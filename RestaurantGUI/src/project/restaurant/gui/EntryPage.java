@@ -30,8 +30,8 @@ public class EntryPage {
     private void openForm(int i) {
         JFrame frame1 = new JFrame("LogIn");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame1.setSize(500,500);
-        frame1.setContentPane(new UserAccount().getBgUserAccount());
+        frame1.setSize(1000,1000);
+        frame1.setContentPane(new UserAccount().getUserAccount());
         frame1.setVisible(true);
 
         switch (i){

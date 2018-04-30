@@ -1,71 +1,130 @@
 package project.restaurant.gui;
 
 import javax.swing.*;
+import javax.swing.ImageIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class UserAccount {
     private JPanel bgUserAccount;
     private JLabel userName;
-    private JPanel MenuPanel;
-    private JButton btnTables;
-    private JButton btnMakeOrder;
-    private JButton logOutButton;
-    private JButton btnTransfer;
-    private JButton btnBill;
+    private JButton btnMenuTables;
+    private JButton btnMenuMakeOrder;
+    private JButton logMenuOutButton;
+    private JButton btnMenuTransfer;
+    private JButton btnMenuBill;
     private JTextField txtSearch;
     private JPanel panelMakeOrder;
     private JButton btnSearch2;
-    private JButton btnDiscount;
-    private JButton btnAddEmployee;
-    private JButton btnStorno;
+    private JButton btnMenuDiscount;
+    private JButton btnMenuAddEmployee;
+    private JButton btnMenuStorno;
+    private JButton btnMakeOrder;
+    private JPanel UserAccount;
+
+    public JLabel getUserName() {
+        return userName;
+    }
+
+    public JButton getBtnMenuTables() {
+        return btnMenuTables;
+    }
+
+    public JButton getBtnMenuMakeOrder() {
+        return btnMenuMakeOrder;
+    }
+
+    public JButton getLogMenuOutButton() {
+        return logMenuOutButton;
+    }
+
+    public JButton getBtnMenuTransfer() {
+        return btnMenuTransfer;
+    }
+
+    public JButton getBtnMenuBill() {
+        return btnMenuBill;
+    }
+
+    public JTextField getTxtSearch() {
+        return txtSearch;
+    }
+
+    public JPanel getPanelMakeOrder() {
+        return panelMakeOrder;
+    }
+
+    public JButton getBtnSearch2() {
+        return btnSearch2;
+    }
+
+    public JButton getBtnMenuDiscount() {
+        return btnMenuDiscount;
+    }
+
+    public JButton getBtnMenuAddEmployee() {
+        return btnMenuAddEmployee;
+    }
+
+    public JButton getBtnMenuStorno() {
+        return btnMenuStorno;
+    }
+
+    public JPanel getUserAccount() {
+        return UserAccount;
+    }
+
+    public JButton getBtnMakeOrder() {
+
+        return btnMakeOrder;
+    }
 
     public UserAccount() {
 
         //Action for button Make Order
-        btnMakeOrder.addActionListener(new ActionListener() {
+        btnMenuMakeOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
             }
         });
         //Action for button Tables
-        btnTables.addActionListener(new ActionListener() {
+        btnMenuTables.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
             }
         });
         //Action for button Transfer
-        btnTransfer.addActionListener(new ActionListener() {
+        btnMenuTransfer.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
             }
         });
         //Action for button Bill
-        btnBill.addActionListener(new ActionListener() {
+        btnMenuBill.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
             }
         });
         //Action for button Discount
-        btnDiscount.addActionListener(new ActionListener() {
+        btnMenuDiscount.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Discount");
             }
         });
         //Action for button Storno
-        btnStorno.addActionListener(new ActionListener() {
+        btnMenuStorno.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Storno");
             }
         });
         //Action for button Add Employee
-        btnAddEmployee.addActionListener(new ActionListener() {
+        btnMenuAddEmployee.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Employee was added");
             }
         });
         //Action for button Log Out
-        logOutButton.addActionListener(new ActionListener() {
+        logMenuOutButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
             }
@@ -77,16 +136,16 @@ public class UserAccount {
     }
 
     public UserAccount AccountWaiter(){
-        btnDiscount.setEnabled(false);
-        btnAddEmployee.setEnabled(false);
-        btnStorno.setEnabled(false);
+        btnMenuDiscount.setEnabled(false);
+        btnMenuAddEmployee.setEnabled(false);
+        btnMenuStorno.setEnabled(false);
         System.out.println("Account Waiter");
         return null;
     }
 
     public UserAccount AccountSupervisor(){
         System.out.println("Account Supervisor");
-        btnAddEmployee.setEnabled(false);
+        btnMenuAddEmployee.setEnabled(false);
         return null;
     }
 
