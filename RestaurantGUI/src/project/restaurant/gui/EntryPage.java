@@ -16,22 +16,29 @@ public class EntryPage {
             public void actionPerformed(ActionEvent e) {
                 if (txtLogin.getSelectedItem() == "waiter"){
                     openForm(1);
+                    new UserAccount().getBgUserAccount(1);
+
+
                 }else if (txtLogin.getSelectedItem() == "seupervisor"){
                     openForm(2);
+                    new UserAccount().getBgUserAccount(2);
                 }else if (txtLogin.getSelectedItem() == "manager"){
                     openForm(3);
+                    new UserAccount().getBgUserAccount(3);
                 }else{
                     System.out.println("Choose a user!");
+
                 }
             }
         });
+
     }
 
     private void openForm(int i) {
         JFrame frame1 = new JFrame("LogIn");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame1.setSize(1000,1000);
-        frame1.setContentPane(new UserAccount().getUserAccount());
+        frame1.setContentPane(new UserAccount().getBgUserAccount(i));
         frame1.setVisible(true);
 
         switch (i){

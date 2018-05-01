@@ -1,7 +1,7 @@
 package project.restaurant.gui;
 
 import javax.swing.*;
-import javax.swing.ImageIcon;
+
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -131,7 +131,16 @@ public class UserAccount {
         });
     }
 
-    public JPanel getBgUserAccount() {
+
+    public JPanel getBgUserAccount(int i) {
+        switch (i){
+            case 1: UserAccount waiter = new UserAccount().AccountWaiter();
+                AccountWaiter();   break;
+            case 2: UserAccount supervisor = new UserAccount().AccountSupervisor();
+                AccountSupervisor();  break;
+            case 3: UserAccount manager = new UserAccount().AccountManager();
+                AccountManager();  break;
+        }
         return bgUserAccount;
     }
 
