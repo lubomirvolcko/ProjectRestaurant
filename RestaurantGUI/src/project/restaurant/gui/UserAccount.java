@@ -1,73 +1,47 @@
 package project.restaurant.gui;
 
 import javax.swing.*;
-import javax.swing.ImageIcon;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class UserAccount {
-    private JPanel bgUserAccount;
-    private JLabel userName;
-    private JButton btnMenuTables;
-    private JButton btnMenuMakeOrder;
-    private JButton logMenuOutButton;
-    private JButton btnMenuTransfer;
-    private JButton btnMenuBill;
-    private JTextField txtSearch;
-    private JPanel panelMakeOrder;
-    private JButton btnSearch2;
-    private JButton btnMenuDiscount;
-    private JButton btnMenuAddEmployee;
-    private JButton btnMenuStorno;
-    private JButton btnMakeOrder;
     private JPanel UserAccount;
+    private JPanel bgUserAccount;
+    private JPanel pnlUserTop;
+    private JLabel lblUserName;
+    private JTextField txtSearch;
+    private JButton btnSearch;
+    private JPanel pnlTopMenu;
+    private JButton btnTopMenuMakeOrder;
+    private JButton btnTopMenuTables;
+    private JButton btnTopMenuTransfer;
+    private JButton btnTopMenuBill;
+    private JButton btnTopMenuDiscount;
+    private JButton btnTopMenuStorno;
+    private JButton btnTopMenuAddEmployee;
+    private JButton btnTopMenuLogOut;
+    private JButton btnMakeOrder;
+    private JButton btnTables;
+    private JButton btnTransfer;
+    private JButton btnBill;
+    private JButton btnDiscount;
+    private JButton btnStorno;
+    private JButton btnAddEmployee;
+    private JButton btnLogOut;
+    private JPanel pnlBasicMenu;
+    private String username;
 
     public JPanel getUserAccount() {
         return UserAccount;
     }
 
     public UserAccount() {
+        //hide top menu
+        pnlTopMenu.setVisible(false);
 
-        //Action for button Make Order
-        btnMenuMakeOrder.addActionListener(new ActionListener() {
+        btnSearch.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        //Action for button Tables
-        btnMenuTables.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        //Action for button Transfer
-        btnMenuTransfer.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        //Action for button Bill
-        btnMenuBill.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-
-            }
-        });
-        //Action for button Discount
-        btnMenuDiscount.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Discount");
-            }
-        });
-        //Action for button Storno
-        btnMenuStorno.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Storno");
-            }
-        });
-        //Action for button Add Employee
-        btnMenuAddEmployee.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Employee was added");
+                System.out.println("Search");
             }
         });
     }
@@ -76,17 +50,35 @@ public class UserAccount {
         return bgUserAccount;
     }
 
+    public JPanel getUserAccount(int i, String username) {
+        switch (i){
+            case 1: UserAccount waiter = new UserAccount().AccountWaiter();
+                AccountWaiter();
+                lblUserName.setText(username);
+                break;
+            case 2: UserAccount supervisor = new UserAccount().AccountSupervisor();
+                AccountSupervisor();
+                lblUserName.setText(username);
+                break;
+            case 3: UserAccount manager = new UserAccount().AccountManager();
+                AccountManager();
+                lblUserName.setText(username);
+                break;
+        }
+        return UserAccount;
+    }
+
     public UserAccount AccountWaiter(){
-        btnMenuDiscount.setEnabled(false);
-        btnMenuAddEmployee.setEnabled(false);
-        btnMenuStorno.setEnabled(false);
+        btnTopMenuDiscount.setEnabled(false);
+        btnTopMenuAddEmployee.setEnabled(false);
+        btnTopMenuStorno.setEnabled(false);
         System.out.println("Account Waiter");
         return null;
     }
 
     public UserAccount AccountSupervisor(){
         System.out.println("Account Supervisor");
-        btnMenuAddEmployee.setEnabled(false);
+        btnTopMenuAddEmployee.setEnabled(false);
         return null;
     }
 
@@ -96,5 +88,8 @@ public class UserAccount {
     }
 
 
+    private void createUIComponents() {
+        // TODO: place custom component creation code here
+    }
 }
 
