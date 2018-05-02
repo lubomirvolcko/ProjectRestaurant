@@ -29,6 +29,16 @@ public class UserAccount {
     private JButton btnAddEmployee;
     private JButton btnLogOut;
     private JPanel pnlBasicMenu;
+    private JSeparator sprTopMenu;
+    private JPanel pnlTables;
+    private JButton btnTable1;
+    private JButton btnTable2;
+    private JButton btnTable3;
+    private JButton btnTable4;
+    private JButton btnTable5;
+    private JButton btnTable6;
+    private JButton btnTable7;
+    private JButton btnTable8;
     private String username;
 
     public JPanel getUserAccount() {
@@ -38,10 +48,40 @@ public class UserAccount {
     public UserAccount() {
         //hide top menu
         pnlTopMenu.setVisible(false);
+        pnlTables.setVisible(false);
 
+        //btn search
         btnSearch.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 System.out.println("Search");
+            }
+        });
+        //btn basic menu Make Order
+        btnMakeOrder.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                pnlBasicMenu.setVisible(false);
+                pnlTopMenu.setVisible(true);
+                pnlTables.setVisible(true);
+                System.out.println("MakeOrder");
+            }
+        });
+        //btn top menu Make Order
+        btnTopMenuMakeOrder.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                pnlBasicMenu.setVisible(false);
+            }
+        });
+        //btn top menu Tables
+        btnTopMenuTables.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                pnlTables.setVisible(true);
+            }
+        });
+        //btn basic menu Tables
+        btnTables.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                pnlBasicMenu.setVisible(false);
+                pnlTables.setVisible(true);
             }
         });
     }
@@ -70,8 +110,11 @@ public class UserAccount {
 
     public UserAccount AccountWaiter(){
         btnTopMenuDiscount.setEnabled(false);
+        btnDiscount.setEnabled(false);
         btnTopMenuAddEmployee.setEnabled(false);
+        btnAddEmployee.setEnabled(false);
         btnTopMenuStorno.setEnabled(false);
+        btnStorno.setEnabled(false);
         System.out.println("Account Waiter");
         return null;
     }
@@ -79,6 +122,7 @@ public class UserAccount {
     public UserAccount AccountSupervisor(){
         System.out.println("Account Supervisor");
         btnTopMenuAddEmployee.setEnabled(false);
+        btnAddEmployee.setEnabled(false);
         return null;
     }
 
