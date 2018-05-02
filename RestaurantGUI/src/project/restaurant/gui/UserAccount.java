@@ -56,7 +56,7 @@ public class UserAccount {
                 System.out.println("Search");
             }
         });
-        //btn basic menu Make Order
+        //btn basic menu MakeOrder
         btnMakeOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 pnlBasicMenu.setVisible(false);
@@ -65,7 +65,7 @@ public class UserAccount {
                 System.out.println("MakeOrder");
             }
         });
-        //btn top menu Make Order
+        //btn top menu MakeOrder
         btnTopMenuMakeOrder.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 pnlBasicMenu.setVisible(false);
@@ -82,6 +82,12 @@ public class UserAccount {
             public void actionPerformed(ActionEvent e) {
                 pnlBasicMenu.setVisible(false);
                 pnlTables.setVisible(true);
+            }
+        });
+        //btn basic menu LogOut
+        btnLogOut.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                
             }
         });
     }
