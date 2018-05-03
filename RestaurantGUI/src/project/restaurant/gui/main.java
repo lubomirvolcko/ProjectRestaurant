@@ -6,7 +6,8 @@ public class main {
     public static void main(String[] args) {
         JFrame frame = new JFrame("LogIn");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setSize(500,500);
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //frame.setSize(500,500);
         frame.setContentPane(new EntryPage().getBrEntryPage());
         frame.setVisible(true);
     }
