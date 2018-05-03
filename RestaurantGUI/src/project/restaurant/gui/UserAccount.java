@@ -1,6 +1,7 @@
 package project.restaurant.gui;
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -51,6 +52,7 @@ public class UserAccount  {
     }
 
     public UserAccount() {
+
         //hide top menu
         pnlTopMenu.setVisible(false);
         pnlTables.setVisible(false);
@@ -93,7 +95,14 @@ public class UserAccount  {
         });
         //btn basic menu LogOut
         btnLogOut.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
+            EntryPage page = new EntryPage();
+            page.getBrEntryPage();
+            JComponent comp = (JComponent) e.getSource();
+            Window win = SwingUtilities.getWindowAncestor(comp); //get top window 
+            win.dispose();
+
 
             }
         });
@@ -103,6 +112,7 @@ public class UserAccount  {
                 btnTable1.setVisible(false);
             }
         });
+
     }
 
     public JPanel getBgUserAccount() {
@@ -126,6 +136,8 @@ public class UserAccount  {
         }
         return UserAccount;
     }
+
+
 
     public UserAccount AccountWaiter(){
         btnTopMenuDiscount.setEnabled(false);
