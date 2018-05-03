@@ -39,6 +39,11 @@ public class UserAccount {
     private JButton btnTable6;
     private JButton btnTable7;
     private JButton btnTable8;
+    private JButton btnSmallTable1;
+    private JPanel pnlSmallTable1;
+    private JButton btnTable1More;
+    private JTextPane textPane1;
+    private JButton button1;
     private String username;
 
     public JPanel getUserAccount() {
@@ -88,6 +93,12 @@ public class UserAccount {
         btnLogOut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
 
+            }
+        });
+        //btn icon table1
+        btnTable1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                btnTable1.setVisible(false);
             }
         });
     }
