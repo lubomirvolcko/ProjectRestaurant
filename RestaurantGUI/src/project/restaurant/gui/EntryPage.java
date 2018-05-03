@@ -39,9 +39,9 @@ public class EntryPage {
     private void openForm(int i, String username) {
         JFrame frame1 = new JFrame("LogIn");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        //frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame1.setUndecorated(true);
-        //frame1.setSize(1920,1080);
+        frame1.setSize(1920,1080);
         frame1.setContentPane(new UserAccount().getUserAccount(i, username));
         frame1.setVisible(true);
     }
