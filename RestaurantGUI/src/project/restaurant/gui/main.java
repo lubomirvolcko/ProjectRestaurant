@@ -3,12 +3,9 @@ package project.restaurant.gui;
 import javax.swing.*;
 
 public class main {
-    public static void main(String[] args) {
-        JFrame frame = new JFrame("LogIn");
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //frame.setSize(500,500);
-        frame.setContentPane(new EntryPage().getBrEntryPage());
-        frame.setVisible(true);
+    public static void main(String[] args)
+    {
+    EntryPage entry = new EntryPage();
+
     }
 }

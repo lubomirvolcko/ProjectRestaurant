@@ -4,7 +4,7 @@ import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class UserAccount {
+public class UserAccount  {
     private JPanel UserAccount;
     private JPanel bgUserAccount;
     private JPanel pnlUserTop;
@@ -54,6 +54,8 @@ public class UserAccount {
         //hide top menu
         pnlTopMenu.setVisible(false);
         pnlTables.setVisible(false);
+
+
 
         //btn search
         btnSearch.addActionListener(new ActionListener() {
@@ -109,15 +111,15 @@ public class UserAccount {
 
     public JPanel getUserAccount(int i, String username) {
         switch (i){
-            case 1: UserAccount waiter = new UserAccount().AccountWaiter();
+            case 1: UserAccount waiter = AccountWaiter();
                 AccountWaiter();
                 lblUserName.setText(username);
                 break;
-            case 2: UserAccount supervisor = new UserAccount().AccountSupervisor();
+            case 2: UserAccount supervisor = AccountSupervisor();
                 AccountSupervisor();
                 lblUserName.setText(username);
                 break;
-            case 3: UserAccount manager = new UserAccount().AccountManager();
+            case 3: UserAccount manager = AccountManager();
                 AccountManager();
                 lblUserName.setText(username);
                 break;

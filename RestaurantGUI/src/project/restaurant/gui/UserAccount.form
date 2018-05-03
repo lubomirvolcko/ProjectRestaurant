@@ -192,8 +192,10 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <enabled value="true"/>
                   <font name="Century Gothic" size="24" style="1"/>
+                  <hideActionText value="true"/>
                   <icon value="img/order.png"/>
                   <text value=""/>
                   <toolTipText value=""/>
@@ -207,6 +209,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/tebles.png"/>
                   <text value=""/>
                 </properties>
@@ -217,17 +220,8 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/transfer.png"/>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="b0900" class="javax.swing.JButton" binding="btnBill">
-                <constraints>
-                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <icon value="img/bill.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -237,6 +231,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <font name="Century Gothic" size="24" style="1"/>
                   <icon value="img/discount.png"/>
                   <text value=""/>
@@ -251,6 +246,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/storno.png"/>
                   <text value=""/>
                 </properties>
@@ -261,6 +257,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/addEmployee.png"/>
                   <text value=""/>
                 </properties>
@@ -271,7 +268,19 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/logOut.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
+              <component id="b0900" class="javax.swing.JButton" binding="btnBill">
+                <constraints>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-988964"/>
+                  <borderPainted value="false"/>
+                  <icon value="img/bill.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -293,6 +302,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/teble1.png"/>
                   <text value=""/>
                 </properties>
@@ -303,17 +313,8 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/teble2.png"/>
-                  <text value=""/>
-                </properties>
-              </component>
-              <component id="51f5" class="javax.swing.JButton" binding="btnTable3">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <icon value="img/teble3.png"/>
                   <text value=""/>
                 </properties>
               </component>
@@ -323,6 +324,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/teble4.png"/>
                   <text value=""/>
                 </properties>
@@ -333,6 +335,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/table5.png"/>
                   <text value=""/>
                 </properties>
@@ -343,6 +346,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/table6.png"/>
                   <text value=""/>
                 </properties>
@@ -353,6 +357,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/table7.png"/>
                   <text value=""/>
                 </properties>
@@ -363,6 +368,7 @@
                 </constraints>
                 <properties>
                   <background color="-988964"/>
+                  <borderPainted value="false"/>
                   <icon value="img/table8.png"/>
                   <text value=""/>
                 </properties>
@@ -433,6 +439,17 @@
                   </grid>
                 </children>
               </grid>
+              <component id="51f5" class="javax.swing.JButton" binding="btnTable3">
+                <constraints>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-988964"/>
+                  <borderPainted value="false"/>
+                  <icon value="img/teble3.png"/>
+                  <text value=""/>
+                </properties>
+              </component>
             </children>
           </grid>
         </children>
