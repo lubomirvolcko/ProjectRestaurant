@@ -125,6 +125,80 @@ public class UserAccount  {
                 win.dispose();
             }
         });
+        btnTable1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(1);
+            }
+        });
+        btnTable2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(2);
+            }
+        });
+        btnTable3.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(3);
+            }
+        });
+        btnTable4.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(4);
+            }
+        });
+        btnTable5.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(5);
+            }
+        });
+        btnTable6.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(6);
+            }
+        });
+        btnTable7.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(7);
+            }
+        });
+        btnTable8.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openMealMeanu(8);
+            }
+        });
+    }
+
+    public JFrame openMealMeanu(int i) {
+        MakeOrder makeorder = new MakeOrder();
+
+        JFrame frameMakeOrder = new JFrame("Make order");
+        frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameMakeOrder.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frameMakeOrder.setUndecorated(true);
+        //frame.setSize(500,500);
+        frameMakeOrder.setContentPane(makeorder.getPnlMakeOrder());
+        frameMakeOrder.setVisible(true);
+
+        switch (i){
+            case 1: makeorder.getLblNameTable().setText("Table 1");
+                break;
+            case 2: makeorder.getLblNameTable().setText("Table 2");
+                break;
+            case 3: makeorder.getLblNameTable().setText("Table 3");
+                break;
+            case 4: makeorder.getLblNameTable().setText("Table 4");
+                break;
+            case 5: makeorder.getLblNameTable().setText("Table 5");
+                break;
+            case 6: makeorder.getLblNameTable().setText("Table 6");
+                break;
+            case 7: makeorder.getLblNameTable().setText("Table 7");
+                break;
+            case 8: makeorder.getLblNameTable().setText("Table 8");
+                break;
+            default:
+                System.out.println("Table not exists!");
+        }
+        return frameMakeOrder;
     }
 
     public JPanel getBgUserAccount() {
