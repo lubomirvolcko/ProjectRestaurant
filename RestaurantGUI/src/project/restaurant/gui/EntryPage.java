@@ -4,6 +4,7 @@ package project.restaurant.gui;
 
 
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
@@ -38,15 +39,7 @@ final JFrame close = logInPage();
                 if (txtLogin.getSelectedItem() == "waiter"){
                     username = (String) txtLogin.getSelectedItem();
                     openForm(1, username);
-
                     close.dispose();
-
-
-
-
-
-
-
                 }else if (txtLogin.getSelectedItem() == "seupervisor"){
                     username = (String) txtLogin.getSelectedItem();
                     openForm(2, username);
@@ -73,7 +66,7 @@ final JFrame close = logInPage();
         JFrame frame1 = new JFrame("MainForm");
         frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //frame1.setUndecorated(true);
+        frame1.setUndecorated(true);
         //frame1.setSize(1000,1000);
         frame1.setContentPane(new UserAccount().getUserAccount(i,username));
         frame1.setVisible(true);

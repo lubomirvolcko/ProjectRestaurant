@@ -51,6 +51,8 @@ public class UserAccount  {
         return UserAccount;
     }
 
+
+
     public UserAccount() {
 
         //hide top menu
@@ -91,6 +93,7 @@ public class UserAccount  {
             public void actionPerformed(ActionEvent e) {
                 pnlBasicMenu.setVisible(false);
                 pnlTables.setVisible(true);
+                pnlTopMenu.setVisible(true);
             }
         });
         //btn basic menu LogOut
@@ -113,6 +116,15 @@ public class UserAccount  {
             }
         });
 
+        btnTopMenuLogOut.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                EntryPage page = new EntryPage();
+                page.getBrEntryPage();
+                JComponent comp = (JComponent) e.getSource();
+                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                win.dispose();
+            }
+        });
     }
 
     public JPanel getBgUserAccount() {
@@ -136,8 +148,6 @@ public class UserAccount  {
         }
         return UserAccount;
     }
-
-
 
     public UserAccount AccountWaiter(){
         btnTopMenuDiscount.setEnabled(false);
@@ -166,5 +176,5 @@ public class UserAccount  {
     private void createUIComponents() {
         // TODO: place custom component creation code here
     }
-}
 
+}

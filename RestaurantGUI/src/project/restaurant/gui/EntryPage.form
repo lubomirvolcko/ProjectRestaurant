@@ -22,7 +22,7 @@
           <foreground color="-16777216"/>
           <model>
             <item value="waiter"/>
-            <item value="seupervisor"/>
+            <item value="supervisor"/>
             <item value="manager"/>
           </model>
         </properties>
