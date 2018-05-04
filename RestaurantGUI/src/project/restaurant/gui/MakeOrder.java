@@ -16,10 +16,16 @@ public class MakeOrder {
     private JButton btnConfirm;
     private JButton btnCancel;
     private JPanel pnlMealType;
-    private JButton softDrinksButton;
-    private JButton alcoholDrinksButton;
+    private JButton btnSoftDrinks;
+    private JButton btnAlcoholDrinks;
     private JPanel pnlDrinksCategory;
     private JPanel pnlMealCategory;
+    private JButton btnPizza;
+    private JButton btnPasta;
+    private JButton btnMeat;
+    private JButton btnSalad;
+    private JButton btnSoup;
+    private JButton btnDessert;
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
