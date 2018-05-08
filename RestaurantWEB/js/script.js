@@ -37,13 +37,41 @@
     return false;
   });
  
-   $('#beers').click(function() {
+  /* $('#beers').click(function() {
       $('#ulBeers').toggle("slow");
    });
 
    $('#hotDrinks').click(function() {
       $('#hot-drinks').toggle("slow");
-   });
+   });       // po kliknuti sa zobrazi */
 
+
+/* food menu */
+$('#menucko').click(function() {
+  $('#drinks').hide();
+  $('#menucko').hide();
+  $('#foodMenu').show();
+});
+
+/* drink menu */
+$('#drinks').click(function() {
+  $('#drinks').hide();
+  $('#menucko').hide();
+  $('#drinkMenu').show();
+});
+
+/* back btn food */
+$('.back-btn').click(function() {
+  $('#drinks').show();
+  $('#menucko').show();
+  $('#foodMenu').hide();
+});
+
+/* back btn drinks */
+$('.back-bttn').click(function() {
+  $('#drinks').show();
+  $('#menucko').show();
+  $('#drinkMenu').hide();
+});
 
 })(jQuery); // End of use strict

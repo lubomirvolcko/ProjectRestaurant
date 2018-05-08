@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Restaurant</title>
+    <title>Sovy Restaurant</title>
 
     <!-- Bootstrap core CSS -->
     <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -21,7 +21,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNav">
       <div class="container">
-        <a class="navbar-brand js-scroll-trigger" href="#page-top"><h2>Restaurant</h2></a>
+        <a class="navbar-brand js-scroll-trigger" href="#page-top"><h2>Sovy Restaurant</h2></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -32,9 +32,6 @@
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#reviews">Reviews</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link js-scroll-trigger" href="#order">Order</a>
             </li>
             <li class="nav-item">
               <a class="nav-link js-scroll-trigger" href="#reservation">Reservation</a>
@@ -82,7 +79,7 @@
           <div class="carousel-item" style="background-image: url('img/slide3.jpg')">
             <div class="carousel-caption d-none d-md-block">
               <h3>White Chicory</h3>
-              <p>Appetizer.</p>
+              <p>Appetizer</p>
             </div>
           </div>
           <!-- Slide Four -->
@@ -114,104 +111,48 @@
             <p class="lead main text-center">There is no sincerer love than the love of food!</p>
           </div>
         </div>
-
         <div class="row">
-           <div class="col-sm-3 col-md-3 pointers" id="hotDrinks">
-                    <div class="menu-images "><img src="img/menu/hot-drinks.png" alt="Hot Drinks"></div>
-                    <div class="menu-titles"><h1 class="">Hot drinks</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="hot-drinks">
-                
-                        </ul>
-                    </div>
+         <div class="col-sm">
+          <div id="menucko">
+            <div class="menu-images"><img src="img/menu/food.jpg" alt="Food"></div>
+              <div class="menu-titles"><h1>Food</h1></div>
+              </div>
+              <div id="foodMenu" style="display: none;">TU SA BUDE TAHAT Z DB NAZVY JEDAL + PRI NICH BUDE NAKUPNY KOSIK + CENA
+                  <button type="button" class="btn btn-danger back-btn">Back</button>
+              </div>
                 </div>
-      
-         <div class="col-sm-3 col-md-3">
-                    <div class="menu-images "><img src="img/menu/ice-drinks.png" alt="Ice Drinks"></div>
-                    <div class="menu-titles"><h1 class="">Ice drinks</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;">
-                    
-                        </ul>
+                <div class="col-sm">
+                  <div id="drinks">
+                    <div class="menu-images"><img src="img/menu/drinks.jpg" alt="Drinks"></div>
+                    <div class="menu-titles"><h1>Drinks</h1></div>
                     </div>
+                    <div id="drinkMenu" style="display: none;">TU SA BUDE TAHAT Z DB NAZVY DRINKOV + CENA
+                  <button type="button" class="btn btn-danger back-bttn">Back</button>
                 </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="menu-images "><img src="img/menu/smoothies.png" alt="Smoothies"></div>
-                    <div class="menu-titles"><h1 class="">Smoothies</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="smoothies">
-                          
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="menu-images "><img src="img/menu/deserts.png" alt="Deserts"></div>
-                    <div class="menu-titles"><h1 class="">Deserts</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="deserts">
-                   
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-sm-3 col-md-3" id="cocktails">
-                    <div class="menu-images "><img src="img/menu/cocktails.png" alt="Hot Drinks"></div>
-                    <div class="menu-titles"><h1 class="">Cocktails</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="cocktails">
-                      
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3 pointers" id="beers">
-                    <div class="menu-images "><img src="img/menu/beer.png" alt="Ice Drinks"></div>
-                    <div class="menu-titles" ><h1 class="">Beer</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="ulBeers">
-                         
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-sm-3 col-md-3">
-                    <div class="menu-images "><img src="img/menu/wine.png" alt="Smoothies"></div>
-                    <div class="menu-titles"><h1 class="">Wine</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="wine">
-                          
-                        </ul>
-                    </div>
-                </div>
-                    <div class="col-sm-3 col-md-3">
-                    <div class="menu-images "><img src="img/menu/sprites.png" alt="Deserts"></div>
-                    <div class="menu-titles"><h1 class="">Non-alcohol drinks</h1></div>
-                    <div class="menu-items ">
-                        <ul style="display: none;" id="sprites">
-                       
-                        </ul>
-                    </div>
-                </div>
-        </div>
-    </div>
-  </section>
+              </div>
+      </section>
 
     <section id="reviews" class="orangebg">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
             <h2>Reviews</h2>
-
-            <!-- Čo to kurva je? O.o -->
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-
-            
+            <p class="lead">  
+            <div class="container">
+              <h5>Click to rate:</h5>
+              <div class='starrr' id='star1'></div>
+            <div>&nbsp;
+          <span class='your-choice-was' style='display: none;'>
+            Your rating was <span class='choice'></span>.
+          </span>
+    </div>
+</p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="order">
+   <!-- <section id="order">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -270,9 +211,9 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> -->
 
-    <section id="reservation" class="orangebg">
+    <section id="reservation">
       <div class="container">
         <div class="row">
           <div class="col-lg-8 mx-auto">
@@ -281,51 +222,51 @@
           </div>
         </div>
       </div>
-    </section>
+    </section> 
 
     <div class="content"> <!-- footer -->
         </div>
     <footer id="myFooter">
         <div class="container">
             <div class="row">
-                <div class="col-sm">
+                <div class="col-md">
                     <h2>OPENING HOURS</h2>
                         <div class="days">
-                        <ul>
                           <h5>
-                        <li>Monday</li> 
-                        <li>Tuesday</li>
-                        <li>Wednesday</li>  
-                        <li>Thursday</li>
-                        <li>Friday</li>  
-                        <li>Saturday</li>  
-                        <li>Sunday</li>
+                        <p>Monday</p>
+                        <p>Tuesday</p>
+                        <p>Wednesday</p>  
+                        <p>Thursday</p>
+                        <p>Friday</p> 
+                        <p>Saturday</p> 
+                        <p>Sunday</p>
                           </h5> 
-                        </ul>
                         </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-md">
                      <div class="time">
-                            <ul>
                               <h5>
-                          <li>9:Am - 10PM</li>
-                          <li>9:Am - 10PM</li>
-                          <li>9:Am - 10PM</li>
-                          <li>5:PM - 10PM</li>
-                          <li>Closed</li>
-                                </h5>
-                            </ul>
+                          <p>9:Am - 10PM</p>
+                          <p>9:Am - 10PM</p>
+                          <p>9:Am - 10PM</p>
+                          <p>9:Am - 10PM</p>
+                          <p>9:Am - 10PM</p>
+                          <p>5:PM - 10PM</p>
+                          <p>Closed</p>
+                              </h5>
                         </div>
                 </div>
-                <div class="col-sm">
+                <div class="col-md">
                      <div class="contactUs">
-                              <h3>
+                              <h2>
                                 Contact Us
-                              </h3>
-                              <h4>
-                                +421 xxx xxx xxx
-                                Address
-                              </h4>
+                              </h2>
+                              <h5>
+                                <p>+421 904 654 123</p>
+                                <p>Sovy Restaurant</p>
+                                <p>040 11 Kosice</p>
+                                <p>Alejova 1</p>
+                              </h5>
                         </div>
                 </div>
                 <div class="col-sm">
