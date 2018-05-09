@@ -19,7 +19,7 @@ public class UserAccount  {
     private JButton btnTopMenuBill;
     private JButton btnTopMenuDiscount;
     private JButton btnTopMenuStorno;
-    private JButton btnTopMenuAddEmployee;
+    private JButton btnTopMenuSetEmployee;
     private JButton btnTopMenuLogOut;
     private JButton btnMakeOrder;
     private JButton btnTables;
@@ -27,7 +27,7 @@ public class UserAccount  {
     private JButton btnBill;
     private JButton btnDiscount;
     private JButton btnStorno;
-    private JButton btnAddEmployee;
+    private JButton btnSetEmployee;
     private JButton btnLogOut;
     private JPanel pnlBasicMenu;
     private JSeparator sprTopMenu;
@@ -156,6 +156,30 @@ public class UserAccount  {
                 openMealMeanu(8);
             }
         });
+        btnTopMenuSetEmployee.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openSetEmployee();
+            }
+        });
+        btnSetEmployee.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                openSetEmployee();
+            }
+        });
+    }
+
+    public JFrame openSetEmployee(){
+        SetEmployee setemployee = new SetEmployee();
+
+        JFrame frameSetEmployee = new JFrame("Set Employee");
+        frameSetEmployee.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameSetEmployee.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frameSetEmployee.setUndecorated(true);
+        //frame.setSize(500,500);
+        frameSetEmployee.setContentPane(setemployee.getPnlSetEmployee());
+        frameSetEmployee.setVisible(true);
+
+        return frameSetEmployee;
     }
 
     public JFrame openMealMeanu(int i) {
@@ -217,8 +241,8 @@ public class UserAccount  {
     public UserAccount AccountWaiter(){
         btnTopMenuDiscount.setEnabled(false);
         btnDiscount.setEnabled(false);
-        btnTopMenuAddEmployee.setEnabled(false);
-        btnAddEmployee.setEnabled(false);
+        btnTopMenuSetEmployee.setEnabled(false);
+        btnSetEmployee.setEnabled(false);
         btnTopMenuStorno.setEnabled(false);
         btnStorno.setEnabled(false);
         System.out.println("Account Waiter");
@@ -227,8 +251,8 @@ public class UserAccount  {
 
     public UserAccount AccountSupervisor(){
         System.out.println("Account Supervisor");
-        btnTopMenuAddEmployee.setEnabled(false);
-        btnAddEmployee.setEnabled(false);
+        btnTopMenuSetEmployee.setEnabled(false);
+        btnSetEmployee.setEnabled(false);
         return null;
     }
 
