@@ -13,6 +13,7 @@ public class EntryPage {
     private JPasswordField txtPassword;
     private JPanel brEntryPage;
     private JButton btnLogin;
+    private JButton button1;
     private JButton btnLogIn;
     private String username;
     public JFrame logInPage()

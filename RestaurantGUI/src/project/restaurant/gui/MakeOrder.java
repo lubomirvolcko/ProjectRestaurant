@@ -26,6 +26,9 @@ public class MakeOrder {
     private JButton btnSalad;
     private JButton btnSoup;
     private JButton btnDessert;
+    private JPanel pnlBtnBack;
+    private JButton btnBack;
+    public String state;
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -53,6 +56,7 @@ public class MakeOrder {
 
     public MakeOrder(){
         pnlMealType.setVisible(false);
+        btnBack.setEnabled(false);
 
         pnlMakeOrder.setSize(500, 500);
 
@@ -64,25 +68,54 @@ public class MakeOrder {
             }
         });
 
-
         btnDrinks.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                pnlMainCategory.setVisible(false);
-                pnlMealType.setVisible(true);
-                pnlMealCategory.setVisible(false);
-                pnlDrinksCategory.setVisible(true);
+                StateDrinks();
+                state = "StateDrinks";
             }
         });
+
         btnMeal.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                pnlMainCategory.setVisible(false);
-                pnlMealType.setVisible(true);
-                pnlMealCategory.setVisible(true);
-                pnlDrinksCategory.setVisible(false);
+                StateMeal();
+                state = "StateMeal";
+            }
+        });
+
+        //action on btn back
+        btnBack.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                if (state=="StateDrinks" || state=="StateMeal"){
+                    StateMakeorder();
+                }
             }
         });
     }
+
+    public void StateMakeorder(){
+        pnlMainCategory.setVisible(true);
+        pnlMealType.setVisible(false);
+        btnBack.setEnabled(false);
+    }
+
+    public void StateMeal(){
+        pnlMainCategory.setVisible(false);
+        pnlMealType.setVisible(true);
+        pnlMealCategory.setVisible(true);
+        pnlDrinksCategory.setVisible(false);
+        btnBack.setEnabled(true);
+    }
+
+    public void StateDrinks(){
+        pnlMainCategory.setVisible(false);
+        pnlMealType.setVisible(true);
+        pnlMealCategory.setVisible(false);
+        pnlDrinksCategory.setVisible(true);
+        btnBack.setEnabled(true);
+    }
 }
+
+
 
 
 
