@@ -37,14 +37,21 @@
     return false;
   });
  
-  /* $('#beers').click(function() {
-      $('#ulBeers').toggle("slow");
+ /* add review */
+   $('#addReview').click(function() {
+      $('#rating').toggle("slow");
+      $('#post-review-box').toggle("slow");
    });
 
+   $('#cancelBtn').click(function() {
+   $('#rating').hide();
+   $('#post-review-box').hide("slow");
+});
+
+/*
    $('#hotDrinks').click(function() {
       $('#hot-drinks').toggle("slow");
    });       // po kliknuti sa zobrazi */
-
 
 /* food menu */
 $('#menucko').click(function() {

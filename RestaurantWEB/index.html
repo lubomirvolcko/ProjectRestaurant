@@ -140,7 +140,10 @@
           <div class="col-lg-8 mx-auto">
             <h2>Reviews</h2>
             <p class="lead">  
-              <div id="rating">
+              <button type="button" class="btn btn-primary" style="margin-top: 15px;" id="addReview">Add review</button>
+              <button type="button" class="btn btn-info" style="margin-top: 15px;" id="showReviews">Show reviews</button>
+
+              <div id="rating" style="display: none;">
                <select id="example-css" name="rating" autocomplete="off">
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -151,13 +154,12 @@
                 </div>
               </p>
               <p class="lead"> 
-                 <div class="row" id="post-review-box">
+                 <div class="row" id="post-review-box" style="display: none;">
                 <div class="col-md-12">
-                    <form accept-charset="UTF-8" action="" method="post">
-                        <input id="ratings-hidden" name="rating" type="hidden"> 
-                        <textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="7"></textarea>
+                        <p><input type="text" class="form-control" placeholder="Enter your name here"></p>
+                        <p><textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="7"></textarea></p>
                         <p><div class="text-right">
-                            <button type="button" class="btn btn-danger">Cancel</button>
+                            <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
                             <button type="button" class="btn btn-success">Send Review</button></p>
                         </div>
                     </form>
