@@ -50,14 +50,14 @@
 $('#menucko').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#foodMenu').show();
+  $('#foodMenu').show("slow");
 });
 
 /* drink menu */
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#drinkMenu').show();
+  $('#drinkMenu').show("slow");
 });
 
 /* back btn food */
