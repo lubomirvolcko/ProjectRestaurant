@@ -21,6 +21,7 @@ public class SetEmployee {
     private JPanel pnlAddEmployee;
     private JButton btnBack;
     private JPanel pnlDeleteEmployee;
+    private JButton btnConfirm;
     public String State;
 
     public JPanel getPnlSetEmployee() {
