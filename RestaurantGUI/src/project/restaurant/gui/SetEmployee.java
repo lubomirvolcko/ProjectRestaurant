@@ -14,14 +14,14 @@ public class SetEmployee {
     private JPasswordField pswSecond;
     private JPasswordField pswFirst;
     private JComboBox cmbPosition;
-    private JFormattedTextField txtFirstName;
-    private JFormattedTextField txtLastName;
-    private JFormattedTextField txtLogin;
-    private JFormattedTextField txtEmail;
     private JPanel pnlAddEmployee;
     private JButton btnBack;
     private JPanel pnlDeleteEmployee;
     private JButton btnConfirm;
+    private JTextField txtLogin;
+    private JTextField txtFirstName;
+    private JTextField txtLastName;
+    private JTextField txtEmail;
     public String State;
 
     public JPanel getPnlSetEmployee() {

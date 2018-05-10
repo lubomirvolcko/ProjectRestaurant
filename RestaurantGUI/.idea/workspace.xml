@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="565a27cf-090d-403e-a2f1-43e8a9a1e44d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantGUI/img/addEmployee.png" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantGUI/img/addEmployee.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/RestaurantGUI/project/restaurant/gui/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/RestaurantGUI/project/restaurant/gui/UserAccount.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/img/addEmployee.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/img/addEmployee.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/AddEmployee.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/AddEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,10 +25,25 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SetEmployee.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="UserAccount.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
+      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
       <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="612">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
@@ -46,38 +56,11 @@
               <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3819#4190#0" expanded="true" />
-                <element signature="e#4189#4190#0" expanded="true" />
-                <element signature="e#4229#4366#0" expanded="true" />
-                <element signature="e#4365#4366#0" expanded="true" />
-                <element signature="e#4405#4542#0" expanded="true" />
-                <element signature="e#4541#4542#0" expanded="true" />
-                <element signature="e#4581#4718#0" expanded="true" />
-                <element signature="e#4717#4718#0" expanded="true" />
-                <element signature="e#4757#4894#0" expanded="true" />
-                <element signature="e#4893#4894#0" expanded="true" />
-                <element signature="e#4933#5070#0" expanded="true" />
-                <element signature="e#5069#5070#0" expanded="true" />
-                <element signature="e#5109#5246#0" expanded="true" />
-                <element signature="e#5245#5246#0" expanded="true" />
-                <element signature="e#5285#5422#0" expanded="true" />
-                <element signature="e#5421#5422#0" expanded="true" />
-                <element signature="e#5461#5598#0" expanded="true" />
-                <element signature="e#5597#5598#0" expanded="true" />
-                <element signature="e#5315#5453#0" expanded="true" />
-                <element signature="e#5452#5453#0" expanded="true" />
-                <element signature="e#5497#5634#0" expanded="true" />
-                <element signature="e#5633#5634#0" expanded="true" />
-                <element signature="e#6990#6991#0" expanded="true" />
-                <element signature="e#7026#7027#0" expanded="true" />
+                <element signature="e#5497#5635#0" expanded="true" />
+                <element signature="e#5634#5635#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserAccount.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="false">
@@ -87,24 +70,6 @@
               <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#931#932#0" expanded="true" />
-                <element signature="e#969#970#0" expanded="true" />
-                <element signature="e#1057#1058#0" expanded="true" />
-                <element signature="e#1095#1096#0" expanded="true" />
-                <element signature="e#1130#1131#0" expanded="true" />
-                <element signature="e#1160#1161#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1229#1230#0" expanded="true" />
-                <element signature="e#1268#1269#0" expanded="true" />
-                <element signature="e#1303#1304#0" expanded="true" />
-                <element signature="e#1342#1343#0" expanded="true" />
-                <element signature="e#1377#1378#0" expanded="true" />
-                <element signature="e#1857#2008#0" expanded="true" />
-                <element signature="e#2007#2008#0" expanded="true" />
-                <element signature="e#2068#2217#0" expanded="true" />
-                <element signature="e#2216#2217#0" expanded="true" />
-                <element signature="e#2304#2489#0" expanded="true" />
-                <element signature="e#2488#2489#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -114,37 +79,12 @@
         <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="77">
-              <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+              <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#391#392#0" expanded="true" />
-                <element signature="e#428#429#0" expanded="true" />
-                <element signature="e#896#1178#0" expanded="true" />
-                <element signature="e#1177#1178#0" expanded="true" />
-                <element signature="e#1278#1489#0" expanded="true" />
-                <element signature="e#1488#1489#0" expanded="true" />
-                <element signature="e#1548#1687#0" expanded="true" />
-                <element signature="e#1686#1687#0" expanded="true" />
-                <element signature="e#1738#1880#0" expanded="true" />
-                <element signature="e#1879#1880#0" expanded="true" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SetEmployee.form" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="EntryPage.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
-      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.form">
-          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
     </leaf>
@@ -194,8 +134,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="549" />
-    <option name="y" value="-14" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
@@ -205,9 +145,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -231,14 +171,14 @@
               <item name="RestaurantGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="EntryPage" type="e9f4de52:FormNode" />
+              <item name="MakeOrder" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestaurantGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="MakeOrder" type="e9f4de52:FormNode" />
+              <item name="SetEmployee" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -260,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="183" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Hibernate" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -459,7 +399,21 @@
       <option name="project" value="LOCAL" />
       <updated>1525899945285</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="added form set employee">
+      <created>1525904946392</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1525904946392</updated>
+    </task>
+    <task id="LOCAL-00016" summary="added btn confirm in form add employee">
+      <created>1525905334843</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1525905334843</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -474,12 +428,12 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51927084" side_tool="true" weight="0.34006375" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48072916" visible="true" weight="0.34325185" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48072916" visible="true" weight="0.34325185" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.13489583" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.13489583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -495,28 +449,28 @@
     </layout>
     <layout-to-restore>
       <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.48072916" visible="true" weight="0.34325185" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.011979166" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="right" id="Theme Preview" order="5" />
+      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32943678" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51927084" side_tool="true" weight="0.34006375" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Capture Tool" order="6" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.47916666" weight="0.32943678" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -543,39 +497,29 @@
     <MESSAGE value="update pnl MakeOrder" />
     <MESSAGE value="added icons to pnlMakeOrder" />
     <MESSAGE value="Added btn back to Make order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added btn back to Make order" />
+    <MESSAGE value="added form set employee" />
+    <MESSAGE value="added btn confirm in form add employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="added btn confirm in form add employee" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1088">
           <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -601,30 +545,8 @@
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -680,30 +602,8 @@
           <caret line="42" column="24" selection-start-line="42" selection-start-column="24" selection-end-line="42" selection-end-column="24" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -728,30 +628,8 @@
           <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -776,30 +654,8 @@
           <caret line="133" column="32" selection-start-line="133" selection-start-column="32" selection-end-line="133" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -824,30 +680,8 @@
           <caret line="72" column="5" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -872,30 +706,8 @@
           <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -921,30 +733,8 @@
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -999,50 +789,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
+        <state relative-caret-position="612">
           <caret line="41" selection-start-line="41" selection-end-line="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java">
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
+        <state relative-caret-position="77">
+          <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#3819#4190#0" expanded="true" />
-            <element signature="e#4189#4190#0" expanded="true" />
-            <element signature="e#4229#4366#0" expanded="true" />
-            <element signature="e#4365#4366#0" expanded="true" />
-            <element signature="e#4405#4542#0" expanded="true" />
-            <element signature="e#4541#4542#0" expanded="true" />
-            <element signature="e#4581#4718#0" expanded="true" />
-            <element signature="e#4717#4718#0" expanded="true" />
-            <element signature="e#4757#4894#0" expanded="true" />
-            <element signature="e#4893#4894#0" expanded="true" />
-            <element signature="e#4933#5070#0" expanded="true" />
-            <element signature="e#5069#5070#0" expanded="true" />
-            <element signature="e#5109#5246#0" expanded="true" />
-            <element signature="e#5245#5246#0" expanded="true" />
-            <element signature="e#5285#5422#0" expanded="true" />
-            <element signature="e#5421#5422#0" expanded="true" />
-            <element signature="e#5461#5598#0" expanded="true" />
-            <element signature="e#5597#5598#0" expanded="true" />
-            <element signature="e#5315#5453#0" expanded="true" />
-            <element signature="e#5452#5453#0" expanded="true" />
-            <element signature="e#5497#5634#0" expanded="true" />
-            <element signature="e#5633#5634#0" expanded="true" />
-            <element signature="e#6990#6991#0" expanded="true" />
-            <element signature="e#7026#7027#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1053,49 +810,29 @@
           <caret line="88" column="37" selection-start-line="88" selection-start-column="37" selection-end-line="88" selection-end-column="37" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#931#932#0" expanded="true" />
-            <element signature="e#969#970#0" expanded="true" />
-            <element signature="e#1057#1058#0" expanded="true" />
-            <element signature="e#1095#1096#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1160#1161#0" expanded="true" />
-            <element signature="e#1197#1198#0" expanded="true" />
-            <element signature="e#1229#1230#0" expanded="true" />
-            <element signature="e#1268#1269#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1342#1343#0" expanded="true" />
-            <element signature="e#1377#1378#0" expanded="true" />
-            <element signature="e#1857#2008#0" expanded="true" />
-            <element signature="e#2007#2008#0" expanded="true" />
-            <element signature="e#2068#2217#0" expanded="true" />
-            <element signature="e#2216#2217#0" expanded="true" />
-            <element signature="e#2304#2489#0" expanded="true" />
-            <element signature="e#2488#2489#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="42" column="66" selection-start-line="42" selection-start-column="66" selection-end-line="42" selection-end-column="66" />
+        <state relative-caret-position="202">
+          <caret line="165" column="34" selection-start-line="165" selection-start-column="34" selection-end-line="165" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#896#1178#0" expanded="true" />
-            <element signature="e#1177#1178#0" expanded="true" />
-            <element signature="e#1278#1489#0" expanded="true" />
-            <element signature="e#1488#1489#0" expanded="true" />
-            <element signature="e#1548#1687#0" expanded="true" />
-            <element signature="e#1686#1687#0" expanded="true" />
-            <element signature="e#1738#1880#0" expanded="true" />
-            <element signature="e#1879#1880#0" expanded="true" />
+            <element signature="e#5497#5635#0" expanded="true" />
+            <element signature="e#5634#5635#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
