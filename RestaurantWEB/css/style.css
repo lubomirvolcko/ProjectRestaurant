@@ -9,7 +9,11 @@ section {
 }
 
 .orangebg {
-    background: linear-gradient(to bottom, #FFCEB6, #FFB590)
+    background-color: #fe972c;
+}
+
+#logo {
+    height: 10vh;
 }
 
 .carousel-item {
@@ -80,8 +84,8 @@ section {
 #myFooter {
     background-color: #3c3d41;
     color: white;
-    padding-top: 30px;
-    padding-bottom: 20px;
+    padding-top: 20px;
+    padding-bottom: 10px;
 }
 
 
