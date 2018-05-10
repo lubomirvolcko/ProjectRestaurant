@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="565a27cf-090d-403e-a2f1-43e8a9a1e44d" name="Default" comment="">
+    <list default="true" id="565a27cf-090d-403e-a2f1-43e8a9a1e44d" name="Default" comment="remove fields from add employee">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,7 +29,7 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file leaf-file-name="UserAccount.form" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserAccount.form" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -43,10 +42,15 @@
       <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="612">
+            <state relative-caret-position="190">
               <caret line="41" selection-start-line="41" selection-end-line="41" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="EntryPage.form" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form">
+          <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
@@ -122,7 +126,6 @@
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/sample/MenuState.java" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/MenuState.java" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java" />
-        <option value="$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.form" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/AddEmployee.form" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form" />
@@ -130,6 +133,7 @@
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/MakeOrder.java" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java" />
         <option value="$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.form" />
+        <option value="$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form" />
       </list>
     </option>
   </component>
@@ -164,7 +168,20 @@
               <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestaurantGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestaurantGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="gui" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
+              <item name="RestaurantGUI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="gui" type="462c0819:PsiDirectoryNode" />
+              <item name="EntryPage" type="e9f4de52:FormNode" />
             </path>
             <path>
               <item name="RestaurantGUI" type="b2602c69:ProjectViewProjectNode" />
@@ -200,7 +217,7 @@
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="183" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Hibernate" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../xxcc/ProjectRestaurant/RestaurantGUI" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -413,7 +430,14 @@
       <option name="project" value="LOCAL" />
       <updated>1525905334843</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="remove fields from add employee">
+      <created>1525940346093</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1525940346093</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -428,8 +452,8 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.51927084" side_tool="true" weight="0.34006375" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48072916" visible="true" weight="0.34325185" />
-      <window_info anchor="bottom" id="Version Control" order="9" weight="0.32943678" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.48072916" weight="0.34325185" />
+      <window_info anchor="bottom" id="Version Control" order="9" visible="true" weight="0.32943678" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
@@ -499,31 +523,10 @@
     <MESSAGE value="Added btn back to Make order" />
     <MESSAGE value="added form set employee" />
     <MESSAGE value="added btn confirm in form add employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="added btn confirm in form add employee" />
+    <MESSAGE value="remove fields from add employee" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove fields from add employee" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="43" column="66" selection-start-line="43" selection-start-column="66" selection-end-line="43" selection-end-column="66" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1088">
-          <caret line="72" column="5" lean-forward="true" selection-start-line="72" selection-start-column="5" selection-end-line="72" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5497#5635#0" expanded="true" />
-            <element signature="e#5634#5635#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -787,13 +790,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="612">
-          <caret line="41" selection-start-line="41" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/SetEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="77">
@@ -833,6 +829,19 @@
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/UserAccount.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/img/sovy_restaurant_logo.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/project/restaurant/gui/EntryPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>

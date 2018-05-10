@@ -81,7 +81,7 @@
           <contentAreaFilled value="true"/>
           <defaultCapable value="true"/>
           <enabled value="true"/>
-          <icon value="img/sovy_restaurant_logo.png"/>
+          <icon value="img/SovyRestaurant_logo.png"/>
           <text value=""/>
         </properties>
       </component>
