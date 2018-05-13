@@ -196,7 +196,9 @@
                   <enabled value="true"/>
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
+                  <hideActionText value="true"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/order.png"/>
                   <text value="Make Order"/>
                   <toolTipText value=""/>
                   <verticalAlignment value="3"/>
@@ -213,6 +215,7 @@
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Tables"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -227,6 +230,7 @@
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/discount.png"/>
                   <text value="Discount&#10;"/>
                   <toolTipText value=""/>
                   <verticalAlignment value="3"/>
@@ -243,6 +247,7 @@
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/storno.png"/>
                   <text value="Storno"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -257,6 +262,7 @@
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/setEmployee.png"/>
                   <text value="Set Employee"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -270,7 +276,9 @@
                   <borderPainted value="false"/>
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
+                  <hideActionText value="true"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/bill.png"/>
                   <text value="Bill"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -282,9 +290,11 @@
                 <properties>
                   <background color="-988964"/>
                   <borderPainted value="false"/>
+                  <enabled value="true"/>
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/transfer.png"/>
                   <text value="Transfer"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -299,6 +309,7 @@
                   <font name="Century Gothic" size="36" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Log out"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -325,6 +336,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 2"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -339,6 +351,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 4"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -353,6 +366,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 6"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -367,6 +381,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 7"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -381,6 +396,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 8"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -395,6 +411,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 3"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -409,6 +426,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 5"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -423,6 +441,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
                   <text value="Table 1"/>
                   <verticalTextPosition value="3"/>
                 </properties>

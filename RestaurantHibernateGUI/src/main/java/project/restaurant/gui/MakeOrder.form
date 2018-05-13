@@ -61,6 +61,7 @@
               <font name="Century Gothic" size="26" style="1"/>
               <foreground color="-8023247"/>
               <horizontalTextPosition value="0"/>
+              <icon value="src/img/MealIcon.png"/>
               <text value="Meal"/>
               <verticalAlignment value="3"/>
               <verticalTextPosition value="3"/>
@@ -76,6 +77,7 @@
               <font name="Century Gothic" size="26" style="1"/>
               <foreground color="-8023247"/>
               <horizontalTextPosition value="0"/>
+              <icon value="src/img/DrinksIcon.png"/>
               <text value="Drinks&#10;&#10;"/>
               <verticalTextPosition value="3"/>
             </properties>
@@ -179,6 +181,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/alcDrinkIcon.png"/>
                   <text value="Alcohol Drinks"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -193,6 +196,7 @@
                   <font name="Century Gothic" size="26" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/softDrinkIcon.png"/>
                   <text value="Soft Drinks"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -219,6 +223,7 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/pizzaIcon.png"/>
                   <text value="Pizza"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -233,6 +238,7 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/pastaIcon.png"/>
                   <text value="Pasta"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -247,6 +253,7 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/saladIcon.png"/>
                   <text value="Salad"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -261,6 +268,7 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/soupIcon.png"/>
                   <text value="Soup"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -275,6 +283,7 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
+                  <icon value="src/img/meatIcon.png"/>
                   <text value="Meat"/>
                   <verticalTextPosition value="3"/>
                 </properties>
@@ -289,7 +298,8 @@
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
-                  <text value="Dessert"/>
+                  <icon value="src/img/dessertIcon.png"/>
+                  <text value="Desert"/>
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>
@@ -326,6 +336,7 @@
               <borderPainted value="false"/>
               <contentAreaFilled value="true"/>
               <font name="Century Gothic" size="0" style="1"/>
+              <icon value="src/img/back.png"/>
               <text value=""/>
             </properties>
           </component>

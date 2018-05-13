@@ -33,6 +33,7 @@
               <font name="Century Gothic" size="28" style="1"/>
               <foreground color="-8023247"/>
               <horizontalTextPosition value="0"/>
+              <icon value="src/img/addEmployee.png"/>
               <text value="Add Employee"/>
               <verticalAlignment value="0"/>
               <verticalTextPosition value="3"/>
@@ -51,6 +52,7 @@
               <font name="Century Gothic" size="28" style="1"/>
               <foreground color="-8023247"/>
               <horizontalTextPosition value="0"/>
+              <icon value="src/img/deleteEmployee.png"/>
               <text value="Delete Employee"/>
               <verticalAlignment value="0"/>
               <verticalTextPosition value="3"/>

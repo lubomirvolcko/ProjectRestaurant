@@ -11,10 +11,17 @@ import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.HibernateUtil;
 import project.restaurant.hibernate.getInformationFromDatabase;
 
+import javax.imageio.ImageIO;
 import javax.swing.*;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.util.List;
+
+
 
 
 public class EntryPage {
@@ -27,16 +34,13 @@ public class EntryPage {
     private JButton btnLogIn;
     private String position;
     final JFrame close = logInPage();
-    public JFrame logInPage() {
+    public JFrame logInPage()  {
         JFrame frame = new JFrame("LogIn");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         //frame.setSize(500,500);
         frame.setContentPane(getBrEntryPage());
         frame.setVisible(true);
-
-
-
 
 
 
@@ -79,6 +83,7 @@ getAuthenticationInfo();
         frame1.setContentPane(new UserAccount().getUserAccount(i, position));
         frame1.setVisible(true);
         return frame1;
+
     }
 
     /*private void closeForm(){

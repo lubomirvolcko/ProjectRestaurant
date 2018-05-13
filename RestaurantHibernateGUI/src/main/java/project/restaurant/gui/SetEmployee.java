@@ -85,7 +85,10 @@ public class SetEmployee {
                     s.getTransaction().commit();
                     s.close();
 
-                    JOptionPane.showMessageDialog(null, "Sorry,passwords isn´t same");
+                    JOptionPane.showMessageDialog(null, "New user successfully registred!");
+                    JComponent comp = (JComponent) e.getSource();
+                    Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                    win.dispose();
 
 
 
