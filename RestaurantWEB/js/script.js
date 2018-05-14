@@ -57,7 +57,8 @@
 $('#menucko').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#foodMenu').show("slow");
+  $('#mainFoodMenu').show("slow");
+  $('#foodBtn').show("slow");
 });
 
 /* drink menu */
@@ -66,12 +67,64 @@ $('#drinks').click(function() {
   $('#menucko').hide();
   $('#drinkMenu').show("slow");
 });
+  
+  /* after click on food category */
+$('#appetizer').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+});
+
+$('#soup').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+});
+
+$('#mainDish').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+});
+
+$('#salad').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+});
+
+$('#deserts').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+});
 
 /* back btn food */
 $('.back-btn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
-  $('#foodMenu').hide();
+  $('#mainFoodMenu').hide();
+  $('#foodBtn').hide();
 });
 
 /* back btn drinks */
