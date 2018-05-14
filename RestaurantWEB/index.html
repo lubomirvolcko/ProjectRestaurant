@@ -134,6 +134,7 @@
               </div>
 
                  <!-- Main Food Menu -->
+                 <div class="container">
                 <div class="row" style="display: none;" id="mainFoodMenu">
            <div class="col-sm" id="appetizer">
                     <div class="menu-images" ><img src="img/menu/hot-drinks.png" alt="Hot Drinks"></div>
@@ -156,12 +157,23 @@
                     <div class="menu-titles"><h1>Deserts</h1></div>
                 </div>
             </div>
-          <div id="foodBtn" style="display: none;">
+              </div>
+
+            <div class="container">
+              <div class="row">
+                <div class="col-sm">
+                <div id="foodBtn" style="display: none;">
                    <button type="button" class="btn btn-danger back-btn">Back</button> 
+                  </div>
                 </div>
+                <div class="col-sm"></div>
+              </div>
+            </div>
 
-
-  <div class="col-sm-8">
+<div class="container">
+<div class="row">
+  <div class="col-sm"></div>
+  <div class="col-md-12">
       <table class="table table-striped table-dark" style="display: none;" id="tableFood">
   <thead>
     <tr>
@@ -179,10 +191,10 @@
       <td>z DB</td>
       <td>z DB</td>
       <td>z DB</td>
-      <td><p>
+      <td>
         <button type="button" class="btn btn-default btn-sm">
           <img src="img/cartin.png"> Shopping Cart
-        </button></p></td>
+        </button></td>
     </tr>
     <tr>
       <td>z DB</td>
@@ -190,10 +202,10 @@
       <td>z DB</td>
       <td>z DB</td>
       <td>z DB</td>
-      <td><p>
+      <td>
         <button type="button" class="btn btn-default btn-sm">
           <img src="img/cartin.png"> Shopping Cart
-        </button></p></td>
+        </button></td>
     </tr>
     <tr>
       <td>z DB</td>
@@ -201,14 +213,28 @@
       <td>z DB</td>
       <td>z DB</td>
       <td>z DB</td>
-      <td><p>
+      <td>
         <button type="button" class="btn btn-default btn-sm">
           <img src="img/cartin.png"> Shopping Cart
-        </button></p></td>
+        </button></td>
     </tr>
   </tbody>
 </table>
+  </div>
+<div class="col-sm"></div>
+    </div>
 </div>
+
+<div class="container">
+<div class="row">
+<div class="col"></div>
+<div class="col-2" id="btnMenu">
+<button type="button" class="btn btn-danger" id="backToMenu" style="display: none;">Back</button>
+<button type="button" class="btn btn-primary" id="backToDrinks" style="display: none;">Drinks</button>
+  </div>
+<div class="col"></div>
+    </div>
+      </div>
       </section>
 
     <section id="reviews" class="orangebg">
@@ -410,8 +436,6 @@
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/jquery.barrating.min.js"></script>
     <script src="js/examples.js"></script>
-
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
   </body>
 </html>

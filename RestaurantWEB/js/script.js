@@ -77,6 +77,8 @@ $('#appetizer').click(function() {
   $('#deserts').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
 });
 
 $('#soup').click(function() {
@@ -87,6 +89,8 @@ $('#soup').click(function() {
   $('#deserts').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
 });
 
 $('#mainDish').click(function() {
@@ -97,6 +101,8 @@ $('#mainDish').click(function() {
   $('#deserts').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
 });
 
 $('#salad').click(function() {
@@ -107,6 +113,8 @@ $('#salad').click(function() {
   $('#deserts').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
 });
 
 $('#deserts').click(function() {
@@ -117,6 +125,8 @@ $('#deserts').click(function() {
   $('#deserts').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
 });
 
 /* back btn food */
@@ -132,6 +142,18 @@ $('.back-bttn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
   $('#drinkMenu').hide();
+});
+
+$('#backToMenu').click(function() {
+  $('#backToDrinks').hide();
+  $('#backToMenu').hide();
+  $('#tableFood').hide();
+  $('#appetizer').show();
+  $('#soup').show();
+  $('#mainDish').show();
+  $('#salad').show();
+  $('#deserts').show();
+  $('#foodBtn').show();
 });
 
 })(jQuery); // End of use strict
