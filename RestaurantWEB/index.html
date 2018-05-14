@@ -141,7 +141,6 @@
             <h2>Reviews</h2>
             <p class="lead">  
               <button type="button" class="btn btn-primary" style="margin-top: 15px;" id="addReview">Add review</button>
-              <button type="button" class="btn btn-info" style="margin-top: 15px;" id="showReviews">Show reviews</button>
 
               <div id="rating" style="display: none;">
                <select id="example-css" name="rating" autocomplete="off">
@@ -236,10 +235,34 @@
     <section id="reservation">
       <div class="container">
         <div class="row">
-          <div class="col-lg-8 mx-auto">
+          <div class="col-sm">
             <h2>Reservation</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
-          </div>
+            <p class="lead"><iframe src="https://calendar.google.com/calendar/b/1/embed?showPrint=0&amp;showTabs=0&amp;mode=WEEK&amp;height=400&amp;wkst=2&amp;bgcolor=%23FFFFFF&amp;src=akademiasovy.sk_8g54ldq777ahjkjv2g8e8e1ub0%40group.calendar.google.com&amp;color=%23A32929&amp;ctz=Europe%2FPrague" style="border-width:0" width="400" height="400" frameborder="0" scrolling="no"></iframe>
+              </p>
+              </div>
+
+              <div class="col-sm reservStyle">
+              <form>
+                <div class="form-group">
+                 <label for="formGroupExampleInput">Name:</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label for="formGroupExampleInput2">Surname:</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Enter your surname">
+                </div>
+                 <div class="form-group">
+                  <label for="formGroupExampleInput2">E-mail:</label>
+                  <input type="email" class="form-control" id="formGroupExampleInput2" placeholder="example@gmail.com">
+                </div>
+                 <div class="form-group">
+                  <label for="formGroupExampleInput2">Phone Number:</label>
+                  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="+421 xxx xxx xxx">
+                </div>
+              </form>
+              <button type="button" class="btn btn-warning">Click here to book table!</button>
+            </div>
+
         </div>
       </div>
     </section> 

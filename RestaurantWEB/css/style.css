@@ -9,7 +9,7 @@ section {
 }
 
 .orangebg {
-    background-color: #fe972c;
+    background-color: #e9ecef;
 }
 
 #logo {
@@ -77,6 +77,11 @@ section {
 /* menu font size */
 .nav-item{                  
     font-size: 115%;
+}
+
+/* reservation form */
+.reservStyle{
+    margin-top: 65px;
 }
 
 /* footer */
