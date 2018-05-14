@@ -65,7 +65,7 @@ $('#menucko').click(function() {
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#drinkMenu').show("slow");
+  $('#mainDrinksMenu').show("slow");
 });
   
   /* after click on food category */
@@ -129,6 +129,84 @@ $('#deserts').click(function() {
   $('#backToDrinks').show();
 });
 
+/* after click on drink menu category */
+$('#smoothies').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#hotDrinks').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#iceDrinks').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#cocktails').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#beer').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#wine').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#sprites').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
 /* back btn food */
 $('.back-btn').click(function() {
   $('#drinks').show();
@@ -144,6 +222,7 @@ $('.back-bttn').click(function() {
   $('#drinkMenu').hide();
 });
 
+/* back to menu */
 $('#backToMenu').click(function() {
   $('#backToDrinks').hide();
   $('#backToMenu').hide();
