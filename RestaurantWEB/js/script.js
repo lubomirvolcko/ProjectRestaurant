@@ -65,7 +65,9 @@ $('#menucko').click(function() {
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
+  $('.textFood').hide();
   $('#mainDrinksMenu').show("slow");
+  $('#backDrinks').show();
 });
   
   /* after click on food category */
@@ -138,7 +140,9 @@ $('#smoothies').click(function() {
   $('#wine').hide();
   $('#sprites').hide();
   $('#smoothies').hide();
+  $('#backDrinks').hide();
   $('#tableDrinks').show("slow");
+  $('#buttonBack').show();
 });
 
 $('#hotDrinks').click(function() {
@@ -150,6 +154,8 @@ $('#hotDrinks').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#iceDrinks').click(function() {
@@ -161,6 +167,8 @@ $('#iceDrinks').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#cocktails').click(function() {
@@ -172,6 +180,8 @@ $('#cocktails').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#beer').click(function() {
@@ -183,6 +193,8 @@ $('#beer').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#wine').click(function() {
@@ -194,6 +206,8 @@ $('#wine').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#sprites').click(function() {
@@ -205,6 +219,8 @@ $('#sprites').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 /* back btn food */
@@ -220,6 +236,27 @@ $('.back-bttn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
   $('#drinkMenu').hide();
+});
+
+/* back btn drinks */
+$('#backDrinks').click(function() {
+  $('#drinks').show();
+  $('#menucko').show();
+  $('#backDrinks').hide();
+  $('#mainDrinksMenu').hide();
+});
+
+$('#buttonBack').click(function() {
+  $('#buttonBack').hide();
+  $('#tableDrinks').hide();
+  $('#backDrinks').show();
+  $('#hotDrinks').show("slow");
+  $('#iceDrinks').show("slow");
+  $('#cocktails').show("slow");
+  $('#beer').show("slow");
+  $('#wine').show("slow");
+  $('#sprites').show("slow");
+  $('#smoothies').show("slow");
 });
 
 /* back to menu */
