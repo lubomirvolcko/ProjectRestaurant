@@ -16,6 +16,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -80,7 +82,7 @@ getAuthenticationInfo();
         frame1.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frame1.setUndecorated(true);
         //frame1.setSize(1000,1000);
-        frame1.setContentPane(new UserAccount().getUserAccount(i, position));
+        frame1.setContentPane(new UserAccount().getUserAccount(i, username));
         frame1.setVisible(true);
         return frame1;
 
@@ -113,8 +115,8 @@ getAuthenticationInfo();
         for(Authentication d : auth)
         {
 
-            System.out.println(d.getLogin());
-            System.out.println(d.getPassword());
+            System.out.println("Login: "+d.getLogin());
+            System.out.println("Password: "+d.getPassword());
 
             if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
                 openForm(3, d.getPosition());

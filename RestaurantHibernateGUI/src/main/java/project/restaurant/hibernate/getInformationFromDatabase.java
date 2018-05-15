@@ -3,6 +3,8 @@ package project.restaurant.hibernate;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
+import project.restaurant.gui.MakeOrder;
+
 import java.util.List;
 
 public class getInformationFromDatabase
@@ -18,11 +20,18 @@ public void getDrinksSmoothies()
     List<Drink> drinkSmoothies=(List<Drink>)qry.list();
     se.getTransaction().commit();
     se.close();
+    String name;
+    Double price;
+    int item=0;
+    MakeOrder smoothie = new MakeOrder();
     for(Drink d : drinkSmoothies)
     {
-
-        System.out.println(d.getName());
-        System.out.println(d.getPrice());
+        item++;
+        name=d.getName();
+        price=d.getPrice();
+        smoothie.getSmootiesButtons(name, price, item);
+        //System.out.println(name);
+        //System.out.println(price);
     }
 }
 
@@ -74,7 +83,6 @@ public void getDrinksSmoothies()
         se.close();
         for(Drink d : drinkCocktails)
         {
-
             System.out.println(d.getName());
             System.out.println(d.getPrice());
         }

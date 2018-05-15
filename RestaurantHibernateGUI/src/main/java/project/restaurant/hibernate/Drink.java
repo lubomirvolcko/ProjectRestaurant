@@ -18,17 +18,17 @@ public class Drink
     @Column(name = "type")
     private String Type;
 
-    public String getPrice() {
+    public Double getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         Price = price;
     }
 
     @Column(name = "price")
 
-    private String Price;
+    private Double Price;
 
     public long getId() {
         return id;

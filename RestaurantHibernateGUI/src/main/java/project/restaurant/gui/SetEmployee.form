@@ -306,6 +306,7 @@
               <contentAreaFilled value="true"/>
               <enabled value="false"/>
               <font name="Century Gothic" size="0" style="1"/>
+              <icon value="src/img/back.png"/>
               <text value=""/>
             </properties>
           </component>
