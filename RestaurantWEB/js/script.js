@@ -57,21 +57,162 @@
 $('#menucko').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#foodMenu').show("slow");
+  $('#mainFoodMenu').show("slow");
+  $('#foodBtn').show("slow");
 });
 
 /* drink menu */
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('#drinkMenu').show("slow");
+  $('#mainDrinksMenu').show("slow");
+});
+  
+  /* after click on food category */
+$('#appetizer').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
+});
+
+$('#soup').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
+});
+
+$('#mainDish').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
+});
+
+$('#salad').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
+});
+
+$('#deserts').click(function() {
+  $('#appetizer').hide();
+  $('#soup').hide();
+  $('#mainDish').hide();
+  $('#salad').hide();
+  $('#deserts').hide();
+  $('#foodBtn').hide()
+  $('#tableFood').show("slow");
+  $('#backToMenu').show();
+  $('#backToDrinks').show();
+});
+
+/* after click on drink menu category */
+$('#smoothies').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#hotDrinks').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#iceDrinks').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#cocktails').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#beer').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#wine').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
+});
+
+$('#sprites').click(function() {
+  $('#hotDrinks').hide();
+  $('#iceDrinks').hide();
+  $('#cocktails').hide();
+  $('#beer').hide();
+  $('#wine').hide();
+  $('#sprites').hide();
+  $('#smoothies').hide();
+  $('#tableDrinks').show("slow");
 });
 
 /* back btn food */
 $('.back-btn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
-  $('#foodMenu').hide();
+  $('#mainFoodMenu').hide();
+  $('#foodBtn').hide();
 });
 
 /* back btn drinks */
@@ -79,6 +220,19 @@ $('.back-bttn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
   $('#drinkMenu').hide();
+});
+
+/* back to menu */
+$('#backToMenu').click(function() {
+  $('#backToDrinks').hide();
+  $('#backToMenu').hide();
+  $('#tableFood').hide();
+  $('#appetizer').show();
+  $('#soup').show();
+  $('#mainDish').show();
+  $('#salad').show();
+  $('#deserts').show();
+  $('#foodBtn').show();
 });
 
 })(jQuery); // End of use strict
