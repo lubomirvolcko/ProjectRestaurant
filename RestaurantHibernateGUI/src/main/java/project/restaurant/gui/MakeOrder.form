@@ -223,7 +223,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="5c05a" class="javax.swing.JButton" binding="btnPizza">
+              <component id="5c05a" class="javax.swing.JButton" binding="btnAppetizer">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -234,7 +234,7 @@
                   <foreground color="-8023247"/>
                   <horizontalTextPosition value="0"/>
                   <icon value="src/img/pizzaIcon.png"/>
-                  <text value="Pizza"/>
+                  <text value="Appetizer"/>
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>
@@ -253,9 +253,24 @@
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>
-              <component id="35529" class="javax.swing.JButton" binding="btnSoup">
+              <component id="f6e2d" class="javax.swing.JButton" binding="btnMainDish">
                 <constraints>
-                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-988964"/>
+                  <borderPainted value="false"/>
+                  <font name="Century Gothic" size="22" style="1"/>
+                  <foreground color="-8023247"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="src/img/meatIcon.png"/>
+                  <text value="Main dish"/>
+                  <verticalTextPosition value="3"/>
+                </properties>
+              </component>
+              <component id="5d94d" class="javax.swing.JButton" binding="btnSoup">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
@@ -268,24 +283,9 @@
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>
-              <component id="f6e2d" class="javax.swing.JButton" binding="btnMeat">
-                <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="22" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/meatIcon.png"/>
-                  <text value="Meat"/>
-                  <verticalTextPosition value="3"/>
-                </properties>
-              </component>
               <component id="ed01b" class="javax.swing.JButton" binding="btnDessert">
                 <constraints>
-                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
@@ -295,21 +295,6 @@
                   <horizontalTextPosition value="0"/>
                   <icon value="src/img/dessertIcon.png"/>
                   <text value="Desert"/>
-                  <verticalTextPosition value="3"/>
-                </properties>
-              </component>
-              <component id="5d94d" class="javax.swing.JButton" binding="btnPasta">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="22" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/pastaIcon.png"/>
-                  <text value="Pasta"/>
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>

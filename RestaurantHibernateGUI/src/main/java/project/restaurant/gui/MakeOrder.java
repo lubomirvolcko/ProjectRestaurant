@@ -22,10 +22,9 @@ public class MakeOrder {
     private JButton btnAlcoholDrinks;
     private JPanel pnlDrinksCategory;
     private JPanel pnlMealCategory;
-    private JButton btnPizza;
-    private JButton btnMeat;
+    private JButton btnAppetizer;
+    private JButton btnMainDish;
     private JButton btnSalad;
-    private JButton btnSoup;
     private JButton btnDessert;
     private JPanel pnlBtnBack;
     private JButton btnBack;
@@ -34,7 +33,7 @@ public class MakeOrder {
     private JButton btnSmoothie;
     private JButton btnHotDrinks;
     private JButton btnIceDrinks;
-    private JButton btnPasta;
+    private JButton btnSoup;
     public String state;
 
     public JPanel getPnlOrderedItems() {
