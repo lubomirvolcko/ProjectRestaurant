@@ -76,7 +76,7 @@ $('#appetizer').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -88,7 +88,7 @@ $('#soup').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -100,7 +100,7 @@ $('#mainDish').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -112,19 +112,19 @@ $('#salad').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
   $('#backToDrinks').show();
 });
 
-$('#deserts').click(function() {
+$('#desert').click(function() {
   $('#appetizer').hide();
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -268,8 +268,82 @@ $('#backToMenu').click(function() {
   $('#soup').show();
   $('#mainDish').show();
   $('#salad').show();
-  $('#deserts').show();
+  $('#desert').show();
   $('#foodBtn').show();
 });
+
+/*$.get('http://localhost:8080/data',  function(data){
+      
+var i = 0;
+
+ for( i = 0;i<data.length;i++){
+          console.log(JSON.parse(JSON.stringify(data[i].Name)));
+          $("#tableFood").append("<tr><td>"+data[i].Name+"</td><td>"+data[i].Price+"</td>"+data[i].Price+"</tr>");
+
+console.log(type);
+          
+          //console.log(parse);
+          
+          
+
+      
+    }
+
+
+  
+   });*/
+   var type;
+$("#appetizer").click(function(){
+     type = $("#appetizer").attr('id');
+        $( "#tableFood" ).empty();
+     postReq(type);
+});
+$("#soup").click(function(){
+     type = $("#soup").attr('id');
+     postReq(type);
+     $( "#tableFood" ).empty();
+});
+$("#mainDish").click(function(){
+     type = $("#mainDish").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+$("#salad").click(function(){
+     type = $("#salad").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+$("#desert").click(function(){
+     type = $("#desert").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+$("#tableFood").attr("<table class=table table-striped table-dark");
+function postReq(type){
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/type',
+        contentType: 'application/json',
+        data: JSON.stringify({"type": type}),
+        dataType: 'json',
+        success: function(response){ 
+          var i;
+           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Allergens"+"</th>"+"</tr>"+"</thead>");
+          for( i = 0;i<response.length;i++){
+          console.log(JSON.parse(JSON.stringify(response[i].Name)));
+
+          $("#tableFood").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].Price+"€"+"</td>"+response[i].Price+"<td>"+response[i].VolumeWeight+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Allergens+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
+
+          
+     
+          
+
+      
+    } }
+} );}
+
+
 
 })(jQuery); // End of use strict
