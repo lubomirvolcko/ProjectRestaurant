@@ -65,7 +65,9 @@ $('#menucko').click(function() {
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
+  $('.textFood').hide();
   $('#mainDrinksMenu').show("slow");
+  $('#backDrinks').show();
 });
   
   /* after click on food category */
@@ -74,7 +76,7 @@ $('#appetizer').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -86,7 +88,7 @@ $('#soup').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -98,7 +100,7 @@ $('#mainDish').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -110,19 +112,19 @@ $('#salad').click(function() {
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
   $('#backToDrinks').show();
 });
 
-$('#deserts').click(function() {
+$('#desert').click(function() {
   $('#appetizer').hide();
   $('#soup').hide();
   $('#mainDish').hide();
   $('#salad').hide();
-  $('#deserts').hide();
+  $('#desert').hide();
   $('#foodBtn').hide()
   $('#tableFood').show("slow");
   $('#backToMenu').show();
@@ -138,7 +140,9 @@ $('#smoothies').click(function() {
   $('#wine').hide();
   $('#sprites').hide();
   $('#smoothies').hide();
+  $('#backDrinks').hide();
   $('#tableDrinks').show("slow");
+  $('#buttonBack').show();
 });
 
 $('#hotDrinks').click(function() {
@@ -150,6 +154,8 @@ $('#hotDrinks').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#iceDrinks').click(function() {
@@ -161,6 +167,8 @@ $('#iceDrinks').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#cocktails').click(function() {
@@ -172,6 +180,8 @@ $('#cocktails').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#beer').click(function() {
@@ -183,6 +193,8 @@ $('#beer').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#wine').click(function() {
@@ -194,6 +206,8 @@ $('#wine').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 $('#sprites').click(function() {
@@ -205,6 +219,8 @@ $('#sprites').click(function() {
   $('#sprites').hide();
   $('#smoothies').hide();
   $('#tableDrinks').show("slow");
+  $('#backDrinks').hide();
+  $('#buttonBack').show();
 });
 
 /* back btn food */
@@ -222,6 +238,27 @@ $('.back-bttn').click(function() {
   $('#drinkMenu').hide();
 });
 
+/* back btn drinks */
+$('#backDrinks').click(function() {
+  $('#drinks').show();
+  $('#menucko').show();
+  $('#backDrinks').hide();
+  $('#mainDrinksMenu').hide();
+});
+
+$('#buttonBack').click(function() {
+  $('#buttonBack').hide();
+  $('#tableDrinks').hide();
+  $('#backDrinks').show();
+  $('#hotDrinks').show("slow");
+  $('#iceDrinks').show("slow");
+  $('#cocktails').show("slow");
+  $('#beer').show("slow");
+  $('#wine').show("slow");
+  $('#sprites').show("slow");
+  $('#smoothies').show("slow");
+});
+
 /* back to menu */
 $('#backToMenu').click(function() {
   $('#backToDrinks').hide();
@@ -231,8 +268,160 @@ $('#backToMenu').click(function() {
   $('#soup').show();
   $('#mainDish').show();
   $('#salad').show();
-  $('#deserts').show();
+  $('#desert').show();
   $('#foodBtn').show();
 });
+
+/*$.get('http://localhost:8080/data',  function(data){
+      
+var i = 0;
+
+ for( i = 0;i<data.length;i++){
+          console.log(JSON.parse(JSON.stringify(data[i].Name)));
+          $("#tableFood").append("<tr><td>"+data[i].Name+"</td><td>"+data[i].Price+"</td>"+data[i].Price+"</tr>");
+
+console.log(type);
+          
+          //console.log(parse);
+          
+          
+
+      
+    }
+
+
+  
+   });*/
+   var type;
+   var mlg;
+$("#appetizer").click(function(){
+     type = $("#appetizer").attr('id');
+        $( "#tableFood" ).empty();
+     postReq(type);
+});
+$("#soup").click(function(){
+     type = $("#soup").attr('id');
+     postReq(type);
+     $( "#tableFood" ).empty();
+});
+$("#mainDish").click(function(){
+     type = $("#mainDish").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+$("#salad").click(function(){
+     type = $("#salad").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+$("#desert").click(function(){
+     type = $("#desert").attr('id');
+     postReq(type);
+      $( "#tableFood" ).empty();
+});
+
+
+$("#tableFood").attr("<table class=table table-striped table-dark");
+function postReq(type){
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/type',
+        contentType: 'application/json',
+        data: JSON.stringify({"type": type}),
+        dataType: 'json',
+        success: function(response){ 
+          var i;
+          if(type=="soup")
+            mlg="ml";
+          else
+            mlg="g";
+           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Allergens"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          for( i = 0;i<response.length;i++){
+          console.log(JSON.parse(JSON.stringify(response[i].Name)));
+        
+          $("#tableFood").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
+
+          
+     
+          
+
+      
+    } }
+} );}
+
+$("#smoothies").click(function(){
+     type = $("#smoothies").attr('id');
+     getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#hotDrinks").click(function(){
+     type = $("#hotDrinks").attr('id');
+      getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+
+$("#iceDrinks").click(function(){
+     type = $("#iceDrinks").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#cocktails").click(function(){
+     type = $("#cocktails").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#beer").click(function(){
+     type = $("#beer").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#wine").click(function(){
+     type = $("#wine").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#sprites").click(function(){
+     type = $("#sprites").attr('id');
+       getDrinks(type);
+
+      $( "#tableDrinks" ).empty();
+});
+mlg="ml";
+
+function getDrinks(type){
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/drink',
+        contentType: 'application/json',
+        data: JSON.stringify({"type": type}),
+        dataType: 'json',
+        success: function(response){ 
+          var i;
+          
+           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          for( i = 0;i<response.length;i++){
+          
+        
+          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+mlg+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
+
+          
+     
+          
+
+      
+    } }
+} );}
+
+
 
 })(jQuery); // End of use strict
