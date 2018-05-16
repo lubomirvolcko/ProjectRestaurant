@@ -293,6 +293,7 @@ console.log(type);
   
    });*/
    var type;
+   var mlg;
 $("#appetizer").click(function(){
      type = $("#appetizer").attr('id');
         $( "#tableFood" ).empty();
@@ -318,6 +319,8 @@ $("#desert").click(function(){
      postReq(type);
       $( "#tableFood" ).empty();
 });
+
+
 $("#tableFood").attr("<table class=table table-striped table-dark");
 function postReq(type){
 $.post({
@@ -329,11 +332,86 @@ $.post({
         dataType: 'json',
         success: function(response){ 
           var i;
-           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Allergens"+"</th>"+"</tr>"+"</thead>");
+          if(type=="soup")
+            mlg="ml";
+          else
+            mlg="g";
+           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Allergens"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
           for( i = 0;i<response.length;i++){
           console.log(JSON.parse(JSON.stringify(response[i].Name)));
+        
+          $("#tableFood").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
 
-          $("#tableFood").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].Price+"€"+"</td>"+response[i].Price+"<td>"+response[i].VolumeWeight+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Allergens+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
+          
+     
+          
+
+      
+    } }
+} );}
+
+$("#smoothies").click(function(){
+     type = $("#smoothies").attr('id');
+     getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#hotDrinks").click(function(){
+     type = $("#hotDrinks").attr('id');
+      getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+
+$("#iceDrinks").click(function(){
+     type = $("#iceDrinks").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#cocktails").click(function(){
+     type = $("#cocktails").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#beer").click(function(){
+     type = $("#beer").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#wine").click(function(){
+     type = $("#wine").attr('id');
+       getDrinks(type);
+      $( "#tableDrinks" ).empty();
+});
+
+$("#sprites").click(function(){
+     type = $("#sprites").attr('id');
+       getDrinks(type);
+
+      $( "#tableDrinks" ).empty();
+});
+mlg="ml";
+
+function getDrinks(type){
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/drink',
+        contentType: 'application/json',
+        data: JSON.stringify({"type": type}),
+        dataType: 'json',
+        success: function(response){ 
+          var i;
+          
+           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          for( i = 0;i<response.length;i++){
+          
+        
+          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+mlg+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
 
 
           

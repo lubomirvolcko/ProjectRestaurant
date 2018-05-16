@@ -24,21 +24,6 @@ app.use(function(req, res, next) {
 	
 
 
-/*app.get('/data', cors(),function(req,res,next){
-
-
-	connection.query("SELECT Name,Price,VolumeWeight,composition ,Allergens from food where type like ? ",function(err, rows, fields){
-		
-		if(rows.length != 0){
-			
-			
-			res.send(rows);
-		}else{
-			
-			res.send(rows);
-		}
-	});
-});*/
 
 app.post('/type',cors(),function(req,res){
 	var type = req.body.type;
@@ -54,14 +39,21 @@ app.post('/type',cors(),function(req,res){
 });
 
 
-app.post('/users', function (req, res) {
-    connection.query('INSERT INTO users SET ?', req.body, 
-        function (err, result) {
-            if (err) throw err;
-            res.send('User added to database with ID: ' + result.insertId);
-        }
-    );
+app.post('/drink',cors(),function(req,res){
+	var type = req.body.type;
+	
+	connection.query("SELECT Name,composition,price,volume from drink where type like ? ",[type],function(err, rows, fields){
+	
+      
+	res.send(rows);
+	console.log(rows);
+			
+		
+	});
 });
+
+
+
 
 	
 http.listen(8080,function(){
