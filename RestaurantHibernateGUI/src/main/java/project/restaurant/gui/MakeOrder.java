@@ -164,36 +164,34 @@ public class MakeOrder {
         pnlSmoothies.setVisible(true);
     }
 
+    //create labels and button in pnlSmoothies
     public void getSmootiesButtons(final String name, Double price, int item){
-        /*JButton btnSmootie = new JButton();
-        btnSmootie.setName("btnSmootie");
-        btnSmootie.setText(name);
-        btnSmootie.setPreferredSize(new Dimension(100, 100));
-        pnlSmoothies.add(btnSmootie, 1, 1);
-        //pnlSmoothies.revalidate();
-        //pnlSmoothies.repaint();*/
 
         try{
-            JLabel lblSmootieNumber = new JLabel("name");
-            JButton btnSmootie = new JButton();
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
 
             pnlSmoothies.setLayout(new FlowLayout());
 
+            //create label in pnlSmothies for number of item
             pnlSmoothies.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.RIGHT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             //Dimension size = lblSmootieNumber.getPreferredSize();
             //lblSmootieNumber.setBounds(100, 100, size.width, size.height);
 
+            //create label in pnlSmothies for name of item
             pnlSmoothies.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.RIGHT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             //Dimension size2 = lblSmootieNumber.getPreferredSize();
             //lblSmootieNumber.setBounds(300, 100, size2.width, size2.height);
 
+            //create label in pnlSmothies for price of item
             pnlSmoothies.add(lblSmootieNumber = new JLabel(""+price, FlowLayout.RIGHT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             //Dimension size3 = lblSmootieNumber.getPreferredSize();
             //lblSmootieNumber.setBounds(500, 100, size3.width, size3.height);
 
+            //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSmoothies.add(btnSmootie = new JButton("OK"));
             btnSmootie.setBackground(Color.getHSBColor(68.56f, 66.67f, 57.65f));
             btnSmootie.setForeground(Color.white);
@@ -209,18 +207,10 @@ public class MakeOrder {
                 }
             });
 
-        /*JLabel lblSmootieName = new JLabel(""+name);
-        lblSmootieName.setText(name);
-        JLabel lblSmootiePrice = new JLabel(""+ price.toString());
-        lblSmootiePrice.setText(price.toString());
-        //pnlSmoothies.add(lblSmootieNumber);
-        pnlSmoothies.add(lblSmootieName);
-        //pnlSmoothies.add(lblSmootiePrice);*/
-
             System.out.println("smoothie: "+name);
             System.out.println("price: "+price);
             System.out.println("item: "+item);
-            //getPanel(name, price, item);
+
         }catch (Exception e){
             e.getStackTrace();
         }
@@ -228,6 +218,8 @@ public class MakeOrder {
 
     }
 
+
+    //send item to order on table
     public void sendToTable(String name, Double price){
         JLabel lblSmootie = new JLabel("name");
         JButton btnSmootie = new JButton();
@@ -251,31 +243,6 @@ public class MakeOrder {
         return pnlSmoothies;
     }
 
-    public void setPnlSmoothies(JPanel pnlSmoothies) {
-        this.pnlSmoothies = pnlSmoothies;
-        JLabel lab1 = new JLabel("User Name", JLabel.LEFT);
-        pnlSmoothies.setLayout(new FlowLayout());
-        pnlSmoothies.add(lab1 = new JLabel("ahoj fero"));
-    }
-
-    public void getPanel(String name, Double price, int item){
-
-        switch (item){
-            case 1: JLabel lab11 = new JLabel("User Name", JLabel.CENTER);
-                pnlSmoothies.setLayout(new FlowLayout());
-                //pnlSmoothies.add(lab11 = new JLabel(""+name));
-                pnlSmoothies.add(lab11 = new JLabel("AHOJ"));
-                System.out.println("case 1!!! ");
-                break;
-            case 2: JButton lab12 = new JButton("User Name");
-                pnlSmoothies.setLayout(new FlowLayout());
-                pnlSmoothies.add(lab12 = new JButton(""+name));
-                System.out.println("case 2 !!!");
-                break;
-        }
-
-
-    }
 
     }
 

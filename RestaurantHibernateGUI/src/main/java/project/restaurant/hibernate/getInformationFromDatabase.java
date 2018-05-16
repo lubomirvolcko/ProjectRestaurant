@@ -31,11 +31,9 @@ public void getDrinksSmoothies()
         item++;
         name=d.getName();
         price=d.getPrice();
-        //smoothie.XX(name, price, item);
         smoothie.getSmootiesButtons(name, price, item);
         //System.out.println(name);
         //System.out.println(price);
-        //smoothie.getPanel(name, price, item);
         System.out.println(name+"hotovo!!   "+item);
     }
 }
