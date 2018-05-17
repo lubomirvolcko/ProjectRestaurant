@@ -89,11 +89,6 @@ section {
     text-align: center;
 }
 
-#tableDrinks{
-   
-    text-align: center;
-}
-
 /* footer */
 
 #myFooter {
@@ -173,4 +168,12 @@ section {
     #myFooter {
         text-align: center;
     }
+}
+
+
+.Modalgroup
+{
+text-align: center;
+margin-top: 40px;
+
 }
