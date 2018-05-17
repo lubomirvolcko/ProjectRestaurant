@@ -48,11 +48,6 @@
    $('#post-review-box').hide("slow");
 });
 
-/*
-   $('#hotDrinks').click(function() {
-      $('#hot-drinks').toggle("slow");
-   });       // po kliknuti sa zobrazi */
-
 /* food menu */
 $('#menucko').click(function() {
   $('#drinks').hide();

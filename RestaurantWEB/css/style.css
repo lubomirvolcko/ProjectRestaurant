@@ -89,6 +89,18 @@ section {
     text-align: center;
 }
 
+#tableDrinks{
+   
+    text-align: center;
+}
+
+/* modal group for reservation */
+.Modalgroup{
+text-align: center;
+margin-top: 80px;
+}
+
+
 /* footer */
 
 #myFooter {
@@ -168,12 +180,4 @@ section {
     #myFooter {
         text-align: center;
     }
-}
-
-
-.Modalgroup
-{
-text-align: center;
-margin-top: 40px;
-
 }
