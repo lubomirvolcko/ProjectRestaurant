@@ -1,12 +1,17 @@
 package project.restaurant.gui;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import project.restaurant.hibernate.Drink;
+import project.restaurant.hibernate.HibernateUtil;
 import project.restaurant.hibernate.getInformationFromDatabase;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.List;
 
 public class MakeOrder {
     private JPanel pnlMakeOrder;
@@ -36,6 +41,9 @@ public class MakeOrder {
     private JButton btnIceDrinks;
     private JButton btnSoup;
     public String state;
+    String name;
+    Double price;
+    int item=0;
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -113,18 +121,54 @@ public class MakeOrder {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                getInformationFromDatabase drink = new getInformationFromDatabase();
+
 
                 //drink.getDrinksSmoothies();
                 Smoothies();
-                drink.getDrinksSmoothies();
+                getDrinksSmoothies();
 
-                getSmootiesButtons(drink.getName(),drink.getPrice(),drink.getItem());
+
+
 
                 //getPanel("smootie", 0.00, 1);
                 //getPanel("drink", 2.22, 2);
             }
         });
+    }
+
+    public void getDrinksSmoothies()
+    {
+
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Drink where type='Smoothies'");
+        java.util.List<Drink> drinkSmoothies=(List<Drink>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        int f;
+        int i = drinkSmoothies.size();
+
+        MakeOrder smoothie = new MakeOrder();
+
+
+        for(f=0;f<1;f++)
+        {
+            name=drinkSmoothies.get(f).getName();
+            smoothie.getSmootiesButtons(name, price, item);
+        }
+
+        for(Drink d : drinkSmoothies)
+        {
+            item++;
+            name=d.getName();
+            price=d.getPrice();
+            getSmootiesButtons(name,price,item);
+
+
+
+
+        }
     }
 
     public void StateMakeorder() {

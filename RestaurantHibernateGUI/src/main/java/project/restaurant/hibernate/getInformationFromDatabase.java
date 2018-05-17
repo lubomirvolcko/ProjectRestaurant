@@ -17,42 +17,7 @@ public class getInformationFromDatabase
     int item=0;
 
 
-    public void getDrinksSmoothies()
-{
 
-    SessionFactory sf = HibernateUtil.getSessionFactory();
-    Session se = sf.openSession();
-    se.beginTransaction();
-    Query qry=se.createQuery("from Drink where type='Smoothies'");
-    List<Drink> drinkSmoothies=(List<Drink>)qry.list();
-    se.getTransaction().commit();
-    se.close();
-    int f;
-    int i = drinkSmoothies.size();
-
-    MakeOrder smoothie = new MakeOrder();
-
-
-    for(f=0;f<1;f++)
-    {
-        name=drinkSmoothies.get(f).getName();
-        smoothie.getSmootiesButtons(name, price, item);
-    }
-
-    for(Drink d : drinkSmoothies)
-    {
-        item++;
-        name=d.getName();
-        price=d.getPrice();
-
-
-
-
-
-
-
-    }
-}
     public String getName() {
         return name;
     }
