@@ -1,5 +1,6 @@
 package project.restaurant.gui;
 
+import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.getInformationFromDatabase;
 
 import javax.swing.*;
@@ -113,9 +114,13 @@ public class MakeOrder {
             public void actionPerformed(ActionEvent e) {
 
                 getInformationFromDatabase drink = new getInformationFromDatabase();
+
                 //drink.getDrinksSmoothies();
                 Smoothies();
-                getSmootiesButtons("smootie", 2.50, 1);
+                drink.getDrinksSmoothies();
+
+                getSmootiesButtons(drink.getName(),drink.getPrice(),drink.getItem());
+
                 //getPanel("smootie", 0.00, 1);
                 //getPanel("drink", 2.22, 2);
             }
@@ -164,8 +169,9 @@ public class MakeOrder {
     }
 
     //create labels and button in pnlSmoothies
-    public void getSmootiesButtons(final String name, Double price, int item){
+    public void getSmootiesButtons(String name, Double price, int item){
 
+               getInformationFromDatabase drink = new getInformationFromDatabase();
         try{
             JLabel lblSmootieNumber = new JLabel("name"); //create label
             JButton btnSmootie = new JButton(); //create button
@@ -185,7 +191,7 @@ public class MakeOrder {
             //lblSmootieNumber.setBounds(300, 100, size2.width, size2.height);
 
             //create label in pnlSmothies for price of item
-            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+price, FlowLayout.RIGHT));
+            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+price , FlowLayout.RIGHT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             //Dimension size3 = lblSmootieNumber.getPreferredSize();
             //lblSmootieNumber.setBounds(500, 100, size3.width, size3.height);

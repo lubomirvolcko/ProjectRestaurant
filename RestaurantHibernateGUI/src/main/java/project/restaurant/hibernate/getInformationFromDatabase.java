@@ -12,7 +12,12 @@ import java.util.List;
 public class getInformationFromDatabase
 {
 
-public void getDrinksSmoothies()
+    String name;
+    Double price;
+    int item=0;
+
+
+    public void getDrinksSmoothies()
 {
 
     SessionFactory sf = HibernateUtil.getSessionFactory();
@@ -22,21 +27,55 @@ public void getDrinksSmoothies()
     List<Drink> drinkSmoothies=(List<Drink>)qry.list();
     se.getTransaction().commit();
     se.close();
-    String name;
-    Double price;
-    int item=0;
+    int f;
+    int i = drinkSmoothies.size();
+
     MakeOrder smoothie = new MakeOrder();
+
+
+    for(f=0;f<1;f++)
+    {
+        name=drinkSmoothies.get(f).getName();
+        smoothie.getSmootiesButtons(name, price, item);
+    }
+
     for(Drink d : drinkSmoothies)
     {
         item++;
         name=d.getName();
         price=d.getPrice();
-        smoothie.getSmootiesButtons(name, price, item);
-        //System.out.println(name);
-        //System.out.println(price);
-        System.out.println(name+"hotovo!!   "+item);
+
+
+
+
+
+
+
     }
 }
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Double getPrice() {
+        return price;
+    }
+
+    public void setPrice(Double price) {
+        this.price = price;
+    }
+
+    public int getItem() {
+        return item;
+    }
+
+    public void setItem(int item) {
+        this.item = item;
+    }
 
 
     public void getHotDrinks()
