@@ -43,6 +43,7 @@ public class SetEmployee {
     private JTextField updateTxtIdcard;
     private JComboBox updateJcomboPosition;
     private JPasswordField updatePswPassword;
+    private JLabel lblError;
     public String State;
 
     public JPanel getPnlSetEmployee() {
@@ -79,6 +80,9 @@ public class SetEmployee {
         pnlAddEmployee.setVisible(false);
         pnlDeleteEmployee.setVisible(false);
         pnlUpdateEmployee.setVisible(false);
+        lblError.setVisible(false);
+        txtLogin.setText("");
+        pswFirst.setText("");
 
         tblEmployees.setBackground(Color.RED);
         tblEmployees.setForeground(Color.black);
@@ -134,6 +138,11 @@ public class SetEmployee {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                /*if (txtLogin.getText()=="" || pswFirst.getText()=="")
+                {
+                    lblError.setVisible(true);
+                    System.out.println("ERROR Login can' be empty");
+                }else {*/
                     String position = (String) cmbPosition.getSelectedItem();
 
                     SessionFactory sf = HibernateUtil.getSessionFactory();
@@ -165,7 +174,7 @@ public class SetEmployee {
                     JComponent comp = (JComponent) e.getSource();
                     Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                     win.dispose();
-
+                //}
 
 
 
