@@ -2,16 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="633f36e6-18ce-4e82-873b-662c02ff45cf" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/intellij/uiDesigner/core/LayoutState.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/getInformationFromDatabase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/getInformationFromDatabase.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" afterDir="false" />
@@ -20,114 +15,7 @@
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/RestaurantHibernateGUI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_annotations_3_5_6_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_8_0_beta0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/Hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/RestaurantHibernateGUI.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/DrinksIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/MealIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/SovyRestaurant_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/addEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/alcDrinkIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/bill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/btnStorno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/deleteEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/dessertIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/discount.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/logOut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/meatIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/order.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/pastaIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/pizzaIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/saladIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/setEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/softDrinkIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/soupIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/storno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/teble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/src/img/transfer.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__antlr_antlr_2_7_7.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__com_fasterxml_classmate_1_3_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__dom4j_dom4j_1_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__javax_xml_bind_jaxb_api_2_2_11.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__mysql_mysql_connector_java_5_1_38.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_apiguardian_apiguardian_api_1_0_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_common_hibernate_commons_annotations_5_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_annotations_3_5_6_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_commons_annotations_3_2_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_hibernate_core_5_2_12_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_0_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_hibernate_javax_persistence_hibernate_jpa_2_1_api_1_0_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_javassist_javassist_3_20_0_GA.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_jandex_2_0_3_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_logging_jboss_logging_3_3_0_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_jboss_spec_javax_transaction_jboss_transaction_api_1_2_spec_1_0_1_Final.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_junit_jupiter_junit_jupiter_api_5_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_junit_platform_junit_platform_commons_1_2_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_opentest4j_opentest4j_1_1_0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_8_0_beta0.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/Hibernate.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/log4j.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/DrinksIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/MealIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/SovyRestaurant_logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/addEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/alcDrinkIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/back.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/bill.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/btnStorno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/deleteEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/dessertIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/discount.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/logOut.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/meatIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/order.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/pastaIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/pizzaIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/saladIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/setEmployee.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/softDrinkIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/soupIcon.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/storno.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/teble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/target/classes/target/classes/target/classes/src/img/transfer.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/hibernate/getInformationFromDatabase.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/hibernate/getInformationFromDatabase.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -143,8 +31,8 @@
       <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="296" column="47" lean-forward="true" selection-start-line="296" selection-start-column="47" selection-end-line="296" selection-end-column="47" />
+            <state relative-caret-position="592">
+              <caret line="915" column="67" selection-start-line="915" selection-start-column="67" selection-end-line="915" selection-end-column="67" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#1436#1437#0" expanded="true" />
@@ -159,32 +47,63 @@
                 <element signature="e#1762#1763#0" expanded="true" />
                 <element signature="e#1801#1802#0" expanded="true" />
                 <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#3099#3381#0" expanded="true" />
-                <element signature="e#3380#3381#0" expanded="true" />
-                <element signature="e#3421#3555#0" expanded="true" />
-                <element signature="e#3554#3555#0" expanded="true" />
-                <element signature="e#3593#3725#0" expanded="true" />
-                <element signature="e#3724#3725#0" expanded="true" />
-                <element signature="e#3792#4231#0" expanded="true" />
-                <element signature="e#4230#4231#0" expanded="true" />
-                <element signature="e#4274#4429#0" expanded="true" />
-                <element signature="e#4428#4429#0" expanded="true" />
-                <element signature="e#4470#4771#0" expanded="true" />
-                <element signature="e#4770#4771#0" expanded="true" />
-                <element signature="e#8525#8747#0" expanded="true" />
-                <element signature="e#8746#8747#0" expanded="true" />
-                <element signature="e#10154#10155#0" expanded="true" />
-                <element signature="e#10189#10190#0" expanded="true" />
+                <element signature="e#7741#8023#0" expanded="true" />
+                <element signature="e#8022#8023#0" expanded="true" />
+                <element signature="e#8063#8197#0" expanded="true" />
+                <element signature="e#8196#8197#0" expanded="true" />
+                <element signature="e#8235#8367#0" expanded="true" />
+                <element signature="e#8366#8367#0" expanded="true" />
+                <element signature="e#8434#9219#0" expanded="true" />
+                <element signature="e#9218#9219#0" expanded="true" />
+                <element signature="e#9262#9417#0" expanded="true" />
+                <element signature="e#9416#9417#0" expanded="true" />
+                <element signature="e#9458#9698#0" expanded="true" />
+                <element signature="e#9697#9698#0" expanded="true" />
+                <element signature="e#9740#9927#0" expanded="true" />
+                <element signature="e#9926#9927#0" expanded="true" />
+                <element signature="e#9969#10156#0" expanded="true" />
+                <element signature="e#10155#10156#0" expanded="true" />
+                <element signature="e#10202#10360#0" expanded="true" />
+                <element signature="e#10359#10360#0" expanded="true" />
+                <element signature="e#10398#10575#0" expanded="true" />
+                <element signature="e#10574#10575#0" expanded="true" />
+                <element signature="e#10621#10792#0" expanded="true" />
+                <element signature="e#10791#10792#0" expanded="true" />
+                <element signature="e#10853#11022#0" expanded="true" />
+                <element signature="e#11021#11022#0" expanded="true" />
+                <element signature="e#11073#11240#0" expanded="true" />
+                <element signature="e#11239#11240#0" expanded="true" />
+                <element signature="e#15947#16252#0" expanded="true" />
+                <element signature="e#16251#16252#0" expanded="true" />
+                <element signature="e#18790#19095#0" expanded="true" />
+                <element signature="e#19094#19095#0" expanded="true" />
+                <element signature="e#21662#21967#0" expanded="true" />
+                <element signature="e#21966#21967#0" expanded="true" />
+                <element signature="e#24505#24810#0" expanded="true" />
+                <element signature="e#24809#24810#0" expanded="true" />
+                <element signature="e#27377#27682#0" expanded="true" />
+                <element signature="e#27681#27682#0" expanded="true" />
+                <element signature="e#30249#30554#0" expanded="true" />
+                <element signature="e#30553#30554#0" expanded="true" />
+                <element signature="e#33167#33472#0" expanded="true" />
+                <element signature="e#33471#33472#0" expanded="true" />
+                <element signature="e#20693#20694#0" expanded="true" />
+                <element signature="e#20728#20729#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
+          <provider selected="true" editor-type-id="ui-designer" />
+        </entry>
+      </file>
       <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="263">
-              <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+            <state relative-caret-position="-304">
+              <caret line="70" selection-start-line="70" selection-end-line="70" />
             </state>
           </provider>
         </entry>
@@ -192,8 +111,8 @@
       <file leaf-file-name="getInformationFromDatabase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/getInformationFromDatabase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="60" selection-end-column="9" />
+            <state relative-caret-position="136">
+              <caret line="54" selection-start-line="54" selection-end-line="54" />
             </state>
           </provider>
         </entry>
@@ -271,11 +190,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
-          <provider selected="true" editor-type-id="ui-designer" />
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
@@ -299,6 +213,8 @@
       <find>btnSmoo</find>
       <find>getSmoo</find>
       <find>getText</find>
+      <find>drinkSmoothies</find>
+      <find>btnAl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -503,7 +419,14 @@
       <option name="project" value="LOCAL" />
       <updated>1526503183784</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="set position in pnlSmooties of created buttons and labels">
+      <created>1526604436532</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1526604436532</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -524,6 +447,7 @@
       <window_info id="Capture Tool" order="0" />
       <window_info id="Designer" order="1" />
       <window_info content_ui="combo" id="Project" order="4" visible="true" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32943678" />
       <window_info id="Structure" order="5" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="6" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -533,7 +457,6 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="7" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="right" id="Commander" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Find" order="5" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="4" />
     </layout>
@@ -571,7 +494,8 @@
     <MESSAGE value="added btns on soft drink page" />
     <MESSAGE value="generate lables in panel smootie" />
     <MESSAGE value="create table of employee" />
-    <option name="LAST_COMMIT_MESSAGE" value="create table of employee" />
+    <MESSAGE value="set position in pnlSmooties of created buttons and labels" />
+    <option name="LAST_COMMIT_MESSAGE" value="set position in pnlSmooties of created buttons and labels" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -857,8 +781,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/getInformationFromDatabase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="59" column="21" selection-start-line="59" selection-start-column="21" selection-end-line="60" selection-end-column="9" />
+        <state relative-caret-position="136">
+          <caret line="54" selection-start-line="54" selection-end-line="54" />
         </state>
       </provider>
     </entry>
@@ -867,15 +791,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="62" column="40" selection-start-line="62" selection-start-column="40" selection-end-line="62" selection-end-column="40" />
+        <state relative-caret-position="-304">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="296" column="47" lean-forward="true" selection-start-line="296" selection-start-column="47" selection-end-line="296" selection-end-column="47" />
+        <state relative-caret-position="592">
+          <caret line="915" column="67" selection-start-line="915" selection-start-column="67" selection-end-line="915" selection-end-column="67" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#1436#1437#0" expanded="true" />
@@ -890,22 +814,48 @@
             <element signature="e#1762#1763#0" expanded="true" />
             <element signature="e#1801#1802#0" expanded="true" />
             <element signature="e#1836#1837#0" expanded="true" />
-            <element signature="e#3099#3381#0" expanded="true" />
-            <element signature="e#3380#3381#0" expanded="true" />
-            <element signature="e#3421#3555#0" expanded="true" />
-            <element signature="e#3554#3555#0" expanded="true" />
-            <element signature="e#3593#3725#0" expanded="true" />
-            <element signature="e#3724#3725#0" expanded="true" />
-            <element signature="e#3792#4231#0" expanded="true" />
-            <element signature="e#4230#4231#0" expanded="true" />
-            <element signature="e#4274#4429#0" expanded="true" />
-            <element signature="e#4428#4429#0" expanded="true" />
-            <element signature="e#4470#4771#0" expanded="true" />
-            <element signature="e#4770#4771#0" expanded="true" />
-            <element signature="e#8525#8747#0" expanded="true" />
-            <element signature="e#8746#8747#0" expanded="true" />
-            <element signature="e#10154#10155#0" expanded="true" />
-            <element signature="e#10189#10190#0" expanded="true" />
+            <element signature="e#7741#8023#0" expanded="true" />
+            <element signature="e#8022#8023#0" expanded="true" />
+            <element signature="e#8063#8197#0" expanded="true" />
+            <element signature="e#8196#8197#0" expanded="true" />
+            <element signature="e#8235#8367#0" expanded="true" />
+            <element signature="e#8366#8367#0" expanded="true" />
+            <element signature="e#8434#9219#0" expanded="true" />
+            <element signature="e#9218#9219#0" expanded="true" />
+            <element signature="e#9262#9417#0" expanded="true" />
+            <element signature="e#9416#9417#0" expanded="true" />
+            <element signature="e#9458#9698#0" expanded="true" />
+            <element signature="e#9697#9698#0" expanded="true" />
+            <element signature="e#9740#9927#0" expanded="true" />
+            <element signature="e#9926#9927#0" expanded="true" />
+            <element signature="e#9969#10156#0" expanded="true" />
+            <element signature="e#10155#10156#0" expanded="true" />
+            <element signature="e#10202#10360#0" expanded="true" />
+            <element signature="e#10359#10360#0" expanded="true" />
+            <element signature="e#10398#10575#0" expanded="true" />
+            <element signature="e#10574#10575#0" expanded="true" />
+            <element signature="e#10621#10792#0" expanded="true" />
+            <element signature="e#10791#10792#0" expanded="true" />
+            <element signature="e#10853#11022#0" expanded="true" />
+            <element signature="e#11021#11022#0" expanded="true" />
+            <element signature="e#11073#11240#0" expanded="true" />
+            <element signature="e#11239#11240#0" expanded="true" />
+            <element signature="e#15947#16252#0" expanded="true" />
+            <element signature="e#16251#16252#0" expanded="true" />
+            <element signature="e#18790#19095#0" expanded="true" />
+            <element signature="e#19094#19095#0" expanded="true" />
+            <element signature="e#21662#21967#0" expanded="true" />
+            <element signature="e#21966#21967#0" expanded="true" />
+            <element signature="e#24505#24810#0" expanded="true" />
+            <element signature="e#24809#24810#0" expanded="true" />
+            <element signature="e#27377#27682#0" expanded="true" />
+            <element signature="e#27681#27682#0" expanded="true" />
+            <element signature="e#30249#30554#0" expanded="true" />
+            <element signature="e#30553#30554#0" expanded="true" />
+            <element signature="e#33167#33472#0" expanded="true" />
+            <element signature="e#33471#33472#0" expanded="true" />
+            <element signature="e#20693#20694#0" expanded="true" />
+            <element signature="e#20728#20729#0" expanded="true" />
           </folding>
         </state>
       </provider>

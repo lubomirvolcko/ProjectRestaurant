@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="project.restaurant.gui.MakeOrder">
-  <grid id="27dc6" binding="pnlMakeOrder" layout-manager="GridLayoutManager" row-count="7" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+  <grid id="27dc6" binding="pnlMakeOrder" layout-manager="GridLayoutManager" row-count="14" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="1788" height="1405"/>
+      <xy x="20" y="20" width="1788" height="1983"/>
     </constraints>
     <properties>
       <background color="-988964"/>
@@ -13,7 +13,7 @@
       <grid id="34349" binding="pnlOrderedItems" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="0" column="0" row-span="7" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="0" column="0" row-span="14" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-988964"/>
@@ -105,7 +105,7 @@
       <grid id="c8b96" binding="pnlConfirmButtons" layout-manager="GridLayoutManager" row-count="1" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="4" column="1" row-span="2" col-span="3" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="11" column="1" row-span="2" col-span="3" vsize-policy="3" hsize-policy="3" anchor="2" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-988964"/>
@@ -335,7 +335,7 @@
       <grid id="cb79c" binding="pnlSmoothies" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
         <margin top="0" left="0" bottom="0" right="0"/>
         <constraints>
-          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
           <background color="-988964"/>
@@ -414,7 +414,7 @@
           </component>
           <component id="717ef" class="javax.swing.JLabel">
             <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
               <background color="-988964"/>
@@ -423,6 +423,244 @@
               <horizontalAlignment value="0"/>
               <horizontalTextPosition value="0"/>
               <text value="Soft Drinks"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="837c0" binding="pnlHotDrinks" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="5" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="def2b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Hot Drinks"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="3f2ee" binding="pnlIceDrinks" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="6" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="3a68" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Ice Drinks"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="73dbf" binding="pnlAlcoholDrinks" layout-manager="GridLayoutManager" row-count="3" column-count="3" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="3" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="4a068" class="javax.swing.JButton" binding="btnBeers">
+            <constraints>
+              <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <borderPainted value="false"/>
+              <font name="Century Gothic" size="22" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalTextPosition value="0"/>
+              <icon value="src/img/beerIcon.png"/>
+              <text value="Beers"/>
+              <verticalTextPosition value="3"/>
+            </properties>
+          </component>
+          <component id="e94e5" class="javax.swing.JButton" binding="btnSpirits">
+            <constraints>
+              <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <borderPainted value="false"/>
+              <font name="Century Gothic" size="22" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalTextPosition value="0"/>
+              <icon value="src/img/spiritsIcon.png"/>
+              <label value="Spirits"/>
+              <text value="Spirits"/>
+              <verticalTextPosition value="3"/>
+            </properties>
+          </component>
+          <component id="3989a" class="javax.swing.JLabel" binding="pnnlAlcoholDrinks">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="3" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Alcohol Drinks"/>
+            </properties>
+          </component>
+          <component id="65bcb" class="javax.swing.JButton" binding="btnCocktails">
+            <constraints>
+              <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <borderPainted value="false"/>
+              <font name="Century Gothic" size="22" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalTextPosition value="0"/>
+              <icon value="src/img/coctailsIcon.png"/>
+              <label value="Cocktails"/>
+              <text value="Cocktails"/>
+              <verticalTextPosition value="3"/>
+            </properties>
+          </component>
+          <component id="7a807" class="javax.swing.JButton" binding="btnWines">
+            <constraints>
+              <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <borderPainted value="false"/>
+              <font name="Century Gothic" size="22" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalTextPosition value="0"/>
+              <icon value="src/img/wineIcon.png"/>
+              <label value="Wines"/>
+              <text value="Wines"/>
+              <verticalTextPosition value="3"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="3ffc2" binding="pnlBeers" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="7" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="3665a" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Beers"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="3b2bb" binding="pnlCocktails" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="8" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="90d9d" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Cocktails"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="93b62" binding="pnlSpirits" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="9" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="bf973" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Spirits"/>
+            </properties>
+          </component>
+        </children>
+      </grid>
+      <grid id="ef5b1" binding="pnlWines" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+        <margin top="0" left="0" bottom="0" right="0"/>
+        <constraints>
+          <grid row="10" column="2" row-span="1" col-span="2" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
+        </constraints>
+        <properties>
+          <background color="-988964"/>
+        </properties>
+        <border type="none"/>
+        <children>
+          <component id="8794b" class="javax.swing.JLabel">
+            <constraints>
+              <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="1" fill="0" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <background color="-988964"/>
+              <font name="Century Gothic" size="36" style="1"/>
+              <foreground color="-8023247"/>
+              <horizontalAlignment value="0"/>
+              <horizontalTextPosition value="0"/>
+              <text value="Wines"/>
             </properties>
           </component>
         </children>

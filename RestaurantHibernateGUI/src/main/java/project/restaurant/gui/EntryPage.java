@@ -68,8 +68,7 @@ public class EntryPage {
         logo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-               getInformationFromDatabase getdrinks = new getInformationFromDatabase();
-               getdrinks.getCocktailsDrinks();
+
 
             }
         });

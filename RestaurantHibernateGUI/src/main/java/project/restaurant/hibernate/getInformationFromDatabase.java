@@ -43,114 +43,16 @@ public class getInformationFromDatabase
     }
 
 
-    public void getHotDrinks()
-    {
-
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Hot Drinks'");
-        List<Drink> drinkHotDrinks=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkHotDrinks)
-        {
-
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
-
-    public void getIceDrinks()
-    {
-
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Ice Drinks'");
-        List<Drink> drinkIceDrinks=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkIceDrinks)
-        {
-
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
-
-    public void getCocktailsDrinks()
-    {
-
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Cocktails'");
-        List<Drink> drinkCocktails=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkCocktails)
-        {
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
-
-    public void getBeer()
-    {
-
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Beer'");
-        List<Drink> drinkBeer=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkBeer)
-        {
-
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
 
 
-    public void getWine()
-    {
-
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Wine'");
-        List<Drink> drinkWine=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkWine)
-        {
-
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
 
 
-    public void getSprites()
-    {
 
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Sprites'");
-        List<Drink> drinkSprites =  (List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        for(Drink d : drinkSprites)
-        {
 
-            System.out.println(d.getName());
-            System.out.println(d.getPrice());
-        }
-    }
+
+
+
+
 
 
     public void getFoodAppetizer()
