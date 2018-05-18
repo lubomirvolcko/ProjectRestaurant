@@ -138,11 +138,12 @@ public class SetEmployee {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                /*if (txtLogin.getText()=="" || pswFirst.getText()=="")
+                if (txtLogin.getText().equals("") || pswFirst.getText().equals("")||txtFirstName.getText().equals("") || txtLastName.getText().equals("")||idcardnumber.getText().equals("")||txtEmail.getText().equals(""))
                 {
                     lblError.setVisible(true);
-                    System.out.println("ERROR Login can' be empty");
-                }else {*/
+                    System.out.println("ERROR! Please fill each field!");
+                }else {
+                    lblError.setVisible(false);
                     String position = (String) cmbPosition.getSelectedItem();
 
                     SessionFactory sf = HibernateUtil.getSessionFactory();
@@ -174,7 +175,7 @@ public class SetEmployee {
                     JComponent comp = (JComponent) e.getSource();
                     Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                     win.dispose();
-                //}
+                }
 
 
 
