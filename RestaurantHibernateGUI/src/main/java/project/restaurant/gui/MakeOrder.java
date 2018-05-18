@@ -40,10 +40,16 @@ public class MakeOrder {
     private JButton btnHotDrinks;
     private JButton btnIceDrinks;
     private JButton btnSoup;
+    private JLabel lblSmoothiesHead;
+    private JScrollPane pnlScrollOrderedItems;
     public String state;
     String name;
     Double price;
     int item=0;
+    int positionY = 120;
+    int addPositionY = 50;
+    int orderPositionY=0;
+    String count="";
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -69,11 +75,47 @@ public class MakeOrder {
         return pnlMakeOrder;
     }
 
+    public void getDrinksSmoothies()
+    {
+
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Drink where type='Smoothies'");
+        java.util.List<Drink> drinkSmoothies=(List<Drink>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        int f;
+        int i = drinkSmoothies.size();
+
+        //MakeOrder smoothie = new MakeOrder();
+
+
+        /*for(f=0;f<1;f++)
+        {
+            name=drinkSmoothies.get(f).getName();
+            smoothie.getSmootiesButtons(name, price, item);
+        }*/
+
+        for(Drink d : drinkSmoothies)
+        {
+            item++;
+            name=d.getName();
+            price=d.getPrice();
+            getSmootiesButtons(name,price,item);
+
+            System.out.println("Buttons were created!!!");
+
+
+        }
+    }
+
     public MakeOrder() {
         pnlMealType.setVisible(false);
         btnBack.setEnabled(false);
         pnlSoftDrinks.setVisible(false);
         pnlSmoothies.setVisible(false);
+
 
         pnlMakeOrder.setSize(500, 500);
 
@@ -129,47 +171,13 @@ public class MakeOrder {
 
 
 
-
                 //getPanel("smootie", 0.00, 1);
                 //getPanel("drink", 2.22, 2);
             }
         });
     }
 
-    public void getDrinksSmoothies()
-    {
 
-        SessionFactory sf = HibernateUtil.getSessionFactory();
-        Session se = sf.openSession();
-        se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Smoothies'");
-        java.util.List<Drink> drinkSmoothies=(List<Drink>)qry.list();
-        se.getTransaction().commit();
-        se.close();
-        int f;
-        int i = drinkSmoothies.size();
-
-        MakeOrder smoothie = new MakeOrder();
-
-
-        for(f=0;f<1;f++)
-        {
-            name=drinkSmoothies.get(f).getName();
-            smoothie.getSmootiesButtons(name, price, item);
-        }
-
-        for(Drink d : drinkSmoothies)
-        {
-            item++;
-            name=d.getName();
-            price=d.getPrice();
-            getSmootiesButtons(name,price,item);
-
-
-
-
-        }
-    }
 
     public void StateMakeorder() {
         pnlSoftDrinks.setVisible(false);
@@ -216,43 +224,57 @@ public class MakeOrder {
     public void getSmootiesButtons(String name, Double price, int item){
 
                getInformationFromDatabase drink = new getInformationFromDatabase();
+
         try{
             JLabel lblSmootieNumber = new JLabel("name"); //create label
             JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
 
-            pnlSmoothies.setLayout(new FlowLayout());
+            pnlSmoothies.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
-            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.RIGHT));
-            lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-            //Dimension size = lblSmootieNumber.getPreferredSize();
-            //lblSmootieNumber.setBounds(100, 100, size.width, size.height);
+            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 20, 30);
 
             //create label in pnlSmothies for name of item
-            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.RIGHT));
-            lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-            //Dimension size2 = lblSmootieNumber.getPreferredSize();
-            //lblSmootieNumber.setBounds(300, 100, size2.width, size2.height);
+            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
 
             //create label in pnlSmothies for price of item
-            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+price , FlowLayout.RIGHT));
-            lblSmootieNumber.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-            //Dimension size3 = lblSmootieNumber.getPreferredSize();
-            //lblSmootieNumber.setBounds(500, 100, size3.width, size3.height);
+            pnlSmoothies.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlSmoothies.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
-            pnlSmoothies.add(btnSmootie = new JButton("OK"));
-            btnSmootie.setBackground(Color.getHSBColor(68.56f, 66.67f, 57.65f));
+            pnlSmoothies.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
             btnSmootie.setForeground(Color.white);
-            //Dimension sizeBtn = btnSmootie.getPreferredSize();
-            //btnSmootie.setBounds(700, 100, sizeBtn.width, sizeBtn.height);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
 
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("");
                     sendToTable(smootieName, SmootiePrice);
+
                 }
             });
 
@@ -270,28 +292,36 @@ public class MakeOrder {
 
     //send item to order on table
     public void sendToTable(String name, Double price){
+        orderPositionY=orderPositionY+32;
+
         JLabel lblSmootie = new JLabel("name");
         JButton btnSmootie = new JButton();
 
-        pnlOrderedItems.setLayout(new FlowLayout());
+        pnlOrderedItems.setLayout(null);
+
+        pnlOrderedItems.add(lblSmootie = new JLabel(count+"x", FlowLayout.LEFT));
+        lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+        lblSmootie.setBounds(0, orderPositionY, 45, 30);
 
         pnlOrderedItems.add(lblSmootie = new JLabel(""+name, FlowLayout.LEFT));
         lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+        lblSmootie.setBounds(65, orderPositionY, 200, 30);
 
-        pnlOrderedItems.add(lblSmootie = new JLabel(""+price, FlowLayout.LEFT));
+        pnlOrderedItems.add(lblSmootie = new JLabel(""+price+" €", FlowLayout.LEFT));
         lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+        lblSmootie.setBounds(280, orderPositionY, 80, 30);
 
         pnlOrderedItems.add(btnSmootie = new JButton("THROW"));
-        btnSmootie.setBackground(Color.getHSBColor(68.56f, 66.67f, 57.65f));
-        btnSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+        btnSmootie.setBackground(Color.red);
+        btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
         btnSmootie.setForeground(Color.white);
-
+        btnSmootie.setBounds(410, orderPositionY, 200, 30);
+        btnSmootie.setBorderPainted(false);
     }
 
     public JPanel getPnlSmoothies() {
         return pnlSmoothies;
     }
-
 
     }
 

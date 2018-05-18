@@ -57,10 +57,10 @@ public class EntryPage {
     public EntryPage() {
         getAuthenticationInfo();
 
+
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-getAuthenticationInfo();
-
+                getAuthenticationInfo();
             }
         });
 
