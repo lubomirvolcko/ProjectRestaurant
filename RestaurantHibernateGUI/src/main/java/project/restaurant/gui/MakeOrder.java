@@ -52,7 +52,6 @@ public class MakeOrder {
     private JPanel pnlBeers;
     private JPanel pnlCocktails;
     private JPanel pnlSpirits;
-    private JPanel pnlWines;
     private JPanel pnlAppertizer;
     private JPanel pnlSoup;
     private JPanel pnlMainDish;
@@ -100,7 +99,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Smoothies'");
+        Query qry=se.createQuery("from Drink where type='Smoothies' and active=true");
         java.util.List<Drink> drinkSmoothies=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -133,7 +132,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='HotDrinks'");
+        Query qry=se.createQuery("from Drink where type='HotDrinks' and active=true");
         List<Drink> drinkHotDrinks=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -155,7 +154,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='IceDrinks'");
+        Query qry=se.createQuery("from Drink where type='IceDrinks' and active=true");
         List<Drink> drinkIceDrinks=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -177,7 +176,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Beer'");
+        Query qry=se.createQuery("from Drink where type='Beer' and active=true");
         List<Drink> drinkBeer=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -198,7 +197,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Cocktails'");
+        Query qry=se.createQuery("from Drink where type='Cocktails' and active=true");
         List<Drink> drinkCocktails=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -219,7 +218,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Wine'");
+        Query qry=se.createQuery("from Drink where type='Wine' and active=true");
         List<Drink> drinkWine=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -241,7 +240,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Sprites'");
+        Query qry=se.createQuery("from Drink where type='Sprites' and active=true");
         List<Drink> drinkSprites =  (List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -262,7 +261,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Appetizer'");
+        Query qry=se.createQuery("from Food where type='Appetizer' and active=true");
         List<Food> foodAppetizer=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -285,7 +284,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Soup'");
+        Query qry=se.createQuery("from Food where type='Soup' and active=true");
         List<Food> foodSoup=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -308,7 +307,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Salad'");
+        Query qry=se.createQuery("from Food where type='Salad' and active=true");
         List<Food> foodSalad=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -331,7 +330,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Desert'");
+        Query qry=se.createQuery("from Food where type='Desert' and active=true");
         List<Food> foodDesert=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -354,7 +353,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='MainDish'");
+        Query qry=se.createQuery("from Food where type='MainDish' and active=true");
         List<Food> foodMainDish=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -724,7 +723,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlDessert.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));;
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -793,7 +792,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSalad.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -862,7 +861,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlMainDish.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -931,7 +930,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSoup.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1000,7 +999,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlAppertizer.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1069,7 +1068,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSpirits.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1138,7 +1137,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlWine.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1207,7 +1206,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlCocktails.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1276,7 +1275,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlBeers.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1345,7 +1344,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlHotDrinks.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1414,7 +1413,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlIceDrinks.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1484,7 +1483,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSmoothies.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(new Color(173,187,111));
+            btnSmootie.setBackground(new Color(133,147,49));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1545,7 +1544,7 @@ public class MakeOrder {
         lblSmootie.setBounds(280, orderPositionY, 80, 30);
 
         pnlOrderedItems.add(btnSmootie = new JButton("THROW"));
-        btnSmootie.setBackground(Color.red);
+        btnSmootie.setBackground(new Color(254,151,44));
         btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
         btnSmootie.setForeground(Color.white);
         btnSmootie.setBounds(410, orderPositionY, 200, 30);
