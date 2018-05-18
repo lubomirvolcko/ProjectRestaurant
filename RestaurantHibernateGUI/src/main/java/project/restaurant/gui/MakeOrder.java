@@ -4,8 +4,8 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import project.restaurant.hibernate.Drink;
+import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
-import project.restaurant.hibernate.getInformationFromDatabase;
 
 import javax.swing.*;
 import java.awt.*;
@@ -53,6 +53,11 @@ public class MakeOrder {
     private JPanel pnlCocktails;
     private JPanel pnlSpirits;
     private JPanel pnlWines;
+    private JPanel pnlAppertizer;
+    private JPanel pnlSoup;
+    private JPanel pnlMainDish;
+    private JPanel pnlSalad;
+    private JPanel pnlDessert;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state;
@@ -251,6 +256,121 @@ public class MakeOrder {
         }
     }
 
+    public void getFoodAppetizer()
+    {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Food where type='Appetizer'");
+        List<Food> foodAppetizer=(List<Food>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Food f : foodAppetizer)
+        {
+
+            item=f.getId();
+            name=f.getName();
+            price=f.getPrice();
+            getAppertizerButtons(name, price, item);
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+        }
+
+
+    }
+
+    public void getFoodSoup()
+    {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Food where type='Soup'");
+        List<Food> foodSoup=(List<Food>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Food f : foodSoup)
+        {
+
+            item=f.getId();
+            name=f.getName();
+            price=f.getPrice();
+            getSoupButtons(name, price, item);
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+        }
+
+
+    }
+
+    public void getFoodSalad()
+    {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Food where type='Salad'");
+        List<Food> foodSalad=(List<Food>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Food g : foodSalad)
+        {
+
+            item=g.getId();
+            name=g.getName();
+            price=g.getPrice();
+            getSaladButtons(name, price, item);
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+        }
+
+
+    }
+
+    public void getFoodDesert()
+    {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Food where type='Desert'");
+        List<Food> foodDesert=(List<Food>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Food g : foodDesert)
+        {
+
+            item=g.getId();
+            name=g.getName();
+            price=g.getPrice();
+            getDessertButtons(name, price, item);
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+        }
+
+
+    }
+
+    public void getFoodMainDish()
+    {
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Food where type='Main Dish'");
+        List<Food> foodMainDish=(List<Food>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Food g : foodMainDish)
+        {
+
+            item=g.getId();
+            name=g.getName();
+            price=g.getPrice();
+            getMainDishButtons(name, price, item);
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+        }
+
+
+    }
+
 
     /*public void scrollPanel(){
         pnlOrderedItems.setLayout(null);
@@ -308,6 +428,11 @@ public class MakeOrder {
                     AlcoholDrinks();
                     positionY=120;
                 }
+                else if (state == "StateAppertizer" || state == "StateSoup" || state == "StateDessert" || state == "StateMainDish" || state == "StateSalad"){
+                    StateMeal();
+                    positionY=120;
+                }
+
             }
         });
         btnSoftDrinks.addActionListener(new ActionListener() {
@@ -376,6 +501,41 @@ public class MakeOrder {
                 getWine();
             }
         });
+        btnAppetizer.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Appertizer();
+                getFoodAppetizer();
+            }
+        });
+        btnSoup.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Soup();
+                getFoodSoup();
+            }
+        });
+        btnMainDish.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MainDish();
+                getFoodMainDish();
+            }
+        });
+        btnSalad.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Salad();
+                getFoodSalad();
+            }
+        });
+        btnDessert.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Dessert();
+                getFoodDesert();
+            }
+        });
     }
 
     private void setPanels() {
@@ -390,6 +550,11 @@ public class MakeOrder {
         pnlCocktails.setVisible(false);
         pnlSpirits.setVisible(false);
         pnlWines.setVisible(false);
+        pnlAppertizer.setVisible(false);
+        pnlSoup.setVisible(false);
+        pnlMainDish.setVisible(false);
+        pnlSalad.setVisible(false);
+        pnlDessert.setVisible(false);
     }
 
 
@@ -408,6 +573,11 @@ public class MakeOrder {
         pnlDrinksCategory.setVisible(false);
         btnBack.setEnabled(true);
         pnlSoftDrinks.setVisible(false);
+        pnlAppertizer.setVisible(false);
+        pnlSoup.setVisible(false);
+        pnlMainDish.setVisible(false);
+        pnlSalad.setVisible(false);
+        pnlDessert.setVisible(false);
     }
 
     public void StateDrinks() {
@@ -482,6 +652,386 @@ public class MakeOrder {
         state = "StateWines";
         pnlAlcoholDrinks.setVisible(false);
         pnlWines.setVisible(true);
+    }
+
+    public void Appertizer(){
+        state = "StateAppertizer";
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlAppertizer.setVisible(true);
+    }
+
+    public void Soup(){
+        state = "StateSoup";
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlSoup.setVisible(true);
+    }
+
+    public void MainDish(){
+        state = "StateMainDish";
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlMainDish.setVisible(true);
+    }
+
+    public void Salad(){
+        state = "StateSalad";
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlSalad.setVisible(true);
+    }
+
+    public void Dessert(){
+        state = "StateDessert";
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlDessert.setVisible(true);
+    }
+
+    public void getDessertButtons(String name, Double price, long item){
+
+        try{
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlDessert.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
+
+            //create label in pnlSmothies for number of item
+            pnlDessert.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
+
+            //create label in pnlSmothies for name of item
+            pnlDessert.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlDessert.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlDessert.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlDessert.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("1");
+                    sendToTable(smootieName, SmootiePrice);
+
+                }
+
+
+            });
+
+            System.out.println("smoothie: "+name);
+            System.out.println("price: "+price);
+            System.out.println("item: "+item);
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+    }
+
+    public void getSaladButtons(String name, Double price, long item){
+
+        try{
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlSalad.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
+
+            //create label in pnlSmothies for number of item
+            pnlSalad.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
+
+            //create label in pnlSmothies for name of item
+            pnlSalad.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlSalad.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlSalad.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlSalad.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("1");
+                    sendToTable(smootieName, SmootiePrice);
+
+                }
+
+
+            });
+
+            System.out.println("smoothie: "+name);
+            System.out.println("price: "+price);
+            System.out.println("item: "+item);
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+    }
+
+    public void getMainDishButtons(String name, Double price, long item){
+
+        try{
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlMainDish.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
+
+            //create label in pnlSmothies for number of item
+            pnlMainDish.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
+
+            //create label in pnlSmothies for name of item
+            pnlMainDish.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlMainDish.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlMainDish.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlMainDish.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("1");
+                    sendToTable(smootieName, SmootiePrice);
+
+                }
+
+
+            });
+
+            System.out.println("smoothie: "+name);
+            System.out.println("price: "+price);
+            System.out.println("item: "+item);
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+    }
+
+    public void getSoupButtons(String name, Double price, long item){
+
+        try{
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlSoup.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
+
+            //create label in pnlSmothies for number of item
+            pnlSoup.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
+
+            //create label in pnlSmothies for name of item
+            pnlSoup.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlSoup.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlSoup.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlSoup.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("1");
+                    sendToTable(smootieName, SmootiePrice);
+
+                }
+
+
+            });
+
+            System.out.println("smoothie: "+name);
+            System.out.println("price: "+price);
+            System.out.println("item: "+item);
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
+    }
+
+    public void getAppertizerButtons(String name, Double price, long item){
+
+        try{
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlAppertizer.setLayout(null);
+
+            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
+
+            //create label in pnlSmothies for number of item
+            pnlAppertizer.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
+
+            //create label in pnlSmothies for name of item
+            pnlAppertizer.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlAppertizer.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlAppertizer.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlAppertizer.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(Color.green);
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+
+                    count= finalTxtCount.getText();
+                    finalTxtCount.setText("1");
+                    sendToTable(smootieName, SmootiePrice);
+
+                }
+
+
+            });
+
+            System.out.println("smoothie: "+name);
+            System.out.println("price: "+price);
+            System.out.println("item: "+item);
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+
     }
 
     public void getSpiritesButtons(String name, Double price, long item){

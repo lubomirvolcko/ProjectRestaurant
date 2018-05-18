@@ -16,7 +16,7 @@ public class Food
     private String Name;
 
     @Column(name = "price")
-    private String Price;
+    private Double Price;
 
     @Column(name = "type")
     private String Type;
@@ -45,11 +45,11 @@ public class Food
         Name = name;
     }
 
-    public String getPrice() {
+    public Double getPrice() {
         return Price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(Double price) {
         Price = price;
     }
 
