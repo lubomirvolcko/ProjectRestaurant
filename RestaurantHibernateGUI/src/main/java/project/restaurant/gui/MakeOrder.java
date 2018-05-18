@@ -58,6 +58,7 @@ public class MakeOrder {
     private JPanel pnlMainDish;
     private JPanel pnlSalad;
     private JPanel pnlDessert;
+    private JPanel pnlWine;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state;
@@ -132,7 +133,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Hot Drinks'");
+        Query qry=se.createQuery("from Drink where type='HotDrinks'");
         List<Drink> drinkHotDrinks=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -154,7 +155,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Drink where type='Ice Drinks'");
+        Query qry=se.createQuery("from Drink where type='IceDrinks'");
         List<Drink> drinkIceDrinks=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -353,7 +354,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Main Dish'");
+        Query qry=se.createQuery("from Food where type='MainDish'");
         List<Food> foodMainDish=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -549,7 +550,7 @@ public class MakeOrder {
         pnlBeers.setVisible(false);
         pnlCocktails.setVisible(false);
         pnlSpirits.setVisible(false);
-        pnlWines.setVisible(false);
+        pnlWine.setVisible(false);
         pnlAppertizer.setVisible(false);
         pnlSoup.setVisible(false);
         pnlMainDish.setVisible(false);
@@ -627,7 +628,7 @@ public class MakeOrder {
         pnlBeers.setVisible(false);
         pnlCocktails.setVisible(false);
         pnlSpirits.setVisible(false);
-        pnlWines.setVisible(false);
+        pnlWine.setVisible(false);
     }
 
     public void Beers(){
@@ -651,7 +652,7 @@ public class MakeOrder {
     public void Wines(){
         state = "StateWines";
         pnlAlcoholDrinks.setVisible(false);
-        pnlWines.setVisible(true);
+        pnlWine.setVisible(true);
     }
 
     public void Appertizer(){
@@ -723,7 +724,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlDessert.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));;
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -792,7 +793,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSalad.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -861,7 +862,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlMainDish.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -930,7 +931,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSoup.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -999,7 +1000,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlAppertizer.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1068,7 +1069,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSpirits.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1110,34 +1111,34 @@ public class MakeOrder {
             JButton btnSmootie = new JButton(); //create button
             JTextField txtCount = new JTextField(); //create text field
 
-            pnlWines.setLayout(null);
+            pnlWine.setLayout(null);
 
             //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
-            pnlWines.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
+            pnlWine.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
             lblSmootieNumber.setBounds(0, positionY+addPositionY, 30, 30);
 
             //create label in pnlSmothies for name of item
-            pnlWines.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
+            pnlWine.add(lblSmootieNumber = new JLabel(""+name, FlowLayout.LEFT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
             lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
 
             //create label in pnlSmothies for price of item
-            pnlWines.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
+            pnlWine.add(lblSmootieNumber = new JLabel(""+price+" €" , FlowLayout.LEFT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
             lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
 
             //create txt field in pnlSmothies for count of item
-            pnlWines.add(txtCount = new JTextField(FlowLayout.LEFT));
+            pnlWine.add(txtCount = new JTextField(FlowLayout.LEFT));
             txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
             txtCount.setBounds(450, positionY+addPositionY, 60, 30);
             txtCount.setText("1");
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
-            pnlWines.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            pnlWine.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1206,7 +1207,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlCocktails.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1275,7 +1276,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlBeers.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1344,7 +1345,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlHotDrinks.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1413,7 +1414,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlIceDrinks.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
@@ -1483,7 +1484,7 @@ public class MakeOrder {
 
             //create button in pnlSmothies for send item to table (for confirm item to order)
             pnlSmoothies.add(btnSmootie = new JButton("Choose"));
-            btnSmootie.setBackground(Color.green);
+            btnSmootie.setBackground(new Color(173,187,111));
             btnSmootie.setForeground(Color.white);
             btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
             btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
