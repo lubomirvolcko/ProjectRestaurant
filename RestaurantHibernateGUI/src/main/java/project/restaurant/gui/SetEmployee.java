@@ -2,16 +2,22 @@ package project.restaurant.gui;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.query.Query;
 import project.restaurant.hibernate.Authentication;
+import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
+import javax.swing.event.ListSelectionEvent;
+import javax.swing.event.ListSelectionListener;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.Arrays;
+import java.util.List;
 
 public class SetEmployee {
     private JPanel pnlSetEmployee;
@@ -45,36 +51,13 @@ public class SetEmployee {
     private JPasswordField updatePswPassword;
     private JLabel lblError;
     public String State;
+    JFrame f = new JFrame("Table Example");
+
 
     public JPanel getPnlSetEmployee() {
         return pnlSetEmployee;
     }
 
-    public void setEmployeeToTable(String fname, String lname, String idcard, String login, String email, String password, String position){
-
-
-        int employeeNumber=1;
-
-        Object[] columns = {"Id","First Name","Last Name","Id card", "Login", "Password", "E-mail", "position"};
-        DefaultTableModel model = new DefaultTableModel();
-        model.setColumnIdentifiers(columns);
-
-        Object[] row = new Object[8];
-        row[0]= employeeNumber++;
-        row[1]= fname;
-        row[2]= lname;
-        row[3]= idcard;
-        row[4]= login;
-        row[5]= password;
-        row[6]= email;
-        row[7]= position;
-
-        model.addRow(row);
-        tblEmployees.setModel(model);
-
-        System.out.println(employeeNumber+"  "+fname+"  "+lname+"  "+idcard+"  "+login+"  "+password+"  "+email+"  "+position);
-        System.out.println("user added!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-    }
 
     public SetEmployee() {
         pnlAddEmployee.setVisible(false);
@@ -84,11 +67,6 @@ public class SetEmployee {
         txtLogin.setText("");
         pswFirst.setText("");
 
-        tblEmployees.setBackground(Color.RED);
-        tblEmployees.setForeground(Color.black);
-        //Font font = new Font("",1,22);
-        tblEmployees.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-        tblEmployees.setRowHeight(30);
 
 
 
@@ -99,6 +77,8 @@ public class SetEmployee {
                 win.dispose();
             }
         });
+
+
         btnBack.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 if (State == "AddEmployee" || State == "DeleteEmployee") {
@@ -109,6 +89,7 @@ public class SetEmployee {
                 }
             }
         });
+
         addEmployeeButton.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 StateAddEmployee();
@@ -117,19 +98,7 @@ public class SetEmployee {
 
         deleteEmployeeButton1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                DefaultTableModel model = new DefaultTableModel();
-
-                StateDeleteEmployee();
-
-                // i = the index of the selected row
-                int i = tblEmployees.getSelectedRow();
-                if(i >= 0){
-                    // remove a row from jtable
-                    model.removeRow(i);
-                }
-                else{
-                    System.out.println("Delete Error");
-                }
+createTable();
 
             }
         });
@@ -165,7 +134,7 @@ public class SetEmployee {
                     String Emmail = txtEmail.getText();
                     String Password = pswFirst.getText();
 
-                    setEmployeeToTable(FirstName, LastnName, IdCard, Login, Emmail, Password, position);
+
 
                     s.save(newPerson);
                     s.getTransaction().commit();
@@ -231,7 +200,7 @@ public class SetEmployee {
                 String Emmail = updateTxtEmail.getText();
                 String Password = updatePswPassword.getText();
 
-                setEmployeeToTable(FirstName, LastnName, IdCard, Login, Emmail, Password, position);
+
 
                 s.save(newPerson);
                 s.getTransaction().commit();
@@ -285,8 +254,196 @@ public class SetEmployee {
         State = "DeleteEmployee";
     }
 
+    public void createTable()
+    {
+        JFrame frame2 = new JFrame();
+        final JTable table = new JTable();
 
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
+        Object[] columns = {"Id","First Name","Last Name","Id card","Login","Password","Email","Position"};
+        final DefaultTableModel model = new DefaultTableModel();
+        model.setColumnIdentifiers(columns);
+
+        table.setModel(model);
+
+
+        table.setBackground(Color.LIGHT_GRAY);
+        table.setForeground(Color.black);
+        Font font = new Font("",1,22);
+        table.setFont(font);
+        table.setRowHeight(30);
+
+        final JTextField textId = new JTextField();
+        final JTextField textFname = new JTextField();
+        final JTextField textLname = new JTextField();
+        final JTextField textAge = new JTextField();
+
+        JButton btnAdd = new JButton("Add");
+        JButton btnDelete = new JButton("Delete");
+        JButton btnUpdate = new JButton("Update");
+
+
+        textId.setBounds(20, 220, 100, 25);
+        textFname.setBounds(20, 250, 100, 25);
+        textLname.setBounds(20, 280, 100, 25);
+        textAge.setBounds(20, 310, 100, 25);
+
+        btnAdd.setBounds(150, 220, 100, 25);
+        btnUpdate.setBounds(150, 265, 100, 25);
+        btnDelete.setBounds(150, 310, 100, 25);
+
+        // create JScrollPane
+        JScrollPane pane = new JScrollPane(table);
+        pane.setBounds(0, 0, 880, 200);
+
+        frame2.setLayout(null);
+
+        frame2.add(pane);
+
+        // add JTextFields to the jframe
+        frame2.add(textId);
+        frame2.add(textFname);
+        frame2.add(textLname);
+        frame2.add(textAge);
+
+        // add JButtons to the jframe
+        frame2.add(btnAdd);
+        frame2.add(btnDelete);
+        frame2 .add(btnUpdate);
+
+        // create an array of objects to set the row data
+        final Object[] row = new Object[8];
+        long id = 0;
+        String firstname = null;
+        String lastname = null;
+        String idcard = null;
+        String login = null;
+        String password = null;
+        String email= null;
+        String position = null;
+
+
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from Authentication");
+        java.util.List<Authentication> usersInfo=(List<Authentication>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(Authentication g : usersInfo)
+        {
+
+            id=g.getId();
+            firstname=g.getName();
+            lastname=g.getSurname();
+            idcard=g.getIdcard();
+            login=g.getLogin();
+            password=g.getPassword();
+            email=g.getEmail();
+            position=g.getPosition();
+
+
+
+            //System.out.println(d.getName());
+            //System.out.println(d.getPrice());
+
+
+
+
+
+
+
+
+
+
+
+
+
+                row[0] = id;
+                row[1] = firstname;
+                row[2] = lastname;
+                row[3] =idcard;
+                row[4] = login;
+                row[5] = password;
+                row[6] = email;
+                row[7] = position;
+                // add row to the model
+                model.addRow(row);
+
+
+        }
+
+        btnDelete.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // i = the index of the selected row
+                int i = table.getSelectedRow();
+                if(i >= 0){
+                    // remove a row from jtable
+                    model.removeRow(i);
+                }
+                else{
+                    System.out.println("Delete Error");
+                }
+            }
+        });
+
+
+        table.addMouseListener(new MouseAdapter(){
+
+            @Override
+            public void mouseClicked(MouseEvent e){
+
+                // i = the index of the selected row
+                int i = table.getSelectedRow();
+
+                textId.setText(model.getValueAt(i, 0).toString());
+                textFname.setText(model.getValueAt(i, 1).toString());
+                textLname.setText(model.getValueAt(i, 2).toString());
+                textAge.setText(model.getValueAt(i, 3).toString());
+            }
+        });
+
+        btnUpdate.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+                // i = the index of the selected row
+                int i = table.getSelectedRow();
+
+                if(i >= 0)
+                {
+                    model.setValueAt(textId.getText(), i, 0);
+                    model.setValueAt(textFname.getText(), i, 1);
+                    model.setValueAt(textLname.getText(), i, 2);
+                    model.setValueAt(textAge.getText(), i, 3);
+                }
+                else{
+                    System.out.println("Update Error");
+                }
+            }
+        });
+
+        frame2.setSize(900,400);
+        frame2.setLocationRelativeTo(null);
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setVisible(true);
+
+
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
 }

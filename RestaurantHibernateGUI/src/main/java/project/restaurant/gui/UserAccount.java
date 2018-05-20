@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.print.PrinterException;
 
 public class UserAccount {
     private JPanel UserAccount;
@@ -156,17 +157,25 @@ public class UserAccount {
         });
         btnTopMenuSetEmployee.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                openSetEmployee();
+                try {
+                    openSetEmployee();
+                } catch (PrinterException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
         btnSetEmployee.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                openSetEmployee();
+                try {
+                    openSetEmployee();
+                } catch (PrinterException e1) {
+                    e1.printStackTrace();
+                }
             }
         });
     }
 
-    public JFrame openSetEmployee() {
+    public JFrame openSetEmployee() throws PrinterException {
         SetEmployee setemployee = new SetEmployee();
 
         JFrame frameSetEmployee = new JFrame("Set Employee");
