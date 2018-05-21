@@ -406,7 +406,7 @@ $.post({
           for( i = 0;i<response.length;i++){
           
         
-          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+mlg+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
 
 
           
