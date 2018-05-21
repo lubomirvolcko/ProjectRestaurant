@@ -77,6 +77,12 @@ section {
 /* menu font size */
 .nav-item{                  
     font-size: 115%;
+   margin-right: 10px;
+}
+
+/* font size on menu */
+#navbarResponsive {
+    margin-right: 200px;
 }
 
 /* reservation form */
@@ -85,7 +91,6 @@ section {
 }
 
 #tableFood{
-    /*margin-left: 300px;*/
     text-align: center;
 }
 

@@ -60,7 +60,6 @@ $('#menucko').click(function() {
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
-  $('.textFood').hide();
   $('#mainDrinksMenu').show("slow");
   $('#backDrinks').show();
 });
@@ -245,13 +244,13 @@ $('#buttonBack').click(function() {
   $('#buttonBack').hide();
   $('#tableDrinks').hide();
   $('#backDrinks').show();
-  $('#hotDrinks').show("slow");
-  $('#iceDrinks').show("slow");
-  $('#cocktails').show("slow");
-  $('#beer').show("slow");
-  $('#wine').show("slow");
-  $('#sprites').show("slow");
-  $('#smoothies').show("slow");
+  $('#hotDrinks').show();
+  $('#iceDrinks').show();
+  $('#cocktails').show();
+  $('#beer').show();
+  $('#wine').show();
+  $('#sprites').show();
+  $('#smoothies').show();
 });
 
 /* back to menu */
