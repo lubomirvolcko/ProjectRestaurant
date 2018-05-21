@@ -273,24 +273,31 @@ createTable();
         table.setFont(font);
         table.setRowHeight(30);
 
-        final JTextField textId = new JTextField();
         final JTextField textFname = new JTextField();
         final JTextField textLname = new JTextField();
-        final JTextField textAge = new JTextField();
+        final JTextField textIdcard = new JTextField();
+        final JTextField textlogin = new JTextField();
+        final JTextField textpassword = new JTextField();
+        final JTextField textemail = new JTextField();
+        String[] positions = { "manager", "waiter", "supervisor" };
+        final JComboBox textposition = new JComboBox(positions);
 
         JButton btnAdd = new JButton("Add");
         JButton btnDelete = new JButton("Delete");
         JButton btnUpdate = new JButton("Update");
 
 
-        textId.setBounds(20, 220, 100, 25);
-        textFname.setBounds(20, 250, 100, 25);
-        textLname.setBounds(20, 280, 100, 25);
-        textAge.setBounds(20, 310, 100, 25);
+        textFname.setBounds(20, 220, 100, 25);
+        textLname.setBounds(20, 250, 100, 25);
+        textIdcard.setBounds(20, 280, 100, 25);
+        textlogin.setBounds(20, 310, 100, 25);
+        textpassword.setBounds(150, 220, 100, 25);
+        textemail.setBounds(150, 250, 100, 25);
+        textposition.setBounds(150, 280, 100, 25);
 
-        btnAdd.setBounds(150, 220, 100, 25);
-        btnUpdate.setBounds(150, 265, 100, 25);
-        btnDelete.setBounds(150, 310, 100, 25);
+
+        btnUpdate.setBounds(280, 220, 100, 25);
+        btnDelete.setBounds(280, 265, 100, 25);
 
         // create JScrollPane
         JScrollPane pane = new JScrollPane(table);
@@ -301,17 +308,20 @@ createTable();
         frame2.add(pane);
 
         // add JTextFields to the jframe
-        frame2.add(textId);
         frame2.add(textFname);
         frame2.add(textLname);
-        frame2.add(textAge);
+        frame2.add(textIdcard);
+        frame2.add(textlogin);
+        frame2.add(textpassword);
+        frame2.add(textemail);
+        frame2.add(textposition);
 
-        // add JButtons to the jframe
-        frame2.add(btnAdd);
+
+
         frame2.add(btnDelete);
         frame2 .add(btnUpdate);
 
-        // create an array of objects to set the row data
+
         final Object[] row = new Object[8];
         long id = 0;
         String firstname = null;
@@ -341,21 +351,6 @@ createTable();
             password=g.getPassword();
             email=g.getEmail();
             position=g.getPosition();
-
-
-
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -408,14 +403,7 @@ createTable();
 
 
 
-                int i = table.getSelectedRow();
-                if(i >= 0){
-                    // remove a row from jtable
-                    model.removeRow(i);
-                }
-                else{
-                    System.out.println("Delete Error");
-                }
+
             }
         });
 
@@ -428,10 +416,13 @@ createTable();
                 // i = the index of the selected row
                 int i = table.getSelectedRow();
 
-                textId.setText(model.getValueAt(i, 0).toString());
                 textFname.setText(model.getValueAt(i, 1).toString());
                 textLname.setText(model.getValueAt(i, 2).toString());
-                textAge.setText(model.getValueAt(i, 3).toString());
+                textIdcard.setText(model.getValueAt(i, 3).toString());
+                textlogin.setText(model.getValueAt(i, 4).toString());
+                textpassword.setText(model.getValueAt(i, 5).toString());
+                textemail.setText(model.getValueAt(i, 6).toString());
+                textposition.setSelectedItem(model.getValueAt(i, 7));
             }
         });
 
@@ -440,18 +431,49 @@ createTable();
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session se = sf.openSession();
 
-                
+
+                Transaction transaction = se.beginTransaction();
+                try {
+
+
+                        String hql = "update  Authentication set Name= :name,Surname= :surname,Idcard= :idcard,login= :login,password= :password, email= :email,position = :position";
+                        Query query = se.createQuery(hql);
+                    query.setParameter("name", textFname.getText());
+                    query.setParameter("surname", textLname.getText());
+                    query.setParameter("idcard", textIdcard.getText());
+                    query.setParameter("login", textlogin.getText());
+                    query.setParameter("password", textpassword.getText());
+                    query.setParameter("email", textemail.getText());
+                    query.setParameter("position", textposition.getSelectedItem());
+
+
+
+                    int rowCount = query.executeUpdate();
+                    System.out.println("Rows affected: " + rowCount);
+
+
+                    transaction.commit();
+                } catch (Throwable t) {
+                    transaction.rollback();
+                    throw t;
+                }
+
 
 
                 int i = table.getSelectedRow();
 
                 if(i >= 0)
                 {
-                    model.setValueAt(textId.getText(), i, 0);
                     model.setValueAt(textFname.getText(), i, 1);
                     model.setValueAt(textLname.getText(), i, 2);
-                    model.setValueAt(textAge.getText(), i, 3);
+                    model.setValueAt(textIdcard.getText(), i, 3);
+                    model.setValueAt(textlogin.getText(), i, 4);
+                    model.setValueAt(textpassword.getText(), i, 5);
+                    model.setValueAt(textemail.getText(), i, 6);
+                    model.setValueAt(textposition.getSelectedItem(), i, 7);
                 }
                 else{
                     System.out.println("Update Error");
