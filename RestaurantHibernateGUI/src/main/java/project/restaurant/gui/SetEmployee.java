@@ -2,6 +2,7 @@ package project.restaurant.gui;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.Food;
@@ -372,12 +373,41 @@ createTable();
 
         }
 
+
         btnDelete.addActionListener(new ActionListener(){
 
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // i = the index of the selected row
+
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session se = sf.openSession();
+                System.out.println(table.getSelectedColumn());
+
+                Transaction transaction = se.beginTransaction();
+                try {
+
+                    String hql = "delete from Authentication where id= :id";
+                    Query query = se.createQuery(hql);
+
+                    query.setParameter("id", table.getModel().getValueAt(table.getSelectedRow(), 0));
+
+                    System.out.println(query.executeUpdate());
+
+
+                    transaction.commit();
+                } catch (Throwable t) {
+                    transaction.rollback();
+                    throw t;
+                }
+
+
+
+
+
+
+
+
                 int i = table.getSelectedRow();
                 if(i >= 0){
                     // remove a row from jtable
@@ -410,7 +440,10 @@ createTable();
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                // i = the index of the selected row
+
+                
+
+
                 int i = table.getSelectedRow();
 
                 if(i >= 0)
