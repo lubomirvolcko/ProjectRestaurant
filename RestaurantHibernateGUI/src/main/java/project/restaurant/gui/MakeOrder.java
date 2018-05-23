@@ -58,6 +58,7 @@ public class MakeOrder {
     private JPanel pnlSalad;
     private JPanel pnlDessert;
     private JPanel pnlWine;
+    private JLabel lblTotalPrice;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state;
@@ -68,6 +69,10 @@ public class MakeOrder {
     int addPositionY = 50;
     int orderPositionY=0;
     String count="";
+    double countPrice;
+    int countItem=0;
+    double totalPrice;
+
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -536,6 +541,12 @@ public class MakeOrder {
                 getFoodDesert();
             }
         });
+        btnConfirm.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+
+            }
+        });
     }
 
     private void setPanels() {
@@ -738,10 +749,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -807,10 +827,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -876,11 +905,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -945,10 +982,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -1014,10 +1060,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -1083,11 +1138,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -1152,11 +1215,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -1221,11 +1292,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -1290,10 +1369,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -1359,11 +1447,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -1428,10 +1524,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
                     finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
 
                 }
 
@@ -1498,11 +1603,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-
+                    int countX;
                     count= finalTxtCount.getText();
-                    finalTxtCount.setText("1");
-                    sendToTable(smootieName, SmootiePrice);
+                    countX = Integer.parseInt(count);
+                    System.out.println(countX+" ---POCET");
 
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        countItem++;
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
                 }
 
 
@@ -1519,58 +1632,103 @@ public class MakeOrder {
 
     }
 
-
     //send item to order on table
-    public void sendToTable(String name, Double price){
+    public void sendToTable(final String name, Double price){
         orderPositionY=orderPositionY+32;
 
-
-        JLabel lblSmootie = new JLabel("name");
-        JButton btnSmootie = new JButton();
+        int numberOfItem = Integer.parseInt(count);
+        countPrice=numberOfItem*price;
+        totalPrice=totalPrice+countPrice;
+        System.out.println("TOTAL PRICE IS : "+totalPrice);
+        //lblTotalPrice.setPreferredSize(new Dimension(800,80));// Width, Height
+        lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
+        JLabel lblCount = new JLabel("name");
+        JLabel lblName = new JLabel("name");
+        JLabel lblPrice= new JLabel("name");
+        JButton btnChoose = new JButton();
+        JButton btnUndo = new JButton();
 
         pnlOrderedItems.setLayout(null);
 
+        if (countItem<31)
+        {
+            pnlOrderedItems.add(lblCount = new JLabel(count+"x", FlowLayout.LEFT));
+            lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+            lblCount.setBounds(10, orderPositionY, 45, 30);
 
-        pnlOrderedItems.add(lblSmootie = new JLabel(count+"x", FlowLayout.LEFT));
-        lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-        lblSmootie.setBounds(0, orderPositionY, 45, 30);
+            pnlOrderedItems.add(lblName = new JLabel(""+name, FlowLayout.LEFT));
+            lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+            lblName.setBounds(65, orderPositionY, 200, 30);
 
-        pnlOrderedItems.add(lblSmootie = new JLabel(""+name, FlowLayout.LEFT));
-        lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-        lblSmootie.setBounds(65, orderPositionY, 200, 30);
+            pnlOrderedItems.add(lblPrice = new JLabel(""+countPrice+" €", FlowLayout.LEFT));
+            lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+            lblPrice.setBounds(280, orderPositionY, 100, 30);
 
-        pnlOrderedItems.add(lblSmootie = new JLabel(""+price+" €", FlowLayout.LEFT));
-        lblSmootie.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-        lblSmootie.setBounds(280, orderPositionY, 80, 30);
+            pnlOrderedItems.add(btnChoose = new JButton("THROW"));
+            btnChoose.setBackground(new Color(254,151,44));
+            btnChoose.setFont(new Font("Century Gothic", Font.BOLD, 17));
+            btnChoose.setForeground(Color.white);
+            btnChoose.setBorderPainted(false);
+            btnChoose.setBounds(410, orderPositionY, 100, 30);
 
-        pnlOrderedItems.add(btnSmootie = new JButton("THROW"));
-        btnSmootie.setBackground(new Color(254,151,44));
-        btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
-        btnSmootie.setForeground(Color.white);
-        btnSmootie.setBounds(410, orderPositionY, 200, 30);
-        btnSmootie.setBorderPainted(false);
+            pnlOrderedItems.add(btnUndo = new JButton("UNDO"));
+            btnUndo.setBackground(new Color(133,147,49));
+            btnUndo.setFont(new Font("Century Gothic", Font.BOLD, 17));
+            btnUndo.setForeground(Color.white);
+            btnUndo.setBorderPainted(false);
+            btnUndo.setEnabled(false);
+            btnUndo.setBounds(520, orderPositionY, 100, 30);
 
-        final JButton finalBtnSmootie = btnSmootie;
-        final JLabel finalLblSmootie = lblSmootie;
-        btnSmootie.addActionListener(new ActionListener() {
+        }else{
+            JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
+            countItem=30;
+        }
+
+
+        final JLabel finalLblCount = lblCount;
+        final JLabel finalLblName = lblName;
+        final JLabel finalLblPrice = lblPrice;
+        final JButton finalBtnChoose = btnChoose;
+        final JButton finalBtnUndo = btnUndo;
+        btnChoose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
+                throwItem(finalLblCount, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo);
             }
         });
 
+        final JButton finalBtnUndo1 = btnUndo;
+        btnUndo.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                undoItem(finalLblCount, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo1);
+            }
+        });
     }
 
-    public JPanel getPnlSmoothies() {
-        return pnlSmoothies;
-    }
+    public void throwItem(JLabel lblCount, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo) {
+
+        totalPrice=totalPrice-countPrice;
+        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
+        lblCount.setForeground(Color.red);
+        lblName.setForeground(Color.red);
+        lblPrice.setForeground(Color.red);
+        btnThrow.setText("Deleted");
+        btnThrow.setEnabled(false);
+        btnUndo.setEnabled(true);
 
     }
 
+    public void undoItem(JLabel lblCount, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo){
+        totalPrice=totalPrice+countPrice;
+        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
+        lblCount.setForeground(Color.black);
+        lblName.setForeground(Color.black);
+        lblPrice.setForeground(Color.black);
+        btnThrow.setText("THROW");
+        btnThrow.setEnabled(true);
+        btnUndo.setEnabled(false);
+    }
 
 
-
-
-
-
-
+}

@@ -225,6 +225,7 @@ public class UserAccount {
             case 8:
                 makeorder.getLblNameTable().setText("Table 8");
                 break;
+            case 99: return frameMakeOrder;
             default:
                 System.out.println("Table not exists!");
         }
