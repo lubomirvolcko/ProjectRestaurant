@@ -42,21 +42,145 @@ public class UserAccount {
     private JButton btnTable7;
     private JButton btnTable8;
     private JPanel pnlOrderedTable1;
+    private JButton btnViewOrderTable1;
+    private JButton btnAddToOrderTable1;
+    private JButton btnPaymentTable1;
+    private JButton btnStornoTable1;
+    private JPanel pnlOrderedTable2;
+    private JPanel pnlOrderedTable3;
+    private JPanel pnlOrderedTable5;
+    private JPanel pnlOrderedTable6;
+    private JPanel pnlOrderedTable8;
+    private JPanel pnlOrderedTable7;
+    private JPanel pnlOrderedTable4;
+    private JLabel lblTotalPriceTable1;
+    private JPanel pnlTable1;
+    private JPanel pnlTable2;
+    private JPanel pnlTable3;
+    private JPanel pnlTable4;
+    private JButton btnViewOrderTable2;
+    private JButton btnAddToOrderTable2;
+    private JButton btnPaymentTable2;
+    private JButton btnStornoTable2;
+    private JLabel lblTotalPriceTable2;
+    private JButton btnViewOrderTable3;
+    private JButton btnAddToOrderTable3;
+    private JButton btnPaymentTable3;
+    private JButton btnStornoTable3;
+    private JLabel lblTotalPriceTable3;
+    private JButton btnViewOrderTable4;
+    private JButton btnAddToOrderTable4;
+    private JButton btnPaymentTable4;
+    private JButton btnStornoTable4;
+    private JLabel lblTotalPriceTable4;
+    private JPanel pnlTable5;
+    private JPanel pnlTable6;
+    private JPanel pnlTable7;
+    private JPanel pnlTable8;
+    private JButton btnViewOrderTable8;
+    private JButton btnAddToOrderTable8;
+    private JButton btnPaymentTable8;
+    private JButton btnStornoTable8;
+    private JLabel lblTotalPriceTable8;
+    private JButton btnViewOrderTable7;
+    private JButton btnAddToOrderTable7;
+    private JButton btnPaymentTable7;
+    private JButton btnStornoTable7;
+    private JLabel lblTotalPriceTable7;
+    private JButton btnViewOrderTable6;
+    private JButton btnAddToOrderTable6;
+    private JButton btnPaymentTable6;
+    private JButton btnStornoTable6;
+    private JLabel lblTotalPriceTable6;
+    private JButton btnViewOrderTable5;
+    private JButton btnAddToOrderTable5;
+    private JButton btnPaymentTable5;
+    private JButton btnStornoTable5;
+    private JLabel lblTotalPriceTable5;
     private String username;
+    String table;
 
     public JPanel getUserAccount() {
         return UserAccount;
     }
 
+    MakeOrder makeOrder = new MakeOrder();
+
+
+    public void setPanels(String historyOrder){
+        if (historyOrder=="xx"){
+            pnlTopMenu.setVisible(false);
+            pnlTables.setVisible(false);
+
+            pnlOrderedTable1.setVisible(false);
+            pnlOrderedTable2.setVisible(false);
+            pnlOrderedTable3.setVisible(false);
+            pnlOrderedTable4.setVisible(false);
+            pnlOrderedTable5.setVisible(false);
+            pnlOrderedTable6.setVisible(false);
+            pnlOrderedTable7.setVisible(false);
+            pnlOrderedTable8.setVisible(false);
+        }
+        else if (historyOrder=="true")
+        {
+            if (table=="Table 1"){setTable1();}
+            else if (table=="Table 2"){setTable2();}
+            else if (table=="Table 3"){setTable3();}
+            else if (table=="Table 4"){setTable4();}
+            else if (table=="Table 5"){setTable5();}
+            else if (table=="Table 6"){setTable6();}
+            else if (table=="Table 7"){setTable7();}
+            else if (table=="Table 8"){setTable8();}
+        }else {
+            System.out.println("SOMETHING IS WRONG !");
+        }
+    }
+
+    public void setTable1(){
+        btnTable1.setVisible(false);
+        pnlOrderedTable1.setVisible(true);
+        System.out.println("CHANGE ON TABLE 1");
+    }
+
+    public void setTable2(){
+        btnTable2.setVisible(false);
+        pnlOrderedTable2.setVisible(true);
+    }
+
+    public void setTable3(){
+        btnTable3.setVisible(false);
+        pnlOrderedTable3.setVisible(true);
+    }
+
+    public void setTable4(){
+        btnTable4.setVisible(false);
+        pnlOrderedTable4.setVisible(true);
+    }
+
+    public void setTable5(){
+        btnTable5.setVisible(false);
+        pnlOrderedTable5.setVisible(true);
+    }
+
+    public void setTable6(){
+        btnTable6.setVisible(false);
+        pnlOrderedTable6.setVisible(true);
+    }
+
+    public void setTable7(){
+        btnTable7.setVisible(false);
+        pnlOrderedTable7.setVisible(true);
+    }
+
+    public void setTable8(){
+        btnTable8.setVisible(false);
+        pnlOrderedTable8.setVisible(true);
+    }
 
     public UserAccount() {
 
         //hide top menu
-        pnlTopMenu.setVisible(false);
-        pnlTables.setVisible(false);
-
-        //hide pnl ordered
-        //pnlOrderedTable1.setVisible(false);
+        setPanels("xx");
 
         //btn search
         btnSearch.addActionListener(new ActionListener() {
@@ -88,6 +212,7 @@ public class UserAccount {
         //btn basic menu Tables
         btnTables.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                setPanels("xx");
                 pnlBasicMenu.setVisible(false);
                 pnlTables.setVisible(true);
                 pnlTopMenu.setVisible(true);
@@ -96,23 +221,13 @@ public class UserAccount {
         //btn basic menu LogOut
         btnLogOut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                EntryPage page = new EntryPage();
-                page.getBrEntryPage();
-                JComponent comp = (JComponent) e.getSource();
-                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-                win.dispose();
-
-
+                logOut(e);
             }
         });
 
         btnTopMenuLogOut.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                EntryPage page = new EntryPage();
-                page.getBrEntryPage();
-                JComponent comp = (JComponent) e.getSource();
-                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-                win.dispose();
+                logOut(e);
             }
         });
         btnTable1.addActionListener(new ActionListener() {
@@ -175,6 +290,14 @@ public class UserAccount {
         });
     }
 
+    public void logOut(ActionEvent e){
+        EntryPage page = new EntryPage();
+        page.getBrEntryPage();
+        JComponent comp = (JComponent) e.getSource();
+        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+        win.dispose();
+    }
+
     public JFrame openSetEmployee() throws PrinterException {
         SetEmployee setemployee = new SetEmployee();
 
@@ -182,7 +305,6 @@ public class UserAccount {
         frameSetEmployee.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameSetEmployee.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frameSetEmployee.setUndecorated(true);
-        //frame.setSize(500,500);
         frameSetEmployee.setContentPane(setemployee.getPnlSetEmployee());
         frameSetEmployee.setVisible(true);
 
@@ -196,7 +318,6 @@ public class UserAccount {
         frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMakeOrder.setExtendedState(JFrame.MAXIMIZED_BOTH);
         frameMakeOrder.setUndecorated(true);
-        //frame.setSize(500,500);
         frameMakeOrder.setContentPane(makeorder.getPnlMakeOrder());
         frameMakeOrder.setVisible(true);
 
@@ -278,11 +399,6 @@ public class UserAccount {
     public UserAccount AccountManager() {
         System.out.println("Account Manager");
         return null;
-    }
-
-
-    private void createUIComponents() {
-        // TODO: place custom component creation code here
     }
 
 }

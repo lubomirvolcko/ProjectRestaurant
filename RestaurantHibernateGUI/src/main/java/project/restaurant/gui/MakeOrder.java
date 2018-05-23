@@ -61,18 +61,18 @@ public class MakeOrder {
     private JLabel lblTotalPrice;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
-    public String state;
-    String name;
-    Double price;
-    long item;
-    int positionY = 120;
-    int addPositionY = 50;
-    int orderPositionY=0;
-    String count="";
-    double countPrice;
-    int countItem=0;
-    double totalPrice;
-
+    public String state; //use in btnBack for set panels
+    String name; //use for name of item
+    Double price; //use for price of item
+    long item; //use for id of item
+    int positionY = 120; //use for position Y for generated labels and buttons for example btnSmootie
+    int addPositionY = 50; //use for position Y for generated labels and buttons for example btnSmootie
+    int orderPositionY=0; //use for position Y for generated labels and buttons for example btnSmootie
+    String count=""; //use for count of items in txtCount
+    double countPrice; //use for count total price in order
+    int countItem=0; //use for counting added items to order
+    double totalPrice; //total price in order
+    String orderHistory="false"; //use for seting order history after pressed btnConfirm
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -100,7 +100,6 @@ public class MakeOrder {
 
     public void getDrinksSmoothies()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -108,17 +107,6 @@ public class MakeOrder {
         java.util.List<Drink> drinkSmoothies=(List<Drink>)qry.list();
         se.getTransaction().commit();
         se.close();
-        int f;
-        int i = drinkSmoothies.size();
-
-        //MakeOrder smoothie = new MakeOrder();
-
-
-        /*for(f=0;f<1;f++)
-        {
-            name=drinkSmoothies.get(f).getName();
-            smoothie.getSmootiesButtons(name, price, item);
-        }*/
 
         for(Drink d : drinkSmoothies)
         {
@@ -126,14 +114,12 @@ public class MakeOrder {
             name=d.getName();
             price=d.getPrice();
             getSmootiesButtons(name,price,item);
-
-
         }
     }
 
+
     public void getHotDrinks()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -148,14 +134,11 @@ public class MakeOrder {
             name=d.getName();
             price=d.getPrice();
             getHotDrinksButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
     public void getIceDrinks()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -165,19 +148,15 @@ public class MakeOrder {
         se.close();
         for(Drink d : drinkIceDrinks)
         {
-
             item=d.getId();
             name=d.getName();
             price=d.getPrice();
             getIceDrinksButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
     public void getBeer()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -191,14 +170,11 @@ public class MakeOrder {
             name=d.getName();
             price=d.getPrice();
             getBeerButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
     public void getCocktailsDrinks()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -212,14 +188,11 @@ public class MakeOrder {
             name=d.getName();
             price=d.getPrice();
             getCocktailsButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
     public void getWine()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -229,19 +202,15 @@ public class MakeOrder {
         se.close();
         for(Drink d : drinkWine)
         {
-
             item=d.getId();
             name=d.getName();
             price=d.getPrice();
             getWineButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
     public void getSprites()
     {
-
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -251,13 +220,10 @@ public class MakeOrder {
         se.close();
         for(Drink d : drinkSprites)
         {
-
             item=d.getId();
             name=d.getName();
             price=d.getPrice();
             getSpiritesButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
     }
 
@@ -272,16 +238,11 @@ public class MakeOrder {
         se.close();
         for(Food f : foodAppetizer)
         {
-
             item=f.getId();
             name=f.getName();
             price=f.getPrice();
             getAppertizerButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
-
-
     }
 
     public void getFoodSoup()
@@ -295,16 +256,11 @@ public class MakeOrder {
         se.close();
         for(Food f : foodSoup)
         {
-
             item=f.getId();
             name=f.getName();
             price=f.getPrice();
             getSoupButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
-
-
     }
 
     public void getFoodSalad()
@@ -318,16 +274,11 @@ public class MakeOrder {
         se.close();
         for(Food g : foodSalad)
         {
-
             item=g.getId();
             name=g.getName();
             price=g.getPrice();
             getSaladButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
-
-
     }
 
     public void getFoodDesert()
@@ -341,16 +292,11 @@ public class MakeOrder {
         se.close();
         for(Food g : foodDesert)
         {
-
             item=g.getId();
             name=g.getName();
             price=g.getPrice();
             getDessertButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
-
-
     }
 
     public void getFoodMainDish()
@@ -364,35 +310,15 @@ public class MakeOrder {
         se.close();
         for(Food g : foodMainDish)
         {
-
             item=g.getId();
             name=g.getName();
             price=g.getPrice();
             getMainDishButtons(name, price, item);
-            //System.out.println(d.getName());
-            //System.out.println(d.getPrice());
         }
-
-
     }
-
-
-    /*public void scrollPanel(){
-        pnlOrderedItems.setLayout(null);
-        JScrollPane scrollPane = new JScrollPane();
-
-        pnlSmoothies.add(scrollPane = new JScrollPane());
-        scrollPane.setBounds(0,0, 700, 900);
-        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
-        scrollPane.setBackground(Color.gray);
-        scrollPane.setLayout(null);
-    }*/
 
     public MakeOrder() {
         setPanels();
-
-
-
 
         pnlMakeOrder.setSize(500, 500);
 
@@ -446,20 +372,17 @@ public class MakeOrder {
                 SoftDrinks();
             }
         });
+
         btnSmoothie.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
-                //drink.getDrinksSmoothies();
                 Smoothies();
                 getDrinksSmoothies();
-
             }
         });
         btnHotDrinks.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 HotDrinks();
                 getHotDrinks();
             }
@@ -467,7 +390,6 @@ public class MakeOrder {
         btnIceDrinks.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-
                 IceDrinks();
                 getIceDrinks();
             }
@@ -544,7 +466,15 @@ public class MakeOrder {
         btnConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                UserAccount userAccount = new UserAccount();
 
+                orderHistory="true";
+                userAccount.table=lblNameTable.getText();
+                userAccount.setPanels(orderHistory);
+
+                JComponent comp = (JComponent) e.getSource();
+                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                win.dispose();
             }
         });
     }
@@ -709,8 +639,6 @@ public class MakeOrder {
 
             pnlDessert.setLayout(null);
 
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
-
             //create label in pnlSmothies for number of item
             pnlDessert.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
             lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
@@ -742,7 +670,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -752,7 +679,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -768,14 +694,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getSaladButtons(String name, Double price, long item){
@@ -786,8 +707,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlSalad.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlSalad.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -820,7 +739,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -830,7 +748,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -846,14 +763,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getMainDishButtons(String name, Double price, long item){
@@ -864,8 +776,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlMainDish.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlMainDish.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -898,7 +808,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -908,7 +817,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -923,14 +831,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getSoupButtons(String name, Double price, long item){
@@ -941,8 +844,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlSoup.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlSoup.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -975,7 +876,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -985,7 +885,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1001,14 +900,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getAppertizerButtons(String name, Double price, long item){
@@ -1019,8 +913,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlAppertizer.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlAppertizer.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1053,7 +945,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1063,7 +954,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1079,14 +969,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getSpiritesButtons(String name, Double price, long item){
@@ -1097,8 +982,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlSpirits.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlSpirits.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1141,7 +1024,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1155,10 +1037,6 @@ public class MakeOrder {
 
 
             });
-
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
 
         }catch (Exception e){
             e.getStackTrace();
@@ -1174,8 +1052,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlWine.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlWine.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1208,7 +1084,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1218,7 +1093,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1233,14 +1107,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getCocktailsButtons(String name, Double price, long item){
@@ -1251,8 +1120,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlCocktails.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlCocktails.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1285,7 +1152,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1295,7 +1161,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1310,14 +1175,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getBeerButtons(String name, Double price, long item){
@@ -1328,8 +1188,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlBeers.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlBeers.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1362,7 +1220,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1372,7 +1229,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1388,14 +1244,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getHotDrinksButtons(String name, Double price, long item){
@@ -1406,8 +1257,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlHotDrinks.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlHotDrinks.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1440,7 +1289,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1450,7 +1298,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1465,14 +1312,9 @@ public class MakeOrder {
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     public void getIceDrinksButtons(String name, Double price, long item){
@@ -1483,8 +1325,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlIceDrinks.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlIceDrinks.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1517,7 +1357,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1527,7 +1366,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1537,20 +1375,14 @@ public class MakeOrder {
                     }
 
                     finalTxtCount.setText("1");
-
                 }
 
 
             });
 
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
-
         }catch (Exception e){
             e.getStackTrace();
         }
-
     }
 
     //create labels and button in pnlSmoothies
@@ -1562,8 +1394,6 @@ public class MakeOrder {
             JTextField txtCount = new JTextField(); //create text field
 
             pnlSmoothies.setLayout(null);
-
-            //lblSmoothiesHead.setBounds(150, 0, 300, 40);
 
             //create label in pnlSmothies for number of item
             pnlSmoothies.add(lblSmootieNumber = new JLabel(""+item, FlowLayout.LEFT));
@@ -1596,7 +1426,6 @@ public class MakeOrder {
 
             positionY=positionY+addPositionY;
 
-
             final JTextField finalTxtCount = txtCount;
             final String smootieName = name;
             final Double SmootiePrice = price;
@@ -1606,7 +1435,6 @@ public class MakeOrder {
                     int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
-                    System.out.println(countX+" ---POCET");
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
@@ -1617,19 +1445,11 @@ public class MakeOrder {
 
                     finalTxtCount.setText("1");
                 }
-
-
             });
-
-            System.out.println("smoothie: "+name);
-            System.out.println("price: "+price);
-            System.out.println("item: "+item);
 
         }catch (Exception e){
             e.getStackTrace();
         }
-
-
     }
 
     //send item to order on table
@@ -1640,7 +1460,6 @@ public class MakeOrder {
         countPrice=numberOfItem*price;
         totalPrice=totalPrice+countPrice;
         System.out.println("TOTAL PRICE IS : "+totalPrice);
-        //lblTotalPrice.setPreferredSize(new Dimension(800,80));// Width, Height
         lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
         JLabel lblCount = new JLabel("name");
         JLabel lblName = new JLabel("name");
@@ -1729,6 +1548,5 @@ public class MakeOrder {
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
     }
-
 
 }

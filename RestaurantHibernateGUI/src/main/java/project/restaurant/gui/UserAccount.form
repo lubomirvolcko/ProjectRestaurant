@@ -3,7 +3,7 @@
   <grid id="27dc6" binding="UserAccount" layout-manager="GridLayoutManager" row-count="1" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
     <margin top="10" left="10" bottom="10" right="10"/>
     <constraints>
-      <xy x="20" y="20" width="1527" height="2040"/>
+      <xy x="20" y="20" width="2218" height="2958"/>
     </constraints>
     <properties>
       <background color="-988964"/>
@@ -316,7 +316,7 @@
               </component>
             </children>
           </grid>
-          <grid id="a41c5" binding="pnlTables" layout-manager="GridLayoutManager" row-count="3" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+          <grid id="a41c5" binding="pnlTables" layout-manager="GridLayoutManager" row-count="2" column-count="4" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
             <margin top="10" left="10" bottom="10" right="10"/>
             <constraints>
               <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
@@ -326,126 +326,957 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="9394" class="javax.swing.JButton" binding="btnTable2">
+              <grid id="11649" binding="pnlTable1" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 2"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="304be" class="javax.swing.JButton" binding="btnTable4">
+                <border type="none"/>
+                <children>
+                  <component id="83634" class="javax.swing.JButton" binding="btnTable1">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 1"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="59bcb" binding="pnlOrderedTable1" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                      <visible value="true"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                    <border type="none"/>
+                    <children>
+                      <component id="58f74" class="javax.swing.JButton" binding="btnViewOrderTable1">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="4cb17" class="javax.swing.JButton" binding="btnAddToOrderTable1">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="9c7" class="javax.swing.JButton" binding="btnPaymentTable1">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="1649" class="javax.swing.JButton" binding="btnStornoTable1">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="6a67f" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 1"/>
+                        </properties>
+                      </component>
+                      <component id="238f9" class="javax.swing.JLabel" binding="lblTotalPriceTable1">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="f2c6f">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="d7d3e" binding="pnlTable2" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 4"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="1be13" class="javax.swing.JButton" binding="btnTable6">
+                <border type="none"/>
+                <children>
+                  <component id="6d343" class="javax.swing.JButton" binding="btnTable2">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 2"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="4d34c" binding="pnlOrderedTable2" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <clientProperties>
+                      <html.disable class="java.lang.Boolean" value="false"/>
+                    </clientProperties>
+                    <border type="none"/>
+                    <children>
+                      <component id="da4c6" class="javax.swing.JButton" binding="btnViewOrderTable2">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="e18ee" class="javax.swing.JButton" binding="btnAddToOrderTable2">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="5ee2b" class="javax.swing.JButton" binding="btnPaymentTable2">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="29848" class="javax.swing.JButton" binding="btnStornoTable2">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="2c195" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 2"/>
+                        </properties>
+                      </component>
+                      <component id="4a757" class="javax.swing.JLabel" binding="lblTotalPriceTable2">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="f8cf5">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="c65fc" binding="pnlTable3" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 6"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="d63e5" class="javax.swing.JButton" binding="btnTable7">
+                <border type="none"/>
+                <children>
+                  <grid id="ff4ee" binding="pnlOrderedTable3" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="31e2c" class="javax.swing.JButton" binding="btnViewOrderTable3">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="415a3" class="javax.swing.JButton" binding="btnAddToOrderTable3">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="5ccb0" class="javax.swing.JButton" binding="btnPaymentTable3">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="8c6e3" class="javax.swing.JButton" binding="btnStornoTable3">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="c6084" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 3"/>
+                        </properties>
+                      </component>
+                      <component id="1a599" class="javax.swing.JLabel" binding="lblTotalPriceTable3">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="cd94f">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                  <component id="3bc3" class="javax.swing.JButton" binding="btnTable3">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 3"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                </children>
+              </grid>
+              <grid id="844a0" binding="pnlTable4" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 7"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="4cfa0" class="javax.swing.JButton" binding="btnTable8">
+                <border type="none"/>
+                <children>
+                  <component id="7d2fc" class="javax.swing.JButton" binding="btnTable4">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 4"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="61cb8" binding="pnlOrderedTable4" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="5d09" class="javax.swing.JButton" binding="btnViewOrderTable4">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="89709" class="javax.swing.JButton" binding="btnAddToOrderTable4">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="47ca5" class="javax.swing.JButton" binding="btnPaymentTable4">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="f5a8b" class="javax.swing.JButton" binding="btnStornoTable4">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="3f7f7" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 4"/>
+                        </properties>
+                      </component>
+                      <component id="c2081" class="javax.swing.JLabel" binding="lblTotalPriceTable4">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="23c3a">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="a7785" binding="pnlTable5" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="2" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 8"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="51f5" class="javax.swing.JButton" binding="btnTable3">
+                <border type="none"/>
+                <children>
+                  <component id="fbb51" class="javax.swing.JButton" binding="btnTable5">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 5"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="12f41" binding="pnlOrderedTable5" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="29efe" class="javax.swing.JButton" binding="btnViewOrderTable5">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="5c712" class="javax.swing.JButton" binding="btnAddToOrderTable5">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="e1d8e" class="javax.swing.JButton" binding="btnPaymentTable5">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="7acf9" class="javax.swing.JButton" binding="btnStornoTable5">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="24b1b" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 5"/>
+                        </properties>
+                      </component>
+                      <component id="57ba0" class="javax.swing.JLabel" binding="lblTotalPriceTable5">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="ffced">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="e3c05" binding="pnlTable6" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="1" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 3"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="5ac91" class="javax.swing.JButton" binding="btnTable5">
+                <border type="none"/>
+                <children>
+                  <component id="c0fe5" class="javax.swing.JButton" binding="btnTable6">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 6"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="5c28f" binding="pnlOrderedTable6" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="f3599" class="javax.swing.JButton" binding="btnViewOrderTable6">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="927a9" class="javax.swing.JButton" binding="btnAddToOrderTable6">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="44b2c" class="javax.swing.JButton" binding="btnPaymentTable6">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="6de6e" class="javax.swing.JButton" binding="btnStornoTable6">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="575b3" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 6"/>
+                        </properties>
+                      </component>
+                      <component id="45484" class="javax.swing.JLabel" binding="lblTotalPriceTable6">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="35583">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="9aaec" binding="pnlTable7" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="2" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 5"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
-              <component id="83634" class="javax.swing.JButton" binding="btnTable1">
+                <border type="none"/>
+                <children>
+                  <component id="4e643" class="javax.swing.JButton" binding="btnTable7">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 7"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="6ae66" binding="pnlOrderedTable7" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="94e7e" class="javax.swing.JButton" binding="btnViewOrderTable7">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="17fb" class="javax.swing.JButton" binding="btnAddToOrderTable7">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="1100f" class="javax.swing.JButton" binding="btnPaymentTable7">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="c6fdb" class="javax.swing.JButton" binding="btnStornoTable7">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="e6758" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 7"/>
+                        </properties>
+                      </component>
+                      <component id="8c9be" class="javax.swing.JLabel" binding="lblTotalPriceTable7">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="43c28">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
+              <grid id="1e21e" binding="pnlTable8" layout-manager="GridLayoutManager" row-count="3" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                <margin top="0" left="0" bottom="0" right="0"/>
                 <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                  <grid row="1" column="3" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="3" indent="0" use-parent-layout="false"/>
                 </constraints>
                 <properties>
                   <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="26" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Table 1"/>
-                  <verticalTextPosition value="3"/>
                 </properties>
-              </component>
+                <border type="none"/>
+                <children>
+                  <component id="7ba07" class="javax.swing.JButton" binding="btnTable8">
+                    <constraints>
+                      <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <borderPainted value="false"/>
+                      <font name="Century Gothic" size="26" style="1"/>
+                      <foreground color="-8023247"/>
+                      <horizontalTextPosition value="0"/>
+                      <icon value="src/img/teble.png"/>
+                      <text value="Table 8"/>
+                      <verticalTextPosition value="3"/>
+                    </properties>
+                  </component>
+                  <grid id="34955" binding="pnlOrderedTable8" layout-manager="GridLayoutManager" row-count="6" column-count="1" same-size-horizontally="false" same-size-vertically="false" hgap="-1" vgap="-1">
+                    <margin top="0" left="0" bottom="0" right="0"/>
+                    <constraints>
+                      <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="3" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties>
+                      <background color="-988964"/>
+                      <foreground color="-988964"/>
+                    </properties>
+                    <border type="none"/>
+                    <children>
+                      <component id="78096" class="javax.swing.JButton" binding="btnViewOrderTable8">
+                        <constraints>
+                          <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/viewOrderIcon.png"/>
+                          <text value="View Order"/>
+                        </properties>
+                      </component>
+                      <component id="47b4e" class="javax.swing.JButton" binding="btnAddToOrderTable8">
+                        <constraints>
+                          <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/addToOrderIcon.png"/>
+                          <text value="Add to Order"/>
+                        </properties>
+                      </component>
+                      <component id="9af69" class="javax.swing.JButton" binding="btnPaymentTable8">
+                        <constraints>
+                          <grid row="3" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/paymentIcon.png"/>
+                          <text value="Payment"/>
+                        </properties>
+                      </component>
+                      <component id="f30" class="javax.swing.JButton" binding="btnStornoTable8">
+                        <constraints>
+                          <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <background color="-988964"/>
+                          <borderPainted value="false"/>
+                          <font name="Century Gothic" size="22" style="1"/>
+                          <foreground color="-8023247"/>
+                          <icon value="src/img/stornoIcon.png"/>
+                          <text value="Storno"/>
+                        </properties>
+                      </component>
+                      <component id="b5932" class="javax.swing.JLabel">
+                        <constraints>
+                          <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="1"/>
+                          <foreground color="-8023247"/>
+                          <text value="Table 8"/>
+                        </properties>
+                      </component>
+                      <component id="4b103" class="javax.swing.JLabel" binding="lblTotalPriceTable8">
+                        <constraints>
+                          <grid row="5" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
+                        </constraints>
+                        <properties>
+                          <font name="Century Gothic" size="20" style="0"/>
+                          <foreground color="-16777216"/>
+                          <horizontalAlignment value="0"/>
+                          <text value="Price:"/>
+                        </properties>
+                      </component>
+                    </children>
+                  </grid>
+                  <vspacer id="7b810">
+                    <constraints>
+                      <grid row="2" column="0" row-span="1" col-span="1" vsize-policy="6" hsize-policy="1" anchor="0" fill="2" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                  </vspacer>
+                </children>
+              </grid>
             </children>
           </grid>
         </children>
