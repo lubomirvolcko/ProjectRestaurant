@@ -418,4 +418,50 @@ $.post({
 
 
 
+
+function getDrinks(type){
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/drink',
+        contentType: 'application/json',
+        data: JSON.stringify({"type": type}),
+        dataType: 'json',
+        success: function(response){ 
+          var i;
+          
+           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          for( i = 0;i<response.length;i++){
+          
+        
+          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
+
+          
+     
+          
+
+      
+    } }
+
+
+} );}
+
+$('#send').click(function() {
+  var namereservation=$("#namereservation").val();
+  var surnamereservation=$("#surnamereservation").val();
+  var emailreservation=$("#emailreservation").val();
+  var phonereservation=$("#phonereservation").val();
+
+$.post({
+
+
+        traditional: true,
+        url: 'http://localhost:8080/send',
+        contentType: 'application/json',
+        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation}),
+        dataType: 'json',
+        success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
+} );
+} );
 })(jQuery); // End of use strict
