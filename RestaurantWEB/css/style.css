@@ -16,6 +16,15 @@ section {
     height: 10vh;
 }
 
+#shoppingCart{
+    height: 3vh;
+}
+
+#btnShop{
+    background-color: #859331;
+    border-color: #859331;
+}
+
 .carousel-item {
   height: 100vh;
   min-height: 300px;

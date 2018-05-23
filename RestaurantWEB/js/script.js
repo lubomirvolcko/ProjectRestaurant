@@ -314,6 +314,8 @@ $("#desert").click(function(){
       $( "#tableFood" ).empty();
 });
 
+var a = 0;
+
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
 function postReq(type){
@@ -334,16 +336,30 @@ $.post({
           for( i = 0;i<response.length;i++){
           console.log(JSON.parse(JSON.stringify(response[i].Name)));
         
-          $("#tableFood").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableFood").append("<tr><td id=tab1>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          a++;
 
 
-          
-     
           
 
       
-    } }
+    }
+    a=0;
+
+    $("#btnW0").click(function(){
+      console.log("KOKOT");
+    }); 
+
+
+
+
+
+
+  }
 } );}
+
+          
+     
 
 $("#smoothies").click(function(){
      type = $("#smoothies").attr('id');
@@ -405,7 +421,7 @@ $.post({
           for( i = 0;i<response.length;i++){
           
         
-          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
 
 
           
