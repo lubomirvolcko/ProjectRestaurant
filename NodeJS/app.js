@@ -53,6 +53,28 @@ app.post('/drink',cors(),function(req,res){
 	});
 });
 
+app.post('/review',cors(),function(req,res){
+	var name = req.body.name;
+	var review = req.body.review;
+	var reviewstar= req.body.reviewstar;
+
+	var values =[req.body.name,req.body.review,req.body.reviewstar];
+	console.log(review);
+	console.log(name);
+	console.log(reviewstar);
+	console.log(values);
+
+
+	connection.query("INSERT into reviews(name,review,reviewstar) values (?) ",[values],function(err, rows, fields){
+	
+      
+	res.send(rows);
+
+			
+		
+	});
+});
+
 
 app.post('/send', (req, res) => {
 	const output = `
@@ -100,6 +122,7 @@ app.post('/send', (req, res) => {
 		res.render('contact', {msg:'Email has been sent'});
 	});
 	});
+	
 
 	
 	app.listen(8080,function(){

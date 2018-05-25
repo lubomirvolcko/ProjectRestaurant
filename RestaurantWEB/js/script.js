@@ -435,33 +435,30 @@ $.post({
 
 
 
-function getDrinks(type){
+$("#sendreview").click(function(){
+
+  var name=$("#nameInReview").val();
+  var reviewstar = $('#example-css').val();
+  var review = $("#new-review").val();
+  console.log(name);
+  console.log(reviewstar);
+  console.log(review);
+
+
+
 $.post({
 
         traditional: true,
-        url: 'http://localhost:8080/drink',
+        url: 'http://localhost:8080/review',
         contentType: 'application/json',
-        data: JSON.stringify({"type": type}),
+        data: JSON.stringify({"review": review,"name":name,"reviewstar":reviewstar}),
         dataType: 'json',
-        success: function(response){ 
-          var i;
-          
-           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
-          for( i = 0;i<response.length;i++){
-          
-        
-          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+        success: console.log("SUCCESS")
+} );
+});
 
 
-          
-     
-          
 
-      
-    } }
-
-
-} );}
 
 $('#send').click(function() {
   var namereservation=$("#namereservation").val();
@@ -480,4 +477,5 @@ $.post({
         success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
 } );
 } );
+
 })(jQuery); // End of use strict
