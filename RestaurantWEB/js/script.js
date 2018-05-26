@@ -459,12 +459,13 @@ $.post({
 
 
 
-
 $('#send').click(function() {
   var namereservation=$("#namereservation").val();
   var surnamereservation=$("#surnamereservation").val();
   var emailreservation=$("#emailreservation").val();
   var phonereservation=$("#phonereservation").val();
+  var datereservation=$("#datereservation").val();
+  var timereservation=$("#timereservation").val();
 
 $.post({
 
@@ -472,9 +473,9 @@ $.post({
         traditional: true,
         url: 'http://localhost:8080/send',
         contentType: 'application/json',
-        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation}),
+        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation, "datereservation":datereservation,"timereservation":timereservation}),
         dataType: 'json',
-        success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
+success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation+" "+datereservation+" "+ timereservation)
 } );
 } );
 
