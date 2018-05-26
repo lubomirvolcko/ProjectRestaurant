@@ -44,7 +44,7 @@
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <span class="input-group-append">
-                <div id="shoppingCart"><button type="button" class="btn btn-success btn-small" id="btnShop"><img src="img/shopping-cart.png"></button></div>
+                <div id="shoppingCart"><button type="button" class="btn btn-success btn-small" id="btnShop"  data-toggle="modal" data-target="#myModal1"><img src="img/shopping-cart.png"></button></div>
               </span>
             </div>
           </form>
@@ -225,7 +225,41 @@
   </tbody>
 </table>
   </div>
-<div class="col-sm"></div>
+<div class="col-sm">
+  
+         <div class="container">
+  <!-- The Modal -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Your Order</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+          <div id="empty">Your shopping cart is empty!</div>
+          <div id="foods" style="display: none;">Food name</div> 
+          <div id="price" style="display: none;">Price</div>
+          <div id="quantity" style="display: none;">Quantity <input type="number" name="quantity" min="1" max="3"></div>
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" style="display: none;">Order</button>
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</div>
     </div>
     <button type="button" class="btn btn-danger" id="buttonBack" style="display: none;">Back</button>
 </div>
@@ -289,67 +323,6 @@
         </div>
       </div>
     </section>
-
-   <!-- <section id="order">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Order</h2>
-            <p class="lead">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputLastName4">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label> 
-                    <select id="inputCity" class="form-control">
-                      <option selected>Kosice</option>
-                      <option>Bukovec</option>
-                      <option>Baska</option>
-                      <option>Nizny Klatov</option>
-                      <option>Mala Ida</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Zip">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Address">
-                 </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Phone Number</label>
-                    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="+421xxxxxxxxx">
-                 </div>
-                </div>
-                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Food name</label>
-                    <input type="text" class="form-control" id="inputFoodname" placeholder="Food name">
-                 </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Note</label>
-                    <input type="text" class="form-control" id="Note" placeholder="Note">
-                 </div>
-                </div>
-                <button type="button" class="btn btn-success">Order</button>
-              </form>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section id="reservation">
       <div class="container">
