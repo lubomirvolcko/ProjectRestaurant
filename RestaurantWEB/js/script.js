@@ -315,7 +315,11 @@ $("#desert").click(function(){
 });
 
 var a = 0;
-
+var tdidname= 0
+var tdidprice=0;
+ var nameArray = new Array;
+ var priceArray = new Array;
+$("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Quantity"+"</th>"+"</th>"+"</tr>"+"</thead>");
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
 function postReq(type){
@@ -336,8 +340,10 @@ $.post({
           for( i = 0;i<response.length;i++){
           console.log(JSON.parse(JSON.stringify(response[i].Name)));
         
-          $("#tableFood").append("<tr><td id=tab1>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableFood").append("<tr ><td id=tab"+tdidname+">"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td id=tdidprice"+tdidprice+">"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
           a++;
+          tdidname++;
+          tdidprice++;
 
 
           
@@ -345,9 +351,57 @@ $.post({
       
     }
     a=0;
+    tdidname=0;
+    tdidprice=0;
+
 
     $("#btnW0").click(function(){
-      console.log("KOKOT");
+     
+      var price
+      var test = "ahoj";
+      var test2 = "cau";
+
+
+    nameArray.push($('#tab0').text());
+    console.log(nameArray[0]);
+ 
+    priceArray.push($('#tdidprice0').text());
+    for(var p=0;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+    console.log(price);
+
+    }); 
+
+        $("#btnW1").click(function(){
+
+    var nameofproduct= $('#tab1').text();
+    console.log(nameofproduct);
+  
+    var price= $('#tdidprice1').text();
+    console.log(price);
+
+    }); 
+
+            $("#btnW2").click(function(){
+
+    var nameofproduct= $('#tab2').text();
+    console.log(nameofproduct);
+  
+    var price= $('#tdidprice2').text();
+    console.log(price);
+
+    }); 
+
+                $("#btnW3").click(function(){
+
+    var nameofproduct= $('#tab3').text();
+    console.log(nameofproduct);
+  
+    var price= $('#tdidprice3').text();
+    console.log(price);
+
     }); 
 
 
@@ -358,7 +412,32 @@ $.post({
   }
 } );}
 
-          
+    $("#btnShop").click(function(){
+
+var stringName = JSON.stringify(nameArray);
+
+
+var stringPrice = JSON.stringify(priceArray);
+
+var parsedPrice = JSON.parse(stringPrice);
+
+var parseName = JSON.parse(stringName);
+
+for(var g = 0;g<parseName.length;g++)
+{
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/try',
+        contentType: 'application/json',
+        data: JSON.stringify({"parseName": parseName[g]}),
+        dataType: 'json',
+        success: console.log("SUCCESS")
+} );
+}
+});
+
+         
      
 
 $("#smoothies").click(function(){
@@ -435,6 +514,7 @@ $.post({
 
 
 
+
 $("#sendreview").click(function(){
 
   var name=$("#nameInReview").val();
@@ -459,13 +539,12 @@ $.post({
 
 
 
+
 $('#send').click(function() {
   var namereservation=$("#namereservation").val();
   var surnamereservation=$("#surnamereservation").val();
   var emailreservation=$("#emailreservation").val();
   var phonereservation=$("#phonereservation").val();
-  var datereservation=$("#datereservation").val();
-  var timereservation=$("#timereservation").val();
 
 $.post({
 
@@ -473,10 +552,34 @@ $.post({
         traditional: true,
         url: 'http://localhost:8080/send',
         contentType: 'application/json',
-        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation, "datereservation":datereservation,"timereservation":timereservation}),
+        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation}),
         dataType: 'json',
-success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation+" "+datereservation+" "+ timereservation)
+        success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
 } );
 } );
+
+
+
+
+$("#er").click(function(){
+   
+
+
+$.get({
+
+        traditional: true,
+        url: 'http://localhost:8080/reviews',
+        contentType: 'application/json',
+       
+        dataType: 'json',
+        success: function(response){ 
+          console.log(response[0].reviewStar);
+           $("#star").val(response[0].reviewStar);
+      
+          }
+} );
+});
+
+
 
 })(jQuery); // End of use strict

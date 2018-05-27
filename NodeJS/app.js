@@ -148,6 +148,23 @@ app.post('/send', (req, res) => {
 		res.render('contact', {msg:'Email has been sent'});
 	});
 	});
+
+
+
+	app.post('/try',cors(),function(req,res){
+		var parseName = req.body.parseName;
+	
+	
+	
+		connection.query("INSERT into try(name) values (?) ",[parseName],function(err, rows, fields){
+		
+		  
+		res.send(rows);
+	
+				
+			
+		});
+	});
 	
 
 	

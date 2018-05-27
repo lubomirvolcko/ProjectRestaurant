@@ -50,6 +50,13 @@ $(function() {
             showSelectedRating: false
         });
 
+
+        $('#star').barrating({
+            theme: 'css-stars',
+            showSelectedRating: false
+        });
+
+
         $('#example-bootstrap').barrating({
             theme: 'bootstrap-stars',
             showSelectedRating: false
