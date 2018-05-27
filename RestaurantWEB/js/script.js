@@ -353,54 +353,73 @@ $.post({
     a=0;
     tdidname=0;
     tdidprice=0;
+    var p=0;
 
 
     $("#btnW0").click(function(){
-     
-      var price
-      var test = "ahoj";
-      var test2 = "cau";
+
+
 
 
     nameArray.push($('#tab0').text());
-    console.log(nameArray[0]);
  
     priceArray.push($('#tdidprice0').text());
-    for(var p=0;p<nameArray.length;p++)
+  
+    for(p=p;p<nameArray.length;p++)
     {
    $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
     }
-    console.log(price);
 
     }); 
 
+  
+
         $("#btnW1").click(function(){
 
-    var nameofproduct= $('#tab1').text();
-    console.log(nameofproduct);
+
+
+
+ nameArray.push($('#tab1').text());
+ 
+    priceArray.push($('#tdidprice1').text());
   
-    var price= $('#tdidprice1').text();
-    console.log(price);
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+
 
     }); 
 
             $("#btnW2").click(function(){
 
-    var nameofproduct= $('#tab2').text();
-    console.log(nameofproduct);
+ 
+
+     nameArray.push($('#tab2').text());
+ 
+    priceArray.push($('#tdidprice2').text());
   
-    var price= $('#tdidprice2').text();
-    console.log(price);
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+
 
     }); 
 
                 $("#btnW3").click(function(){
 
-    var nameofproduct= $('#tab3').text();
-    console.log(nameofproduct);
   
-    var price= $('#tdidprice3').text();
-    console.log(price);
+
+     nameArray.push($('#tab3').text());
+ 
+    priceArray.push($('#tdidprice3').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+  
 
     }); 
 
@@ -419,9 +438,10 @@ var stringName = JSON.stringify(nameArray);
 
 var stringPrice = JSON.stringify(priceArray);
 
-var parsedPrice = JSON.parse(stringPrice);
+var parsePrice = JSON.parse(stringPrice);
 
 var parseName = JSON.parse(stringName);
+
 
 for(var g = 0;g<parseName.length;g++)
 {
@@ -430,7 +450,7 @@ $.post({
         traditional: true,
         url: 'http://localhost:8080/try',
         contentType: 'application/json',
-        data: JSON.stringify({"parseName": parseName[g]}),
+        data: JSON.stringify({"parseName": parseName[g],"parsePrice": parsePrice[g]}),
         dataType: 'json',
         success: console.log("SUCCESS")
 } );

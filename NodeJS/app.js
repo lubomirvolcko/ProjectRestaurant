@@ -152,12 +152,13 @@ app.post('/send', (req, res) => {
 
 
 	app.post('/try',cors(),function(req,res){
-		var parseName = req.body.parseName;
+	
+		var orderValues=[req.body.parseName,req.body.parsePrice];
 	
 	
 	
-		connection.query("INSERT into try(name) values (?) ",[parseName],function(err, rows, fields){
-		
+		connection.query("INSERT into try(name,price) values (?) ",[orderValues],function(err, rows, fields){
+		console.log(orderValues);
 		  
 		res.send(rows);
 	
