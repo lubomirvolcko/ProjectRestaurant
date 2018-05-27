@@ -77,6 +77,32 @@ app.post('/review',cors(),function(req,res){
 
 
 app.post('/send', (req, res) => {
+	var namereservation = req.body.namereservation;
+	var surnamereservation = req.body.surnamereservation;
+	var emailreservation = req.body.emailreservation;
+	var phonereservation = req.body.phonereservation;
+	var datereservation = req.body.datereservation;
+	var timereservation = req.body.timereservation;
+
+	var valuesreservation =[req.body.namereservation,req.body.surnamereservation,req.body.emailreservation,req.body.phonereservation,req.body.datereservation,req.body.timereservation];
+
+	
+	console.log(valuesreservation);
+	console.log(timereservation);
+	console.log(datereservation);
+	console.log(phonereservation);
+	console.log(emailreservation);
+	console.log(surnamereservation);
+	console.log(namereservation);
+
+	connection.query("INSERT into reservation(Name,surname,email,phone,date,time) values (?) ",[valuesreservation],function(err, rows, fields){
+
+		res.send(rows);
+
+			
+		
+	});
+
 	const output = `
 	  <p>Reservation</p>
 	  <h3>Reservation</h3>
@@ -124,6 +150,7 @@ app.post('/send', (req, res) => {
 	});
 	
 
+	
 	
 	app.listen(8080,function(){
 	console.log("Connected & Listen to port 8080");
