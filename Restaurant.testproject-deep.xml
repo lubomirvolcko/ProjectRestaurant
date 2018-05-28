@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite id="" name="" >
+<node_order><![CDATA[]]></node_order>
+<details><![CDATA[]]></details> 
+<testsuite id="3" name="Customer manual TestCases" >
+<node_order><![CDATA[1]]></node_order>
+<details><![CDATA[<p>What user/customer can do</p>
+]]></details> 
+
+<testcase internalid="4" name="Slide Show">
+	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[1]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Swap slideshow</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User is able to swap images in slideshow</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>User&nbsp;open Main Sovy Restaurant page</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User see whole Sovy restaurant page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>User click on left or right side of&nbsp;slideshow</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Images of food will change</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="13" name="Check food / drink in menu and order home">
+	<node_order><![CDATA[1]]></node_order>
+	<externalid><![CDATA[3]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>section with food/drink price volume etc.</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will be given&nbsp;described food and drinks on website&nbsp;</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="8" name="Allergens of Food">
+	<node_order><![CDATA[2]]></node_order>
+	<externalid><![CDATA[2]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>PDF of allergens downloadable on webpage</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will dowload PDF of allergens</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>User open Webpage Sovy Restaurant</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user see whole website</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>User scroll for food menu</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user see food menu</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>User click on little icon with allergens</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Automatically start to download PDF file with description</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="15" name="Review">
+	<node_order><![CDATA[3]]></node_order>
+	<externalid><![CDATA[4]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Adding review, stars, and&nbsp;commentary about restaurant</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will be able to add Review about restaurant</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="17" name="Reservation">
+	<node_order><![CDATA[4]]></node_order>
+	<externalid><![CDATA[5]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Book a reservation</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will be able to do reservation in day and time he want</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+</testsuite><testsuite id="19" name="Gui Testcases" >
+<node_order><![CDATA[2]]></node_order>
+<details><![CDATA[<p>Gui function testcases</p>
+]]></details> 
+
+<testcase internalid="25" name="GUi Login">
+	<node_order><![CDATA[1000]]></node_order>
+	<externalid><![CDATA[6]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Login into system</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User should be logged in Gui system</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="27" name="Make order">
+	<node_order><![CDATA[1001]]></node_order>
+	<externalid><![CDATA[7]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Put on table food/drink</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User should be able to add food/drink on table</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="29" name="Describe table">
+	<node_order><![CDATA[1002]]></node_order>
+	<externalid><![CDATA[8]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>see what was ordered&nbsp;</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User can see all ordered foods/drinks on this one table</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="31" name="add/delete/update employee">
+	<node_order><![CDATA[1003]]></node_order>
+	<externalid><![CDATA[9]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>add/delete/update employee in program</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User is able to add/delete/update employee in program</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="33" name="Gui bill">
+	<node_order><![CDATA[1004]]></node_order>
+	<externalid><![CDATA[10]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Printing auto-generated bill</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will be able to print autogenerated bill</p>
+]]></preconditions>
+	<execution_type><![CDATA[2]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="35" name="Log out">
+	<node_order><![CDATA[1005]]></node_order>
+	<externalid><![CDATA[11]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Log out from program</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User is looged out of program</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+</testsuite></testsuite>
