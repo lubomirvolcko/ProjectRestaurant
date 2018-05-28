@@ -47,8 +47,14 @@ $(function() {
 
         $('#example-css').barrating({
             theme: 'css-stars',
-            showSelectedRating: false
+            showSelectedRating: true
         });
+
+        $("#sendreview").click(function(){
+         
+      $('select').barrating('set', "5");
+      });
+
 
 
         $('#star').barrating({

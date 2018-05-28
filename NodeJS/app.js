@@ -153,11 +153,11 @@ app.post('/send', (req, res) => {
 
 	app.post('/try',cors(),function(req,res){
 	
-		var orderValues=[req.body.parseName,req.body.parsePrice];
+		var orderValues=[req.body.parseName,req.body.parsePrice,req.body.number];
 	
 	
 	
-		connection.query("INSERT into try(name,price) values (?) ",[orderValues],function(err, rows, fields){
+		connection.query("INSERT into orderdelivery(name,price,number) values (?) ",[orderValues],function(err, rows, fields){
 		console.log(orderValues);
 		  
 		res.send(rows);
@@ -184,6 +184,43 @@ app.get('/reviews',cors(),function(req,res){
 			
 		});
 	});
+
+
+
+	
+app.get('/lastnumber',cors(),function(req,res){
+	
+
+
+
+	connection.query("select MAX(number) as number from orderdelivery;",function(err, rows, fields){
+		
+		console.log(rows);
+		res.send(rows);
+	
+				
+			
+		});
+	});
+
+
+
+	app.post('/sendfinalorder',cors(),function(req,res){
+	
+		var orderValues=[req.body.number,req.body.total];
+	
+	
+	
+		connection.query("INSERT into delivery(orderid,price) values (?) ",[orderValues],function(err, rows, fields){
+		console.log(orderValues);
+		  
+		res.send(rows);
+	
+				
+			
+		});
+	});
+	
 	
 
 	

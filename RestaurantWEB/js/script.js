@@ -288,6 +288,13 @@ console.log(type);
    });*/
    var type;
    var mlg;
+       a=0;
+    tdidname=0;
+    tdidprice=0;
+    var p=0;
+
+var btnCancelCout=0;
+var getname = 0;
 $("#appetizer").click(function(){
      type = $("#appetizer").attr('id');
         $( "#tableFood" ).empty();
@@ -322,41 +329,29 @@ var tdidprice=0;
 $("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Quantity"+"</th>"+"</th>"+"</tr>"+"</thead>");
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
-function postReq(type){
+
+function getDrinks(type){
 $.post({
 
         traditional: true,
-        url: 'http://localhost:8080/type',
+        url: 'http://localhost:8080/drink',
         contentType: 'application/json',
         data: JSON.stringify({"type": type}),
         dataType: 'json',
         success: function(response){ 
           var i;
-          if(type=="soup")
-            mlg="ml";
-          else
-            mlg="g";
-           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Allergens"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          
+           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
           for( i = 0;i<response.length;i++){
-          console.log(JSON.parse(JSON.stringify(response[i].Name)));
+          
         
-          $("#tableFood").append("<tr ><td id=tab"+tdidname+">"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td id=tdidprice"+tdidprice+">"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableDrinks").append("<tr ><td id=tab"+tdidname+">"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td id=tdidprice"+tdidprice+">"+response[i].price+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+
           a++;
           tdidname++;
           tdidprice++;
-
-
-          
-
-      
-    }
-    a=0;
-    tdidname=0;
-    tdidprice=0;
-    var p=0;
-
-
-    $("#btnW0").click(function(){
+ }
+          $("#btnW0").click(function(){
 
 
 
@@ -367,8 +362,11 @@ $.post({
   
     for(p=p;p<nameArray.length;p++)
     {
-   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+   $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
     }
+
 
     }); 
 
@@ -385,7 +383,9 @@ $.post({
   
     for(p=p;p<nameArray.length;p++)
     {
-   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+  $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
     }
 
 
@@ -401,7 +401,9 @@ $.post({
   
     for(p=p;p<nameArray.length;p++)
     {
-   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+   $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
     }
 
 
@@ -417,48 +419,25 @@ $.post({
   
     for(p=p;p<nameArray.length;p++)
     {
-   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+  $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
     }
   
 
     }); 
 
+          
+     
+          
 
-
-
-
-
-  }
+      
+    }
 } );}
 
-    $("#btnShop").click(function(){
-
-var stringName = JSON.stringify(nameArray);
 
 
-var stringPrice = JSON.stringify(priceArray);
 
-var parsePrice = JSON.parse(stringPrice);
-
-var parseName = JSON.parse(stringName);
-
-
-for(var g = 0;g<parseName.length;g++)
-{
-$.post({
-
-        traditional: true,
-        url: 'http://localhost:8080/try',
-        contentType: 'application/json',
-        data: JSON.stringify({"parseName": parseName[g],"parsePrice": parsePrice[g]}),
-        dataType: 'json',
-        success: console.log("SUCCESS")
-} );
-}
-});
-
-         
-     
 
 $("#smoothies").click(function(){
      type = $("#smoothies").attr('id');
@@ -505,35 +484,210 @@ $("#sprites").click(function(){
 });
 mlg="ml";
 
-function getDrinks(type){
+
+function postReq(type){
 $.post({
 
         traditional: true,
-        url: 'http://localhost:8080/drink',
+        url: 'http://localhost:8080/type',
         contentType: 'application/json',
         data: JSON.stringify({"type": type}),
         dataType: 'json',
         success: function(response){ 
           var i;
-          
-           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+          if(type=="soup")
+            mlg="ml";
+          else
+            mlg="g";
+           $("#tableFood").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Food name"+"</th>"+"<th scope=\"col\">"+"Allergens"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Composition"+"</th>"+"<th scope=\"col\">"+"Price(€)"+"</th>"+"</tr>"+"</thead>");
           for( i = 0;i<response.length;i++){
-          
+          console.log(JSON.parse(JSON.stringify(response[i].Name)));
         
-          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableFood").append("<tr ><td id=tab"+tdidname+">"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td id=tdidprice"+tdidprice+">"+response[i].Price+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          a++;
+          tdidname++;
+          tdidprice++;
 
 
-          
-     
           
 
       
-    } }
+    }
+
+
+    $("#btnW0").click(function(){
+
+
+
+
+    nameArray.push($('#tab0').text());
+ 
+    priceArray.push($('#tdidprice0').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    }
+
+
+    }); 
+
+  
+
+        $("#btnW1").click(function(){
+
+
+
+
+ nameArray.push($('#tab1').text());
+ 
+    priceArray.push($('#tdidprice1').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    }
+
+
+    }); 
+
+            $("#btnW2").click(function(){
+
+ 
+
+     nameArray.push($('#tab2').text());
+ 
+    priceArray.push($('#tdidprice2').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    }
+
+
+    }); 
+
+                $("#btnW3").click(function(){
+
+  
+
+     nameArray.push($('#tab3').text());
+ 
+    priceArray.push($('#tdidprice3').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr><td id=\"getName"+getname+"\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    }
+  
+
+    }); 
+
+
+
+
+
+
+  }
 } );}
 
 
 
+    $("#btnShop").click(function(){
 
+var stringName = JSON.stringify(nameArray);
+
+
+var stringPrice = JSON.stringify(priceArray);
+
+var parsePrice = JSON.parse(stringPrice);
+
+var parseName = JSON.parse(stringName);
+var maxnumber;
+
+$.get({
+
+        traditional: true,
+        url: 'http://localhost:8080/lastnumber',
+        contentType: 'application/json',
+       
+        dataType: 'json',
+        success: function(response){ 
+         
+          getNumber(response)
+
+          }
+
+ 
+
+
+} );
+function getNumber(response){
+  var number= 1;
+  var countOfPrice;
+  var g=0;
+  var e=0;
+number = response[0].number;
+number++;
+for(g = 0;g<parseName.length;g++)
+  
+
+{
+
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/try',
+        contentType: 'application/json',
+        data: JSON.stringify({"parseName": parseName[g],"parsePrice": parsePrice[g],"number":number}),
+        dataType: 'json',
+        success: console.log("AHSDIl")
+} );
+
+
+}
+
+
+var total = 0;
+for (var i = 0; i < priceArray.length; i++) {
+    total =total+ + + priceArray[i] ; 
+}
+console.log(total);
+
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/sendfinalorder',
+        contentType: 'application/json',
+        data: JSON.stringify({"number": number,"total":total}),
+        dataType: 'json',
+        success: console.log("Succes write final order")
+} );
+
+
+}
+
+
+
+
+});
+
+
+    
+
+
+
+
+
+ 
 
 $("#sendreview").click(function(){
 
@@ -601,4 +755,12 @@ $.get({
 
 
 
+
+
 })(jQuery); // End of use strict
+
+
+
+
+
+
