@@ -13,6 +13,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.List;
 
+
+
+
 public class MakeOrder {
     private JPanel pnlMakeOrder;
     private JPanel pnlOrderedItems;
@@ -73,6 +76,7 @@ public class MakeOrder {
     int countItem=0; //use for counting added items to order
     double totalPrice; //total price in order
     String orderHistory="false"; //use for seting order history after pressed btnConfirm
+    int countX;
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -472,6 +476,7 @@ public class MakeOrder {
                 userAccount.table=lblNameTable.getText();
                 userAccount.setPanels(orderHistory);
 
+
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -676,7 +681,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -745,7 +749,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -814,7 +817,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -882,7 +884,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -951,7 +952,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1021,7 +1021,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1090,7 +1089,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1158,7 +1156,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1226,7 +1223,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1295,7 +1291,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1363,7 +1358,6 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
@@ -1432,15 +1426,19 @@ public class MakeOrder {
             btnSmootie.addActionListener(new ActionListener() {
                 @Override
                 public void actionPerformed(ActionEvent e) {
-                    int countX;
+
                     count= finalTxtCount.getText();
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1452,16 +1450,34 @@ public class MakeOrder {
         }
     }
 
+    private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
+
+
+        double totalPrice;
+        totalPrice=numberOfItem*smootiePrice;
+        totalPrice=Math.round(totalPrice * 100)/100.0;
+        //String itemNum=""+itemCount;
+
+        Order order = new Order(numberOfItem, smootieName, smootiePrice, totalPrice);
+        order.setToArrayList(order);
+
+    }
+
     //send item to order on table
     public void sendToTable(final String name, Double price){
-        orderPositionY=orderPositionY+32;
 
-        int numberOfItem = Integer.parseInt(count);
-        countPrice=numberOfItem*price;
+        orderPositionY=orderPositionY+32;
+        countPrice=price*countX;
+        countPrice=Math.round(countPrice * 100)/100.0;
         totalPrice=totalPrice+countPrice;
+        totalPrice=Math.round(totalPrice * 100)/100.0;
+
+        System.out.println("COUNTPRICE IS: "+countPrice);
+
         System.out.println("TOTAL PRICE IS : "+totalPrice);
         lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
         JLabel lblCount = new JLabel("name");
+        JLabel lblX = new JLabel("name");
         JLabel lblName = new JLabel("name");
         JLabel lblPrice= new JLabel("name");
         JButton btnChoose = new JButton();
@@ -1471,17 +1487,21 @@ public class MakeOrder {
 
         if (countItem<31)
         {
-            pnlOrderedItems.add(lblCount = new JLabel(count+"x", FlowLayout.LEFT));
+            pnlOrderedItems.add(lblCount = new JLabel(""+count, FlowLayout.LEFT));
             lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             lblCount.setBounds(10, orderPositionY, 45, 30);
 
+            pnlOrderedItems.add(lblX = new JLabel("x", FlowLayout.LEFT));
+            lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+            lblX.setBounds(55, orderPositionY, 20, 30);
+
             pnlOrderedItems.add(lblName = new JLabel(""+name, FlowLayout.LEFT));
             lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-            lblName.setBounds(65, orderPositionY, 200, 30);
+            lblName.setBounds(85, orderPositionY, 200, 30);
 
             pnlOrderedItems.add(lblPrice = new JLabel(""+countPrice+" €", FlowLayout.LEFT));
             lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-            lblPrice.setBounds(280, orderPositionY, 100, 30);
+            lblPrice.setBounds(295, orderPositionY, 100, 30);
 
             pnlOrderedItems.add(btnChoose = new JButton("THROW"));
             btnChoose.setBackground(new Color(254,151,44));
@@ -1509,10 +1529,16 @@ public class MakeOrder {
         final JLabel finalLblPrice = lblPrice;
         final JButton finalBtnChoose = btnChoose;
         final JButton finalBtnUndo = btnUndo;
+        final JLabel finalLblCount1 = lblCount;
+        final JLabel finalLblX = lblX;
         btnChoose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                throwItem(finalLblCount, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo);
+                int numberOfItem;
+                numberOfItem = Integer.parseInt(finalLblCount1.getText());
+                System.out.println("Number of item is: "+numberOfItem);
+
+                throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo);
             }
         });
 
@@ -1525,16 +1551,21 @@ public class MakeOrder {
         });
     }
 
-    public void throwItem(JLabel lblCount, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo) {
+    public void throwItem(JLabel lblCount,JLabel lblX, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo) {
 
         totalPrice=totalPrice-countPrice;
         lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
         lblCount.setForeground(Color.red);
+        lblX.setForeground(Color.red);
         lblName.setForeground(Color.red);
         lblPrice.setForeground(Color.red);
         btnThrow.setText("Deleted");
         btnThrow.setEnabled(false);
         btnUndo.setEnabled(true);
+
+
+        //Order order = new Order();
+
 
     }
 
