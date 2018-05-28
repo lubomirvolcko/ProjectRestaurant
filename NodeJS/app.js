@@ -169,6 +169,24 @@ app.post('/send', (req, res) => {
 	
 
 	
+
+app.get('/reviews',cors(),function(req,res){
+	
+
+
+
+	connection.query("SELECT name,review,reviewStar from reviews ",function(err, rows, fields){
+		
+		console.log(rows);
+		res.send(rows);
+	
+				
+			
+		});
+	});
+	
+
+	
 	
 	app.listen(8080,function(){
 	console.log("Connected & Listen to port 8080");

@@ -581,7 +581,7 @@ $.post({
 
 
 
-$("#er").click(function(){
+$("#sendreview").click(function(){
    
 
 
@@ -594,8 +594,7 @@ $.get({
         dataType: 'json',
         success: function(response){ 
           console.log(response[0].reviewStar);
-           $("#star").val(response[0].reviewStar);
-      
+           $("#star").val( response[0].reviewStar);  
           }
 } );
 });
