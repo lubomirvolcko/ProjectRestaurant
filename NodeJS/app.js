@@ -53,8 +53,56 @@ app.post('/drink',cors(),function(req,res){
 	});
 });
 
+app.post('/review',cors(),function(req,res){
+	var name = req.body.name;
+	var review = req.body.review;
+	var reviewstar= req.body.reviewstar;
+
+	var values =[req.body.name,req.body.review,req.body.reviewstar];
+	console.log(review);
+	console.log(name);
+	console.log(reviewstar);
+	console.log(values);
+
+
+	connection.query("INSERT into reviews(name,review,reviewstar) values (?) ",[values],function(err, rows, fields){
+	
+      
+	res.send(rows);
+
+			
+		
+	});
+});
+
 
 app.post('/send', (req, res) => {
+	var namereservation = req.body.namereservation;
+	var surnamereservation = req.body.surnamereservation;
+	var emailreservation = req.body.emailreservation;
+	var phonereservation = req.body.phonereservation;
+	var datereservation = req.body.datereservation;
+	var timereservation = req.body.timereservation;
+
+	var valuesreservation =[req.body.namereservation,req.body.surnamereservation,req.body.emailreservation,req.body.phonereservation,req.body.datereservation,req.body.timereservation];
+
+	
+	console.log(valuesreservation);
+	console.log(timereservation);
+	console.log(datereservation);
+	console.log(phonereservation);
+	console.log(emailreservation);
+	console.log(surnamereservation);
+	console.log(namereservation);
+
+	connection.query("INSERT into reservation(Name,surname,email,phone,date,time) values (?) ",[valuesreservation],function(err, rows, fields){
+
+		res.send(rows);
+
+			
+		
+	});
+
 	const output = `
 	  <p>Reservation</p>
 	  <h3>Reservation</h3>
@@ -101,6 +149,26 @@ app.post('/send', (req, res) => {
 	});
 	});
 
+
+
+	app.post('/try',cors(),function(req,res){
+	
+		var orderValues=[req.body.parseName,req.body.parsePrice];
+	
+	
+	
+		connection.query("INSERT into try(name,price) values (?) ",[orderValues],function(err, rows, fields){
+		console.log(orderValues);
+		  
+		res.send(rows);
+	
+				
+			
+		});
+	});
+	
+
+	
 	
 	app.listen(8080,function(){
 	console.log("Connected & Listen to port 8080");

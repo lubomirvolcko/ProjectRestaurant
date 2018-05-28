@@ -44,7 +44,7 @@
           <form class="form-inline my-2 my-lg-0 mr-lg-2">
             <div class="input-group">
               <span class="input-group-append">
-                <div id="shoppingCart"><button type="button" class="btn btn-success btn-small" id="btnShop"><img src="img/shopping-cart.png"></button></div>
+                <div id="shoppingCart"><button type="button" class="btn btn-success btn-small" id="btnShop"  data-toggle="modal" data-target="#myModal1"><img src="img/shopping-cart.png"></button></div>
               </span>
             </div>
           </form>
@@ -59,35 +59,27 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-          <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
         </ol>
         <div class="carousel-inner" role="listbox">
           <!-- Slide One -->
           <div class="carousel-item active" style="background-image: url('img/slide1.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h1>Grilled Salmon</h1>
-              <p>Main Dish.</p>
+              <h1>Tomato Soup</h1>
+              <p>Soup</p>
             </div>
           </div>
           <!-- Slide Two -->
           <div class="carousel-item" style="background-image: url('img/slide2.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>Pork tenderloin</h3>
+              <h3>Grilled Salmon</h3>
               <p>Main Dish.</p>
             </div>
           </div>
           <!-- Slide Three -->
           <div class="carousel-item" style="background-image: url('img/slide3.jpg')">
             <div class="carousel-caption d-none d-md-block">
-              <h3>White Chicory</h3>
-              <p>Appetizer</p>
-            </div>
-          </div>
-          <!-- Slide Four -->
-          <div class="carousel-item" style="background-image: url('img/slide4.jpg')">
-            <div class="carousel-caption d-none d-md-block">
-              <h3>Chocolate Fudge</h3>
-              <p>Desert.</p>
+              <h3>Pancakes with fruit</h3>
+              <p>Desserts</p>
             </div>
           </div>
     </div>
@@ -186,7 +178,7 @@
                 </div>
                 <div class="col-sm" id="desert">
                     <div class="menu-images "><img src="img/menu/deserts.png" alt="Deserts"></div>
-                    <div class="menu-titles"><h1>Deserts</h1></div>
+                    <div class="menu-titles"><h1>Desserts</h1></div>
                 </div>
             </div>
               </div>
@@ -233,7 +225,46 @@
   </tbody>
 </table>
   </div>
-<div class="col-sm"></div>
+<div class="col-sm">
+  
+         <div class="container">
+  <!-- The Modal -->
+  <div class="modal" id="myModal1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Your Order</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        
+        <!-- Modal body -->
+        <div class="modal-body">
+
+           <table class="table table-striped table-dark" id="shoppingcart">
+  <thead>
+  
+  </thead>
+  <tbody>
+ 
+  </tbody>
+</table>
+   
+        </div>
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success" style="display: none;">Order</button>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+</div>
+
+</div>
     </div>
     <button type="button" class="btn btn-danger" id="buttonBack" style="display: none;">Back</button>
 </div>
@@ -252,6 +283,13 @@
     </div>
     <button type="button" class="btn btn-danger" id="backToMenu" style="display: none;">Back</button>
       </div>
+
+      <p>All 14 known Allergens described here:</p>
+
+<a href="img\Allergens.pdf" download="Allergens">
+  <img border="0" src="img\Alergens.png" alt="Allergens" width="104" height="142">
+</a>
+
       </section>
 
     <section id="reviews" class="orangebg">
@@ -275,11 +313,11 @@
               <p class="lead"> 
                  <div class="row" id="post-review-box" style="display: none;">
                 <div class="col-md-12">
-                        <p><input type="text" class="form-control" placeholder="Enter your name here"></p>
+                        <p><input type="text" id="nameInReview" class="form-control" placeholder="Enter your name here"></p>
                         <p><textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="7"></textarea></p>
                         <p><div class="text-right">
                             <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
-                            <button type="button" class="btn btn-success">Send Review</button></p>
+                            <button type="button" id="sendreview" class="btn btn-success">Send Review</button></p>
                         </div>
                     </form>
                 </div>
@@ -290,67 +328,6 @@
         </div>
       </div>
     </section>
-
-   <!-- <section id="order">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <h2>Order</h2>
-            <p class="lead">
-              <form>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputName4">Name</label>
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Name">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputLastName4">Last Name</label>
-                    <input type="text" class="form-control" id="inputLastName" placeholder="Last Name">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">City</label> 
-                    <select id="inputCity" class="form-control">
-                      <option selected>Kosice</option>
-                      <option>Bukovec</option>
-                      <option>Baska</option>
-                      <option>Nizny Klatov</option>
-                      <option>Mala Ida</option>
-                    </select>
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputZip">Zip</label>
-                    <input type="text" class="form-control" id="inputZip" placeholder="Zip">
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Address</label>
-                    <input type="text" class="form-control" id="inputAddress" placeholder="Address">
-                 </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Phone Number</label>
-                    <input type="text" class="form-control" id="inputPhoneNumber" placeholder="+421xxxxxxxxx">
-                 </div>
-                </div>
-                 <div class="form-row">
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Food name</label>
-                    <input type="text" class="form-control" id="inputFoodname" placeholder="Food name">
-                 </div>
-                  <div class="form-group col-md-6">
-                    <label for="inputCity">Note</label>
-                    <input type="text" class="form-control" id="Note" placeholder="Note">
-                 </div>
-                </div>
-                <button type="button" class="btn btn-success">Order</button>
-              </form>
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
 
     <section id="reservation">
       <div class="container">
@@ -397,10 +374,8 @@
                   <input type="text" class="form-control" id="phonereservation" placeholder="+421 xxx xxx xxx">
                 </div>
                 <div class="form-group">
-                <form action="/action_page.php">
-                  <label for="formGroupExampleInput">Date: <input type="date" name="bday">
-                </form>
-                </label>
+                  <label for="formGroupExampleInput">Date: <input type="date" id="datereservation" > </label>
+                   <label for="formGroupExampleInput">Time: <input type="time" id="timereservation" ></label>
                 </div> 
                 <button type="submit" id="send" class="btn btn-warning">Click here to book table!</button>
               </form>

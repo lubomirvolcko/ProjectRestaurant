@@ -315,7 +315,11 @@ $("#desert").click(function(){
 });
 
 var a = 0;
-
+var tdidname= 0
+var tdidprice=0;
+ var nameArray = new Array;
+ var priceArray = new Array;
+$("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Quantity"+"</th>"+"</th>"+"</tr>"+"</thead>");
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
 function postReq(type){
@@ -336,8 +340,10 @@ $.post({
           for( i = 0;i<response.length;i++){
           console.log(JSON.parse(JSON.stringify(response[i].Name)));
         
-          $("#tableFood").append("<tr><td id=tab1>"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td>"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+          $("#tableFood").append("<tr ><td id=tab"+tdidname+">"+response[i].Name+"</td><td>"+response[i].Allergens+"</td>"+"<td>"+response[i].VolumeWeight+mlg+"</td>"+"<td>"+response[i].composition+"</td>"+"<td id=tdidprice"+tdidprice+">"+response[i].Price+"€"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-warning btn-sm\" id=\"btnW"+a+"\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
           a++;
+          tdidname++;
+          tdidprice++;
 
 
           
@@ -345,9 +351,76 @@ $.post({
       
     }
     a=0;
+    tdidname=0;
+    tdidprice=0;
+    var p=0;
+
 
     $("#btnW0").click(function(){
-      console.log("KOKOT");
+
+
+
+
+    nameArray.push($('#tab0').text());
+ 
+    priceArray.push($('#tdidprice0').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+
+    }); 
+
+  
+
+        $("#btnW1").click(function(){
+
+
+
+
+ nameArray.push($('#tab1').text());
+ 
+    priceArray.push($('#tdidprice1').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+
+
+    }); 
+
+            $("#btnW2").click(function(){
+
+ 
+
+     nameArray.push($('#tab2').text());
+ 
+    priceArray.push($('#tdidprice2').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+
+
+    }); 
+
+                $("#btnW3").click(function(){
+
+  
+
+     nameArray.push($('#tab3').text());
+ 
+    priceArray.push($('#tdidprice3').text());
+  
+    for(p=p;p<nameArray.length;p++)
+    {
+   $("#shoppingcart").append("<tr><td>"+nameArray[p]+"</td><td>"+priceArray[p]+"</td></tr>");
+    }
+  
+
     }); 
 
 
@@ -358,7 +431,33 @@ $.post({
   }
 } );}
 
-          
+    $("#btnShop").click(function(){
+
+var stringName = JSON.stringify(nameArray);
+
+
+var stringPrice = JSON.stringify(priceArray);
+
+var parsePrice = JSON.parse(stringPrice);
+
+var parseName = JSON.parse(stringName);
+
+
+for(var g = 0;g<parseName.length;g++)
+{
+$.post({
+
+        traditional: true,
+        url: 'http://localhost:8080/try',
+        contentType: 'application/json',
+        data: JSON.stringify({"parseName": parseName[g],"parsePrice": parsePrice[g]}),
+        dataType: 'json',
+        success: console.log("SUCCESS")
+} );
+}
+});
+
+         
      
 
 $("#smoothies").click(function(){
@@ -435,33 +534,31 @@ $.post({
 
 
 
-function getDrinks(type){
+
+$("#sendreview").click(function(){
+
+  var name=$("#nameInReview").val();
+  var reviewstar = $('#example-css').val();
+  var review = $("#new-review").val();
+  console.log(name);
+  console.log(reviewstar);
+  console.log(review);
+
+
+
 $.post({
 
         traditional: true,
-        url: 'http://localhost:8080/drink',
+        url: 'http://localhost:8080/review',
         contentType: 'application/json',
-        data: JSON.stringify({"type": type}),
+        data: JSON.stringify({"review": review,"name":name,"reviewstar":reviewstar}),
         dataType: 'json',
-        success: function(response){ 
-          var i;
-          
-           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
-          for( i = 0;i<response.length;i++){
-          
-        
-          $("#tableDrinks").append("<tr><td>"+response[i].Name+"</td><td>"+response[i].composition+"</td>"+"<td>"+response[i].volume+"ml"+"</td>"+"<td>"+response[i].price+"€"+"</td>"+"</td>"+"<td>"+"<button type=\"button\" class=\"btn btn-default btn-sm\">"+"<img src=\"img/cartin.png\">"+" Shopping Cart"+"</button>"+"</td>"+"</tr>");
+        success: console.log("SUCCESS")
+} );
+});
 
 
-          
-     
-          
 
-      
-    } }
-
-
-} );}
 
 $('#send').click(function() {
   var namereservation=$("#namereservation").val();
@@ -480,4 +577,29 @@ $.post({
         success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
 } );
 } );
+
+
+
+
+$("#er").click(function(){
+   
+
+
+$.get({
+
+        traditional: true,
+        url: 'http://localhost:8080/reviews',
+        contentType: 'application/json',
+       
+        dataType: 'json',
+        success: function(response){ 
+          console.log(response[0].reviewStar);
+           $("#star").val(response[0].reviewStar);
+      
+          }
+} );
+});
+
+
+
 })(jQuery); // End of use strict
