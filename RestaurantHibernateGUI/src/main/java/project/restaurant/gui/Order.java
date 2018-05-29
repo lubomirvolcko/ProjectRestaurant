@@ -47,7 +47,7 @@ public class Order {
     }
 
     public Double getTotalPrice() {
-        return totalPrice;
+        return totalPrice=Math.round(totalPrice * 100)/100.0;
     }
 
 
