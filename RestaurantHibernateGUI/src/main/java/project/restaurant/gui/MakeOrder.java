@@ -11,6 +11,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -77,6 +78,11 @@ public class MakeOrder {
     double totalPrice; //total price in order
     String orderHistory="false"; //use for seting order history after pressed btnConfirm
     int countX;
+    ArrayList<Order> orderArrayList;
+
+    UserAccount userAccount = new UserAccount();
+
+
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -101,6 +107,12 @@ public class MakeOrder {
     public JPanel getPnlMakeOrder() {
         return pnlMakeOrder;
     }
+
+
+    public void getOrderArray(ArrayList<Order> orderArray){
+        orderArrayList=orderArray;
+    }
+
 
     public void getDrinksSmoothies()
     {
@@ -1450,6 +1462,9 @@ public class MakeOrder {
         }
     }
 
+
+
+
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
 
 
@@ -1458,8 +1473,42 @@ public class MakeOrder {
         totalPrice=Math.round(totalPrice * 100)/100.0;
         //String itemNum=""+itemCount;
 
-        Order order = new Order(numberOfItem, smootieName, smootiePrice, totalPrice);
-        order.setToArrayList(order);
+
+        //Order order = new Order(numberOfItem, smootieName, smootiePrice, totalPrice);
+
+        Order order = new Order();
+
+        int size = orderArrayList.size();
+
+        if (size>0){
+            for (int i=0; i<size;i++){
+                if (orderArrayList.get(i).getNameItem()==smootieName){
+                    orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
+                    orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
+                    System.out.println("COUNTED");
+                }else{
+
+
+                    orderArrayList.add(order);
+                    System.out.println("ELSE 1");
+                }
+            }
+        }else {
+            order.setNumberOfItem(numberOfItem);
+            order.setPrice(smootiePrice);
+            order.setNameItem(smootieName);
+            order.setTotalPrice(totalPrice);
+
+            orderArrayList.add(order);
+            System.out.println("Done");
+        }
+
+
+
+
+        userAccount.setOrderArray(orderArrayList);
+        userAccount.printOrderArray();
+
 
     }
 
@@ -1543,10 +1592,11 @@ public class MakeOrder {
         });
 
         final JButton finalBtnUndo1 = btnUndo;
+        final JLabel finalLblX1 = lblX;
         btnUndo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                undoItem(finalLblCount, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo1);
+                undoItem(finalLblCount, finalLblX1, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo1);
             }
         });
     }
@@ -1569,12 +1619,13 @@ public class MakeOrder {
 
     }
 
-    public void undoItem(JLabel lblCount, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo){
+    public void undoItem(JLabel lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo){
         totalPrice=totalPrice+countPrice;
         lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
         lblCount.setForeground(Color.black);
         lblName.setForeground(Color.black);
         lblPrice.setForeground(Color.black);
+        lblX.setForeground(Color.black);
         btnThrow.setText("THROW");
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
