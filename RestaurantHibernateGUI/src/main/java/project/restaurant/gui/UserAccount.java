@@ -188,9 +188,9 @@ public class UserAccount {
         }
     }
 
-    public void setPanels(String historyOrder, String tableHistory){
-        pnlTopMenu.setVisible(false);
-        pnlTables.setVisible(false);
+    /*public void setPanels(String historyOrder, String tableHistory){
+
+
 
         /*btnTable1.setVisible(false);
         btnTable2.setVisible(false);
@@ -199,7 +199,7 @@ public class UserAccount {
         btnTable5.setVisible(false);
         btnTable6.setVisible(false);
         btnTable7.setVisible(false);
-        btnTable8.setVisible(false);*/
+        btnTable8.setVisible(false);
 
         pnlOrderedTable1.setVisible(false);
         pnlOrderedTable2.setVisible(false);
@@ -309,14 +309,14 @@ public class UserAccount {
             else if (table.equals("Table 8")){setTable8();}
         }else {
             System.out.println("SOMETHING IS WRONG !");
-        }*/
-    }
+        }
+    }*/
 
 
 
     public void setTable1(){
-        pnlOrderedTable1.setVisible(true);
-        btnTable1.setVisible(false);
+        pnlOrderedTable1.setVisible(false);
+        btnTable1.setVisible(true);
 
         System.out.println("CHANGE ON TABLE 1");
     }
@@ -358,8 +358,20 @@ public class UserAccount {
 
     public UserAccount() {
 
+        pnlTopMenu.setVisible(false);
+        pnlTables.setVisible(false);
+
+        pnlOrderedTable1.setVisible(false);
+        pnlOrderedTable2.setVisible(false);
+        pnlOrderedTable3.setVisible(false);
+        pnlOrderedTable4.setVisible(false);
+        pnlOrderedTable5.setVisible(false);
+        pnlOrderedTable6.setVisible(false);
+        pnlOrderedTable7.setVisible(false);
+        pnlOrderedTable8.setVisible(false);
+
         //hide top menu
-        setPanels("xx", "xx");
+        //setPanels("xx", "xx");
 
         //btn search
         btnSearch.addActionListener(new ActionListener() {
@@ -391,7 +403,7 @@ public class UserAccount {
         //btn basic menu Tables
         btnTables.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                setPanels("xx", "xx");
+                //setPanels("xx", "xx");
                 pnlBasicMenu.setVisible(false);
                 pnlTables.setVisible(true);
                 pnlTopMenu.setVisible(true);

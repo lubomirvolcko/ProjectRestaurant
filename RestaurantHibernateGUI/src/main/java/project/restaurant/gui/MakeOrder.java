@@ -484,15 +484,15 @@ public class MakeOrder {
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                /*System.out.println("BEFORE CHANGE");
-                //UserAccount userAccount = new UserAccount();
+                System.out.println("BEFORE CHANGE");
+                UserAccount userAccount = new UserAccount();
                 System.out.println("AFTER CHANGE");
 
                 if (lblNameTable.getText().equals("Table 1")){
                     //userAccount.getBtnTable1().setVisible(false);
                     //userAccount.getPnlOrderedTable1().setVisible(true);
-                    userAccount.setTable1();
-
+                    //userAccount.setTable1();
+                    userAccount.table=lblNameTable.getText();
                     System.out.println("table 1 was changed -------");
                 }else if (lblNameTable.getText().equals("Table 2")){
                     userAccount.setTable2();
@@ -522,7 +522,7 @@ public class MakeOrder {
                 //userAccount.setPanels("xx", orderHistory);
 
                 System.out.println("aready finish ----------------");
-*/
+
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -733,8 +733,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -801,8 +805,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -869,8 +877,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -936,8 +948,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1004,8 +1020,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1073,8 +1093,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1141,8 +1165,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1208,8 +1236,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1275,8 +1307,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1343,8 +1379,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
@@ -1410,8 +1450,12 @@ public class MakeOrder {
                     if (countX > 50){
                         JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
                         countItem++;
                         sendToTable(smootieName, SmootiePrice);
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                     }
 
                     finalTxtCount.setText("1");
