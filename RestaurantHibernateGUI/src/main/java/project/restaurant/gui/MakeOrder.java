@@ -79,6 +79,7 @@ public class MakeOrder {
     String orderHistory="false"; //use for seting order history after pressed btnConfirm
     int countX;
     ArrayList<Order> orderArrayList;
+    int makeOrderIdTable;
 
     UserAccount userAccount = new UserAccount();
 
@@ -482,13 +483,46 @@ public class MakeOrder {
         btnConfirm.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                UserAccount userAccount = new UserAccount();
+
+                /*System.out.println("BEFORE CHANGE");
+                //UserAccount userAccount = new UserAccount();
+                System.out.println("AFTER CHANGE");
+
+                if (lblNameTable.getText().equals("Table 1")){
+                    //userAccount.getBtnTable1().setVisible(false);
+                    //userAccount.getPnlOrderedTable1().setVisible(true);
+                    userAccount.setTable1();
+
+                    System.out.println("table 1 was changed -------");
+                }else if (lblNameTable.getText().equals("Table 2")){
+                    userAccount.setTable2();
+                }
+                else if (lblNameTable.getText().equals("Table 3")){
+                    userAccount.setTable3();
+                }
+                else if (lblNameTable.getText().equals("Table 4")){
+                    userAccount.setTable4();
+                }
+                else if (lblNameTable.getText().equals("Table 5")){
+                    userAccount.setTable5();
+                }
+                else if (lblNameTable.getText().equals("Table 6")){
+                    userAccount.setTable6();
+                }
+                else if (lblNameTable.getText().equals("Table 7")){
+                    userAccount.setTable7();
+                }
+                else if (lblNameTable.getText().equals("Table 8")){
+                    userAccount.setTable8();
+                }
+
 
                 orderHistory="true";
-                userAccount.table=lblNameTable.getText();
-                userAccount.setPanels(orderHistory);
+                //userAccount.table=lblNameTable.getText();
+                //userAccount.setPanels("xx", orderHistory);
 
-
+                System.out.println("aready finish ----------------");
+*/
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -1471,23 +1505,16 @@ public class MakeOrder {
         double totalPrice;
         totalPrice=numberOfItem*smootiePrice;
         totalPrice=Math.round(totalPrice * 100)/100.0;
-        //String itemNum=""+itemCount;
-
-
-        //Order order = new Order(numberOfItem, smootieName, smootiePrice, totalPrice);
-
 
         int countChnages=0;
         int size = orderArrayList.size();
 
         if (size>0){
             for (int i=0; i<size;i++){
-                if (orderArrayList.get(i).getNameItem()==smootieName){
+                if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
                     orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
                     orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
-                    System.out.println("COUNTED");
                 }else {
-                    System.out.println("none");
                     countChnages++;
                 }
             }
@@ -1500,6 +1527,7 @@ public class MakeOrder {
                 order.setPrice(smootiePrice);
                 order.setNameItem(smootieName);
                 order.setTotalPrice(totalPrice);
+                order.setIdTable(makeOrderIdTable);
 
                 orderArrayList.add(order);
                 System.out.println("ELSE 1");
@@ -1511,6 +1539,7 @@ public class MakeOrder {
             order.setPrice(smootiePrice);
             order.setNameItem(smootieName);
             order.setTotalPrice(totalPrice);
+            order.setIdTable(makeOrderIdTable);
 
             orderArrayList.add(order);
             System.out.println("ELSE 2");
@@ -1638,11 +1667,6 @@ public class MakeOrder {
         double ttlPrice = Double.parseDouble(lblPrice.getText());
 
         int size = orderArrayList.size();
-
-        System.out.println(" ");
-        System.out.println(" ");
-        System.out.println("In array: --"+orderArrayList.get(0).getNameItem()+"--");
-        System.out.println("In function: --"+itemName+"--");
 
         for (int i=0; i<size;i++){
             if (orderArrayList.get(i).getNameItem().equals(itemName)){

@@ -10,6 +10,15 @@ public class Order {
     private String nameItem;
     private Double price;
     private Double totalPrice;
+    private int idTable;
+
+    public int getIdTable() {
+        return idTable;
+    }
+
+    public void setIdTable(int idTable) {
+        this.idTable = idTable;
+    }
 
     /*public Order(int numberOfItem, String nameItem, Double price, Double totalPrice) {
         this.numberOfItem = numberOfItem;
