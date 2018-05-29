@@ -50,16 +50,14 @@ $(function() {
             showSelectedRating: true
         });
 
-        $("#sendreview").click(function(){
-         
-      $('select').barrating('set', "5");
-      });
-
-
+      $("#sendreview").click(function(){
+           $('#star').barrating('set', "5");
+        });
 
         $('#star').barrating({
             theme: 'css-stars',
-            showSelectedRating: false
+            readonly: true,
+            showSelectedRating: true,
         });
 
 
