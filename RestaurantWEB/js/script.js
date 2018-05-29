@@ -1072,7 +1072,7 @@ console.log(date);
 
 $("#sendreview").click(function(){
    
-
+var i;
 
 $.get({
 
@@ -1082,8 +1082,13 @@ $.get({
        
         dataType: 'json',
         success: function(response){ 
+          /*for (var i = Things.length - 1; i >= 0; i--) {
+            Things[i]
+          }*/
           console.log(response[0].reviewStar);
-           $("#star").val( response[0].reviewStar);  
+           $("#stars").val( response[0].reviewStar);  
+           $("#name").val(response[0].name);
+           $("#review").val(response[0].review);
           }
 } );
 });
