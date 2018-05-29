@@ -5,6 +5,7 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.print.PrinterException;
+import java.util.ArrayList;
 
 public class UserAccount {
     private JPanel UserAccount;
@@ -99,13 +100,26 @@ public class UserAccount {
     private JLabel lblTotalPriceTable5;
     private String username;
     String table;
+    ArrayList<Order> orderArray = new ArrayList<Order>();
+
+    public void setOrderArray(ArrayList<Order> orderArray) {
+        this.orderArray = orderArray;
+    }
 
     public JPanel getUserAccount() {
         return UserAccount;
     }
 
-    MakeOrder makeOrder = new MakeOrder();
+    //MakeOrder makeOrder = new MakeOrder();
 
+    public void printOrderArray(){
+        int size=orderArray.size();
+        System.out.println("SIZE : "+size);
+
+        for (int i=0;i<size;i++){
+            System.out.println("ARRAY LIST "+i+": "+orderArray.get(i).getNumberOfItem()+" - "+orderArray.get(i).getNameItem()+" - "+orderArray.get(i).getPrice()+" - "+orderArray.get(i).getTotalPrice());
+        }
+    }
 
     public void setPanels(String historyOrder){
         if (historyOrder=="xx"){
@@ -313,6 +327,9 @@ public class UserAccount {
 
     public JFrame openMealMeanu(int i) {
         MakeOrder makeorder = new MakeOrder();
+
+        makeorder.getOrderArray(orderArray);
+        //ArrayList<Order> orderArray = new ArrayList<Order>();
 
         JFrame frameMakeOrder = new JFrame("Make order");
         frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

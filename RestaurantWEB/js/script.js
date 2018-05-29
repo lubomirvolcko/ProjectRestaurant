@@ -897,6 +897,10 @@ $('#send').click(function() {
   var surnamereservation=$("#surnamereservation").val();
   var emailreservation=$("#emailreservation").val();
   var phonereservation=$("#phonereservation").val();
+  var datereservation=$("#datereservation").val();
+  var timereservation=$("#timereservation").val();
+
+
 
 $.post({
 
@@ -904,13 +908,53 @@ $.post({
         traditional: true,
         url: 'http://localhost:8080/send',
         contentType: 'application/json',
-        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation}),
+        data: JSON.stringify({"namereservation": namereservation, "surnamereservation": surnamereservation,"emailreservation":emailreservation,"phonereservation":phonereservation,"timereservation":timereservation,"datereservation":datereservation}),
         dataType: 'json',
-        success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation)
-} );
+        success: console.log(namereservation+" "+surnamereservation+" "+emailreservation+" "+phonereservation+" "+timereservation+" "+datereservation)
 } );
 
 
+var namereservationregex = /^[A-ZÁ-Ž]{1,1}[a-zá-ž]{1,15}$/;
+var surnamereservationregex= /^[A-ZÁ-Ž]{1,1}[a-zá-ž]{1,15}$/;
+var emailreservationregex=  /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+if(namereservation.match(namereservationregex)==null||surnamereservation.match(surnamereservationregex)==null||phonereservation==null||emailreservation.match(emailreservationregex)==null){
+alert("Ooopss. Something went wrong. Please try again!");}
+
+else{
+  alert("Email was send! Wait for being contacted by Manager/Supervisor!!!");
+
+}
+} );
+
+
+var today= new Date();
+
+var time = today.getHours() + ":" + today.getMinutes()  
+var day = ("0" + today.getDate()).slice(-2);
+var month = ("0" + (today.getMonth() + 1)).slice(-2);
+var today = today.getFullYear()+"-"+(month)+"-"+(day) ;
+var today2 = new Date();
+var day2 = ("0" + today2.getDate()).slice(-2);
+var month2 = ("0" + (today2.getMonth() + 1)).slice(-2);
+var today2=today2.getFullYear()+1+"-"+(month2)+"-"+(day2) ;
+var today3= new Date();
+var time3 = today3.getHours() + ":" + today3.getMinutes()  
+var day3 = ("0" + today3.getDate()).slice(-2);
+var month3 = ("0" + (today3.getMonth() + 1)).slice(-2);
+var today3 = today3.getFullYear()+"-"+(month3)+"-"+(day3) ;
+
+
+var nulll =" ";
+
+$("#datereservation").attr("min",today);
+
+$("#datereservation").change(function(){
+
+var date = $("#datereservation").val();
+console.log(date);
+
+});
 
 
 $("#sendreview").click(function(){
