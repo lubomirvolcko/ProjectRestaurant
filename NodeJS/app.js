@@ -111,6 +111,8 @@ app.post('/send', (req, res) => {
 		<li>Surname: ${req.body.surnamereservation}</li>
 		<li>Email: ${req.body.emailreservation}</li>
 		<li>Phone: ${req.body.phonereservation}</li>
+		<li>Date: ${req.body.datereservation}</li>
+		<li>Time: ${req.body.timereservation}</li>
 	  </ul>
 	`;
   
