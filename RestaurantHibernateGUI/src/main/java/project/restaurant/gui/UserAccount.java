@@ -19,16 +19,16 @@ public class UserAccount {
     private JButton btnTopMenuTables;
     private JButton btnTopMenuTransfer;
     private JButton btnTopMenuBill;
-    private JButton btnTopMenuDiscount;
-    private JButton btnTopMenuStorno;
+    private JButton btnTopMenuSetDrinks;
+    private JButton btnTopMenuSetFoods;
     private JButton btnTopMenuSetEmployee;
     private JButton btnTopMenuLogOut;
     private JButton btnMakeOrder;
     private JButton btnTables;
     private JButton btnTransfer;
     private JButton btnBill;
-    private JButton btnDiscount;
-    private JButton btnStorno;
+    private JButton btnSetDrinks;
+    private JButton btnSetFoods;
     private JButton btnSetEmployee;
     private JButton btnLogOut;
     private JPanel pnlBasicMenu;
@@ -102,6 +102,71 @@ public class UserAccount {
     String table;
     ArrayList<Order> orderArray = new ArrayList<Order>();
 
+    public JPanel getPnlOrderedTable1() {
+        return pnlOrderedTable1;
+    }
+
+    public JPanel getPnlOrderedTable2() {
+        return pnlOrderedTable2;
+    }
+
+    public JPanel getPnlOrderedTable3() {
+        return pnlOrderedTable3;
+    }
+
+    public JPanel getPnlOrderedTable4() {
+        return pnlOrderedTable4;
+    }
+
+    public JPanel getPnlOrderedTable5() {
+        return pnlOrderedTable5;
+    }
+
+    public JPanel getPnlOrderedTable6() {
+        return pnlOrderedTable6;
+    }
+
+    public JPanel getPnlOrderedTable7() {
+        return pnlOrderedTable7;
+    }
+
+    public JPanel getPnlOrderedTable8() {
+        return pnlOrderedTable8;
+    }
+
+
+    public JButton getBtnTable1() {
+        return btnTable1;
+    }
+
+    public JButton getBtnTable2() {
+        return btnTable2;
+    }
+
+    public JButton getBtnTable3() {
+        return btnTable3;
+    }
+
+    public JButton getBtnTable4() {
+        return btnTable4;
+    }
+
+    public JButton getBtnTable5() {
+        return btnTable5;
+    }
+
+    public JButton getBtnTable6() {
+        return btnTable6;
+    }
+
+    public JButton getBtnTable7() {
+        return btnTable7;
+    }
+
+    public JButton getBtnTable8() {
+        return btnTable8;
+    }
+
     public void setOrderArray(ArrayList<Order> orderArray) {
         this.orderArray = orderArray;
     }
@@ -117,42 +182,142 @@ public class UserAccount {
         System.out.println("SIZE : "+size);
 
         for (int i=0;i<size;i++){
-            System.out.println("ARRAY LIST "+i+": "+orderArray.get(i).getNumberOfItem()+" - "+orderArray.get(i).getNameItem()+" - "+orderArray.get(i).getPrice()+" - "+orderArray.get(i).getTotalPrice());
+            System.out.println("ARRAY LIST "+i+": "+orderArray.get(i).getNumberOfItem()+" - "+orderArray.get(i).getNameItem()+" - "+
+                    +orderArray.get(i).getPrice()+" - " +orderArray.get(i).getTotalPrice()+" - "+orderArray.get(i).getIdTable());
+
         }
     }
 
-    public void setPanels(String historyOrder){
-        if (historyOrder=="xx"){
+    public void setPanels(String historyOrder, String tableHistory){
+        pnlTopMenu.setVisible(false);
+        pnlTables.setVisible(false);
+
+        /*btnTable1.setVisible(false);
+        btnTable2.setVisible(false);
+        btnTable3.setVisible(false);
+        btnTable4.setVisible(false);
+        btnTable5.setVisible(false);
+        btnTable6.setVisible(false);
+        btnTable7.setVisible(false);
+        btnTable8.setVisible(false);*/
+
+        pnlOrderedTable1.setVisible(false);
+        pnlOrderedTable2.setVisible(false);
+        pnlOrderedTable3.setVisible(false);
+        pnlOrderedTable4.setVisible(false);
+        pnlOrderedTable5.setVisible(false);
+        pnlOrderedTable6.setVisible(false);
+        pnlOrderedTable7.setVisible(false);
+        pnlOrderedTable8.setVisible(false);
+
+        System.out.println("SET PANELS !!!");
+
+        /*if (historyOrder.equals("xx")) {
             pnlTopMenu.setVisible(false);
             pnlTables.setVisible(false);
+        }*/
 
-            pnlOrderedTable1.setVisible(false);
+            /*if (tableHistory.equals("true 1")){
+                pnlOrderedTable1.setVisible(true);
+                btnTable1.setVisible(false);
+                System.out.println("Table 1 was changed");
+            }else {
+                pnlOrderedTable1.setVisible(false);
+                btnTable1.setVisible(true);
+            }
+
+        if (tableHistory.equals("true 2")){
+            pnlOrderedTable2.setVisible(true);
+            btnTable2.setVisible(false);
+            System.out.println("Table 2 was changed");
+        }else {
             pnlOrderedTable2.setVisible(false);
-            pnlOrderedTable3.setVisible(false);
-            pnlOrderedTable4.setVisible(false);
-            pnlOrderedTable5.setVisible(false);
-            pnlOrderedTable6.setVisible(false);
-            pnlOrderedTable7.setVisible(false);
-            pnlOrderedTable8.setVisible(false);
+            btnTable2.setVisible(true);
         }
-        else if (historyOrder=="true")
+
+        if (tableHistory.equals("true 3")){
+            pnlOrderedTable3.setVisible(true);
+            btnTable3.setVisible(false);
+            System.out.println("Table 3 was changed");
+        }else {
+            pnlOrderedTable3.setVisible(false);
+            btnTable3.setVisible(true);
+        }
+
+        if (tableHistory.equals("true 4")){
+            pnlOrderedTable4.setVisible(true);
+            btnTable4.setVisible(false);
+            System.out.println("Table 4 was changed");
+        }else {
+            pnlOrderedTable4.setVisible(false);
+            btnTable4.setVisible(true);
+        }
+
+        if (tableHistory.equals("true 5")){
+            pnlOrderedTable5.setVisible(true);
+            btnTable5.setVisible(false);
+        }else {
+            pnlOrderedTable5.setVisible(false);
+            btnTable5.setVisible(true);
+        }
+
+        if (tableHistory.equals("true 6")){
+            pnlOrderedTable6.setVisible(true);
+            btnTable6.setVisible(false);
+        }else {
+            pnlOrderedTable6.setVisible(false);
+            btnTable6.setVisible(true);
+        }
+
+        if (tableHistory.equals("true 7")){
+            pnlOrderedTable7.setVisible(true);
+            btnTable7.setVisible(false);
+        }else {
+            pnlOrderedTable7.setVisible(false);
+            btnTable7.setVisible(true);
+        }
+
+        if (tableHistory.equals("true 8")){
+            pnlOrderedTable8.setVisible(true);
+            btnTable8.setVisible(false);
+        }else {
+            pnlOrderedTable8.setVisible(false);
+            btnTable8.setVisible(true);
+        }*/
+
+            /*if (tableHistory!="true" || tableHistory.equals("xx")){
+                pnlOrderedTable1.setVisible(false);
+                pnlOrderedTable2.setVisible(false);
+                pnlOrderedTable3.setVisible(false);
+                pnlOrderedTable4.setVisible(false);
+                pnlOrderedTable5.setVisible(false);
+                pnlOrderedTable6.setVisible(false);
+                pnlOrderedTable7.setVisible(false);
+                pnlOrderedTable8.setVisible(false);
+            }*/
+
+
+        /*else if (historyOrder.equals("true"))
         {
-            if (table=="Table 1"){setTable1();}
-            else if (table=="Table 2"){setTable2();}
-            else if (table=="Table 3"){setTable3();}
-            else if (table=="Table 4"){setTable4();}
-            else if (table=="Table 5"){setTable5();}
-            else if (table=="Table 6"){setTable6();}
-            else if (table=="Table 7"){setTable7();}
-            else if (table=="Table 8"){setTable8();}
+            if (table.equals("Table 1")){setTable1();}
+            else if (table.equals("Table 2")){setTable2();}
+            else if (table.equals("Table 3")){setTable3();}
+            else if (table.equals("Table 4")){setTable4();}
+            else if (table.equals("Table 5")){setTable5();}
+            else if (table.equals("Table 6")){setTable6();}
+            else if (table.equals("Table 7")){setTable7();}
+            else if (table.equals("Table 8")){setTable8();}
         }else {
             System.out.println("SOMETHING IS WRONG !");
-        }
+        }*/
     }
 
+
+
     public void setTable1(){
-        btnTable1.setVisible(false);
         pnlOrderedTable1.setVisible(true);
+        btnTable1.setVisible(false);
+
         System.out.println("CHANGE ON TABLE 1");
     }
 
@@ -194,7 +359,7 @@ public class UserAccount {
     public UserAccount() {
 
         //hide top menu
-        setPanels("xx");
+        setPanels("xx", "xx");
 
         //btn search
         btnSearch.addActionListener(new ActionListener() {
@@ -226,7 +391,7 @@ public class UserAccount {
         //btn basic menu Tables
         btnTables.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                setPanels("xx");
+                setPanels("xx", "xx");
                 pnlBasicMenu.setVisible(false);
                 pnlTables.setVisible(true);
                 pnlTopMenu.setVisible(true);
@@ -327,6 +492,7 @@ public class UserAccount {
 
     public JFrame openMealMeanu(int i) {
         MakeOrder makeorder = new MakeOrder();
+        Order order = new Order();
 
         makeorder.getOrderArray(orderArray);
         //ArrayList<Order> orderArray = new ArrayList<Order>();
@@ -341,27 +507,35 @@ public class UserAccount {
         switch (i) {
             case 1:
                 makeorder.getLblNameTable().setText("Table 1");
+                makeorder.makeOrderIdTable=1;
                 break;
             case 2:
                 makeorder.getLblNameTable().setText("Table 2");
+                makeorder.makeOrderIdTable=2;
                 break;
             case 3:
                 makeorder.getLblNameTable().setText("Table 3");
+                makeorder.makeOrderIdTable=3;
                 break;
             case 4:
                 makeorder.getLblNameTable().setText("Table 4");
+                makeorder.makeOrderIdTable=4;
                 break;
             case 5:
                 makeorder.getLblNameTable().setText("Table 5");
+                makeorder.makeOrderIdTable=5;
                 break;
             case 6:
                 makeorder.getLblNameTable().setText("Table 6");
+                makeorder.makeOrderIdTable=6;
                 break;
             case 7:
                 makeorder.getLblNameTable().setText("Table 7");
+                makeorder.makeOrderIdTable=7;
                 break;
             case 8:
                 makeorder.getLblNameTable().setText("Table 8");
+                makeorder.makeOrderIdTable=8;
                 break;
             case 99: return frameMakeOrder;
             default:
@@ -396,12 +570,12 @@ public class UserAccount {
     }
 
     public UserAccount AccountWaiter() {
-        btnTopMenuDiscount.setEnabled(false);
-        btnDiscount.setEnabled(false);
+        btnTopMenuSetDrinks.setEnabled(false);
+        btnSetDrinks.setEnabled(false);
         btnTopMenuSetEmployee.setEnabled(false);
         btnSetEmployee.setEnabled(false);
-        btnTopMenuStorno.setEnabled(false);
-        btnStorno.setEnabled(false);
+        btnTopMenuSetFoods.setEnabled(false);
+        btnSetFoods.setEnabled(false);
         System.out.println("Account Waiter");
         return null;
     }
