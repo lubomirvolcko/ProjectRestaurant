@@ -1463,7 +1463,7 @@ public class MakeOrder {
     }
 
 
-
+    Order order = new Order();
 
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
 
@@ -1476,8 +1476,8 @@ public class MakeOrder {
 
         //Order order = new Order(numberOfItem, smootieName, smootiePrice, totalPrice);
 
-        Order order = new Order();
 
+        int countChnages=0;
         int size = orderArrayList.size();
 
         if (size>0){
@@ -1486,13 +1486,26 @@ public class MakeOrder {
                     orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
                     orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
                     System.out.println("COUNTED");
-                }else{
-
-
-                    orderArrayList.add(order);
-                    System.out.println("ELSE 1");
+                }else {
+                    System.out.println("none");
+                    countChnages++;
                 }
             }
+
+            if (countChnages==size){
+
+                Order order = new Order();
+
+                order.setNumberOfItem(numberOfItem);
+                order.setPrice(smootiePrice);
+                order.setNameItem(smootieName);
+                order.setTotalPrice(totalPrice);
+
+                orderArrayList.add(order);
+                System.out.println("ELSE 1");
+            }
+
+
         }else {
             order.setNumberOfItem(numberOfItem);
             order.setPrice(smootiePrice);
@@ -1500,11 +1513,8 @@ public class MakeOrder {
             order.setTotalPrice(totalPrice);
 
             orderArrayList.add(order);
-            System.out.println("Done");
+            System.out.println("ELSE 2");
         }
-
-
-
 
         userAccount.setOrderArray(orderArrayList);
         userAccount.printOrderArray();
@@ -1527,6 +1537,7 @@ public class MakeOrder {
         lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
         JLabel lblCount = new JLabel("name");
         JLabel lblX = new JLabel("name");
+        JLabel lblEuro = new JLabel("name");
         JLabel lblName = new JLabel("name");
         JLabel lblPrice= new JLabel("name");
         JButton btnChoose = new JButton();
@@ -1548,16 +1559,20 @@ public class MakeOrder {
             lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             lblName.setBounds(85, orderPositionY, 200, 30);
 
-            pnlOrderedItems.add(lblPrice = new JLabel(""+countPrice+" €", FlowLayout.LEFT));
+            pnlOrderedItems.add(lblPrice = new JLabel(""+countPrice, FlowLayout.LEFT));
             lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             lblPrice.setBounds(295, orderPositionY, 100, 30);
+
+            pnlOrderedItems.add(lblEuro = new JLabel("€", FlowLayout.LEFT));
+            lblEuro.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+            lblEuro.setBounds(405, orderPositionY, 30, 30);
 
             pnlOrderedItems.add(btnChoose = new JButton("THROW"));
             btnChoose.setBackground(new Color(254,151,44));
             btnChoose.setFont(new Font("Century Gothic", Font.BOLD, 17));
             btnChoose.setForeground(Color.white);
             btnChoose.setBorderPainted(false);
-            btnChoose.setBounds(410, orderPositionY, 100, 30);
+            btnChoose.setBounds(450, orderPositionY, 100, 30);
 
             pnlOrderedItems.add(btnUndo = new JButton("UNDO"));
             btnUndo.setBackground(new Color(133,147,49));
@@ -1565,7 +1580,7 @@ public class MakeOrder {
             btnUndo.setForeground(Color.white);
             btnUndo.setBorderPainted(false);
             btnUndo.setEnabled(false);
-            btnUndo.setBounds(520, orderPositionY, 100, 30);
+            btnUndo.setBounds(560, orderPositionY, 100, 30);
 
         }else{
             JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
@@ -1580,6 +1595,7 @@ public class MakeOrder {
         final JButton finalBtnUndo = btnUndo;
         final JLabel finalLblCount1 = lblCount;
         final JLabel finalLblX = lblX;
+        final JLabel finalLblEuro = lblEuro;
         btnChoose.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -1587,48 +1603,100 @@ public class MakeOrder {
                 numberOfItem = Integer.parseInt(finalLblCount1.getText());
                 System.out.println("Number of item is: "+numberOfItem);
 
-                throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo);
+                throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
             }
         });
 
         final JButton finalBtnUndo1 = btnUndo;
         final JLabel finalLblX1 = lblX;
+        final JLabel finalLblEuro1 = lblEuro;
         btnUndo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                undoItem(finalLblCount, finalLblX1, finalLblName, finalLblPrice, finalBtnChoose, finalBtnUndo1);
+                undoItem(finalLblCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnChoose, finalBtnUndo1);
             }
         });
     }
 
-    public void throwItem(JLabel lblCount,JLabel lblX, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo) {
+    public void throwItem(JLabel lblCount,JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo) {
 
         totalPrice=totalPrice-countPrice;
-        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
+        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
         lblCount.setForeground(Color.red);
         lblX.setForeground(Color.red);
         lblName.setForeground(Color.red);
         lblPrice.setForeground(Color.red);
+        lblEuro.setForeground(Color.red);
         btnThrow.setText("Deleted");
         btnThrow.setEnabled(false);
         btnUndo.setEnabled(true);
 
-
         //Order order = new Order();
+
+        int numberOfItems = Integer.parseInt(lblCount.getText());
+        String itemName = lblName.getText();
+        double ttlPrice = Double.parseDouble(lblPrice.getText());
+
+        int size = orderArrayList.size();
+
+        System.out.println(" ");
+        System.out.println(" ");
+        System.out.println("In array: --"+orderArrayList.get(0).getNameItem()+"--");
+        System.out.println("In function: --"+itemName+"--");
+
+        for (int i=0; i<size;i++){
+            if (orderArrayList.get(i).getNameItem().equals(itemName)){
+
+                orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()-numberOfItems);
+                orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()-ttlPrice);
+                System.out.println("COUNTED");
+            }
+            else {
+                System.out.println("Something is wrong");
+            }
+        }
+
+        userAccount.setOrderArray(orderArrayList);
+        userAccount.printOrderArray();
 
 
     }
 
-    public void undoItem(JLabel lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JButton btnThrow, JButton btnUndo){
+    public void undoItem(JLabel lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
+
         totalPrice=totalPrice+countPrice;
-        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice)+" €");
+        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
         lblCount.setForeground(Color.black);
         lblName.setForeground(Color.black);
         lblPrice.setForeground(Color.black);
         lblX.setForeground(Color.black);
+        lblEuro.setForeground(Color.black);
         btnThrow.setText("THROW");
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
+
+        int numberOfItems = Integer.parseInt(lblCount.getText());
+        String itemName = lblName.getText();
+        double ttlPrice = Double.parseDouble(lblPrice.getText());
+
+        int size = orderArrayList.size();
+
+        for (int i=0; i<size;i++){
+            if (orderArrayList.get(i).getNameItem().equals(itemName)){
+
+                orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItems);
+                orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+ttlPrice);
+                System.out.println("COUNTED");
+            }
+            else {
+                System.out.println("Something is wrong");
+            }
+        }
+
+        userAccount.setOrderArray(orderArrayList);
+        userAccount.printOrderArray();
+
     }
 
 }
+
