@@ -7,8 +7,43 @@
 <details><![CDATA[<p>What user/customer can do</p>
 ]]></details> 
 
-<testcase internalid="4" name="Slide Show">
+<testcase internalid="44" name="Header">
 	<node_order><![CDATA[0]]></node_order>
+	<externalid><![CDATA[12]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>Header for auto trasfer somewhere</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will be on click transfer on selected header to section</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>User&nbsp;open Main Sovy Restaurant page</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User See main page of Sovy Restaurant</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>User click on header Food&nbsp;Menu/Reviews/Reservation</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will be send to section which he choose</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
+</testcase>
+
+<testcase internalid="4" name="Slide Show">
+	<node_order><![CDATA[1]]></node_order>
 	<externalid><![CDATA[1]]></externalid>
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>Swap slideshow</p>
@@ -43,7 +78,7 @@
 </testcase>
 
 <testcase internalid="13" name="Check food / drink in menu and order home">
-	<node_order><![CDATA[1]]></node_order>
+	<node_order><![CDATA[2]]></node_order>
 	<externalid><![CDATA[3]]></externalid>
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>section with food/drink price volume etc.</p>
@@ -60,7 +95,7 @@
 </testcase>
 
 <testcase internalid="8" name="Allergens of Food">
-	<node_order><![CDATA[2]]></node_order>
+	<node_order><![CDATA[3]]></node_order>
 	<externalid><![CDATA[2]]></externalid>
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>PDF of allergens downloadable on webpage</p>
@@ -104,7 +139,7 @@
 </testcase>
 
 <testcase internalid="15" name="Review">
-	<node_order><![CDATA[3]]></node_order>
+	<node_order><![CDATA[4]]></node_order>
 	<externalid><![CDATA[4]]></externalid>
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>Adding review, stars, and&nbsp;commentary about restaurant</p>
@@ -117,11 +152,47 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open website Sovy Restaurant</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user will see Website of Sovy Restaurant</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
 
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>scroll down and click on&nbsp;add Review</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User after click will see stars, input for name and comment</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>After fill in input (stars, name, commentar) press cancel</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will cancel&nbsp;adding a review</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>After fill in input (stars, name, commentar) and pressed send review</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will send review for website</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
 </testcase>
 
 <testcase internalid="17" name="Reservation">
-	<node_order><![CDATA[4]]></node_order>
+	<node_order><![CDATA[5]]></node_order>
 	<externalid><![CDATA[5]]></externalid>
 	<version><![CDATA[1]]></version>
 	<summary><![CDATA[<p>Book a reservation</p>
@@ -134,7 +205,34 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Open website Sovy Restaurant</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user will see whole website of Sovy Restaurant</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
 
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Scroll down to reservation and click on reservation button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will get pop up window with inputs</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>After filling all inputs press book a table</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will be contacted by manager / supervisor via Email or Call</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
 </testcase>
 </testsuite><testsuite id="19" name="Gui Testcases" >
 <node_order><![CDATA[2]]></node_order>
@@ -155,7 +253,25 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>User will start program</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>Program is started</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
 
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>user will type login / password and press log in</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user will see Main menu&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
 </testcase>
 
 <testcase internalid="27" name="Make order">
@@ -192,13 +308,13 @@
 
 </testcase>
 
-<testcase internalid="31" name="add/delete/update employee">
+<testcase internalid="31" name="add employee">
 	<node_order><![CDATA[1003]]></node_order>
 	<externalid><![CDATA[9]]></externalid>
 	<version><![CDATA[1]]></version>
-	<summary><![CDATA[<p>add/delete/update employee in program</p>
+	<summary><![CDATA[<p>add employee in program</p>
 ]]></summary>
-	<preconditions><![CDATA[<p>User is able to add/delete/update employee in program</p>
+	<preconditions><![CDATA[<p>User is able to add employee in program</p>
 ]]></preconditions>
 	<execution_type><![CDATA[1]]></execution_type>
 	<importance><![CDATA[2]]></importance>
@@ -240,6 +356,15 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
-
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Click logout button</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>on click logout button, it will logout the waiter/supervisor/manager back to login page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[2]]></execution_type>
+</step>
+</steps>
 </testcase>
 </testsuite></testsuite>
