@@ -270,6 +270,45 @@ $('#backToMenu').click(function() {
   $('#foodBtn').show();
 });
 
+ $("#nameInReview").keyup(function(){
+            var username = $("#nameInReview").val();
+            if(username.trim().length < 4){
+                $("#errorusr").show();
+            }
+            else if(username.trim().length > 4){
+                $("#errorusr").hide();
+            }
+        });
+
+ $("#new-review").keyup(function(){
+            var review = $("#new-review").val();
+            if(review.trim().length < 30){
+                $("#errorrvw").show();
+            }
+            else if(review.trim().length > 30){
+                $("#errorrvw").hide();
+            }
+        });
+
+   $("#sendreview").click(function(){
+        var review = $("#new-review").val();
+        var username = $("#nameInReview").val();
+    if(username.trim().length < 4 || review.trim().length < 30){
+    alert("Username or review is too short!");
+    }
+  });
+
+$('#new-review').keyup(function () {
+  var max = 500;
+  var len = $(this).val().length;
+  if (len >= max) {
+    $('#charNum').text(' You have reached the limit!');
+  } else {
+    var char = max - len;
+    $('#charNum').text(char + ' characters left');
+  }
+});
+
 /*$.get('http://localhost:8080/data',  function(data){
       
 var i = 0;

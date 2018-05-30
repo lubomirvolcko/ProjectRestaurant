@@ -258,7 +258,7 @@
        <form>
           <div class="form-group">
             <label for="formGroupExampleInput">Name</label>
-            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Enter your name">
+            <input type="text" class="form-control" id="formName" placeholder="Enter your name">
           </div>
           <div class="form-group">
             <label for="formGroupExampleInput2">Adress</label>
@@ -277,6 +277,9 @@
             <label for="formGroupExampleInput2">Phone number</label>
             <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="+421 xxx xxx xxx">
           </div>
+          <div class="form-group">
+                   <label for="formGroupExampleInput">Time: <input type="time" id="timereservation" ></label>
+                </div> 
         </form>
    
         </div>
@@ -356,8 +359,12 @@
               <p class="lead"> 
                  <div class="row" id="post-review-box" style="display: none;">
                 <div class="col-md-12">
-                        <p><input type="text" id="nameInReview" class="form-control" placeholder="Enter your name here"></p>
-                        <p><textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="7"></textarea></p>
+                        <p><input type="text" id="nameInReview" class="form-control" placeholder="Enter your name here" maxlength="15"></p>
+                        <p id="errorusr" class="sizeText">Your name is too short!</p>
+                        <p><textarea class="form-control animated" cols="50" id="new-review" name="comment" placeholder="Enter your review here..." rows="7" maxlength="500"></textarea></p>
+                        <div id="charNum"></div>
+                        <div id="errorrvw" class="sizeText">Review must be at least 30 characters long!</div>
+                        <!--<p id="error">s</p>-->
                         <p><div class="text-right">
                             <button type="button" class="btn btn-danger" id="cancelBtn">Cancel</button>
                             <button type="button" id="sendreview" class="btn btn-success">Send Review</button></p>

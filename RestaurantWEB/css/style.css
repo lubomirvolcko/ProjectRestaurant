@@ -16,6 +16,12 @@ section {
     height: 10vh;
 }
 
+.sizeText{
+    display: none;
+    font-weight: 400;
+    color: red;
+}
+
 #shoppingCart{
     height: 3vh;
 }
