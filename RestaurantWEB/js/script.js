@@ -52,6 +52,7 @@
 $('#menucko').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
+  $('#alergens').hide();
   $('#mainFoodMenu').show("slow");
   $('#foodBtn').show("slow");
 });
@@ -60,6 +61,7 @@ $('#menucko').click(function() {
 $('#drinks').click(function() {
   $('#drinks').hide();
   $('#menucko').hide();
+  $('#alergens').hide();
   $('#mainDrinksMenu').show("slow");
   $('#backDrinks').show();
 });
@@ -221,6 +223,7 @@ $('#sprites').click(function() {
 $('.back-btn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
+  $('#alergens').show();
   $('#mainFoodMenu').hide();
   $('#foodBtn').hide();
 });
@@ -229,6 +232,7 @@ $('.back-btn').click(function() {
 $('.back-bttn').click(function() {
   $('#drinks').show();
   $('#menucko').show();
+  $('#alergens').show();
   $('#drinkMenu').hide();
 });
 
