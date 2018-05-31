@@ -85,6 +85,7 @@
                   <enabled value="true"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/orderTopMenu.png"/>
                   <text value="MakeOrder"/>
                 </properties>
               </component>
@@ -96,6 +97,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/tebleTopMenu.png"/>
                   <text value="Tables"/>
                 </properties>
               </component>
@@ -107,6 +109,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/transferTopMenu.png"/>
                   <text value="Transfer"/>
                 </properties>
               </component>
@@ -118,6 +121,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/billTopMenu.png"/>
                   <text value="Bill"/>
                 </properties>
               </component>
@@ -129,6 +133,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/setDrinksTopMenu.png"/>
                   <text value="Set Drinks"/>
                 </properties>
               </component>
@@ -140,7 +145,8 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
-                  <text value="Set Meal"/>
+                  <icon value="src/img/setFoodsTopMenu.png"/>
+                  <text value="Set Foods"/>
                 </properties>
               </component>
               <component id="aedd4" class="javax.swing.JButton" binding="btnTopMenuSetEmployee">
@@ -151,6 +157,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/setEmployeeTopMenu.png"/>
                   <text value="Set Employee"/>
                 </properties>
               </component>
@@ -162,6 +169,7 @@
                   <background color="-8023247"/>
                   <font name="Century Gothic" size="18" style="1"/>
                   <foreground color="-1"/>
+                  <icon value="src/img/logOutTopMenu.png"/>
                   <text value="Log Out"/>
                 </properties>
               </component>
