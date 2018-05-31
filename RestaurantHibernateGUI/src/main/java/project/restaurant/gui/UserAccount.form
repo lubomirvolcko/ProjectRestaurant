@@ -83,7 +83,7 @@
                 <properties>
                   <background color="-8023247"/>
                   <enabled value="true"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/orderTopMenu.png"/>
                   <text value="MakeOrder"/>
@@ -95,7 +95,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/tebleTopMenu.png"/>
                   <text value="Tables"/>
@@ -107,7 +107,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/transferTopMenu.png"/>
                   <text value="Transfer"/>
@@ -119,7 +119,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/billTopMenu.png"/>
                   <text value="Bill"/>
@@ -131,7 +131,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/setDrinksTopMenu.png"/>
                   <text value="Set Drinks"/>
@@ -143,7 +143,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/setFoodsTopMenu.png"/>
                   <text value="Set Foods"/>
@@ -155,7 +155,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/setEmployeeTopMenu.png"/>
                   <text value="Set Employee"/>
@@ -167,7 +167,7 @@
                 </constraints>
                 <properties>
                   <background color="-8023247"/>
-                  <font name="Century Gothic" size="18" style="1"/>
+                  <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
                   <icon value="src/img/logOutTopMenu.png"/>
                   <text value="Log Out"/>

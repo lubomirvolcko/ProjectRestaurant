@@ -365,6 +365,20 @@ public class UserAccount {
                 setFood.createTable();
             }
         });
+        btnTopMenuSetFoods.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SetFood setFood = new SetFood();
+                setFood.createTable();
+            }
+        });
+        btnTopMenuSetDrinks.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SetDrinks setDrinks = new SetDrinks();
+                setDrinks.createTable();
+            }
+        });
     }
 
     public void logOut(ActionEvent e){

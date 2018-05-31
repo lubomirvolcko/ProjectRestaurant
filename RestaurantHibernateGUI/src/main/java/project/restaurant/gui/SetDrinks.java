@@ -295,8 +295,8 @@ public class SetDrinks {
 
         frame2.setSize(900,400);
         frame2.setLocationRelativeTo(null);
-        frame2.setVisible(true);
         frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame2.setVisible(true);
 
 
 

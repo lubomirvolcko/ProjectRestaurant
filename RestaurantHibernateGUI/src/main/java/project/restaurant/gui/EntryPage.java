@@ -34,14 +34,14 @@ public class EntryPage {
     private JButton logo;
     private JTextField logInArea;
     private JButton btnLogIn;
-    private String position;
     private int clickedOnBtnLogin;
     final JFrame close = logInPage();
+
+
     public JFrame logInPage()  {
         JFrame frame = new JFrame("LogIn");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        //frame.setSize(500,500);
         frame.setContentPane(getBrEntryPage());
         frame.setVisible(true);
 
@@ -51,9 +51,6 @@ public class EntryPage {
         return frame;
     }
 
-    public String getUsername() {
-        return position;
-    }
 
     public EntryPage() {
         getAuthenticationInfo();
@@ -65,6 +62,8 @@ public class EntryPage {
                 getAuthenticationInfo();
             }
         });
+
+
 
 
         logo.addActionListener(new ActionListener() {
@@ -120,17 +119,17 @@ public class EntryPage {
             System.out.println("Password: "+d.getPassword());
 
             if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
-                openForm(3, d.getPosition());
+                openForm(3, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("waiter")) {
-                openForm(1, d.getPosition());
+                openForm(1, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("supervisor")) {
-                openForm(2, d.getPosition());
+                openForm(2, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
             }

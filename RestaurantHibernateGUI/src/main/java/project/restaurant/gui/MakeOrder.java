@@ -1613,7 +1613,7 @@ public class MakeOrder {
         System.out.println("COUNTPRICE IS: "+countPrice);
 
         System.out.println("TOTAL PRICE IS : "+totalPrice);
-        lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
+
         JLabel lblCount = new JLabel("name");
         JLabel lblX = new JLabel("name");
         JLabel lblEuro = new JLabel("name");
@@ -1630,6 +1630,8 @@ public class MakeOrder {
             countPrice=Math.round(countPrice * 100)/100.0;
             totalPrice=totalPrice+countPrice;
             totalPrice=Math.round(totalPrice * 100)/100.0;
+
+            lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
 
             pnlOrderedItems.add(lblCount = new JLabel(""+count, FlowLayout.LEFT));
             lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
