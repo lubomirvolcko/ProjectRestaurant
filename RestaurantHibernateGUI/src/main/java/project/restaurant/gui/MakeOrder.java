@@ -482,11 +482,20 @@ public class MakeOrder {
             @Override
             public void actionPerformed(ActionEvent e) {
 
+                int size = orderArrayList.size();
                 System.out.println("BEFORE CHANGE");
                 UserAccount userAccount = new UserAccount();
                 System.out.println("AFTER CHANGE");
 
                 if (lblNameTable.getText().equals("Table 1")){
+
+                    for (int i=0; i<size;i++){
+                        if (orderArrayList.get(i).getIdTable()==1){
+                            orderHistory="true";
+                            System.out.println("Order History: "+orderHistory);
+                        }
+                    }
+
                     //userAccount.getBtnTable1().setVisible(false);
                     //userAccount.getPnlOrderedTable1().setVisible(true);
                     //userAccount.setTable1();
@@ -514,7 +523,7 @@ public class MakeOrder {
                     userAccount.setTable8();
                 }
 
-                orderHistory="true";
+
                 //userAccount.table=lblNameTable.getText();
                 //userAccount.setPanels("xx", orderHistory);
 

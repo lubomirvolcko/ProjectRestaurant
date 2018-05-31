@@ -258,6 +258,8 @@ createTable();
     public void createTable()
     {
         JFrame frame2 = new JFrame();
+        frame2.setBackground(new Color(240,232,220));
+
         final JTable table = new JTable();
 
         Object[] columns = {"Id","First Name","Last Name","Id card","Login","Password","Email","Position"};
@@ -267,18 +269,25 @@ createTable();
         table.setModel(model);
 
 
-        table.setBackground(Color.LIGHT_GRAY);
-        table.setForeground(Color.black);
-        Font font = new Font("",1,22);
+        table.setBackground(new Color(240,232,220));
+        table.setForeground(new Color(133,147,49));
+        Font font = new Font("Century Gothic", 1, 22);
         table.setFont(font);
         table.setRowHeight(30);
 
+        final JLabel lblFname = new JLabel();
         final JTextField textFname = new JTextField();
+        final JLabel lblLname = new JLabel();
         final JTextField textLname = new JTextField();
+        final JLabel lblIdcard= new JLabel();
         final JTextField textIdcard = new JTextField();
+        final JLabel lbllogin = new JLabel();
         final JTextField textlogin = new JTextField();
+        final JLabel lblPassword = new JLabel();
         final JTextField textpassword = new JTextField();
+        final JLabel lblEmail = new JLabel();
         final JTextField textemail = new JTextField();
+        final JLabel lblPosition= new JLabel();
         String[] positions = { "manager", "waiter", "supervisor" };
         final JComboBox textposition = new JComboBox(positions);
 
@@ -286,28 +295,73 @@ createTable();
         JButton btnDelete = new JButton("Delete");
         JButton btnUpdate = new JButton("Update");
 
+        btnUpdate.setBackground(new Color(133,147,49));
+        btnUpdate.setForeground(Color.white);
 
-        textFname.setBounds(20, 220, 100, 25);
-        textLname.setBounds(20, 250, 100, 25);
-        textIdcard.setBounds(20, 280, 100, 25);
-        textlogin.setBounds(20, 310, 100, 25);
-        textpassword.setBounds(150, 220, 100, 25);
-        textemail.setBounds(150, 250, 100, 25);
-        textposition.setBounds(150, 280, 100, 25);
+        btnDelete.setBackground(new Color(254,151,44));
+        btnDelete.setForeground(Color.white);
 
 
-        btnUpdate.setBounds(280, 220, 100, 25);
-        btnDelete.setBounds(280, 265, 100, 25);
+        lblFname.setForeground(new Color(133,147,49));
+        lblLname.setForeground(new Color(133,147,49));
+        lblIdcard.setForeground(new Color(133,147,49));
+        lbllogin.setForeground(new Color(133,147,49));
+        lblPassword.setForeground(new Color(133,147,49));
+        lblEmail.setForeground(new Color(133,147,49));
+        lblPosition.setForeground(new Color(133,147,49));
+
+        lblFname.setText("First name : ");
+        lblLname.setText("Last name : ");
+        lblIdcard.setText("Id card : ");
+        lbllogin.setText("Login : ");
+        lblPassword.setText("Password : ");
+        lblEmail.setText("Email : ");
+        lblPosition.setText("Position : ");
+
+
+        lblFname.setBounds(20, 220, 80, 25);
+        textFname.setBounds(100, 220, 100, 25);
+
+        lblLname.setBounds(20, 250, 80, 25);
+        textLname.setBounds(100, 250, 100, 25);
+
+        lblIdcard.setBounds(20, 280, 80, 25);
+        textIdcard.setBounds(100, 280, 100, 25);
+
+        lbllogin.setBounds(250, 220, 80, 25);
+        textlogin.setBounds(330, 220, 100, 25);
+
+        lblPassword.setBounds(250, 250, 80, 25);
+        textpassword.setBounds(330, 250, 100, 25);
+
+        lblEmail.setBounds(480, 220, 80, 25);
+        textemail.setBounds(560, 220, 100, 25);
+
+        lblPosition.setBounds(480, 250, 80, 25);
+        textposition.setBounds(560, 250, 100, 25);
+
+
+        btnUpdate.setBounds(700, 220, 100, 25);
+        btnDelete.setBounds(700, 265, 100, 25);
 
         // create JScrollPane
         JScrollPane pane = new JScrollPane(table);
         pane.setBounds(0, 0, 880, 200);
+        pane.setBackground(new Color(240,232,220));
 
         frame2.setLayout(null);
 
         frame2.add(pane);
 
         // add JTextFields to the jframe
+        frame2.add(lblEmail);
+        frame2.add(lblFname);
+        frame2.add(lblIdcard);
+        frame2.add(lblLname);
+        frame2.add(lbllogin);
+        frame2.add(lblPassword);
+        frame2.add(lblPosition);
+
         frame2.add(textFname);
         frame2.add(textLname);
         frame2.add(textIdcard);
@@ -319,7 +373,9 @@ createTable();
 
 
         frame2.add(btnDelete);
-        frame2 .add(btnUpdate);
+        frame2.add(btnUpdate);
+
+        frame2.setBackground(new Color(240,232,220));
 
 
         final Object[] row = new Object[8];

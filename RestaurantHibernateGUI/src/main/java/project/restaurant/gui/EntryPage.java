@@ -35,6 +35,7 @@ public class EntryPage {
     private JTextField logInArea;
     private JButton btnLogIn;
     private String position;
+    private int clickedOnBtnLogin;
     final JFrame close = logInPage();
     public JFrame logInPage()  {
         JFrame frame = new JFrame("LogIn");
@@ -60,6 +61,7 @@ public class EntryPage {
 
         btnLogin.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
+                clickedOnBtnLogin=1;
                 getAuthenticationInfo();
             }
         });
@@ -120,18 +122,26 @@ public class EntryPage {
             if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
                 openForm(3, d.getPosition());
                 close.dispose();
+                clickedOnBtnLogin=0;
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("waiter")) {
                 openForm(1, d.getPosition());
                 close.dispose();
+                clickedOnBtnLogin=0;
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("supervisor")) {
                 openForm(2, d.getPosition());
                 close.dispose();
+                clickedOnBtnLogin=0;
             }
             else
             {
-                System.out.println("Bad Login or Password");
+                if (clickedOnBtnLogin==1){
+                    JOptionPane.showMessageDialog(null, "Wrong Login or Password ! Try it Again please !");
+                    System.out.println("Bad Login or Password");
+                    clickedOnBtnLogin=0;
+                }
+
             }
         }
 
