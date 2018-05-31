@@ -369,6 +369,13 @@ var tdidname= 0
 var tdidprice=0;
  var nameArray = new Array;
  var priceArray = new Array;
+
+ var row;
+var deletename;
+var buttonId;
+var total = 0;
+
+
 $("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Delete item"+"</th>"+"</th>"+"</tr>"+"</thead>");
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
@@ -394,206 +401,20 @@ $.post({
           tdidname++;
           tdidprice++;
 
- }
+  }
+
 a=0;
 tdidname=0;
 tdidprice=0;
-          $("#btnW0").click(function(){
+ }
 
 
 
-
-    nameArray.push($('#tab0').text());
- 
-    priceArray.push($('#tdidprice0').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
- $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    }
-
-     $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-
-
-    }); 
-
-  
-
-        $("#btnW1").click(function(){
-
-
-
-
- nameArray.push($('#tab1').text());
- 
-    priceArray.push($('#tdidprice1').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-   $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    }
-
-
-     $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-
-
-    }); 
-
-            $("#btnW2").click(function(){
-
- 
-
-     nameArray.push($('#tab2').text());
- 
-    priceArray.push($('#tdidprice2').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
- $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    }
-
-
-    }); 
-
-                $("#btnW3").click(function(){
-
-  
-
-     nameArray.push($('#tab3').text());
- 
-    priceArray.push($('#tdidprice3').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    }
-
-
-     $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-  
-
-    }); 
-
-          
-     
-          
-
-      
-    }
 } );}
+
+
+
+
 
 
 
@@ -668,274 +489,202 @@ $.post({
           a++;
           tdidname++;
           tdidprice++;
+           }
 
 
-          
 
       
-    }
-   a=0;
+    
+          a=0;
           tdidname=0;
           tdidprice=0;
 
-  $("#btnW0").click(function(){
-
-
-    nameArray.push($('#tab0').text());
- 
-    priceArray.push($('#tdidprice0').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    trcount++;
-    }
-
-   
-
- 
-   $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-              
-      
-
-       
-    
-
-    }); 
-
-  
-
-
-        $("#btnW1").click(function(){
-
-
-
-
- nameArray.push($('#tab1').text());
- 
-    priceArray.push($('#tdidprice1').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    trcount++;
-    }
-
-   $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-
-
-    }); 
-          
-            $("#btnW2").click(function(){
-
- 
-
-     nameArray.push($('#tab2').text());
- 
-    priceArray.push($('#tdidprice2').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    trcount++;
-    }
-
-   $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-
-
-
-    }); 
-     
-
-                $("#btnW3").click(function(){
-
-  
-
-     nameArray.push($('#tab3').text());
- 
-    priceArray.push($('#tdidprice3').text());
-  
-    for(p=p;p<nameArray.length;p++)
-    {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
-    btnCancelCout++;
-    getname++;
-    trcount++;
-    }
- 
-    $(".btnC,.getTdName,.classTr").mouseover(function(){
-          var wtf = $(this).closest('td');
-          var tdd=wtf.attr('id');
-          console.log(tdd);
-          var nameTD=$("#"+tdd).text();
-          console.log(nameTD);
-
-            var currentButton = $(this).closest('button');
-          var currentButtonId=currentButton.attr('id');
-          console.log(currentButtonId);
-
- $(currentButton).click(function(){
-         
-       
-            
-
-
-             
-
-var currentRow = $(this).closest('tr');
-            var currentRowId=currentRow.attr('id')
-            console.log(currentRowId);
-
-
-   var index = nameArray.indexOf(nameTD);
-   for (var i=nameArray.length-1; i>=0; i--) {
-    if (nameArray[i] === nameTD) {
-        nameArray.splice(i, 1);
-    
-    }
-}
-    
-
-$(currentRow).remove();
-});
- });
-          
-
-  
-   
-
-        
-          
-          
-
- 
-
-
-    }); 
-         
-
-
-
-
 
   }
+
+
+
+
+
 } );}
 
 
 
 
-    $("#btnShop").click(function(){
+
+
+
+    $("#tableFood,#tableDrinks").on("click","button#btnW0",function(){
+
+
+    nameArray.push($('#tab0').text());
+ 
+    priceArray.push($('#tdidprice0').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+
+
+
+
+
+     $("#tableFood,#tableDrinks").on("click","button#btnW1",function(){
+
+
+    nameArray.push($('#tab1').text());
+ 
+    priceArray.push($('#tdidprice1').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+
+        $("#tableFood,#tableDrinks").on("click","button#btnW2",function(){
+
+
+    nameArray.push($('#tab2').text());
+ 
+    priceArray.push($('#tdidprice2').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   });
+
+      $("#tableFood,#tableDrinks").on("click","button#btnW3",function(){
+
+
+    nameArray.push($('#tab3').text());
+ 
+    priceArray.push($('#tdidprice3').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   });  
+
+
+         $("#tableFood,#tableDrinks").on("click","button#btnW4",function(){
+
+
+    nameArray.push($('#tab4').text());
+ 
+    priceArray.push($('#tdidprice4').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+ 
+for(var t=0;t<1000;t++)
+$("#shoppingcart").on("click","button#btnCancel"+[t],function(){
+
+
+    var tdd = $(this).closest('tr').find('td:nth-child(1)').text();
+    var tddd = $(this).closest('tr').find('td:nth-child(2)').text();
+    
+
+
+ var row = $(this).closest('tr').attr('id');
+ console.log("ID:"+row);
+ var indexName = nameArray.indexOf(tdd);
+ var indexPrice = priceArray.indexOf(tddd)
+nameArray.splice(indexName,1);
+priceArray.splice(indexPrice,1);
+
+$("#"+row).remove();
+console.log("NAMETD"+tdd);
+
+
+
+ }); 
+$("#btnShop").click(function(){
+var countRow = $('#shoppingcart tr').length;
+console.log(countRow);
+if(countRow<=1){
+ $("#shoppingcart").hide();
+
+$("#emptyCart").show();
+
+}
+else{
+
+   $("#shoppingcart").show();
+  $("#emptyCart").css("display", "none");
+}
+
+ }); 
+
+    $("#makeorder").click(function(){
 
 var stringName = JSON.stringify(nameArray);
 
