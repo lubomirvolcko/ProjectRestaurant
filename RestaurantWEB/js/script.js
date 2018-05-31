@@ -309,30 +309,6 @@ $('#new-review').keyup(function () {
   }
 });
 
- $("#formName").keyup(function(){
-            var username = $("#formName").val();
-            if(username.trim().length < 4){
-                $("#nameErr").show();
-            }
-            else if(username.trim().length > 4){
-                $("#nameErr").hide();
-            }
-        });
-
-  $("#orderAddress").keyup(function(){
-            var username = $("#orderAddress").val();
-            if(username.trim().length < 5){
-                $("#adressErr").show();
-            }
-            else if(username.trim().length > 5){
-                $("#adressErr").hide();
-            }
-        });
-
-  jQuery('#formNumber').keyup(function () { 
-    this.value = this.value.replace(/[^+0-9\.]/g,'');
-});
-
 /*$.get('http://localhost:8080/data',  function(data){
       
 var i = 0;
@@ -1159,6 +1135,9 @@ $.get({
           }
 } );
 });
+
+
+
 
 
 })(jQuery); // End of use strict

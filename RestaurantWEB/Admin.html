@@ -53,37 +53,20 @@
 
 
 
-
 </table>
-</form>
 
 <button type="button" id="button" class="btn">LOG IN</button> 
+
+ <div id="error" hidden>Invalid Username or Password </div>
+
+</form>
+
+
 </div>
 <div class="col-sm-4"></div>
     </div>
     
-  <!--
   <div class="row">
-<div class="col-sm-3">
-<h1>Managment</h1>
-  <table border="1">
-    
-    <tr>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>IDCard</th>
-      <th>email</th>
-      <th>Position</th>
-      </tr> 
-      <tr>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    <td></td>
-    </tr>
-  </table>
-</div>
 
 <div class="col-sm-3">
 <h2>Foods</h2>
@@ -97,10 +80,10 @@
 </tr>
 
 <tr>
-  <td></td>
-  <td></td>
-  <td></td>
-  <td></td>
+  <td id="namefood"></td>
+  <td id="pricefood"></td>
+  <td id="typefood"></td>
+  <td id="allergensfood"></td>
 </tr>
 
 </table>
@@ -123,13 +106,29 @@
      </table>
 </div>
 
-   <div class="col-sm-3">
-     <h4>Payment</h4>
+   <div class="col-sm-3" >
+     <h4>Reservation</h4>
      <table border="1">
      <tr>
-       <th>IdOrder</th>
+       <th>ID Reservation</th>
        <th>Status</th>
        <th>Type</th>
+     </tr>
+     <tr>
+       <td></td>
+       <td></td>
+       <td></td>
+     </tr>
+</table>
+   </div>
+
+   <div class="col-sm-3" >
+     <h4>Employees</h4>
+     <table border="1">
+     <tr>
+       <th>Name</th>
+       <th>Surname</th>
+       <th>Position</th>
      </tr>
      <tr>
        <td></td>
@@ -141,6 +140,5 @@
  
  </div> 
  </div>
--->
 </body>
 </html>
