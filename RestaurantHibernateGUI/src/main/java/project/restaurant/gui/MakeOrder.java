@@ -15,8 +15,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-
-
 public class MakeOrder {
     private JPanel pnlMakeOrder;
     private JPanel pnlOrderedItems;
@@ -516,7 +514,6 @@ public class MakeOrder {
                     userAccount.setTable8();
                 }
 
-
                 orderHistory="true";
                 //userAccount.table=lblNameTable.getText();
                 //userAccount.setPanels("xx", orderHistory);
@@ -737,8 +734,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -809,8 +806,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -881,8 +878,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -952,8 +949,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1024,8 +1021,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1097,8 +1094,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1169,8 +1166,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1240,8 +1237,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1311,8 +1308,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1383,8 +1380,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1454,8 +1451,8 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
                     }
 
                     finalTxtCount.setText("1");
@@ -1527,8 +1524,9 @@ public class MakeOrder {
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
                         countItem++;
-                        sendToTable(smootieName, SmootiePrice);
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
+
                     }
 
                     finalTxtCount.setText("1");
@@ -1552,21 +1550,33 @@ public class MakeOrder {
 
         int countChnages=0;
         int size = orderArrayList.size();
-
-        if (size>0){
-            for (int i=0; i<size;i++){
-                if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
-                    orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
-                    orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
-                }else {
-                    countChnages++;
+        if (countItem<31){
+            if (size>0){
+                for (int i=0; i<size;i++){
+                    if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
+                        orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
+                        orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
+                    }else {
+                        countChnages++;
+                    }
                 }
-            }
 
-            if (countChnages==size){
+                if (countChnages==size){
 
-                Order order = new Order();
+                    Order order = new Order();
 
+                    order.setNumberOfItem(numberOfItem);
+                    order.setPrice(smootiePrice);
+                    order.setNameItem(smootieName);
+                    order.setTotalPrice(totalPrice);
+                    order.setIdTable(makeOrderIdTable);
+
+                    orderArrayList.add(order);
+                    System.out.println("ELSE 1");
+                }
+
+
+            }else {
                 order.setNumberOfItem(numberOfItem);
                 order.setPrice(smootiePrice);
                 order.setNameItem(smootieName);
@@ -1574,24 +1584,14 @@ public class MakeOrder {
                 order.setIdTable(makeOrderIdTable);
 
                 orderArrayList.add(order);
-                System.out.println("ELSE 1");
+                System.out.println("ELSE 2");
             }
 
-
+            userAccount.setOrderArray(orderArrayList);
+            userAccount.printOrderArray();
         }else {
-            order.setNumberOfItem(numberOfItem);
-            order.setPrice(smootiePrice);
-            order.setNameItem(smootieName);
-            order.setTotalPrice(totalPrice);
-            order.setIdTable(makeOrderIdTable);
-
-            orderArrayList.add(order);
-            System.out.println("ELSE 2");
+            System.out.println("Item can't be added to orderArray");
         }
-
-        userAccount.setOrderArray(orderArrayList);
-        userAccount.printOrderArray();
-
 
     }
 
@@ -1599,10 +1599,7 @@ public class MakeOrder {
     public void sendToTable(final String name, Double price){
 
         orderPositionY=orderPositionY+32;
-        countPrice=price*countX;
-        countPrice=Math.round(countPrice * 100)/100.0;
-        totalPrice=totalPrice+countPrice;
-        totalPrice=Math.round(totalPrice * 100)/100.0;
+
 
         System.out.println("COUNTPRICE IS: "+countPrice);
 
@@ -1620,6 +1617,11 @@ public class MakeOrder {
 
         if (countItem<31)
         {
+            countPrice=price*countX;
+            countPrice=Math.round(countPrice * 100)/100.0;
+            totalPrice=totalPrice+countPrice;
+            totalPrice=Math.round(totalPrice * 100)/100.0;
+
             pnlOrderedItems.add(lblCount = new JLabel(""+count, FlowLayout.LEFT));
             lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
             lblCount.setBounds(10, orderPositionY, 45, 30);
