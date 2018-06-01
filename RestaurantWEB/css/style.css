@@ -61,6 +61,16 @@ section {
     margin-left: 15vh; /* search button */
 }
 
+
+
+#finalprice
+{
+  margin-right: 28vh; 
+  color:red;
+   font-weight: bold;
+   font-size: 20px;
+
+}
 /* menu */
 .menu-items {
     text-align:center;

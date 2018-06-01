@@ -400,7 +400,7 @@ var buttonId;
 var total = 0;
 
 
-$("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price"+ "<th scope=\"col\">"+"Delete item"+"</th>"+"</th>"+"</tr>"+"</thead>");
+$("#shoppingcart").html("<thead>"+"<tr>"+"<th scope=\"col\">"+"Name of Product"+"</th>"+"<th scope=\"col\">"+"Price(€)"+ "<th scope=\"col\">"+"Delete item"+"</th>"+"</th>"+"</tr>"+"</thead>");
 
 $("#tableFood").attr("<table class=table table-striped table-dark");
 
@@ -415,7 +415,7 @@ $.post({
         success: function(response){ 
           var i;
           
-           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price"+"</th>"+"</tr>"+"</thead>");
+           $("#tableDrinks").append("<thead>"+"<tr>"+"<th scope=\"col\">"+"Drink name"+"</th>"+"<th scope=\"col\">"+"Composition"+ "<th scope=\"col\">"+"Volume Weight"+"</th>"+"</th>"+"<th scope=\"col\">"+"Price(€)"+"</th>"+"</tr>"+"</thead>");
           for( i = 0;i<response.length;i++){  
           
         
@@ -546,7 +546,7 @@ $.post({
     priceArray.push($('#tdidprice0').text());
     for(p=p;p<nameArray.length;p++)
     {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
     btnCancelCout++;
     getname++;
     trcount++;
@@ -575,7 +575,7 @@ $.post({
     priceArray.push($('#tdidprice1').text());
     for(p=p;p<nameArray.length;p++)
     {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
     btnCancelCout++;
     getname++;
     trcount++;
@@ -600,7 +600,7 @@ $.post({
     priceArray.push($('#tdidprice2').text());
     for(p=p;p<nameArray.length;p++)
     {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
     btnCancelCout++;
     getname++;
     trcount++;
@@ -625,7 +625,7 @@ $.post({
     priceArray.push($('#tdidprice3').text());
     for(p=p;p<nameArray.length;p++)
     {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
     btnCancelCout++;
     getname++;
     trcount++;
@@ -651,7 +651,7 @@ $.post({
     priceArray.push($('#tdidprice4').text());
     for(p=p;p<nameArray.length;p++)
     {
-  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC\" id=\"btnCancel"+btnCancelCout+"\">Cancel</button></td></tr>");
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
     btnCancelCout++;
     getname++;
     trcount++;
@@ -708,6 +708,35 @@ else{
 
  }); 
 
+
+
+ var finalpriceprint = 0;
+
+
+
+
+for(var t = 0; t<200; t++)
+$("#tableFood,#tableDrinks,#shoppingcart").on("click","button.btn,button#btnCancel"+[t],function(){
+
+for (var i = 0; i < priceArray.length; i++) {
+    finalpriceprint =finalpriceprint+ + + priceArray[i] ; 
+}
+
+
+
+console.log(finalpriceprint);
+$("#finalprice").text("Total: "+finalpriceprint+"€" );
+if(finalpriceprint==0){
+$("#shoppingcart").hide();
+$("#emptyCart").show();
+}
+finalpriceprint = 0;
+
+
+ });
+
+
+
     $("#makeorder").click(function(){
 
 var stringName = JSON.stringify(nameArray);
@@ -756,17 +785,17 @@ $.post({
         contentType: 'application/json',
         data: JSON.stringify({"parseName": parseName[g],"parsePrice": parsePrice[g],"number":number}),
         dataType: 'json',
-        success: console.log("AHSDIl")
+        success: console.log("Order was added to databse!")
 } );
 
 
 }
 
 
-var total = 0;
 for (var i = 0; i < priceArray.length; i++) {
     total =total+ + + priceArray[i] ; 
 }
+
 console.log(total);
 
 $.post({
