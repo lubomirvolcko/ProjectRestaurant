@@ -739,6 +739,18 @@ finalpriceprint = 0;
 
     $("#makeorder").click(function(){
 
+
+      var personname = $("#formName").val();
+      var address = $("#orderAddress").val();
+      var city = $('#getCity').find(":selected").text();
+      var phonenumber =  $("#formNumber").val();
+      var time = $("#timereservation").val();
+      console.log(personname);
+      console.log(address);
+      console.log(city);
+      console.log(phonenumber);
+      console.log(time);
+
 var stringName = JSON.stringify(nameArray);
 
 
@@ -797,13 +809,13 @@ for (var i = 0; i < priceArray.length; i++) {
 }
 
 console.log(total);
-
+console.log(personname)
 $.post({
 
         traditional: true,
         url: 'http://localhost:8080/sendfinalorder',
         contentType: 'application/json',
-        data: JSON.stringify({"number": number,"total":total}),
+        data: JSON.stringify({"number": number,"total":total,"personname":personname,"address":address,"city":city,"phonenumber":phonenumber,"time":time}),
         dataType: 'json',
         success: console.log("Succes write final order")
 } );

@@ -209,11 +209,11 @@ app.get('/lastnumber',cors(),function(req,res){
 
 	app.post('/sendfinalorder',cors(),function(req,res){
 	
-		var orderValues=[req.body.number,req.body.total];
+		var orderValues=[req.body.number,req.body.total,req.body.personname,req.body.address,req.body.city,req.body.phonenumber,req.body.time];
 	
 	
 	
-		connection.query("INSERT into delivery(orderid,price) values (?) ",[orderValues],function(err, rows, fields){
+		connection.query("INSERT into delivery(orderid,price,personname,address,city,phonenumber,time) values (?) ",[orderValues],function(err, rows, fields){
 		console.log(orderValues);
 		  
 		res.send(rows);
