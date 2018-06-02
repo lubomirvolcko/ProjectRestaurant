@@ -23,17 +23,17 @@ public class SetFood {
 
     Drink food = new Drink();
 
-    public void createTable(){
-        Color green =new Color(133, 147, 49);
-        Color orange =new Color(254,151,44);
-        Color beige = new Color(240,232,220);
+    public void createTable() {
+        Color green = new Color(133, 147, 49);
+        Color orange = new Color(254, 151, 44);
+        Color beige = new Color(240, 232, 220);
 
         JFrame frame2 = new JFrame();
         frame2.setBackground(beige);
 
         final JTable table = new JTable();
 
-        Object[] columns = {"Id","Name","Composition","Price","Volume","Type","Allergens","Active"};
+        Object[] columns = {"Id", "Name", "Composition", "Price", "Volume", "Type", "Allergens", "Active"};
         final DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
 
@@ -48,19 +48,19 @@ public class SetFood {
 
         final JLabel lblName = new JLabel();
         final JTextField textName = new JTextField();
-        final JLabel lblComposition= new JLabel();
+        final JLabel lblComposition = new JLabel();
         final JTextField textComposition = new JTextField();
-        final JLabel lblPrice= new JLabel();
+        final JLabel lblPrice = new JLabel();
         final JTextField textPrice = new JTextField();
         final JLabel lblVolume = new JLabel();
         final JTextField textVolume = new JTextField();
         final JLabel lblType = new JLabel();
-        String[] types = { "Appetizer", "Soup", "mainDish", "Salad" };
+        String[] types = {"Appetizer", "Soup", "mainDish", "Salad"};
         final JComboBox textType = new JComboBox(types);
         final JLabel lblAllergens = new JLabel();
         final JTextField textAllergens = new JTextField();
         final JLabel lblActive = new JLabel();
-        String[] active = { "1", "0"};
+        String[] active = {"1", "0"};
         final JComboBox textActive = new JComboBox(active);
 
         JButton btnAdd = new JButton("Add");
@@ -145,7 +145,6 @@ public class SetFood {
         frame2.add(textAllergens);
 
 
-
         frame2.add(btnAdd);
         frame2.add(btnDelete);
         frame2.add(btnUpdate);
@@ -167,12 +166,11 @@ public class SetFood {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food");
-        java.util.List<Food> foodInfo=(List<Food>)qry.list();
+        Query qry = se.createQuery("from Food");
+        java.util.List<Food> foodInfo = (List<Food>) qry.list();
         se.getTransaction().commit();
         se.close();
-        for(Food  x: foodInfo)
-        {
+        for (Food x : foodInfo) {
 
             id = x.getId();
             name = x.getName();
@@ -180,9 +178,8 @@ public class SetFood {
             price = String.valueOf(x.getPrice());
             volume = x.getVolumeweight();
             type = x.getType();
-            allergens =x.getAllergens();
+            allergens = x.getAllergens();
             activeItem = String.valueOf(x.getActive());
-
 
 
             row[0] = id;
@@ -200,7 +197,7 @@ public class SetFood {
         }
 
 
-        btnDelete.addActionListener(new ActionListener(){
+        btnDelete.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -228,17 +225,14 @@ public class SetFood {
                 }
 
 
-
-
-
             }
         });
 
 
-        table.addMouseListener(new MouseAdapter(){
+        table.addMouseListener(new MouseAdapter() {
 
             @Override
-            public void mouseClicked(MouseEvent e){
+            public void mouseClicked(MouseEvent e) {
 
                 // i = the index of the selected row
                 int i = table.getSelectedRow();
@@ -253,7 +247,7 @@ public class SetFood {
             }
         });
 
-        btnUpdate.addActionListener(new ActionListener(){
+        btnUpdate.addActionListener(new ActionListener() {
 
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -278,8 +272,6 @@ public class SetFood {
                     query.setParameter("id", table.getModel().getValueAt(table.getSelectedRow(), 0));
 
 
-
-
                     int rowCount = query.executeUpdate();
                     System.out.println("Rows affected: " + rowCount);
 
@@ -291,11 +283,9 @@ public class SetFood {
                 }
 
 
-
                 int i = table.getSelectedRow();
 
-                if(i >= 0)
-                {
+                if (i >= 0) {
                     model.setValueAt(textName.getText(), i, 1);
                     model.setValueAt(textComposition.getText(), i, 2);
                     model.setValueAt(textPrice.getText(), i, 3);
@@ -303,20 +293,40 @@ public class SetFood {
                     model.setValueAt(textType.getSelectedItem(), i, 5);
                     model.setValueAt(textAllergens.getText(), i, 6);
                     model.setValueAt(textActive.getSelectedItem(), i, 7);
-                }
-                else{
+                } else {
                     System.out.println("Update Error");
                 }
             }
         });
 
-        frame2.setSize(900,400);
+        frame2.setSize(900, 400);
         frame2.setLocationRelativeTo(null);
         frame2.setVisible(true);
 
 
+        btnAdd.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session s = sf.openSession();
+                s.beginTransaction();
+                Food newFood = new Food();
+                newFood.setName(textName.getText());
+                newFood.setComposition(textComposition.getText());
+                newFood.setPrice(Double.parseDouble( textPrice.getText()));
+                newFood.setVolumeweight(textVolume.getText());
+                newFood.setType(String.valueOf(textType.getSelectedItem()));
+                newFood.setAllergens(textAllergens.getText());
+                newFood.setActive(String.valueOf(textActive.getSelectedItem()));
 
 
+                s.save(newFood);
+                s.getTransaction().commit();
+                s.close();
 
+            }
+
+        });
     }
 }

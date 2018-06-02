@@ -6,6 +6,7 @@ import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.Drink;
+import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
@@ -299,6 +300,30 @@ public class SetDrinks {
         frame2.setVisible(true);
 
 
+
+        btnAdd.addActionListener(new ActionListener() {
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session s = sf.openSession();
+                s.beginTransaction();
+                Drink newDrink = new Drink();
+                newDrink.setName(textName.getText());
+                newDrink.setComposition(textComposition.getText());
+                newDrink.setPrice(Double.parseDouble( textPrice.getText()));
+                newDrink.setVolume(textVolume.getText());
+                newDrink.setType(String.valueOf(textType.getSelectedItem()));
+                newDrink.setActive(String.valueOf(textActive.getSelectedItem()));
+
+
+                s.save(newDrink);
+                s.getTransaction().commit();
+                s.close();
+
+            }
+
+        });
 
 
     }
