@@ -247,7 +247,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Appetizer' and active=true");
+        Query qry=se.createQuery("from Food where type='Appetizer' and active=1");
         List<Food> foodAppetizer=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -265,7 +265,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Soup' and active=true");
+        Query qry=se.createQuery("from Food where type='Soup' and active=1");
         List<Food> foodSoup=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -283,7 +283,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Salad' and active=true");
+        Query qry=se.createQuery("from Food where type='Salad' and active=1");
         List<Food> foodSalad=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -301,7 +301,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='Desert' and active=true");
+        Query qry=se.createQuery("from Food where type='Desert' and active=1");
         List<Food> foodDesert=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
@@ -319,7 +319,7 @@ public class MakeOrder {
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
-        Query qry=se.createQuery("from Food where type='MainDish' and active=true");
+        Query qry=se.createQuery("from Food where type='MainDish' and active=1");
         List<Food> foodMainDish=(List<Food>)qry.list();
         se.getTransaction().commit();
         se.close();
