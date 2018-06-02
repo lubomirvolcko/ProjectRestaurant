@@ -4,6 +4,8 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.KeyAdapter;
+import java.awt.event.KeyEvent;
 import java.awt.print.PrinterException;
 import java.util.ArrayList;
 
@@ -379,6 +381,7 @@ public class UserAccount {
                 setDrinks.createTable();
             }
         });
+
     }
 
     public void logOut(ActionEvent e){
@@ -409,6 +412,58 @@ public class UserAccount {
         makeorder.getOrderArray(orderArray);
         //ArrayList<Order> orderArray = new ArrayList<Order>();
 
+
+
+
+
+        switch (i) {
+            case 1:
+                makeorder.getLblNameTable().setText("Table 1");
+                System.out.println("written");
+                makeorder.makeOrderIdTable=1;
+                System.out.println("set parameter");
+                //setToTable(makeorder);
+                System.out.println("set to table");
+                break;
+            case 2:
+                makeorder.getLblNameTable().setText("Table 2");
+                makeorder.makeOrderIdTable=2;
+                //setToTable(makeorder);
+                break;
+            case 3:
+                makeorder.getLblNameTable().setText("Table 3");
+                makeorder.makeOrderIdTable=3;
+                //setToTable(makeorder);
+                break;
+            case 4:
+                makeorder.getLblNameTable().setText("Table 4");
+                makeorder.makeOrderIdTable=4;
+                //setToTable(makeorder);
+                break;
+            case 5:
+                makeorder.getLblNameTable().setText("Table 5");
+                makeorder.makeOrderIdTable=5;
+                //setToTable(makeorder);
+                break;
+            case 6:
+                makeorder.getLblNameTable().setText("Table 6");
+                makeorder.makeOrderIdTable=6;
+                //setToTable(makeorder);
+                break;
+            case 7:
+                makeorder.getLblNameTable().setText("Table 7");
+                makeorder.makeOrderIdTable=7;
+                //setToTable(makeorder);
+                break;
+            case 8:
+                makeorder.getLblNameTable().setText("Table 8");
+                makeorder.makeOrderIdTable=8;
+                //setToTable(makeorder);
+                break;
+            default:
+                System.out.println("Table not exists!");
+        }
+
         JFrame frameMakeOrder = new JFrame("Make order");
         frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frameMakeOrder.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -416,45 +471,20 @@ public class UserAccount {
         frameMakeOrder.setContentPane(makeorder.getPnlMakeOrder());
         frameMakeOrder.setVisible(true);
 
-        switch (i) {
-            case 1:
-                makeorder.getLblNameTable().setText("Table 1");
-                makeorder.makeOrderIdTable=1;
-                break;
-            case 2:
-                makeorder.getLblNameTable().setText("Table 2");
-                makeorder.makeOrderIdTable=2;
-                break;
-            case 3:
-                makeorder.getLblNameTable().setText("Table 3");
-                makeorder.makeOrderIdTable=3;
-                break;
-            case 4:
-                makeorder.getLblNameTable().setText("Table 4");
-                makeorder.makeOrderIdTable=4;
-                break;
-            case 5:
-                makeorder.getLblNameTable().setText("Table 5");
-                makeorder.makeOrderIdTable=5;
-                break;
-            case 6:
-                makeorder.getLblNameTable().setText("Table 6");
-                makeorder.makeOrderIdTable=6;
-                break;
-            case 7:
-                makeorder.getLblNameTable().setText("Table 7");
-                makeorder.makeOrderIdTable=7;
-                break;
-            case 8:
-                makeorder.getLblNameTable().setText("Table 8");
-                makeorder.makeOrderIdTable=8;
-                break;
-            case 99: return frameMakeOrder;
-            default:
-                System.out.println("Table not exists!");
-        }
         return frameMakeOrder;
     }
+
+    /*public void setToTable(MakeOrder makeOrder) {
+        int size=orderArray.size();
+        if (size>0){
+            for (int i=0;i<size;i++){
+                //if (orderArray.get(i).getIdTable()==makeOrder.makeOrderIdTable){
+                makeOrder.sendToTable(orderArray.get(i).getNameItem(), orderArray.get(i).getTotalPrice());
+                //}
+            }
+        }
+
+    }*/
 
     public JPanel getBgUserAccount() {
         return bgUserAccount;
