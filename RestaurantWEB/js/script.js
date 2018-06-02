@@ -1054,7 +1054,12 @@ var parsePrice = JSON.parse(stringPrice);
 
 var parseName = JSON.parse(stringName);
 var maxnumber;
+if(personname==""||address==""||phonenumber=="")
+  alert("Please fill each field!");
+else if(nameArray.length==0)
+  alert("You need order something!");
 
+else{
 $.get({
 
         traditional: true,
@@ -1117,7 +1122,7 @@ $.post({
 
 }
 
-
+}
 
 
 });
