@@ -33,7 +33,7 @@ public class SetFood {
 
         final JTable table = new JTable();
 
-        Object[] columns = {"Id","Name","Composition","Price","Volume","Type","Active"};
+        Object[] columns = {"Id","Name","Composition","Price","Volume","Type","Allergens","Active"};
         final DefaultTableModel model = new DefaultTableModel();
         model.setColumnIdentifiers(columns);
 
@@ -55,7 +55,7 @@ public class SetFood {
         final JLabel lblVolume = new JLabel();
         final JTextField textVolume = new JTextField();
         final JLabel lblType = new JLabel();
-        String[] types = { "Beer", "Wine", "Spirites", "Cocktail", "Ice Drink", "Hot Drink", "Smoothie" };
+        String[] types = { "Appetizer", "Soup", "mainDish", "Salad" };
         final JComboBox textType = new JComboBox(types);
         final JLabel lblAllergens = new JLabel();
         final JTextField textAllergens = new JTextField();
@@ -266,7 +266,7 @@ public class SetFood {
                 try {
 
 
-                    String hql = "update Food set name= :name,composition= :composition,price= :price,volumeweught= :volume,type= :type,allergens= :allergens,active= :active";
+                    String hql = "update Food set name= :name,composition= :composition,price= :price,volumeweight= :volume,type= :type,allergens= :allergens,active= :active where id= :id";
                     Query query = se.createQuery(hql);
                     query.setParameter("name", textName.getText());
                     query.setParameter("composition", textComposition.getText());
@@ -275,6 +275,7 @@ public class SetFood {
                     query.setParameter("type", textType.getSelectedItem());
                     query.setParameter("allergens", textAllergens.getText());
                     query.setParameter("active", textActive.getSelectedItem());
+                    query.setParameter("id", table.getModel().getValueAt(table.getSelectedRow(), 0));
 
 
 
@@ -312,7 +313,7 @@ public class SetFood {
         frame2.setSize(900,400);
         frame2.setLocationRelativeTo(null);
         frame2.setVisible(true);
-        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
 
 
 

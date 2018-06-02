@@ -54,7 +54,7 @@ public class SetDrinks {
         final JLabel lblVolume = new JLabel();
         final JTextField textVolume = new JTextField();
         final JLabel lblType = new JLabel();
-        String[] types = { "Beer", "Wine", "Spirites", "Cocktail", "Ice Drink", "Hot Drink", "Smoothie" };
+        String[] types = { "Beer", "Wine", "Sprites", "Cocktail", "Ice Drink", "Hot Drink", "Smoothie" };
         final JComboBox textType = new JComboBox(types);
         final JLabel lblActive = new JLabel();
         String[] active = { "1", "0"};
@@ -252,7 +252,7 @@ public class SetDrinks {
                 try {
 
 
-                    String hql = "update Drink set name= :name,composition= :composition,price= :price,volume= :volume,type= :type,active= :active";
+                    String hql = "update Drink set name= :name,composition= :composition,price= :price,volume= :volume,type= :type,active= :active where id= :id";
                     Query query = se.createQuery(hql);
                     query.setParameter("name", textName.getText());
                     query.setParameter("composition", textComposition.getText());
@@ -260,7 +260,7 @@ public class SetDrinks {
                     query.setParameter("volume", textVolume.getText());
                     query.setParameter("type", textType.getSelectedItem());
                     query.setParameter("active", textActive.getSelectedItem());
-
+                    query.setParameter("id", table.getModel().getValueAt(table.getSelectedRow(), 0));
 
 
 
@@ -295,7 +295,7 @@ public class SetDrinks {
 
         frame2.setSize(900,400);
         frame2.setLocationRelativeTo(null);
-        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         frame2.setVisible(true);
 
 

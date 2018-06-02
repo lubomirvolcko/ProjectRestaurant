@@ -495,7 +495,7 @@ createTable();
                 try {
 
 
-                        String hql = "update  Authentication set Name= :name,Surname= :surname,Idcard= :idcard,login= :login,password= :password, email= :email,position = :position";
+                        String hql = "update  Authentication set Name= :name,Surname= :surname,Idcard= :idcard,login= :login,password= :password, email= :email,position = :position where id= :id";
                         Query query = se.createQuery(hql);
                     query.setParameter("name", textFname.getText());
                     query.setParameter("surname", textLname.getText());
@@ -504,6 +504,7 @@ createTable();
                     query.setParameter("password", textpassword.getText());
                     query.setParameter("email", textemail.getText());
                     query.setParameter("position", textposition.getSelectedItem());
+                    query.setParameter("id", table.getModel().getValueAt(table.getSelectedRow(), 0));
 
 
 
@@ -539,7 +540,7 @@ createTable();
 
         frame2.setSize(900,400);
         frame2.setLocationRelativeTo(null);
-        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+
         frame2.setVisible(true);
 
 
