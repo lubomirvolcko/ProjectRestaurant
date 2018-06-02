@@ -667,6 +667,293 @@ $.post({
 
 
    }); 
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW5",function(){
+
+
+    nameArray.push($('#tab5').text());
+ 
+    priceArray.push($('#tdidprice5').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW6",function(){
+
+
+    nameArray.push($('#tab6').text());
+ 
+    priceArray.push($('#tdidprice6').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW7",function(){
+
+
+    nameArray.push($('#tab7').text());
+ 
+    priceArray.push($('#tdidprice7').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW8",function(){
+
+
+    nameArray.push($('#tab8').text());
+ 
+    priceArray.push($('#tdidprice8').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW9",function(){
+
+
+    nameArray.push($('#tab9').text());
+ 
+    priceArray.push($('#tdidprice9').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW10",function(){
+
+
+    nameArray.push($('#tab10').text());
+ 
+    priceArray.push($('#tdidprice10').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW11",function(){
+
+
+    nameArray.push($('#tab11').text());
+ 
+    priceArray.push($('#tdidprice11').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW12",function(){
+
+
+    nameArray.push($('#tab12').text());
+ 
+    priceArray.push($('#tdidprice12').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW13",function(){
+
+
+    nameArray.push($('#tab13').text());
+ 
+    priceArray.push($('#tdidprice13').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
+
+
+
+
+           $("#tableFood,#tableDrinks").on("click","button#btnW14",function(){
+
+
+    nameArray.push($('#tab14').text());
+ 
+    priceArray.push($('#tdidprice14').text());
+    for(p=p;p<nameArray.length;p++)
+    {
+  $("#shoppingcart").append("<tr id=\"countTr"+trcount+"\" class=\"classTr\"><td id=\"getName"+getname+"\"class=\"getTdName\">"+nameArray[p]+"</td><td>"+priceArray[p]+"</td><td><button type=\"button\" class=\"btnC btn-danger\" id=\"btnCancel"+btnCancelCout+"\">Delete</button></td></tr>");
+    btnCancelCout++;
+    getname++;
+    trcount++;
+    }
+
+
+
+        
+         
+          
+          
+  
+
+
+   }); 
+         
          
  
 for(var t=0;t<1000;t++)
@@ -685,6 +972,11 @@ $("#shoppingcart").on("click","button#btnCancel"+[t],function(){
 nameArray.splice(indexName,1);
 priceArray.splice(indexPrice,1);
 
+var countRow = $('#shoppingcart tr').length;
+if(nameArray.length>0)
+p=nameArray.length;
+else
+p=0;
 $("#"+row).remove();
 console.log("NAMETD"+tdd);
 
@@ -696,6 +988,7 @@ var countRow = $('#shoppingcart tr').length;
 console.log(countRow);
 if(countRow<=1){
  $("#shoppingcart").hide();
+
 
 $("#emptyCart").show();
 
@@ -723,9 +1016,10 @@ for (var i = 0; i < priceArray.length; i++) {
 }
 
 
+console.log(nameArray[0]);
 
 console.log(finalpriceprint);
-$("#finalprice").text("Total: "+finalpriceprint+"€" );
+$("#finalprice").text("Total: "+finalpriceprint.toFixed(2)+"€" );
 if(finalpriceprint==0){
 $("#shoppingcart").hide();
 $("#emptyCart").show();
