@@ -62,7 +62,17 @@ public class MakeOrder {
     private JPanel pnlSalad;
     private JPanel pnlDessert;
     private JPanel pnlWine;
+
+    public JLabel getLblTotalPrice() {
+        return lblTotalPrice;
+    }
+
     private JLabel lblTotalPrice;
+
+    public JPanel getPnlItemOnTable() {
+        return pnlItemOnTable;
+    }
+
     private JPanel pnlItemOnTable;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
@@ -1628,11 +1638,6 @@ public class MakeOrder {
     //send item to order on table
     public void sendToTable(final String name, final Double price){
             totalPrice=0;
-
-
-        System.out.println("COUNTPRICE IS: "+countPrice);
-
-        System.out.println("TOTAL PRICE IS : "+totalPrice);
 
         JTextField txtCount = new JTextField("name");
         JLabel lblX = new JLabel("name");

@@ -413,78 +413,231 @@ public class UserAccount {
         //ArrayList<Order> orderArray = new ArrayList<Order>();
 
 
-
+        JFrame frameMakeOrder = new JFrame("Make order");
+        frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frameMakeOrder.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        frameMakeOrder.setUndecorated(true);
 
 
         switch (i) {
             case 1:
                 makeorder.getLblNameTable().setText("Table 1");
-                System.out.println("written");
                 makeorder.makeOrderIdTable=1;
-                System.out.println("set parameter");
-                //setToTable(makeorder);
-                System.out.println("set to table");
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 2:
                 makeorder.getLblNameTable().setText("Table 2");
                 makeorder.makeOrderIdTable=2;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 3:
                 makeorder.getLblNameTable().setText("Table 3");
                 makeorder.makeOrderIdTable=3;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 4:
                 makeorder.getLblNameTable().setText("Table 4");
                 makeorder.makeOrderIdTable=4;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 5:
                 makeorder.getLblNameTable().setText("Table 5");
                 makeorder.makeOrderIdTable=5;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 6:
                 makeorder.getLblNameTable().setText("Table 6");
                 makeorder.makeOrderIdTable=6;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 7:
                 makeorder.getLblNameTable().setText("Table 7");
                 makeorder.makeOrderIdTable=7;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             case 8:
                 makeorder.getLblNameTable().setText("Table 8");
                 makeorder.makeOrderIdTable=8;
-                //setToTable(makeorder);
+                setToTable(frameMakeOrder, makeorder);
                 break;
             default:
                 System.out.println("Table not exists!");
         }
 
-        JFrame frameMakeOrder = new JFrame("Make order");
-        frameMakeOrder.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frameMakeOrder.setExtendedState(JFrame.MAXIMIZED_BOTH);
-        frameMakeOrder.setUndecorated(true);
+
+
         frameMakeOrder.setContentPane(makeorder.getPnlMakeOrder());
         frameMakeOrder.setVisible(true);
 
         return frameMakeOrder;
     }
 
-    /*public void setToTable(MakeOrder makeOrder) {
+    public void setToTable(JFrame frameMakeOrder, final MakeOrder makeOrder) {
         int size=orderArray.size();
         if (size>0){
             for (int i=0;i<size;i++){
-                //if (orderArray.get(i).getIdTable()==makeOrder.makeOrderIdTable){
-                makeOrder.sendToTable(orderArray.get(i).getNameItem(), orderArray.get(i).getTotalPrice());
-                //}
+                makeOrder.totalPrice=0;
+
+                JTextField txtCount = new JTextField("name");
+                JLabel lblX = new JLabel("name");
+                JLabel lblEuro = new JLabel("name");
+                JLabel lblName = new JLabel("name");
+                JLabel lblPrice= new JLabel("name");
+                JButton btnChoose = new JButton();
+                JButton btnUndo = new JButton();
+
+                makeOrder.getPnlItemOnTable().removeAll();
+                makeOrder.getPnlItemOnTable().revalidate();
+                makeOrder.getPnlItemOnTable().repaint();
+                makeOrder.getPnlItemOnTable().setLayout(null);
+                makeOrder.orderPositionY=0;
+
+                int sizeArray=orderArray.size();
+
+                for (int x=0;x<sizeArray;x++){
+
+
+
+                    /*String nameItem=orderArray.get(x).getNameItem();
+                    double priceItem=orderArray.get(x).getTotalPrice();
+                    int countOfItem=orderArray.get(x).getNumberOfItem();*/
+
+                    if (makeOrder.makeOrderIdTable==orderArray.get(x).getIdTable())
+                    {
+
+                        makeOrder.totalPrice=makeOrder.totalPrice+orderArray.get(x).getTotalPrice();
+                        makeOrder.orderPositionY=makeOrder.orderPositionY+32;
+                        if (makeOrder.countItem<31)
+                        {
+                            /*System.out.println("countPrice: "+makeOrder.countPrice+" - price: "+makeOrder.price+" - countX: "+makeOrder.countX);
+                            makeOrder.countPrice=makeOrder.price*makeOrder.countX;
+                            makeOrder.countPrice=Math.round(makeOrder.countPrice * 100)/100.0;
+                            makeOrder.totalPrice=Math.round(makeOrder.totalPrice * 100)/100.0;
+*/
+                            makeOrder.getLblTotalPrice().setText("Price: "+Double.toString(makeOrder.totalPrice)+" €");
+
+                            makeOrder.getPnlItemOnTable().add(txtCount = new JTextField(""+orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
+                            txtCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            txtCount.setBounds(10, makeOrder.orderPositionY, 45, 30);
+
+                            makeOrder.getPnlItemOnTable().add(lblX = new JLabel("x", FlowLayout.LEFT));
+                            lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            lblX.setBounds(55, makeOrder.orderPositionY, 20, 30);
+
+                            makeOrder.getPnlItemOnTable().add(lblName = new JLabel(""+orderArray.get(x).getNameItem(), FlowLayout.LEFT));
+                            lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            lblName.setBounds(85, makeOrder.orderPositionY, 200, 30);
+
+                            makeOrder.getPnlItemOnTable().add(lblPrice = new JLabel(""+orderArray.get(x).getTotalPrice(), FlowLayout.LEFT));
+                            lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            lblPrice.setBounds(295, makeOrder.orderPositionY, 100, 30);
+
+                            makeOrder.getPnlItemOnTable().add(lblEuro = new JLabel("€", FlowLayout.LEFT));
+                            lblEuro.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            lblEuro.setBounds(405, makeOrder.orderPositionY, 30, 30);
+
+                            makeOrder.getPnlItemOnTable().add(btnChoose = new JButton("DELETE"));
+                            btnChoose.setBackground(new Color(254,151,44));
+                            btnChoose.setFont(new Font("Century Gothic", Font.BOLD, 17));
+                            btnChoose.setForeground(Color.white);
+                            btnChoose.setBorderPainted(false);
+                            btnChoose.setBounds(450, makeOrder.orderPositionY, 100, 30);
+
+                            makeOrder.getPnlItemOnTable().add(btnUndo = new JButton("UNDO"));
+                            btnUndo.setBackground(new Color(133,147,49));
+                            btnUndo.setFont(new Font("Century Gothic", Font.BOLD, 17));
+                            btnUndo.setForeground(Color.white);
+                            btnUndo.setBorderPainted(false);
+                            btnUndo.setEnabled(false);
+                            btnUndo.setBounds(560, makeOrder.orderPositionY, 100, 30);
+
+
+
+                        }else{
+                            JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
+                            makeOrder.countItem=30;
+                        }
+
+
+
+                    }
+
+
+                }
+
+
+
+
+
+
+
+                final  JLabel finalLblPrice = lblPrice;
+                final JTextField finalTxtCount1 = txtCount;
+                final JLabel finalLblPrice1 = lblPrice;
+                txtCount.addKeyListener(new KeyAdapter() {
+                    @Override
+                    public void keyReleased(KeyEvent e) {
+                        super.keyReleased(e);
+
+                        if (finalTxtCount1.getText().equals("")){
+                            finalTxtCount1.setText("0");
+                        }
+                        if (Integer.parseInt(finalTxtCount1.getText()) > 50){
+
+                            JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+
+                            finalTxtCount1.setText("50");
+                        }
+                        else if (finalTxtCount1.getText().equals("") || finalTxtCount1.getText().equals(" ") || finalTxtCount1.getText().equals("  ")){
+                            finalTxtCount1.setText("0");
+                        }
+                        else if (Integer.parseInt(finalTxtCount1.getText()) <= 50){
+                            int countOfItem= Integer.parseInt(finalTxtCount1.getText());
+                            double finalPriceOfItem=makeOrder.price*countOfItem;
+                            finalLblPrice1.setText(String.valueOf(finalPriceOfItem));
+                        }
+
+                    }
+                });
+
+
+
+
+                makeOrder.orderPositionY=makeOrder.orderPositionY+32;
+
+
+                final JTextField finalTxtCount = txtCount;
+                final JLabel finalLblName = lblName;
+                //final JLabel finalLblPrice = lblPrice;
+                final JButton finalBtnChoose = btnChoose;
+                final JButton finalBtnUndo = btnUndo;
+                final JTextField finalLblCount1 = txtCount;
+                final JLabel finalLblX = lblX;
+                final JLabel finalLblEuro = lblEuro;
+                btnChoose.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        int numberOfItem;
+                        numberOfItem = Integer.parseInt(finalLblCount1.getText());
+                        System.out.println("Number of item is: "+numberOfItem);
+
+                        makeOrder.throwItem(finalTxtCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
+                    }
+                });
+
+                final JButton finalBtnUndo1 = btnUndo;
+                final JLabel finalLblX1 = lblX;
+                final JLabel finalLblEuro1 = lblEuro;
+                btnUndo.addActionListener(new ActionListener() {
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+                        makeOrder.undoItem(finalTxtCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnChoose, finalBtnUndo1);
+                    }
+                });
             }
         }
 
-    }*/
+    }
 
     public JPanel getBgUserAccount() {
         return bgUserAccount;
