@@ -1,15 +1,10 @@
 package project.restaurant.gui;
 
-
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-
 import org.hibernate.query.Query;
-import project.restaurant.hibernate.Authentication;
-import project.restaurant.hibernate.Drink;
-import project.restaurant.hibernate.Food;
-import project.restaurant.hibernate.HibernateUtil;
+import project.restaurant.hibernate.*;
 
 import javax.swing.*;
 import java.awt.*;
@@ -77,6 +72,8 @@ public class MakeOrder {
 
     private JPanel pnlItemOnTable;
     private JButton btnPayment;
+    private JTextField txtSearch;
+    private JPanel pnlSearched;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state; //use in btnBack for set panels
@@ -403,6 +400,8 @@ public class MakeOrder {
                 else if (state == "StateAppertizer" || state == "StateSoup" || state == "StateDessert" || state == "StateMainDish" || state == "StateSalad"){
                     StateMeal();
                     positionY=120;
+                }else if(state == "StateSearch"){
+                    StateMakeorder();
                 }
 
             }
@@ -523,7 +522,107 @@ public class MakeOrder {
                 openPayment(e);
             }
         });
+        txtSearch.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyReleased(KeyEvent e) {
+                super.keyReleased(e);
+                String st = txtSearch.getText().trim();
+                System.out.println("KEY LISTENER: "+st);
+                StateSearch();
+                getSearched(st);
+
+            }
+        });
     }
+
+    public void getSearched(String st) {
+        String itemName;
+        Double itemPrice;
+
+        SessionFactory sf = HibernateUtil.getSessionFactory();
+        Session se = sf.openSession();
+        se.beginTransaction();
+        Query qry=se.createQuery("from item where name like '"+st+"%'");
+        List<ItemSearch> itemList=(List<ItemSearch>)qry.list();
+        se.getTransaction().commit();
+        se.close();
+        for(ItemSearch d : itemList)
+        {
+            System.out.println("FOR: "+d);
+            itemName=d.getItemName();
+            itemPrice=d.getItemPrice();
+            getSearchedItems(itemName, itemPrice);
+        }
+    }
+
+    public void getSearchedItems(String itemName, Double itemPrice) {
+        try{
+            System.out.println("GET SEARCHED ITEMS");
+            JLabel lblSmootieNumber = new JLabel("name"); //create label
+            JButton btnSmootie = new JButton(); //create button
+            JTextField txtCount = new JTextField(); //create text field
+
+            pnlSearched.setLayout(null);
+
+
+            //create label in pnlSmothies for name of item
+            pnlSearched.add(lblSmootieNumber = new JLabel(""+itemName, FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(100, positionY+addPositionY, 200, 30);
+
+            //create label in pnlSmothies for price of item
+            pnlSearched.add(lblSmootieNumber = new JLabel(""+itemPrice+" €" , FlowLayout.LEFT));
+            lblSmootieNumber.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            lblSmootieNumber.setBounds(350, positionY+addPositionY, 80, 30);
+
+            //create txt field in pnlSmothies for count of item
+            pnlSearched.add(txtCount = new JTextField(FlowLayout.LEFT));
+            txtCount.setFont(new Font("Century Gothic", Font.BOLD, 25));
+            txtCount.setBounds(450, positionY+addPositionY, 60, 30);
+            txtCount.setText("1");
+
+            //create button in pnlSmothies for send item to table (for confirm item to order)
+            pnlSearched.add(btnSmootie = new JButton("Choose"));
+            btnSmootie.setBackground(new Color(133,147,49));
+            btnSmootie.setForeground(Color.white);
+            btnSmootie.setFont(new Font("Century Gothic", Font.BOLD, 20));
+            btnSmootie.setBounds(520, positionY+addPositionY, 200, 30);
+            btnSmootie.setBorderPainted(false);
+
+            positionY=positionY+addPositionY;
+
+            final JTextField finalTxtCount = txtCount;
+            final String smootieName = name;
+            final Double SmootiePrice = price;
+            btnSmootie.addActionListener(new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    count= finalTxtCount.getText();
+                    countX = Integer.parseInt(count);
+
+                    if (countX > 50){
+                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                    }else{
+                        int numberOfItem;
+                        numberOfItem=Integer.parseInt(finalTxtCount.getText());
+
+                        //countItem++;
+                        sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
+                        sendToTable(smootieName, SmootiePrice);
+                    }
+
+                    finalTxtCount.setText("1");
+
+                }
+
+
+            });
+
+        }catch (Exception e){
+            e.getStackTrace();
+        }
+    }
+
 
     private JFrame openPayment(ActionEvent e) {
         Payment payment =  new Payment();
@@ -542,6 +641,9 @@ public class MakeOrder {
         JLabel lblPaymentEuro = new JLabel("name");
         Font font = new Font("Century Gothic", Font.BOLD, 26);
 
+        double finalPrice=0;
+        orderPositionY=0;
+
         int sizeOfArray=userAccount.orderArray.size();
         for (int x=0;x<sizeOfArray;x++) {
 
@@ -551,8 +653,10 @@ public class MakeOrder {
 
 
 
+
             if (userAccount.orderArray.get(x).getNumberOfItem() != 0) {
                 orderPositionY=orderPositionY+30;
+                finalPrice=finalPrice+userAccount.orderArray.get(x).getTotalPrice();
 
                 payment.getPnlPaymentItems().setLayout(null);
 
@@ -576,6 +680,8 @@ public class MakeOrder {
                 lblPaymentEuro.setFont(font);
                 lblPaymentEuro.setBounds(405, orderPositionY, 30, 30);
             }
+
+            payment.getLblFinalPrice().setText("Final prce : "+String.valueOf(finalPrice));
 
 
             JComponent comp = (JComponent) e.getSource();
@@ -616,6 +722,7 @@ public class MakeOrder {
         pnlMainDish.setVisible(false);
         pnlSalad.setVisible(false);
         pnlDessert.setVisible(false);
+        pnlSearched.setVisible(false);
     }
 
 
@@ -624,6 +731,7 @@ public class MakeOrder {
         pnlMainCategory.setVisible(true);
         pnlMealType.setVisible(false);
         btnBack.setEnabled(false);
+        pnlSearched.setVisible(false);
     }
 
     public void StateMeal() {
@@ -639,6 +747,23 @@ public class MakeOrder {
         pnlMainDish.setVisible(false);
         pnlSalad.setVisible(false);
         pnlDessert.setVisible(false);
+        pnlSearched.setVisible(false);
+    }
+
+    public void StateSearch(){
+        state = "StateSearch";
+        pnlMainCategory.setVisible(false);
+        pnlMealType.setVisible(false);
+        pnlMealCategory.setVisible(false);
+        pnlDrinksCategory.setVisible(false);
+        btnBack.setEnabled(true);
+        pnlSoftDrinks.setVisible(false);
+        pnlAppertizer.setVisible(false);
+        pnlSoup.setVisible(false);
+        pnlMainDish.setVisible(false);
+        pnlSalad.setVisible(false);
+        pnlDessert.setVisible(false);
+        pnlSearched.setVisible(true);
     }
 
     public void StateDrinks() {
@@ -650,6 +775,7 @@ public class MakeOrder {
         btnBack.setEnabled(true);
         pnlSoftDrinks.setVisible(false);
         pnlAlcoholDrinks.setVisible(false);
+        pnlSearched.setVisible(false);
     }
 
     public void SoftDrinks(){
@@ -660,24 +786,28 @@ public class MakeOrder {
         pnlSmoothies.setVisible(false);
         pnlHotDrinks.setVisible(false);
         pnlIceDrinks.setVisible(false);
+        pnlSearched.setVisible(false);
     }
 
     public void Smoothies(){
         state = "StateSmoothies";
         pnlSoftDrinks.setVisible(false);
         pnlSmoothies.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void HotDrinks(){
         state = "StateHotDrinks";
         pnlSoftDrinks.setVisible(false);
         pnlHotDrinks.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void IceDrinks(){
         state = "StateIceDrinks";
         pnlSoftDrinks.setVisible(false);
         pnlIceDrinks.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void AlcoholDrinks(){
@@ -689,30 +819,35 @@ public class MakeOrder {
         pnlCocktails.setVisible(false);
         pnlSpirits.setVisible(false);
         pnlWine.setVisible(false);
+        pnlSearched.setVisible(false);
     }
 
     public void Beers(){
         state = "StateBeers";
         pnlAlcoholDrinks.setVisible(false);
         pnlBeers.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Cocktails(){
         state = "StateCocktails";
         pnlAlcoholDrinks.setVisible(false);
         pnlCocktails.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Spirits(){
         state = "StateSpirits";
         pnlAlcoholDrinks.setVisible(false);
         pnlSpirits.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Wines(){
         state = "StateWines";
         pnlAlcoholDrinks.setVisible(false);
         pnlWine.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Appertizer(){
@@ -720,6 +855,7 @@ public class MakeOrder {
         pnlMealType.setVisible(false);
         pnlMealCategory.setVisible(false);
         pnlAppertizer.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Soup(){
@@ -727,6 +863,7 @@ public class MakeOrder {
         pnlMealType.setVisible(false);
         pnlMealCategory.setVisible(false);
         pnlSoup.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void MainDish(){
@@ -734,6 +871,7 @@ public class MakeOrder {
         pnlMealType.setVisible(false);
         pnlMealCategory.setVisible(false);
         pnlMainDish.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Salad(){
@@ -741,6 +879,7 @@ public class MakeOrder {
         pnlMealType.setVisible(false);
         pnlMealCategory.setVisible(false);
         pnlSalad.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void Dessert(){
@@ -748,6 +887,7 @@ public class MakeOrder {
         pnlMealType.setVisible(false);
         pnlMealCategory.setVisible(false);
         pnlDessert.setVisible(true);
+        pnlSearched.setVisible(false);
     }
 
     public void getDessertButtons(String name, Double price, long item){
@@ -1965,7 +2105,7 @@ public class MakeOrder {
                 try {
                     String hql = "FROM Authentication where position ='manager' OR position='supervisor'";
                     Query query = se.createQuery(hql);
-                   String pass;
+                    String pass;
                     List<Authentication> checkPassword=(List<Authentication>)query.list();
                     se.getTransaction().commit();
 
@@ -1979,21 +2119,21 @@ public class MakeOrder {
 
 
 
-                    System.out.println(password);
-                    if (password.equals(pass)){
+                        System.out.println(password);
+                        if (password.equals(pass)){
 
 
-                        JComponent comp = (JComponent) e.getSource();
-                        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-                        win.dispose();
-                        ver[1] =true;
+                            JComponent comp = (JComponent) e.getSource();
+                            Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                            win.dispose();
+                            ver[1] =true;
 
-                    }else {
-
-                        
+                        }else {
 
 
-                    }
+
+
+                        }
                         se.close();
                     }
                 } catch (Throwable t) {

@@ -13,6 +13,11 @@ public class Payment {
     private JButton btnCash;
     private JButton btnPaymentCancel;
     private JButton btnCreditCard;
+    private JLabel lblFinalPrice;
+
+    public JLabel getLblFinalPrice() {
+        return lblFinalPrice;
+    }
 
     public JPanel getPnlPayment() {
         return pnlPayment;
@@ -22,10 +27,14 @@ public class Payment {
         return pnlPaymentItems;
     }
 
+    MakeOrder makeOrder = new MakeOrder();
+
     public Payment() {
         btnPaymentCancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
+                makeOrder.orderPositionY=0;
+
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();

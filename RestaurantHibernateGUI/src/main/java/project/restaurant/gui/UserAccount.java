@@ -502,6 +502,7 @@ public class UserAccount {
                     {
 
                         makeOrder.totalPrice=makeOrder.totalPrice+orderArray.get(x).getTotalPrice();
+                        makeOrder.totalPrice=Math.round(makeOrder.totalPrice * 100)/100.0;
                         makeOrder.orderPositionY=makeOrder.orderPositionY+32;
                         if (makeOrder.countItem<31)
                         {
