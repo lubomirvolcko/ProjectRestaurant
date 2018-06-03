@@ -498,10 +498,6 @@ public class UserAccount {
 
 
 
-                    /*String nameItem=orderArray.get(x).getNameItem();
-                    double priceItem=orderArray.get(x).getTotalPrice();
-                    int countOfItem=orderArray.get(x).getNumberOfItem();*/
-
                     if (makeOrder.makeOrderIdTable==orderArray.get(x).getIdTable())
                     {
 
@@ -509,11 +505,7 @@ public class UserAccount {
                         makeOrder.orderPositionY=makeOrder.orderPositionY+32;
                         if (makeOrder.countItem<31)
                         {
-                            /*System.out.println("countPrice: "+makeOrder.countPrice+" - price: "+makeOrder.price+" - countX: "+makeOrder.countX);
-                            makeOrder.countPrice=makeOrder.price*makeOrder.countX;
-                            makeOrder.countPrice=Math.round(makeOrder.countPrice * 100)/100.0;
-                            makeOrder.totalPrice=Math.round(makeOrder.totalPrice * 100)/100.0;
-*/
+
                             makeOrder.getLblTotalPrice().setText("Price: "+Double.toString(makeOrder.totalPrice)+" €");
 
                             makeOrder.getPnlItemOnTable().add(txtCount = new JTextField(""+orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));

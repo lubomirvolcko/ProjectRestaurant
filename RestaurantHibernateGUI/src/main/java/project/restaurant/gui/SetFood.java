@@ -28,7 +28,7 @@ public class SetFood {
         Color orange = new Color(254, 151, 44);
         Color beige = new Color(240, 232, 220);
 
-        JFrame frame2 = new JFrame();
+        JFrame frame2 = new JFrame("Set Foods");
         frame2.setBackground(beige);
 
         final JTable table = new JTable();

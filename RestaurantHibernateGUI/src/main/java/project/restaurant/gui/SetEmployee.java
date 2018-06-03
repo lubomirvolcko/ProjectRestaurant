@@ -257,7 +257,7 @@ createTable();
 
     public void createTable()
     {
-        JFrame frame2 = new JFrame();
+        JFrame frame2 = new JFrame("Set Employee");
         frame2.setBackground(new Color(240,232,220));
 
         final JTable table = new JTable();

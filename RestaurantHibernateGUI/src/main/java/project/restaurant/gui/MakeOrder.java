@@ -2,17 +2,17 @@ package project.restaurant.gui;
 
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
 import org.hibernate.query.Query;
+import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
+import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
+import java.awt.event.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -1572,6 +1572,7 @@ public class MakeOrder {
     Order order = new Order();
 
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
+        btnCancel.setEnabled(false);
         checkItemsInArray();
 
         double totalPrice;
@@ -1644,7 +1645,7 @@ public class MakeOrder {
         JLabel lblEuro = new JLabel("name");
         JLabel lblName = new JLabel("name");
         JLabel lblPrice= new JLabel("name");
-        JButton btnChoose = new JButton();
+        JButton btnDelete = new JButton();
         JButton btnUndo = new JButton();
 
         pnlItemOnTable.removeAll();
@@ -1696,12 +1697,12 @@ public class MakeOrder {
                     lblEuro.setFont(new Font("Century Gothic", Font.ITALIC, 25));
                     lblEuro.setBounds(405, orderPositionY, 30, 30);
 
-                    pnlItemOnTable.add(btnChoose = new JButton("DELETE"));
-                    btnChoose.setBackground(new Color(254,151,44));
-                    btnChoose.setFont(new Font("Century Gothic", Font.BOLD, 17));
-                    btnChoose.setForeground(Color.white);
-                    btnChoose.setBorderPainted(false);
-                    btnChoose.setBounds(450, orderPositionY, 100, 30);
+                    pnlItemOnTable.add(btnDelete = new JButton("DELETE"));
+                    btnDelete.setBackground(new Color(254,151,44));
+                    btnDelete.setFont(new Font("Century Gothic", Font.BOLD, 17));
+                    btnDelete.setForeground(Color.white);
+                    btnDelete.setBorderPainted(false);
+                    btnDelete.setBounds(450, orderPositionY, 100, 30);
 
                     pnlItemOnTable.add(btnUndo = new JButton("UNDO"));
                     btnUndo.setBackground(new Color(133,147,49));
@@ -1769,19 +1770,19 @@ public class MakeOrder {
         final JTextField finalTxtCount = txtCount;
         final JLabel finalLblName = lblName;
         //final JLabel finalLblPrice = lblPrice;
-        final JButton finalBtnChoose = btnChoose;
+        final JButton finalBtnDelete = btnDelete;
         final JButton finalBtnUndo = btnUndo;
         final JTextField finalLblCount1 = txtCount;
         final JLabel finalLblX = lblX;
         final JLabel finalLblEuro = lblEuro;
-        btnChoose.addActionListener(new ActionListener() {
+        btnDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int numberOfItem;
                 numberOfItem = Integer.parseInt(finalLblCount1.getText());
                 System.out.println("Number of item is: "+numberOfItem);
 
-                throwItem(finalTxtCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
+                throwItem(finalTxtCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnDelete, finalBtnUndo);
             }
         });
 
@@ -1791,60 +1792,152 @@ public class MakeOrder {
         btnUndo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                undoItem(finalTxtCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnChoose, finalBtnUndo1);
+                undoItem(finalTxtCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnDelete, finalBtnUndo1);
             }
         });
     }
 
     public void throwItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo) {
 
-        totalPrice=totalPrice-countPrice;
-        lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
-        lblCount.setForeground(Color.red);
-        lblX.setForeground(Color.red);
-        lblName.setForeground(Color.red);
-        lblPrice.setForeground(Color.red);
-        lblEuro.setForeground(Color.red);
-        btnThrow.setText("Deleted");
-        btnThrow.setEnabled(false);
-        btnUndo.setEnabled(true);
+        final String[] checkPsw = {"false"};
 
-        //Order order = new Order();
+        JFrame frame2 = new JFrame("Delete Verification");
+        frame2.setBackground(new Color(240,232,220));
 
-        int numberOfItems = Integer.parseInt(lblCount.getText());
-        String itemName = lblName.getText();
-        double ttlPrice = Double.parseDouble(lblPrice.getText());
+        Font font = new Font("Century Gothic", 1, 22);
+        frame2.setFont(font);
 
-        int size = orderArrayList.size();
+        final JLabel lblPassword = new JLabel();
+        final JPasswordField textPassword = new JPasswordField();
+        JButton btnOk = new JButton("OK");
 
-        for (int i=0; i<size;i++){
-            if (orderArrayList.get(i).getNameItem().equals(itemName)){
+        btnOk.setBackground(new Color(133,147,49));
+        btnOk.setForeground(Color.white);
 
-                orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()-numberOfItems);
-                orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()-ttlPrice);
-                System.out.println("COUNTED");
+
+        lblPassword.setForeground(new Color(133,147,49));
+        lblPassword.setFont(new Font("Century Gothic", 1, 25));
+        lblPassword.setText("Password : ");
+        btnOk.setFont(font);
+        textPassword.setFont(font);
+
+
+        lblPassword.setBounds(110, 40, 140, 30);
+        textPassword.setBounds(120, 90, 100, 30);
+        btnOk.setBounds(120, 140, 100, 30);
+
+
+        frame2.setLayout(null);
+
+        // add JTextFields to the jframe
+        frame2.add(lblPassword);
+        frame2.add(textPassword);
+        frame2.add(btnOk);
+
+        frame2.setBackground(new Color(240,232,220));
+
+        btnOk.addActionListener(new ActionListener(){
+
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String password=textPassword.getText();
+
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session se = sf.openSession();
+
+                Transaction transaction = se.beginTransaction();
+                try {
+
+                    Query qry=se.createQuery("from Authentication where (position='manager' or position='supervisor') and password='"+password+"'");
+                    List<String> checkPassword=(List<String>)qry;
+                    se.getTransaction().commit();
+                    se.close();
+                    for(String g : checkPassword)
+                    {
+                        if (g.equals(password)){
+                            checkPsw[0] ="true";
+
+                            JComponent comp = (JComponent) e.getSource();
+                            Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                            win.dispose();
+                        }else {
+                            JOptionPane.showMessageDialog(null, "You can't do Storno !");
+                        }
+
+                    }
+
+                } catch (Throwable t) {
+                    transaction.rollback();
+                    throw t;
+                }
+
             }
-            else {
-                System.out.println("Something is wrong");
+        });
+
+
+        frame2.setSize(360,300);
+        frame2.setLocationRelativeTo(null);
+
+        frame2.setVisible(true);
+
+
+        if (checkPsw.equals(true)){
+            int sizeArray=userAccount.orderArray.size();
+            for (int x=0;x<sizeArray;x++){
+                if (userAccount.orderArray.get(x).getNameItem().equals(lblName))
+                    totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+            }
+
+            lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
+            lblCount.setForeground(Color.red);
+            lblX.setForeground(Color.red);
+            lblName.setForeground(Color.red);
+            lblPrice.setForeground(Color.red);
+            lblEuro.setForeground(Color.red);
+            btnThrow.setText("Deleted");
+            btnThrow.setEnabled(false);
+            btnUndo.setEnabled(true);
+
+            //Order order = new Order();
+
+            int numberOfItems = Integer.parseInt(lblCount.getText());
+            String itemName = lblName.getText();
+            double ttlPrice = Double.parseDouble(lblPrice.getText());
+
+            int size = userAccount.orderArray.size();
+
+            for (int i=0; i<size;i++){
+                if (userAccount.orderArray.get(i).getNameItem().equals(itemName)){
+
+                    userAccount.orderArray.get(i).setNumberOfItem(userAccount.orderArray.get(i).getNumberOfItem()-numberOfItems);
+                    userAccount.orderArray.get(i).setTotalPrice(userAccount.orderArray.get(i).getTotalPrice()-ttlPrice);
+                }
+                else {
+                    System.out.println("Something is wrong");
+                }
             }
         }
 
-        userAccount.setOrderArray(orderArrayList);
-        userAccount.printOrderArray();
+
+        //userAccount.setOrderArray(orderArrayList);
+        //userAccount.printOrderArray();
 
 
     }
 
     public void undoItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
 
-        totalPrice=totalPrice+countPrice;
+        int sizeArray=userAccount.orderArray.size();
+        for (int x=0;x<sizeArray;x++){
+            totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+        }
         lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
         lblCount.setForeground(Color.black);
         lblName.setForeground(Color.black);
         lblPrice.setForeground(Color.black);
         lblX.setForeground(Color.black);
         lblEuro.setForeground(Color.black);
-        btnThrow.setText("THROW");
+        btnThrow.setText("DELETE");
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
 
@@ -1852,13 +1945,13 @@ public class MakeOrder {
         String itemName = lblName.getText();
         double ttlPrice = Double.parseDouble(lblPrice.getText());
 
-        int size = orderArrayList.size();
+        int size = userAccount.orderArray.size();
 
         for (int i=0; i<size;i++){
-            if (orderArrayList.get(i).getNameItem().equals(itemName)){
+            if (userAccount.orderArray.get(i).getNameItem().equals(itemName)){
 
-                orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItems);
-                orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+ttlPrice);
+                userAccount.orderArray.get(i).setNumberOfItem(userAccount.orderArray.get(i).getNumberOfItem()+numberOfItems);
+                userAccount.orderArray.get(i).setTotalPrice(userAccount.orderArray.get(i).getTotalPrice()+ttlPrice);
                 System.out.println("COUNTED");
             }
             else {
@@ -1866,8 +1959,8 @@ public class MakeOrder {
             }
         }
 
-        userAccount.setOrderArray(orderArrayList);
-        userAccount.printOrderArray();
+        //userAccount.setOrderArray(orderArrayList);
+        //userAccount.printOrderArray();
 
     }
 
