@@ -14,6 +14,13 @@ public class Payment {
     private JButton btnPaymentCancel;
     private JButton btnCreditCard;
 
+    public JPanel getPnlPayment() {
+        return pnlPayment;
+    }
+
+    public JPanel getPnlPaymentItems() {
+        return pnlPaymentItems;
+    }
 
     public Payment() {
         btnPaymentCancel.addActionListener(new ActionListener() {
@@ -26,7 +33,5 @@ public class Payment {
         });
     }
 
-    public JPanel getPnlPayment() {
-        return pnlPayment;
-    }
+
 }

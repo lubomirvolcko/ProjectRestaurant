@@ -532,12 +532,53 @@ public class MakeOrder {
         paymentFrame.setContentPane(payment.getPnlPayment());
         paymentFrame.setVisible(true);
 
+        JLabel lblPaymentCount = new JLabel("name");
+        JLabel lblPaymentX = new JLabel("name");
+        JLabel lblPaymentName = new JLabel("name");
+        JLabel lblPaymentPrice = new JLabel("name");
+        JLabel lblPaymentEuro = new JLabel("name");
+        Font font = new Font("Century Gothic", Font.BOLD, 26);
+
+        int sizeOfArray=userAccount.orderArray.size();
+        for (int x=0;x<sizeOfArray;x++) {
 
 
-        JComponent comp = (JComponent) e.getSource();
-        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-        win.dispose();
+                System.out.println("MAKE ORDER "+x+": "+userAccount.orderArray.get(x).getNumberOfItem()+" - "+userAccount.orderArray.get(x).getNameItem()+" - "+
+                        +userAccount.orderArray.get(x).getPrice()+" - " +userAccount.orderArray.get(x).getTotalPrice()+" - "+userAccount.orderArray.get(x).getIdTable());
 
+
+
+            if (userAccount.orderArray.get(x).getNumberOfItem() != 0) {
+                orderPositionY=orderPositionY+30;
+
+                payment.getPnlPaymentItems().setLayout(null);
+
+                payment.getPnlPaymentItems().add(lblPaymentCount = new JLabel("" + userAccount.orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
+                lblPaymentCount.setFont(font);
+                lblPaymentCount.setBounds(10, orderPositionY, 45, 30);
+
+                payment.getPnlPaymentItems().add(lblPaymentX = new JLabel("x", FlowLayout.LEFT));
+                lblPaymentX.setFont(font);
+                lblPaymentX.setBounds(55, orderPositionY, 20, 30);
+
+                payment.getPnlPaymentItems().add(lblPaymentName = new JLabel("" + userAccount.orderArray.get(x).getNameItem(), FlowLayout.LEFT));
+                lblPaymentName.setFont(font);
+                lblPaymentName.setBounds(85, orderPositionY, 200, 30);
+
+                payment.getPnlPaymentItems().add(lblPaymentPrice = new JLabel("" + userAccount.orderArray.get(x).getTotalPrice(), FlowLayout.LEFT));
+                lblPaymentPrice.setFont(font);
+                lblPaymentPrice.setBounds(295, orderPositionY, 100, 30);
+
+                payment.getPnlPaymentItems().add(lblPaymentEuro = new JLabel("€", FlowLayout.LEFT));
+                lblPaymentEuro.setFont(font);
+                lblPaymentEuro.setBounds(405, orderPositionY, 30, 30);
+            }
+
+
+            JComponent comp = (JComponent) e.getSource();
+            Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+            win.dispose();
+        }
         return paymentFrame;
     }
 

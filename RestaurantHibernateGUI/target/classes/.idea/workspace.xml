@@ -7,47 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="633f36e6-18ce-4e82-873b-662c02ff45cf" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.form" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RestaurantHibernateGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantHibernateGUI.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$24.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$25.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$25.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$26.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$26.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$27.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$28.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$30.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$31.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$32.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$33.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$33.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/EntryPage.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -63,25 +28,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="201">
-              <caret line="537" column="8" lean-forward="true" selection-start-line="537" selection-start-column="8" selection-end-line="539" selection-end-column="22" />
+            <state relative-caret-position="439">
+              <caret line="536" column="8" selection-start-line="536" selection-start-column="8" selection-end-line="536" selection-end-column="8" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#3544#3545#0" expanded="true" />
-                <element signature="e#3585#3586#0" expanded="true" />
-                <element signature="e#16667#16828#0" expanded="true" />
-                <element signature="e#16827#16828#0" expanded="true" />
-                <element signature="e#66327#67366#0" expanded="true" />
-                <element signature="e#67365#67366#0" expanded="true" />
-                <element signature="e#67830#68263#0" expanded="true" />
-                <element signature="e#68262#68263#0" expanded="true" />
-                <element signature="e#68434#68687#0" expanded="true" />
-                <element signature="e#68686#68687#0" expanded="true" />
-                <element signature="e#72771#74147#0" expanded="true" />
-                <element signature="e#74146#74147#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -90,36 +43,19 @@
       <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="269">
-              <caret line="468" column="8" selection-start-line="468" selection-start-column="8" selection-end-line="471" selection-end-column="30" />
-              <folding>
-                <element signature="e#3656#3663#0" expanded="true" />
-                <element signature="e#7622#7773#0" expanded="true" />
-                <element signature="e#7772#7773#0" expanded="true" />
-                <element signature="e#20208#21417#0" expanded="true" />
-                <element signature="e#21416#21417#0" expanded="true" />
-                <element signature="e#21920#22427#0" expanded="true" />
-                <element signature="e#22426#22427#0" expanded="true" />
-                <element signature="e#22630#22933#0" expanded="true" />
-                <element signature="e#22932#22933#0" expanded="true" />
-                <element signature="e#23005#23006#0" expanded="true" />
-                <element signature="e#23041#23042#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="1649">
+              <caret line="104" selection-start-line="104" selection-end-line="104" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+            <state relative-caret-position="306">
+              <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#476#780#0" expanded="true" />
-                <element signature="e#779#780#0" expanded="true" />
-                <element signature="e#352#353#0" expanded="true" />
-                <element signature="e#385#386#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,16 +71,16 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file leaf-file-name="UserAccount.form" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form">
+      <file leaf-file-name="EntryPage.form" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
       <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+            <state relative-caret-position="-680">
+              <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -152,12 +88,10 @@
       <file leaf-file-name="SetEmployee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-564">
+            <state relative-caret-position="3570">
               <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#8352#8353#0" expanded="true" />
-                <element signature="e#8389#8390#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -166,18 +100,10 @@
       <file leaf-file-name="SetDrinks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
-              <caret line="333" column="16" lean-forward="true" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
+            <state relative-caret-position="5134">
+              <caret line="333" column="16" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#5727#6594#0" expanded="true" />
-                <element signature="e#6593#6594#0" expanded="true" />
-                <element signature="e#6630#7282#0" expanded="true" />
-                <element signature="e#7281#7282#0" expanded="true" />
-                <element signature="e#7322#9354#0" expanded="true" />
-                <element signature="e#9353#9354#0" expanded="true" />
-                <element signature="e#9505#10359#0" expanded="true" />
-                <element signature="e#10358#10359#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -186,12 +112,10 @@
       <file leaf-file-name="SetFood.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
+            <state relative-caret-position="238">
               <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#10185#11098#0" expanded="true" />
-                <element signature="e#11097#11098#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,11 +132,9 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>table</find>
-      <find>sendToOrder</find>
       <find>itemCount</find>
       <find>logOut</find>
-      <find>Max quantity of ordered ite</find>
+      <find />
       <find>textposition</find>
       <find>textType</find>
       <find>usersInfo</find>
@@ -225,7 +147,7 @@
       <find>orderArrayList</find>
       <find>countItem</find>
       <find>countItem++</find>
-      <find>can be 30</find>
+      <find />
       <find>item++</find>
       <find>lblTotalPrice</find>
       <find>throw</find>
@@ -236,8 +158,10 @@
       <find>order.add</find>
       <find>btnCancel</find>
       <find>btnChooseHistory</find>
-      <find>MakeOrder</find>
       <find>btnCan</find>
+      <find>pnlPayment</find>
+      <find>MakeOrder</find>
+      <find>btnPayment</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -268,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.form" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Drink.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Food.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java" />
@@ -276,8 +199,9 @@
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.form" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" />
       </list>
     </option>
   </component>
@@ -299,6 +223,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -316,53 +241,18 @@
               <item name="RestaurantHibernateGUI" type="b2602c69:ProjectViewProjectNode" />
               <item name="RestaurantHibernateGUI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RestaurantHibernateGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RestaurantHibernateGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RestaurantHibernateGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RestaurantHibernateGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RestaurantHibernateGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RestaurantHibernateGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="RestaurantHibernateGUI" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RestaurantHibernateGUI" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="restaurant" type="462c0819:PsiDirectoryNode" />
-              <item name="gui" type="462c0819:PsiDirectoryNode" />
-              <item name="Payment" type="e9f4de52:FormNode" />
+              <item name="img" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="282" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../XXRestaurantSovy/ProjectRestaurant/RestaurantHibernateGUI" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -602,7 +492,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="953" y="0" width="974" height="1047" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
@@ -613,12 +503,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33156216" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33476394" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32624868" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18177083" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.36430064" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -697,14 +587,6 @@
           <caret line="32" column="39" lean-forward="true" selection-start-line="32" selection-start-column="39" selection-end-line="32" selection-end-column="39" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#5727#6594#0" expanded="true" />
-            <element signature="e#6593#6594#0" expanded="true" />
-            <element signature="e#6630#7282#0" expanded="true" />
-            <element signature="e#7281#7282#0" expanded="true" />
-            <element signature="e#7322#9354#0" expanded="true" />
-            <element signature="e#9353#9354#0" expanded="true" />
-            <element signature="e#9505#10359#0" expanded="true" />
-            <element signature="e#10358#10359#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -753,9 +635,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Food.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1139">
@@ -766,33 +645,32 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
+        <state relative-caret-position="238">
           <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#10185#11098#0" expanded="true" />
-            <element signature="e#11097#11098#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-564">
+        <state relative-caret-position="3570">
           <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8389#8390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5134">
+          <caret line="333" column="16" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -800,79 +678,42 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
-          <caret line="333" column="16" lean-forward="true" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5727#6594#0" expanded="true" />
-            <element signature="e#6593#6594#0" expanded="true" />
-            <element signature="e#6630#7282#0" expanded="true" />
-            <element signature="e#7281#7282#0" expanded="true" />
-            <element signature="e#7322#9354#0" expanded="true" />
-            <element signature="e#9353#9354#0" expanded="true" />
-            <element signature="e#9505#10359#0" expanded="true" />
-            <element signature="e#10358#10359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="468" column="8" selection-start-line="468" selection-start-column="8" selection-end-line="471" selection-end-column="30" />
-          <folding>
-            <element signature="e#3656#3663#0" expanded="true" />
-            <element signature="e#7622#7773#0" expanded="true" />
-            <element signature="e#7772#7773#0" expanded="true" />
-            <element signature="e#20208#21417#0" expanded="true" />
-            <element signature="e#21416#21417#0" expanded="true" />
-            <element signature="e#21920#22427#0" expanded="true" />
-            <element signature="e#22426#22427#0" expanded="true" />
-            <element signature="e#22630#22933#0" expanded="true" />
-            <element signature="e#22932#22933#0" expanded="true" />
-            <element signature="e#23005#23006#0" expanded="true" />
-            <element signature="e#23041#23042#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1649">
+          <caret line="104" selection-start-line="104" selection-end-line="104" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="201">
-          <caret line="537" column="8" lean-forward="true" selection-start-line="537" selection-start-column="8" selection-end-line="539" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3544#3545#0" expanded="true" />
-            <element signature="e#3585#3586#0" expanded="true" />
-            <element signature="e#16667#16828#0" expanded="true" />
-            <element signature="e#16827#16828#0" expanded="true" />
-            <element signature="e#66327#67366#0" expanded="true" />
-            <element signature="e#67365#67366#0" expanded="true" />
-            <element signature="e#67830#68263#0" expanded="true" />
-            <element signature="e#68262#68263#0" expanded="true" />
-            <element signature="e#68434#68687#0" expanded="true" />
-            <element signature="e#68686#68687#0" expanded="true" />
-            <element signature="e#72771#74147#0" expanded="true" />
-            <element signature="e#74146#74147#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-680">
+          <caret line="82" column="17" selection-start-line="82" selection-start-column="17" selection-end-line="82" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="23" column="30" selection-start-line="23" selection-start-column="30" selection-end-line="23" selection-end-column="30" />
+        <state relative-caret-position="306">
+          <caret line="20" column="38" selection-start-line="20" selection-start-column="38" selection-end-line="20" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#476#780#0" expanded="true" />
-            <element signature="e#779#780#0" expanded="true" />
-            <element signature="e#352#353#0" expanded="true" />
-            <element signature="e#385#386#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="439">
+          <caret line="536" column="8" selection-start-line="536" selection-start-column="8" selection-end-line="536" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -895,7 +736,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -956,7 +797,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited />
           <splitter-proportions>
             <option name="proportions">
               <list>
