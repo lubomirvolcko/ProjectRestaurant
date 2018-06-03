@@ -64,6 +64,7 @@ public class MakeOrder {
     private JPanel pnlWine;
     private JLabel lblTotalPrice;
     private JPanel pnlItemOnTable;
+    private JTextField textField1;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state; //use in btnBack for set panels
@@ -1531,6 +1532,8 @@ public class MakeOrder {
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
 
+
+
                         sendToOrder(numberOfItem, SmootiePrice, smootieName, countItem);
                         sendToTable(smootieName, SmootiePrice);
 
@@ -1545,11 +1548,23 @@ public class MakeOrder {
         }
     }
 
+    public void checkItemsInArray(){
+        int arraySize=userAccount.orderArray.size();
+        countItem=0;
+
+        for (int i = 0; i<arraySize; i++){
+            if (userAccount.orderArray.get(i).getIdTable()==makeOrderIdTable){
+                countItem++;
+                System.out.println("COUNT OF ITEM: "+countItem+" -----");
+            }
+        }
+    }
+
 
     Order order = new Order();
 
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
-
+        checkItemsInArray();
 
         double totalPrice;
         totalPrice=numberOfItem*smootiePrice;
@@ -1561,8 +1576,13 @@ public class MakeOrder {
             if (size>0){
                 for (int i=0; i<size;i++){
                     if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
-                        orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
-                        orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
+
+                        if (orderArrayList.get(i).getNumberOfItem()>=50 && smootieName.equals(orderArrayList.get(i).getNameItem())){
+                            JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        }else{
+                            orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
+                            orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
+                        }
                     }else {
                         countChnages++;
                     }
@@ -1580,6 +1600,9 @@ public class MakeOrder {
 
                     orderArrayList.add(order);
                     System.out.println("ELSE 1");
+
+
+
                 }
 
 
@@ -1597,6 +1620,7 @@ public class MakeOrder {
 
             userAccount.setOrderArray(orderArrayList);
             userAccount.printOrderArray();
+
         }else {
             System.out.println("Item can't be added to orderArray");
         }
@@ -1642,6 +1666,12 @@ public class MakeOrder {
 
             if (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())
             {
+
+                /*if (userAccount.orderArray.get(i).getNumberOfItem()>=50){
+                    userAccount.orderArray.get(i).setNumberOfItem(50);
+                    JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                }*/
+
 
                 orderPositionY=orderPositionY+32;
                 if (countItem<31)

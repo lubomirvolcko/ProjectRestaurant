@@ -55,7 +55,7 @@ public class SetFood {
         final JLabel lblVolume = new JLabel();
         final JTextField textVolume = new JTextField();
         final JLabel lblType = new JLabel();
-        String[] types = {"Appetizer", "Soup", "mainDish", "Salad"};
+        String[] types = {"Appetizer", "Soup", "Main Dish", "Salad", "Desserts"};
         final JComboBox textType = new JComboBox(types);
         final JLabel lblAllergens = new JLabel();
         final JTextField textAllergens = new JTextField();
@@ -99,16 +99,16 @@ public class SetFood {
         lblComposition.setBounds(20, 250, 80, 25);
         textComposition.setBounds(120, 250, 170, 25);
 
-        lblPrice.setBounds(310, 220, 80, 25);
-        textPrice.setBounds(370, 220, 60, 25);
+        lblPrice.setBounds(310, 220, 100, 25);
+        textPrice.setBounds(410, 220, 60, 25);
 
-        lblVolume.setBounds(310, 250, 80, 25);
-        textVolume.setBounds(370, 250, 60, 25);
+        lblVolume.setBounds(310, 250, 100, 25);
+        textVolume.setBounds(410, 250, 60, 25);
 
-        lblActive.setBounds(480, 220, 80, 25);
+        lblActive.setBounds(500, 220, 60, 25);
         textActive.setBounds(560, 220, 100, 25);
 
-        lblType.setBounds(480, 250, 80, 25);
+        lblType.setBounds(500, 250, 60, 25);
         textType.setBounds(560, 250, 100, 25);
 
         lblAllergens.setBounds(20, 280, 80, 25);
@@ -219,6 +219,13 @@ public class SetFood {
 
 
                     transaction.commit();
+
+                    JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully deleted!");
+                    JComponent comp = (JComponent) e.getSource();
+                    Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                    win.dispose();
+                    createTable();
+
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;
@@ -293,6 +300,8 @@ public class SetFood {
                     model.setValueAt(textType.getSelectedItem(), i, 5);
                     model.setValueAt(textAllergens.getText(), i, 6);
                     model.setValueAt(textActive.getSelectedItem(), i, 7);
+
+                    JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully updaded!");
                 } else {
                     System.out.println("Update Error");
                 }
@@ -324,6 +333,13 @@ public class SetFood {
                 s.save(newFood);
                 s.getTransaction().commit();
                 s.close();
+
+
+                JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully added!");
+                JComponent comp = (JComponent) e.getSource();
+                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                win.dispose();
+                createTable();
 
             }
 

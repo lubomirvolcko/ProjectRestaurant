@@ -210,6 +210,13 @@ public class SetDrinks {
 
 
                     transaction.commit();
+
+                    JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully deleted!");
+                    JComponent comp = (JComponent) e.getSource();
+                    Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                    win.dispose();
+                    createTable();
+
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;
@@ -287,6 +294,8 @@ public class SetDrinks {
                     model.setValueAt(textVolume.getText(), i, 4);
                     model.setValueAt(textType.getSelectedItem(), i, 5);
                     model.setValueAt(textActive.getSelectedItem(), i, 6);
+
+                    JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully updaded!");
                 }
                 else{
                     System.out.println("Update Error");
@@ -320,6 +329,12 @@ public class SetDrinks {
                 s.save(newDrink);
                 s.getTransaction().commit();
                 s.close();
+
+                JOptionPane.showMessageDialog(null, "Item "+textName.getText()+" successfully added!");
+                JComponent comp = (JComponent) e.getSource();
+                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                win.dispose();
+                createTable();
 
             }
 

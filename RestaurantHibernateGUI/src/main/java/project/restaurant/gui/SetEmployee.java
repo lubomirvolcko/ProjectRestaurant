@@ -207,7 +207,7 @@ createTable();
                 s.getTransaction().commit();
                 s.close();
 
-                JOptionPane.showMessageDialog(null, "New user successfully registred!");
+                JOptionPane.showMessageDialog(null, "User "+Login+" successfully registred!");
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -447,6 +447,13 @@ createTable();
 
 
                     transaction.commit();
+
+                    JOptionPane.showMessageDialog(null, "User "+textlogin.getText()+" successfully deleted!");
+                    JComponent comp = (JComponent) e.getSource();
+                    Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                    win.dispose();
+                    createTable();
+
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;
@@ -513,6 +520,8 @@ createTable();
 
 
                     transaction.commit();
+
+                    JOptionPane.showMessageDialog(null, "User "+textlogin.getText()+" successfully updaded!");
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;
