@@ -65,8 +65,8 @@ public class Payment {
                 final JLabel lblUser = new JLabel("name");
                 final JLabel lblFnllPrice = new JLabel("name");
                 final JLabel lblReceivedCash = new JLabel("name");
-                final JTextField txtReceivedCash = new JTextField("name");
-                final JLabel lblRelease = new JLabel("name");
+                final JTextField txtReceivedCash = new JTextField();
+                final JLabel lblRelease = new JLabel();
                 JButton btnConfirm = new JButton("CONFIRM");
                 JButton btnDone= new JButton("Done");
 
@@ -107,13 +107,13 @@ public class Payment {
                 }
 
 
-                lblUser.setBounds(200, 50, 200, 40);
-                lblFnllPrice.setBounds(200, 100, 200, 40);
-                lblReceivedCash.setBounds(200, 200, 200, 40);
-                txtReceivedCash.setBounds(200, 300, 200, 40);
-                lblRelease.setBounds(200, 400, 200, 40);
-                btnConfirm.setBounds(200, 500, 200, 40);
-                btnDone.setBounds(200, 600, 200, 40);
+                lblUser.setBounds(180, 40, 200, 40);
+                lblFnllPrice.setBounds(180, 100, 200, 40);
+                lblReceivedCash.setBounds(180, 160, 250, 40);
+                txtReceivedCash.setBounds(180, 220, 200, 40);
+                btnConfirm.setBounds(180, 280, 200, 40);
+                lblRelease.setBounds(180, 340, 200, 40);
+                btnDone.setBounds(180, 400, 200, 40);
 
 
                 frame2.setLayout(null);

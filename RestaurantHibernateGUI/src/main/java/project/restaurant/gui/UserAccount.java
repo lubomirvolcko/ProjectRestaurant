@@ -50,10 +50,6 @@ public class UserAccount {
     private JButton btnTable7;
     private JButton btnTable8;
     private JPanel pnlOrderedTable1;
-    private JButton btnViewOrderTable1;
-    private JButton btnAddToOrderTable1;
-    private JButton btnPaymentTable1;
-    private JButton btnStornoTable1;
     private JPanel pnlOrderedTable2;
     private JPanel pnlOrderedTable3;
     private JPanel pnlOrderedTable5;
@@ -61,50 +57,14 @@ public class UserAccount {
     private JPanel pnlOrderedTable8;
     private JPanel pnlOrderedTable7;
     private JPanel pnlOrderedTable4;
-    private JLabel lblTotalPriceTable1;
     private JPanel pnlTable1;
     private JPanel pnlTable2;
     private JPanel pnlTable3;
     private JPanel pnlTable4;
-    private JButton btnViewOrderTable2;
-    private JButton btnAddToOrderTable2;
-    private JButton btnPaymentTable2;
-    private JButton btnStornoTable2;
-    private JLabel lblTotalPriceTable2;
-    private JButton btnViewOrderTable3;
-    private JButton btnAddToOrderTable3;
-    private JButton btnPaymentTable3;
-    private JButton btnStornoTable3;
-    private JLabel lblTotalPriceTable3;
-    private JButton btnViewOrderTable4;
-    private JButton btnAddToOrderTable4;
-    private JButton btnPaymentTable4;
-    private JButton btnStornoTable4;
-    private JLabel lblTotalPriceTable4;
     private JPanel pnlTable5;
     private JPanel pnlTable6;
     private JPanel pnlTable7;
     private JPanel pnlTable8;
-    private JButton btnViewOrderTable8;
-    private JButton btnAddToOrderTable8;
-    private JButton btnPaymentTable8;
-    private JButton btnStornoTable8;
-    private JLabel lblTotalPriceTable8;
-    private JButton btnViewOrderTable7;
-    private JButton btnAddToOrderTable7;
-    private JButton btnPaymentTable7;
-    private JButton btnStornoTable7;
-    private JLabel lblTotalPriceTable7;
-    private JButton btnViewOrderTable6;
-    private JButton btnAddToOrderTable6;
-    private JButton btnPaymentTable6;
-    private JButton btnStornoTable6;
-    private JLabel lblTotalPriceTable6;
-    private JButton btnViewOrderTable5;
-    private JButton btnAddToOrderTable5;
-    private JButton btnPaymentTable5;
-    private JButton btnStornoTable5;
-    private JLabel lblTotalPriceTable5;
     private String username;
     String table;
     ArrayList<Order> orderArray = new ArrayList<Order>();
@@ -195,62 +155,10 @@ public class UserAccount {
         }
     }
 
-
-    public void setTable1(){
-        pnlOrderedTable1.setVisible(false);
-        btnTable1.setVisible(true);
-
-        System.out.println("CHANGE ON TABLE 1");
-    }
-
-    public void setTable2(){
-        btnTable2.setVisible(false);
-        pnlOrderedTable2.setVisible(true);
-    }
-
-    public void setTable3(){
-        btnTable3.setVisible(false);
-        pnlOrderedTable3.setVisible(true);
-    }
-
-    public void setTable4(){
-        btnTable4.setVisible(false);
-        pnlOrderedTable4.setVisible(true);
-    }
-
-    public void setTable5(){
-        btnTable5.setVisible(false);
-        pnlOrderedTable5.setVisible(true);
-    }
-
-    public void setTable6(){
-        btnTable6.setVisible(false);
-        pnlOrderedTable6.setVisible(true);
-    }
-
-    public void setTable7(){
-        btnTable7.setVisible(false);
-        pnlOrderedTable7.setVisible(true);
-    }
-
-    public void setTable8(){
-        btnTable8.setVisible(false);
-        pnlOrderedTable8.setVisible(true);
-    }
-
     public UserAccount() {
 
         pnlTopMenu.setVisible(false);
         pnlTables.setVisible(false);
-
-        pnlOrderedTable1.setVisible(false);
-        pnlOrderedTable2.setVisible(false);
-        pnlOrderedTable3.setVisible(false);
-        pnlOrderedTable4.setVisible(false);
-        pnlOrderedTable5.setVisible(false);
-        pnlOrderedTable6.setVisible(false);
-        pnlOrderedTable7.setVisible(false);
-        pnlOrderedTable8.setVisible(false);
 
         //btn search
         btnSearch.addActionListener(new ActionListener() {
@@ -483,7 +391,7 @@ public class UserAccount {
             for (int i=0;i<size;i++){
                 makeOrder.totalPrice=0;
 
-                JTextField txtCount = new JTextField("name");
+                JLabel lblCount = new JLabel("name");
                 JLabel lblX = new JLabel("name");
                 JLabel lblEuro = new JLabel("name");
                 JLabel lblName = new JLabel("name");
@@ -503,7 +411,7 @@ public class UserAccount {
 
 
 
-                    if (makeOrder.makeOrderIdTable==orderArray.get(x).getIdTable())
+                    if (orderArray.get(x).getNumberOfItem()!=0 && makeOrder.makeOrderIdTable==orderArray.get(x).getIdTable())
                     {
 
                         makeOrder.totalPrice=makeOrder.totalPrice+orderArray.get(x).getTotalPrice();
@@ -514,9 +422,9 @@ public class UserAccount {
 
                             makeOrder.getLblTotalPrice().setText("Price: "+Double.toString(makeOrder.totalPrice)+" €");
 
-                            makeOrder.getPnlItemOnTable().add(txtCount = new JTextField(""+orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
-                            txtCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                            txtCount.setBounds(10, makeOrder.orderPositionY, 45, 30);
+                            makeOrder.getPnlItemOnTable().add(lblCount = new JLabel(""+orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
+                            lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                            lblCount.setBounds(10, makeOrder.orderPositionY, 45, 30);
 
                             makeOrder.getPnlItemOnTable().add(lblX = new JLabel("x", FlowLayout.LEFT));
                             lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
@@ -563,63 +471,27 @@ public class UserAccount {
 
                 }
 
-
-
-
-
-
-
                 final  JLabel finalLblPrice = lblPrice;
-                final JTextField finalTxtCount1 = txtCount;
-                final JLabel finalLblPrice1 = lblPrice;
-                txtCount.addKeyListener(new KeyAdapter() {
-                    @Override
-                    public void keyReleased(KeyEvent e) {
-                        super.keyReleased(e);
-
-                        if (finalTxtCount1.getText().equals("")){
-                            finalTxtCount1.setText("0");
-                        }
-                        if (Integer.parseInt(finalTxtCount1.getText()) > 50){
-
-                            JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
-
-                            finalTxtCount1.setText("50");
-                        }
-                        else if (finalTxtCount1.getText().equals("") || finalTxtCount1.getText().equals(" ") || finalTxtCount1.getText().equals("  ")){
-                            finalTxtCount1.setText("0");
-                        }
-                        else if (Integer.parseInt(finalTxtCount1.getText()) <= 50){
-                            int countOfItem= Integer.parseInt(finalTxtCount1.getText());
-                            double finalPriceOfItem=makeOrder.price*countOfItem;
-                            finalLblPrice1.setText(String.valueOf(finalPriceOfItem));
-                        }
-
-                    }
-                });
-
-
-
 
                 makeOrder.orderPositionY=makeOrder.orderPositionY+32;
 
 
-                final JTextField finalTxtCount = txtCount;
+                final JLabel finalTxtCount = lblCount;
                 final JLabel finalLblName = lblName;
                 //final JLabel finalLblPrice = lblPrice;
                 final JButton finalBtnChoose = btnChoose;
                 final JButton finalBtnUndo = btnUndo;
-                final JTextField finalLblCount1 = txtCount;
                 final JLabel finalLblX = lblX;
                 final JLabel finalLblEuro = lblEuro;
+                final JLabel finalLblCount = lblCount;
                 btnChoose.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         int numberOfItem;
-                        numberOfItem = Integer.parseInt(finalLblCount1.getText());
+                        numberOfItem = Integer.parseInt(finalLblCount.getText());
                         System.out.println("Number of item is: "+numberOfItem);
 
-                        makeOrder.throwItem(finalTxtCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
+                        makeOrder.throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
                     }
                 });
 

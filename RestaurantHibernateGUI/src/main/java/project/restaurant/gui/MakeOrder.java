@@ -1751,6 +1751,9 @@ public class MakeOrder {
         countItem=0;
 
         for (int i = 0; i<arraySize; i++){
+            if (userAccount.orderArray.get(i).getNumberOfItem()==0){
+                userAccount.orderArray.remove(i);
+            }
             if (userAccount.orderArray.get(i).getIdTable()==makeOrderIdTable){
                 countItem++;
             }
@@ -1764,23 +1767,32 @@ public class MakeOrder {
         btnCancel.setEnabled(false);
         checkItemsInArray();
 
+
+
         double totalPrice;
         totalPrice=numberOfItem*smootiePrice;
         totalPrice=Math.round(totalPrice * 100)/100.0;
 
         int countChnages=0;
         int size = orderArrayList.size();
-        if (countItem<31){
+        if (countItem<31 && numberOfItem!=0){
             if (size>0){
                 for (int i=0; i<size;i++){
-                    if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
 
-                        if (orderArrayList.get(i).getNumberOfItem()>=50 && smootieName.equals(orderArrayList.get(i).getNameItem())){
+                    if ((orderArrayList.get(i).getIdTable()==makeOrderIdTable) && (orderArrayList.get(i).getNameItem().equals(smootieName))){
+                        if ((numberOfItem+orderArrayList.get(i).getNumberOfItem()==50)  || (numberOfItem+orderArrayList.get(i).getNumberOfItem()>50) ){
                             JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
-                        }else{
+                            orderArrayList.get(i).setNumberOfItem(50);
+                        }
+
+                        orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getNumberOfItem()*smootiePrice);
+                    }else if (orderArrayList.get(i).getNameItem().equals(smootieName) && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
+
                             orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
                             orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
-                        }
+
+                            orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getNumberOfItem()*smootiePrice);
+
                     }else {
                         countChnages++;
                     }
@@ -1797,10 +1809,6 @@ public class MakeOrder {
                     order.setIdTable(makeOrderIdTable);
 
                     orderArrayList.add(order);
-                    System.out.println("ELSE 1");
-
-
-
                 }
 
 
@@ -1812,7 +1820,6 @@ public class MakeOrder {
                 order.setIdTable(makeOrderIdTable);
 
                 orderArrayList.add(order);
-                System.out.println("ELSE 2");
             }
 
 
@@ -1831,7 +1838,7 @@ public class MakeOrder {
             btnChooseHistory="true";
 
 
-        JTextField txtCount = new JTextField("name");
+        JLabel lblCount = new JLabel("name");
         JLabel lblX = new JLabel("name");
         JLabel lblEuro = new JLabel("name");
         JLabel lblName = new JLabel("name");
@@ -1855,6 +1862,8 @@ public class MakeOrder {
             double priceItem=userAccount.orderArray.get(i).getTotalPrice();
             int countOfItem=userAccount.orderArray.get(i).getNumberOfItem();
 
+            if (countOfItem!=0){
+
             if (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())
             {
 
@@ -1868,9 +1877,9 @@ public class MakeOrder {
 
                     lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
 
-                    pnlItemOnTable.add(txtCount = new JTextField(""+countOfItem, FlowLayout.LEFT));
-                    txtCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    txtCount.setBounds(10, orderPositionY, 45, 30);
+                    pnlItemOnTable.add(lblCount = new JLabel(""+countOfItem, FlowLayout.LEFT));
+                    lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                    lblCount.setBounds(10, orderPositionY, 45, 30);
 
                     pnlItemOnTable.add(lblX = new JLabel("x", FlowLayout.LEFT));
                     lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
@@ -1903,135 +1912,30 @@ public class MakeOrder {
                     btnUndo.setEnabled(false);
                     btnUndo.setBounds(560, orderPositionY, 100, 30);
 
-                    switch (countItem){
-                        case 1: JButton btnDeleteItem1 = btnDelete;
-                                JButton btnUndoItem1 = btnUndo;
-                                JTextField txtCountItem1 = txtCount;
-                                JLabel lblXItem1 = lblX;
-                                JLabel lblNameItem1 = lblName;
-                                JLabel lblPriceItem1 = lblPrice;
-                                JLabel lblEuroItem1 = lblEuro;
-                                break;
-                        case 2: JButton btnDeleteItem2 = btnDelete;
-                                JButton btnUndoItem2 = btnUndo;
-                                JTextField txtCountItem2 = txtCount;
-                                JLabel lblXItem2 = lblX;
-                                JLabel lblNameItem2 = lblName;
-                                JLabel lblPriceItem2 = lblPrice;
-                                JLabel lblEuroItem2 = lblEuro;
-
-                                break;
-                        case 3: JButton btnDeleteItem3 = btnDelete;
-                                JButton btnUndoItem3 = btnUndo;
-                                JTextField txtCountItem3 = txtCount;
-                                JLabel lblXItem3 = lblX;
-                                JLabel lblNameItem3 = lblName;
-                                JLabel lblPriceItem3 = lblPrice;
-                                JLabel lblEuroItem3 = lblEuro;
-                                break;
-                        case 4: JButton btnDeleteItem4 = btnDelete;
-                                JButton btnUndoItem4 = btnUndo;
-                                JTextField txtCountItem4 = txtCount;
-                                JLabel lblXItem4 = lblX;
-                                JLabel lblNameItem4 = lblName;
-                                JLabel lblPriceItem4 = lblPrice;
-                                JLabel lblEuroItem4 = lblEuro;
-                                break;
-                        case 5: JButton btnDeleteItem5 = btnDelete;
-                                JButton btnUndoItem5 = btnUndo;
-                                JTextField txtCountItem5 = txtCount;
-                                JLabel lblXItem5 = lblX;
-                                JLabel lblNameItem5 = lblName;
-                                JLabel lblPriceItem5 = lblPrice;
-                                JLabel lblEuroItem5 = lblEuro;
-                                break;
-                        case 6: JButton btnDeleteItem6 = btnDelete;
-                                JButton btnUndoItem6 = btnUndo;
-                                JTextField txtCountItem6 = txtCount;
-                                JLabel lblXItem6 = lblX;
-                                JLabel lblNameItem6 = lblName;
-                                JLabel lblPriceItem6 = lblPrice;
-                                JLabel lblEuroItem6 = lblEuro;
-                                break;
-                        case 7: JButton btnDeleteItem7 = btnDelete;
-                                JButton btnUndoItem7 = btnUndo;
-                                JTextField txtCountItem7 = txtCount;
-                                JLabel lblXItem7 = lblX;
-                                JLabel lblNameItem7 = lblName;
-                                JLabel lblPriceItem7 = lblPrice;
-                                JLabel lblEuroItem7 = lblEuro;
-                                break;
-                        case 8: JButton btnDeleteItem8 = btnDelete;
-                                JButton btnUndoItem8 = btnUndo;
-                                JTextField txtCountItem8 = txtCount;
-                                JLabel lblXItem8 = lblX;
-                                JLabel lblNameItem8 = lblName;
-                                JLabel lblPriceItem8 = lblPrice;
-                                JLabel lblEuroItem8 = lblEuro;
-                                break;
-                    }
 
                 }else{
                     JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
                     countItem=30;
                 }
 
-
-
             }
 
+            }
 
         }
-
-
-
-
-
-
-
-        final  JLabel finalLblPrice = lblPrice;
-        final JTextField finalTxtCount1 = txtCount;
-        final JLabel finalLblPrice1 = lblPrice;
-        txtCount.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);
-
-                if (finalTxtCount1.getText().equals("")){
-                    finalTxtCount1.setText("0");
-                }
-                if (Integer.parseInt(finalTxtCount1.getText()) > 50){
-
-                    JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
-
-                    finalTxtCount1.setText("50");
-                }
-                else if (finalTxtCount1.getText().equals("") || finalTxtCount1.getText().equals(" ") || finalTxtCount1.getText().equals("  ")){
-                    finalTxtCount1.setText("0");
-                }
-                else if (Integer.parseInt(finalTxtCount1.getText()) <= 50){
-                    int countOfItem= Integer.parseInt(finalTxtCount1.getText());
-                    double finalPriceOfItem=price*countOfItem;
-                    finalLblPrice1.setText(String.valueOf(finalPriceOfItem));
-                }
-
-            }
-        });
-
-
-
 
         orderPositionY=orderPositionY+32;
 
 
-        final JTextField finalTxtCount = txtCount;
         final JLabel finalLblName = lblName;
         //final JLabel finalLblPrice = lblPrice;
         final JButton finalBtnDelete = btnDelete;
         final JButton finalBtnUndo = btnUndo;
-        final JTextField finalLblCount1 = txtCount;
         final JLabel finalLblX = lblX;
         final JLabel finalLblEuro = lblEuro;
+        final JLabel finalLblCount = lblCount;
+        final JLabel finalLblCount1 = lblCount;
+        final JLabel finalLblPrice = lblPrice;
         btnDelete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -2039,22 +1943,23 @@ public class MakeOrder {
                 numberOfItem = Integer.parseInt(finalLblCount1.getText());
                 System.out.println("Number of item is: "+numberOfItem);
 
-                throwItem(finalTxtCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnDelete, finalBtnUndo);
+                throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnDelete, finalBtnUndo);
             }
         });
 
         final JButton finalBtnUndo1 = btnUndo;
         final JLabel finalLblX1 = lblX;
         final JLabel finalLblEuro1 = lblEuro;
+        final JLabel finalLblCount2 = lblCount;
         btnUndo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                undoItem(finalTxtCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnDelete, finalBtnUndo1);
+                undoItem(finalLblCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnDelete, finalBtnUndo1);
             }
         });
     }
 
-    public void throwItem(final JTextField lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
+    public void throwItem(final JLabel lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
 
 
 
@@ -2093,6 +1998,86 @@ public class MakeOrder {
 
         frame2.setBackground(new Color(240,232,220));
         final boolean[] ver = {false};
+        textPassword.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    String password=textPassword.getText();
+
+                    System.out.println(password);
+                    SessionFactory sf = HibernateUtil.getSessionFactory();
+                    Session se = sf.openSession();
+
+                    Transaction transaction = se.beginTransaction();
+                    try {
+                        String hql = "FROM Authentication where position ='manager' OR position='supervisor'";
+                        Query query = se.createQuery(hql);
+                        String pass;
+                        List<Authentication> checkPassword=(List<Authentication>)query.list();
+                        se.getTransaction().commit();
+
+                        for(Authentication g : checkPassword)
+                        {
+                            pass = g.getPassword();
+
+
+
+
+
+
+
+                            System.out.println(password);
+                            if (password.equals(pass)){
+
+                                if (ver[0] =true){
+
+
+                                    btnCancel.setEnabled(false);
+                                    int sizeArray=userAccount.orderArray.size();
+                                    for (int x=0;x<sizeArray;x++){
+                                        if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
+                                            totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+                                            userAccount.orderArray.get(x).setTotalPrice(0.0);
+                                            userAccount.orderArray.get(x).setNumberOfItem(0);
+                                        }
+
+                                    }
+
+                                    lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
+                                    lblCount.setForeground(Color.red);
+                                    lblX.setForeground(Color.red);
+                                    lblName.setForeground(Color.red);
+                                    lblPrice.setForeground(Color.red);
+                                    lblEuro.setForeground(Color.red);
+                                    btnThrow.setText("Deleted");
+                                    btnThrow.setEnabled(false);
+                                    btnUndo.setEnabled(true);
+
+                                } //if checkPsw
+
+
+                                JComponent comp = (JComponent) e.getSource();
+                                Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                                win.dispose();
+                                ver[1] =true;
+
+                            }else {
+
+
+                            }
+                            se.close();
+                        }
+                    } catch (Throwable t) {
+                        transaction.rollback();
+                        throw t;
+                    }
+
+                }
+                }
+
+        });
+
         btnOk.addActionListener(new ActionListener(){
 
             @Override
@@ -2114,12 +2099,6 @@ public class MakeOrder {
                     for(Authentication g : checkPassword)
                     {
                         pass = g.getPassword();
-
-
-
-
-
-
 
                         System.out.println(password);
                         if (password.equals(pass)){
@@ -2183,7 +2162,7 @@ public class MakeOrder {
 
     }
 
-    public void undoItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
+    public void undoItem(JLabel lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
 
 
 
