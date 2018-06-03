@@ -64,7 +64,6 @@ public class MakeOrder {
     private JPanel pnlWine;
     private JLabel lblTotalPrice;
     private JPanel pnlItemOnTable;
-    private JTextField textField1;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state; //use in btnBack for set panels
@@ -1555,7 +1554,6 @@ public class MakeOrder {
         for (int i = 0; i<arraySize; i++){
             if (userAccount.orderArray.get(i).getIdTable()==makeOrderIdTable){
                 countItem++;
-                System.out.println("COUNT OF ITEM: "+countItem+" -----");
             }
         }
     }
@@ -1629,6 +1627,8 @@ public class MakeOrder {
 
     //send item to order on table
     public void sendToTable(final String name, final Double price){
+            totalPrice=0;
+
 
         System.out.println("COUNTPRICE IS: "+countPrice);
 
@@ -1652,12 +1652,6 @@ public class MakeOrder {
 
         for (int i=0;i<sizeArray;i++){
 
-            //max different items in one order
-            /*for (int y=0;y<sizeArray;y++){
-                if ((userAccount.orderArray.get(y).getNameItem()!=userAccount.orderArray.get(i).getNameItem()) && (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())){
-                    countItem++;
-                }
-            }*/
 
 
             String nameItem=userAccount.orderArray.get(i).getNameItem();
@@ -1667,21 +1661,12 @@ public class MakeOrder {
             if (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())
             {
 
-                /*if (userAccount.orderArray.get(i).getNumberOfItem()>=50){
-                    userAccount.orderArray.get(i).setNumberOfItem(50);
-                    JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
-                }*/
-
-
+                totalPrice=totalPrice+userAccount.orderArray.get(i).getTotalPrice();
                 orderPositionY=orderPositionY+32;
                 if (countItem<31)
                 {
-
-
-
                     countPrice=price*countX;
                     countPrice=Math.round(countPrice * 100)/100.0;
-                    totalPrice=totalPrice+countPrice;
                     totalPrice=Math.round(totalPrice * 100)/100.0;
 
                     lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
