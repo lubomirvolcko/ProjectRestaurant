@@ -136,7 +136,7 @@
               <horizontalAlignment value="2"/>
               <horizontalTextPosition value="2"/>
               <icon value="src/img/finalPrice.png"/>
-              <text value="0.0"/>
+              <text value="Final price:  0.0"/>
             </properties>
           </component>
         </children>

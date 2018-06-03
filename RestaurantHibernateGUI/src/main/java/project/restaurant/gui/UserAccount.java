@@ -13,6 +13,11 @@ public class UserAccount {
     private JPanel UserAccount;
     private JPanel bgUserAccount;
     private JPanel pnlUserTop;
+
+    public JLabel getLblUserName() {
+        return lblUserName;
+    }
+
     private JLabel lblUserName;
     private JTextField txtSearch;
     private JButton btnSearch;

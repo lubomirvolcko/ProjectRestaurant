@@ -99,6 +99,7 @@ public class MakeOrder {
     String historyTable6;
     String historyTable7;
     String historyTable8;
+    Double paymentPrice=0.0;
 
     UserAccount userAccount = new UserAccount();
 
@@ -657,6 +658,7 @@ public class MakeOrder {
             if (userAccount.orderArray.get(x).getNumberOfItem() != 0) {
                 orderPositionY=orderPositionY+30;
                 finalPrice=finalPrice+userAccount.orderArray.get(x).getTotalPrice();
+                paymentPrice=finalPrice;
 
                 payment.getPnlPaymentItems().setLayout(null);
 
@@ -2052,7 +2054,7 @@ public class MakeOrder {
         });
     }
 
-    public void throwItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo) {
+    public void throwItem(final JTextField lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
 
 
 
@@ -2122,6 +2124,32 @@ public class MakeOrder {
                         System.out.println(password);
                         if (password.equals(pass)){
 
+                            if (ver[0] =true){
+
+
+                                btnCancel.setEnabled(false);
+                                int sizeArray=userAccount.orderArray.size();
+                                for (int x=0;x<sizeArray;x++){
+                                    if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
+                                        totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+                                        userAccount.orderArray.get(x).setTotalPrice(0.0);
+                                        userAccount.orderArray.get(x).setNumberOfItem(0);
+                                    }
+
+                                }
+
+                                lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
+                                lblCount.setForeground(Color.red);
+                                lblX.setForeground(Color.red);
+                                lblName.setForeground(Color.red);
+                                lblPrice.setForeground(Color.red);
+                                lblEuro.setForeground(Color.red);
+                                btnThrow.setText("Deleted");
+                                btnThrow.setEnabled(false);
+                                btnUndo.setEnabled(true);
+
+                            } //if checkPsw
+
 
                             JComponent comp = (JComponent) e.getSource();
                             Window win = SwingUtilities.getWindowAncestor(comp); //get top window
@@ -2150,31 +2178,7 @@ public class MakeOrder {
 
         frame2.setVisible(true);
 
-        if (ver[0] =true){
 
-
-            btnCancel.setEnabled(false);
-            int sizeArray=userAccount.orderArray.size();
-            for (int x=0;x<sizeArray;x++){
-                if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
-                    totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
-                    userAccount.orderArray.get(x).setTotalPrice(0.0);
-                    userAccount.orderArray.get(x).setNumberOfItem(0);
-                }
-
-            }
-
-            lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
-            lblCount.setForeground(Color.red);
-            lblX.setForeground(Color.red);
-            lblName.setForeground(Color.red);
-            lblPrice.setForeground(Color.red);
-            lblEuro.setForeground(Color.red);
-            btnThrow.setText("Deleted");
-            btnThrow.setEnabled(false);
-            btnUndo.setEnabled(true);
-
-        } //if checkPsw
 
 
     }
