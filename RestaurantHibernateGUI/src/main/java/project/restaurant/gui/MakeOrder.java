@@ -74,6 +74,7 @@ public class MakeOrder {
     }
 
     private JPanel pnlItemOnTable;
+    private JButton btnPayment;
     private JButton btn;
     private JScrollPane pnlScrollOrderedItems;
     public String state; //use in btnBack for set panels
@@ -91,6 +92,14 @@ public class MakeOrder {
     int countX;
     ArrayList<Order> orderArrayList;
     int makeOrderIdTable;
+    String historyTable1;
+    String historyTable2;
+    String historyTable3;
+    String historyTable4;
+    String historyTable5;
+    String historyTable6;
+    String historyTable7;
+    String historyTable8;
 
     UserAccount userAccount = new UserAccount();
 
@@ -497,59 +506,27 @@ public class MakeOrder {
             public void actionPerformed(ActionEvent e) {
 
                 orderPositionY=0;
-
-                /*int size = orderArrayList.size();
-                System.out.println("BEFORE CHANGE");
-                UserAccount userAccount = new UserAccount();
-                System.out.println("AFTER CHANGE");
-
-                if (lblNameTable.getText().equals("Table 1")){
-
-                    for (int i=0; i<size;i++){
-                        if (orderArrayList.get(i).getIdTable()==1){
-                            orderHistory="true";
-                            System.out.println("Order History: "+orderHistory);
-                        }
-                    }
-
-                    //userAccount.getBtnTable1().setVisible(false);
-                    //userAccount.getPnlOrderedTable1().setVisible(true);
-                    //userAccount.setTable1();
-                    userAccount.table=lblNameTable.getText();
-                    System.out.println("table 1 was changed -------");
-                }else if (lblNameTable.getText().equals("Table 2")){
-                    userAccount.setTable2();
-                }
-                else if (lblNameTable.getText().equals("Table 3")){
-                    userAccount.setTable3();
-                }
-                else if (lblNameTable.getText().equals("Table 4")){
-                    userAccount.setTable4();
-                }
-                else if (lblNameTable.getText().equals("Table 5")){
-                    userAccount.setTable5();
-                }
-                else if (lblNameTable.getText().equals("Table 6")){
-                    userAccount.setTable6();
-                }
-                else if (lblNameTable.getText().equals("Table 7")){
-                    userAccount.setTable7();
-                }
-                else if (lblNameTable.getText().equals("Table 8")){
-                    userAccount.setTable8();
-                }
-
-
-                //userAccount.table=lblNameTable.getText();
-                //userAccount.setPanels("xx", orderHistory);
-
-                System.out.println("aready finish ----------------");*/
+                setOrderHistory();
 
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
             }
         });
+    }
+
+
+    public void setOrderHistory(){
+        switch (makeOrderIdTable){
+            case 1: historyTable1="true"; break;
+            case 2: historyTable2="true"; break;
+            case 3: historyTable3="true"; break;
+            case 4: historyTable4="true"; break;
+            case 5: historyTable5="true"; break;
+            case 6: historyTable6="true"; break;
+            case 7: historyTable7="true"; break;
+            case 8: historyTable8="true"; break;
+        }
     }
 
     private void setPanels() {
@@ -1640,6 +1617,7 @@ public class MakeOrder {
     public void sendToTable(final String name, final Double price){
             totalPrice=0;
 
+
         JTextField txtCount = new JTextField("name");
         JLabel lblX = new JLabel("name");
         JLabel lblEuro = new JLabel("name");
@@ -1712,7 +1690,73 @@ public class MakeOrder {
                     btnUndo.setEnabled(false);
                     btnUndo.setBounds(560, orderPositionY, 100, 30);
 
+                    switch (countItem){
+                        case 1: JButton btnDeleteItem1 = btnDelete;
+                                JButton btnUndoItem1 = btnUndo;
+                                JTextField txtCountItem1 = txtCount;
+                                JLabel lblXItem1 = lblX;
+                                JLabel lblNameItem1 = lblName;
+                                JLabel lblPriceItem1 = lblPrice;
+                                JLabel lblEuroItem1 = lblEuro;
+                                break;
+                        case 2: JButton btnDeleteItem2 = btnDelete;
+                                JButton btnUndoItem2 = btnUndo;
+                                JTextField txtCountItem2 = txtCount;
+                                JLabel lblXItem2 = lblX;
+                                JLabel lblNameItem2 = lblName;
+                                JLabel lblPriceItem2 = lblPrice;
+                                JLabel lblEuroItem2 = lblEuro;
 
+                                break;
+                        case 3: JButton btnDeleteItem3 = btnDelete;
+                                JButton btnUndoItem3 = btnUndo;
+                                JTextField txtCountItem3 = txtCount;
+                                JLabel lblXItem3 = lblX;
+                                JLabel lblNameItem3 = lblName;
+                                JLabel lblPriceItem3 = lblPrice;
+                                JLabel lblEuroItem3 = lblEuro;
+                                break;
+                        case 4: JButton btnDeleteItem4 = btnDelete;
+                                JButton btnUndoItem4 = btnUndo;
+                                JTextField txtCountItem4 = txtCount;
+                                JLabel lblXItem4 = lblX;
+                                JLabel lblNameItem4 = lblName;
+                                JLabel lblPriceItem4 = lblPrice;
+                                JLabel lblEuroItem4 = lblEuro;
+                                break;
+                        case 5: JButton btnDeleteItem5 = btnDelete;
+                                JButton btnUndoItem5 = btnUndo;
+                                JTextField txtCountItem5 = txtCount;
+                                JLabel lblXItem5 = lblX;
+                                JLabel lblNameItem5 = lblName;
+                                JLabel lblPriceItem5 = lblPrice;
+                                JLabel lblEuroItem5 = lblEuro;
+                                break;
+                        case 6: JButton btnDeleteItem6 = btnDelete;
+                                JButton btnUndoItem6 = btnUndo;
+                                JTextField txtCountItem6 = txtCount;
+                                JLabel lblXItem6 = lblX;
+                                JLabel lblNameItem6 = lblName;
+                                JLabel lblPriceItem6 = lblPrice;
+                                JLabel lblEuroItem6 = lblEuro;
+                                break;
+                        case 7: JButton btnDeleteItem7 = btnDelete;
+                                JButton btnUndoItem7 = btnUndo;
+                                JTextField txtCountItem7 = txtCount;
+                                JLabel lblXItem7 = lblX;
+                                JLabel lblNameItem7 = lblName;
+                                JLabel lblPriceItem7 = lblPrice;
+                                JLabel lblEuroItem7 = lblEuro;
+                                break;
+                        case 8: JButton btnDeleteItem8 = btnDelete;
+                                JButton btnUndoItem8 = btnUndo;
+                                JTextField txtCountItem8 = txtCount;
+                                JLabel lblXItem8 = lblX;
+                                JLabel lblNameItem8 = lblName;
+                                JLabel lblPriceItem8 = lblPrice;
+                                JLabel lblEuroItem8 = lblEuro;
+                                break;
+                    }
 
                 }else{
                     JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
@@ -1880,12 +1924,17 @@ public class MakeOrder {
 
         frame2.setVisible(true);
 
-
         if (checkPsw.equals(true)){
+
+
             int sizeArray=userAccount.orderArray.size();
             for (int x=0;x<sizeArray;x++){
-                if (userAccount.orderArray.get(x).getNameItem().equals(lblName))
+                if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
                     totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+                    userAccount.orderArray.get(x).setTotalPrice(0.0);
+                    userAccount.orderArray.get(x).setNumberOfItem(0);
+                }
+
             }
 
             lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
@@ -1898,29 +1947,7 @@ public class MakeOrder {
             btnThrow.setEnabled(false);
             btnUndo.setEnabled(true);
 
-            //Order order = new Order();
-
-            int numberOfItems = Integer.parseInt(lblCount.getText());
-            String itemName = lblName.getText();
-            double ttlPrice = Double.parseDouble(lblPrice.getText());
-
-            int size = userAccount.orderArray.size();
-
-            for (int i=0; i<size;i++){
-                if (userAccount.orderArray.get(i).getNameItem().equals(itemName)){
-
-                    userAccount.orderArray.get(i).setNumberOfItem(userAccount.orderArray.get(i).getNumberOfItem()-numberOfItems);
-                    userAccount.orderArray.get(i).setTotalPrice(userAccount.orderArray.get(i).getTotalPrice()-ttlPrice);
-                }
-                else {
-                    System.out.println("Something is wrong");
-                }
-            }
-        }
-
-
-        //userAccount.setOrderArray(orderArrayList);
-        //userAccount.printOrderArray();
+        } //if checkPsw
 
 
     }
@@ -1928,8 +1955,14 @@ public class MakeOrder {
     public void undoItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
 
         int sizeArray=userAccount.orderArray.size();
+
         for (int x=0;x<sizeArray;x++){
-            totalPrice=totalPrice-userAccount.orderArray.get(x).getTotalPrice();
+            if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
+                userAccount.orderArray.get(x).setNumberOfItem(Integer.parseInt(lblCount.getText()));
+                userAccount.orderArray.get(x).setTotalPrice(Double.parseDouble(lblPrice.getText()));
+                totalPrice=totalPrice+userAccount.orderArray.get(x).getTotalPrice();
+            }
+
         }
         lblTotalPrice.setText("Price: "+String.valueOf(totalPrice=Math.round(totalPrice * 100)/100.0)+" €");
         lblCount.setForeground(Color.black);
@@ -1941,28 +1974,7 @@ public class MakeOrder {
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
 
-        int numberOfItems = Integer.parseInt(lblCount.getText());
-        String itemName = lblName.getText();
-        double ttlPrice = Double.parseDouble(lblPrice.getText());
-
-        int size = userAccount.orderArray.size();
-
-        for (int i=0; i<size;i++){
-            if (userAccount.orderArray.get(i).getNameItem().equals(itemName)){
-
-                userAccount.orderArray.get(i).setNumberOfItem(userAccount.orderArray.get(i).getNumberOfItem()+numberOfItems);
-                userAccount.orderArray.get(i).setTotalPrice(userAccount.orderArray.get(i).getTotalPrice()+ttlPrice);
-                System.out.println("COUNTED");
-            }
-            else {
-                System.out.println("Something is wrong");
-            }
         }
-
-        //userAccount.setOrderArray(orderArrayList);
-        //userAccount.printOrderArray();
-
-    }
 
 }
 
