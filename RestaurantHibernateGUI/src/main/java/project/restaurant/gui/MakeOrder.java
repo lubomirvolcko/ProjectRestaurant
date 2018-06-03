@@ -62,6 +62,7 @@ public class MakeOrder {
     private JPanel pnlSalad;
     private JPanel pnlDessert;
     private JPanel pnlWine;
+    private String btnChooseHistory="false";
 
     public JLabel getLblTotalPrice() {
         return lblTotalPrice;
@@ -362,6 +363,7 @@ public class MakeOrder {
         btnCancel.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 orderPositionY=0;
+                btnChooseHistory="false";
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -506,6 +508,7 @@ public class MakeOrder {
             public void actionPerformed(ActionEvent e) {
 
                 orderPositionY=0;
+                btnChooseHistory="false";
                 setOrderHistory();
 
                 JComponent comp = (JComponent) e.getSource();
@@ -1616,6 +1619,7 @@ public class MakeOrder {
     //send item to order on table
     public void sendToTable(final String name, final Double price){
             totalPrice=0;
+            btnChooseHistory="true";
 
 
         JTextField txtCount = new JTextField("name");
@@ -1927,6 +1931,7 @@ public class MakeOrder {
         if (checkPsw.equals(true)){
 
 
+            btnCancel.setEnabled(false);
             int sizeArray=userAccount.orderArray.size();
             for (int x=0;x<sizeArray;x++){
                 if (userAccount.orderArray.get(x).getNameItem().equals(lblName.getText()) && userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
@@ -1954,6 +1959,8 @@ public class MakeOrder {
 
     public void undoItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo){
 
+
+
         int sizeArray=userAccount.orderArray.size();
 
         for (int x=0;x<sizeArray;x++){
@@ -1961,6 +1968,10 @@ public class MakeOrder {
                 userAccount.orderArray.get(x).setNumberOfItem(Integer.parseInt(lblCount.getText()));
                 userAccount.orderArray.get(x).setTotalPrice(Double.parseDouble(lblPrice.getText()));
                 totalPrice=totalPrice+userAccount.orderArray.get(x).getTotalPrice();
+
+                if (btnChooseHistory.equals(false)){
+                    btnCancel.setEnabled(true);
+                }
             }
 
         }

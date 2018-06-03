@@ -8,8 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="633f36e6-18ce-4e82-873b-662c02ff45cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RestaurantHibernateGUI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/RestaurantHibernateGUI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" afterDir="false" />
@@ -41,7 +42,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -57,11 +57,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="211">
-              <caret line="1811" column="42" lean-forward="true" selection-start-line="1811" selection-start-column="42" selection-end-line="1811" selection-end-column="42" />
+            <state relative-caret-position="197">
+              <caret line="1969" column="79" selection-start-line="1969" selection-start-column="79" selection-end-line="1969" selection-end-column="79" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3544#3545#0" expanded="true" />
@@ -72,6 +72,8 @@
                 <element signature="e#68262#68263#0" expanded="true" />
                 <element signature="e#68434#68687#0" expanded="true" />
                 <element signature="e#68686#68687#0" expanded="true" />
+                <element signature="e#72771#74147#0" expanded="true" />
+                <element signature="e#74146#74147#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -80,7 +82,7 @@
       <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
+            <state relative-caret-position="-2037">
               <caret line="498" selection-start-line="498" selection-end-line="498" />
               <folding>
                 <element signature="e#3656#3663#0" expanded="true" />
@@ -99,7 +101,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MakeOrder.form" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
@@ -121,8 +123,8 @@
       <file leaf-file-name="SetEmployee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="505" column="58" lean-forward="true" selection-start-line="505" selection-start-column="58" selection-end-line="506" selection-end-column="68" />
+            <state relative-caret-position="-564">
+              <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#8352#8353#0" expanded="true" />
@@ -135,8 +137,8 @@
       <file leaf-file-name="SetDrinks.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="122">
-              <caret line="297" column="109" lean-forward="true" selection-start-line="297" selection-start-column="20" selection-end-line="297" selection-end-column="109" />
+            <state relative-caret-position="309">
+              <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="47" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#5727#6594#0" expanded="true" />
@@ -155,8 +157,8 @@
       <file leaf-file-name="SetFood.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="54" column="46" lean-forward="true" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+            <state relative-caret-position="405">
+              <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#10185#11098#0" expanded="true" />
@@ -191,11 +193,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>historyOrder</find>
-      <find>pnlOrderedTable1</find>
-      <find>history</find>
-      <find>setPanels</find>
-      <find>orderHistory</find>
       <find>SET PANELS !!!</find>
       <find>table</find>
       <find>sendToOrder</find>
@@ -219,8 +216,13 @@
       <find>lblTotalPrice</find>
       <find>throw</find>
       <find>totalPrice</find>
-      <find>btnCancel</find>
       <find>DELETE</find>
+      <find>frame2</find>
+      <find>btnConfirm</find>
+      <find>order.add</find>
+      <find>btnCancel</find>
+      <find>btnChooseHistory</find>
+      <find>btnCan</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -252,13 +254,13 @@
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Drink.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" />
       </list>
     </option>
   </component>
@@ -518,12 +520,25 @@
       <option name="project" value="LOCAL" />
       <updated>1527995140506</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="add verification on delete item from order">
+      <created>1527999357606</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1527999357606</updated>
+    </task>
+    <task id="LOCAL-00019" summary="generate buttons for each item">
+      <created>1528004982709</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1528004982709</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -533,12 +548,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.33156216" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.33156216" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32624868" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.047916666" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18697916" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -600,7 +615,9 @@
     <MESSAGE value="repair conditions for maximum items" />
     <MESSAGE value="repair counting totalPrice on table" />
     <MESSAGE value="save order on table" />
-    <option name="LAST_COMMIT_MESSAGE" value="save order on table" />
+    <MESSAGE value="add verification on delete item from order" />
+    <MESSAGE value="generate buttons for each item" />
+    <option name="LAST_COMMIT_MESSAGE" value="generate buttons for each item" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -699,10 +716,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="309">
+          <caret line="30" column="35" lean-forward="true" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="47" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5727#6594#0" expanded="true" />
+            <element signature="e#6593#6594#0" expanded="true" />
+            <element signature="e#6630#7282#0" expanded="true" />
+            <element signature="e#7281#7282#0" expanded="true" />
+            <element signature="e#7322#9354#0" expanded="true" />
+            <element signature="e#9353#9354#0" expanded="true" />
+            <element signature="e#9505#10359#0" expanded="true" />
+            <element signature="e#10358#10359#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="54" column="46" lean-forward="true" selection-start-line="54" selection-start-column="46" selection-end-line="54" selection-end-column="46" />
+        <state relative-caret-position="405">
+          <caret line="30" column="45" selection-start-line="30" selection-start-column="45" selection-end-line="30" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#10185#11098#0" expanded="true" />
@@ -711,15 +756,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
-      <provider selected="true" editor-type-id="ui-designer" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-564">
+          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#8352#8353#0" expanded="true" />
+            <element signature="e#8389#8390#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
+        <state relative-caret-position="-2037">
           <caret line="498" selection-start-line="498" selection-end-line="498" />
           <folding>
             <element signature="e#3656#3663#0" expanded="true" />
@@ -737,47 +788,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="122">
-          <caret line="297" column="109" lean-forward="true" selection-start-line="297" selection-start-column="20" selection-end-line="297" selection-end-column="109" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5727#6594#0" expanded="true" />
-            <element signature="e#6593#6594#0" expanded="true" />
-            <element signature="e#6630#7282#0" expanded="true" />
-            <element signature="e#7281#7282#0" expanded="true" />
-            <element signature="e#7322#9354#0" expanded="true" />
-            <element signature="e#9353#9354#0" expanded="true" />
-            <element signature="e#9505#10359#0" expanded="true" />
-            <element signature="e#10358#10359#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="505" column="58" lean-forward="true" selection-start-line="505" selection-start-column="58" selection-end-line="506" selection-end-column="68" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#8352#8353#0" expanded="true" />
-            <element signature="e#8389#8390#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="43" column="54" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="211">
-          <caret line="1811" column="42" lean-forward="true" selection-start-line="1811" selection-start-column="42" selection-end-line="1811" selection-end-column="42" />
+        <state relative-caret-position="197">
+          <caret line="1969" column="79" selection-start-line="1969" selection-start-column="79" selection-end-line="1969" selection-end-column="79" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3544#3545#0" expanded="true" />
@@ -788,9 +802,14 @@
             <element signature="e#68262#68263#0" expanded="true" />
             <element signature="e#68434#68687#0" expanded="true" />
             <element signature="e#68686#68687#0" expanded="true" />
+            <element signature="e#72771#74147#0" expanded="true" />
+            <element signature="e#74146#74147#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
     </entry>
   </component>
   <component name="masterDetails">
