@@ -4,13 +4,11 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
-import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
-import javax.swing.table.DefaultTableModel;
 import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
@@ -516,6 +514,31 @@ public class MakeOrder {
                 win.dispose();
             }
         });
+        btnPayment.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                openPayment(e);
+            }
+        });
+    }
+
+    private JFrame openPayment(ActionEvent e) {
+        Payment payment =  new Payment();
+
+        JFrame paymentFrame = new JFrame();
+        paymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        paymentFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
+        paymentFrame.setUndecorated(true);
+        paymentFrame.setContentPane(payment.getPnlPayment());
+        paymentFrame.setVisible(true);
+
+
+
+        JComponent comp = (JComponent) e.getSource();
+        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+        win.dispose();
+
+        return paymentFrame;
     }
 
 

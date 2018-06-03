@@ -73,6 +73,26 @@ public class EntryPage {
 
             }
         });
+        txtPassword.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    clickedOnBtnLogin=1;
+                    getAuthenticationInfo();
+                }
+            }
+        });
+        logInArea.addKeyListener(new KeyAdapter() {
+            @Override
+            public void keyPressed(KeyEvent e) {
+                super.keyPressed(e);
+                if(e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    clickedOnBtnLogin=1;
+                    getAuthenticationInfo();
+                }
+            }
+        });
     }
 
 
