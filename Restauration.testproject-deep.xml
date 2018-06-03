@@ -732,7 +732,43 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Start program</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will see login page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
 
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>Insert login, password and press log in</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will see menu</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>Click set food</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will see all foods in menu&nbsp;</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[4]]></step_number>
+	<actions><![CDATA[<p>fill all inputs and click on add/delete/update</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User will add new food /delete food /update food</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
 </testcase>
 
 <testcase internalid="147" name="add/delete/update drinks">
@@ -749,6 +785,42 @@
 	<status>1</status>
 	<is_open>1</is_open>
 	<active>1</active>
+<steps>
+<step>
+	<step_number><![CDATA[1]]></step_number>
+	<actions><![CDATA[<p>Start program</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>User see login page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
 
+<step>
+	<step_number><![CDATA[2]]></step_number>
+	<actions><![CDATA[<p>insert login, password and press log in</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user see main page</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[3]]></step_number>
+	<actions><![CDATA[<p>click set drinks</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user will see all drinks</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+
+<step>
+	<step_number><![CDATA[5]]></step_number>
+	<actions><![CDATA[<p>fill all inputs and press add/update/delete&nbsp;</p>
+]]></actions>
+	<expectedresults><![CDATA[<p>user will add drink /update drink /delete drink</p>
+]]></expectedresults>
+	<execution_type><![CDATA[1]]></execution_type>
+</step>
+</steps>
 </testcase>
 </testsuite></testsuite>
