@@ -594,7 +594,7 @@
 </steps>
 </testcase>
 
-<testcase internalid="93" name="add employee">
+<testcase internalid="93" name="add/delete/update employee">
 	<node_order><![CDATA[1003]]></node_order>
 	<externalid><![CDATA[9]]></externalid>
 	<version><![CDATA[1]]></version>
@@ -716,5 +716,39 @@
 	<execution_type><![CDATA[1]]></execution_type>
 </step>
 </steps>
+</testcase>
+
+<testcase internalid="145" name="add/delete/update food">
+	<node_order><![CDATA[1006]]></node_order>
+	<externalid><![CDATA[16]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>add/delete/update food in menu</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will add/delete/update food in menu</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
+</testcase>
+
+<testcase internalid="147" name="add/delete/update drinks">
+	<node_order><![CDATA[1007]]></node_order>
+	<externalid><![CDATA[17]]></externalid>
+	<version><![CDATA[1]]></version>
+	<summary><![CDATA[<p>add/delete/update drinks</p>
+]]></summary>
+	<preconditions><![CDATA[<p>User will&nbsp;add/delete/update drinks</p>
+]]></preconditions>
+	<execution_type><![CDATA[1]]></execution_type>
+	<importance><![CDATA[2]]></importance>
+	<estimated_exec_duration></estimated_exec_duration>
+	<status>1</status>
+	<is_open>1</is_open>
+	<active>1</active>
+
 </testcase>
 </testsuite></testsuite>
