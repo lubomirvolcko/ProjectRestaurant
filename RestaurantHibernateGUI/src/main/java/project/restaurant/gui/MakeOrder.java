@@ -1,9 +1,12 @@
 package project.restaurant.gui;
 
+
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+
 import org.hibernate.query.Query;
+import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.Food;
 import project.restaurant.hibernate.HibernateUtil;
@@ -1911,7 +1914,7 @@ public class MakeOrder {
 
     public void throwItem(JTextField lblCount, JLabel lblX, JLabel lblName, JLabel lblPrice, JLabel lblEuro, JButton btnThrow, JButton btnUndo) {
 
-        final String[] checkPsw = {"false"};
+
 
         JFrame frame2 = new JFrame("Delete Verification");
         frame2.setBackground(new Color(240,232,220));
@@ -1947,37 +1950,52 @@ public class MakeOrder {
         frame2.add(btnOk);
 
         frame2.setBackground(new Color(240,232,220));
-
+        final boolean[] ver = {false};
         btnOk.addActionListener(new ActionListener(){
 
             @Override
             public void actionPerformed(ActionEvent e) {
                 String password=textPassword.getText();
 
+                System.out.println(password);
                 SessionFactory sf = HibernateUtil.getSessionFactory();
                 Session se = sf.openSession();
 
                 Transaction transaction = se.beginTransaction();
                 try {
-
-                    Query qry=se.createQuery("from Authentication where (position='manager' or position='supervisor') and password='"+password+"'");
-                    List<String> checkPassword=(List<String>)qry;
+                    String hql = "FROM Authentication where position ='manager' OR position='supervisor'";
+                    Query query = se.createQuery(hql);
+                   String pass;
+                    List<Authentication> checkPassword=(List<Authentication>)query.list();
                     se.getTransaction().commit();
-                    se.close();
-                    for(String g : checkPassword)
-                    {
-                        if (g.equals(password)){
-                            checkPsw[0] ="true";
 
-                            JComponent comp = (JComponent) e.getSource();
-                            Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-                            win.dispose();
-                        }else {
-                            JOptionPane.showMessageDialog(null, "You can't do Storno !");
-                        }
+                    for(Authentication g : checkPassword)
+                    {
+                        pass = g.getPassword();
+
+
+
+
+
+
+
+                    System.out.println(password);
+                    if (password.equals(pass)){
+
+
+                        JComponent comp = (JComponent) e.getSource();
+                        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+                        win.dispose();
+                        ver[1] =true;
+
+                    }else {
+
+                        
+
 
                     }
-
+                        se.close();
+                    }
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;
@@ -1992,7 +2010,7 @@ public class MakeOrder {
 
         frame2.setVisible(true);
 
-        if (checkPsw.equals(true)){
+        if (ver[0] =true){
 
 
             btnCancel.setEnabled(false);
