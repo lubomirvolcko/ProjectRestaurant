@@ -102,6 +102,7 @@ public class MakeOrder {
     String historyTable7;
     String historyTable8;
     Double paymentPrice=0.0;
+    String userName;
 
     UserAccount userAccount = new UserAccount();
 
@@ -634,7 +635,7 @@ public class MakeOrder {
 
 
     private JFrame openPayment(ActionEvent e) {
-        Payment payment =  new Payment();
+        Payment payment =  new Payment(userAccount.userName ,userAccount.getOrderArray());
 
         JFrame paymentFrame = new JFrame();
         paymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -1780,7 +1781,7 @@ public class MakeOrder {
         double totalPrice;
         totalPrice=numberOfItem*smootiePrice;
         totalPrice=Math.round(totalPrice * 100)/100.0;
-        Payment pay = new Payment();
+        //Payment pay = new Payment();
         int countOfItem=0;
         int countChnages=0;
         int size = orderArrayList.size();

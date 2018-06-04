@@ -67,6 +67,7 @@ public class UserAccount {
     String table;
     ArrayList<Order> orderArray = new ArrayList<Order>();
     int chceckDoneOrder=0;
+    String userName;
 
     public JPanel getPnlOrderedTable1() {
         return pnlOrderedTable1;
@@ -141,6 +142,7 @@ public class UserAccount {
         return orderArray;
     }
 
+    EntryPage xx = new EntryPage();
     public JPanel getUserAccount() {
         return UserAccount;
     }
@@ -162,6 +164,9 @@ public class UserAccount {
 
 
     public UserAccount() {
+
+        userName=xx.getUsername();
+        System.out.println("USERNAME: "+userName+" -------");
 
         pnlTopMenu.setVisible(false);
         pnlTables.setVisible(false);
@@ -525,16 +530,19 @@ public class UserAccount {
                 UserAccount waiter = AccountWaiter();
                 AccountWaiter();
                 lblUserName.setText(username);
+                userName=username;
                 break;
             case 2:
                 UserAccount supervisor = AccountSupervisor();
                 AccountSupervisor();
                 lblUserName.setText(username);
+                userName=username;
                 break;
             case 3:
                 UserAccount manager = AccountManager();
                 AccountManager();
                 lblUserName.setText(username);
+                userName=username;
                 break;
         }
         return UserAccount;

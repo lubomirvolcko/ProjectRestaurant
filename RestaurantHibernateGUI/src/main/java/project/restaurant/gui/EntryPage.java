@@ -36,6 +36,15 @@ public class EntryPage {
     private JButton btnLogIn;
     private int clickedOnBtnLogin;
     final JFrame close = logInPage();
+    private String username;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
 
 
     public JFrame logInPage()  {
@@ -125,6 +134,7 @@ public class EntryPage {
     public void getAuthenticationInfo()
     {
 
+
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
         se.beginTransaction();
@@ -135,23 +145,32 @@ public class EntryPage {
         for(Authentication d : auth)
         {
 
-            System.out.println("Login: "+d.getLogin());
-            System.out.println("Password: "+d.getPassword());
+
 
             if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
                 openForm(3, d.getLogin());
+                setUsername(d.getLogin());
+                //System.out.println("UserName: "+getUsername());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("waiter")) {
                 openForm(1, d.getLogin());
+                setUsername(d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("supervisor")) {
                 openForm(2, d.getLogin());
+                setUsername(d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
             else
             {
