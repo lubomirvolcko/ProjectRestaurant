@@ -1,13 +1,20 @@
 package project.restaurant.gui;
 
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.Transaction;
+import org.hibernate.query.Query;
+import project.restaurant.hibernate.Authentication;
+import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 import java.util.List;
 
-public class Payment {
+public class Payment extends UserAccount{
     private JPanel pnlPayment;
     private JPanel pnlPaymentItems;
     private JPanel pnlPaymentButtons;
@@ -16,6 +23,16 @@ public class Payment {
     private JButton btnPaymentCancel;
     private JButton btnCreditCard;
     private JLabel lblFinalPrice;
+
+    public ArrayList<Order> getPaymentArray() {
+        return paymentArray;
+    }
+
+    public void setPaymentArray(ArrayList<Order> paymentArray) {
+        this.paymentArray = paymentArray;
+    }
+
+    private ArrayList<Order> paymentArray = new ArrayList<Order>();
 
     public JLabel getLblFinalPrice() {
         return lblFinalPrice;
@@ -31,8 +48,26 @@ public class Payment {
 
     MakeOrder makeOrder = new MakeOrder();
     UserAccount userAccount = new UserAccount();
+    ArrayList <Order> array;
+
+    public void getArray(ArrayList <Order> array)
+    {
+        int size= array.size();
+
+        System.out.println("TRY:"+array.size());
+
+
+    }
+
+
+
+
+
 
     public Payment() {
+
+
+
         btnPaymentCancel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -60,6 +95,7 @@ public class Payment {
                 final JLabel lblFnllPrice = new JLabel("name");
                 final JLabel lblReceivedCash = new JLabel("name");
                 final JTextField txtReceivedCash = new JTextField();
+
                 final JLabel lblRelease = new JLabel();
                 JButton btnConfirm = new JButton("CONFIRM");
                 JButton btnDone= new JButton("Done");
@@ -86,19 +122,16 @@ public class Payment {
                 txtReceivedCash.setFont(font);
 
 
-                /*String sum=txtReceivedCash.getText();
-                double xx=Double.parseDouble(sum);
-                double releasePrice=xx-makeOrder.paymentPrice;
+                String sum=txtReceivedCash.getText();
 
-                if (makeOrder.paymentPrice>Double.parseDouble(txtReceivedCash.getText())){
-                    JOptionPane.showMessageDialog(null, "Not enough received money!");
-                }else {
-                    lblRelease.setForeground(orange);
-                    lblRelease.setFont(font);
-                    lblRelease.setText("Release: "+releasePrice);
 
-                    frame2.add(btnDone);
-                }*/
+                String[] parts = getLblFinalPrice().getText().split(":");
+                String part1 = parts[0]; // 004
+                final String part2 = parts[1]; // 034556
+                System.out.println(part2);
+                lblFnllPrice.setText(part2+" €");
+                txtReceivedCash.getText();
+
 
 
                 lblUser.setBounds(180, 40, 200, 40);
@@ -119,6 +152,7 @@ public class Payment {
                 frame2.add(txtReceivedCash);
                 frame2.add(lblRelease);
                 frame2.add(btnConfirm);
+                frame2.add(btnDone);
 
                 frame2.setBackground(new Color(240,232,220));
                 final boolean[] ver = {false};
@@ -127,11 +161,35 @@ public class Payment {
 
                     @Override
                     public void actionPerformed(ActionEvent e) {
+                        lblRelease.setEnabled(true);
 
-
+                        double finalprice = Double.parseDouble(part2);
+                        double received = Double.parseDouble(txtReceivedCash.getText());
+                        double release = received - finalprice;
+                        if(received<finalprice)
+                        {
+                            JOptionPane.showMessageDialog(null, "Missing receive money!");
+                        }
+                        else
+                        lblRelease.setText(String.valueOf(release));
 
                     }
                 });
+
+
+                btnDone.addActionListener(new ActionListener(){
+
+                    @Override
+                    public void actionPerformed(ActionEvent e) {
+
+                        userAccount.chceckDoneOrder=makeOrder.makeOrderIdTable;
+                        userAccount.doneOrder();
+                        System.out.println(userAccount.getOrderArray().size());
+
+                    }
+                });
+
+
 
 
                 frame2.setSize(600,600);
@@ -142,6 +200,8 @@ public class Payment {
 
             }
         });
+
+
     }
 
 

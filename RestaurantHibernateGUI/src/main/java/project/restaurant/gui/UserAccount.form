@@ -196,6 +196,40 @@
             </properties>
             <border type="none"/>
             <children>
+              <component id="29aee" class="javax.swing.JButton" binding="btnDelivery">
+                <constraints>
+                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-988964"/>
+                  <borderPainted value="false"/>
+                  <enabled value="true"/>
+                  <font name="Century Gothic" size="36" style="1"/>
+                  <foreground color="-8023247"/>
+                  <hideActionText value="true"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="src/img/delivery.png"/>
+                  <text value="Delivery"/>
+                  <toolTipText value=""/>
+                  <verticalAlignment value="3"/>
+                  <verticalTextPosition value="3"/>
+                </properties>
+              </component>
+              <component id="b3fef" class="javax.swing.JButton" binding="btnTables">
+                <constraints>
+                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+                </constraints>
+                <properties>
+                  <background color="-988964"/>
+                  <borderPainted value="false"/>
+                  <font name="Century Gothic" size="36" style="1"/>
+                  <foreground color="-8023247"/>
+                  <horizontalTextPosition value="0"/>
+                  <icon value="src/img/teble.png"/>
+                  <text value="Tables"/>
+                  <verticalTextPosition value="3"/>
+                </properties>
+              </component>
               <component id="a82b7" class="javax.swing.JButton" binding="btnSetDrinks">
                 <constraints>
                   <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -287,40 +321,6 @@
                   <horizontalTextPosition value="0"/>
                   <icon value="src/img/logOut.png"/>
                   <text value="Log out"/>
-                  <verticalTextPosition value="3"/>
-                </properties>
-              </component>
-              <component id="5d360" class="javax.swing.JButton" binding="btnDelivery">
-                <constraints>
-                  <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <enabled value="true"/>
-                  <font name="Century Gothic" size="36" style="1"/>
-                  <foreground color="-8023247"/>
-                  <hideActionText value="true"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/delivery.png"/>
-                  <text value="Delivery"/>
-                  <toolTipText value=""/>
-                  <verticalAlignment value="3"/>
-                  <verticalTextPosition value="3"/>
-                </properties>
-              </component>
-              <component id="5d5f8" class="javax.swing.JButton" binding="btnTables">
-                <constraints>
-                  <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                </constraints>
-                <properties>
-                  <background color="-988964"/>
-                  <borderPainted value="false"/>
-                  <font name="Century Gothic" size="36" style="1"/>
-                  <foreground color="-8023247"/>
-                  <horizontalTextPosition value="0"/>
-                  <icon value="src/img/teble.png"/>
-                  <text value="Tables"/>
                   <verticalTextPosition value="3"/>
                 </properties>
               </component>

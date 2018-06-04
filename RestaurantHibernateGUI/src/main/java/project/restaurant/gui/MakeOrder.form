@@ -142,7 +142,6 @@
             <properties>
               <background color="-8023247"/>
               <borderPainted value="false"/>
-              <enabled value="false"/>
               <font name="Century Gothic" size="24" style="1"/>
               <foreground color="-1"/>
               <icon value="src/img/confirm.png"/>
@@ -170,7 +169,6 @@
               <background color="-8023247"/>
               <borderPainted value="false"/>
               <contentAreaFilled value="true"/>
-              <enabled value="false"/>
               <font name="Century Gothic" size="24" style="1"/>
               <foreground color="-1"/>
               <horizontalAlignment value="0"/>

@@ -66,6 +66,7 @@ public class UserAccount {
     private String username;
     String table;
     ArrayList<Order> orderArray = new ArrayList<Order>();
+    int chceckDoneOrder=0;
 
     public JPanel getPnlOrderedTable1() {
         return pnlOrderedTable1;
@@ -136,6 +137,10 @@ public class UserAccount {
         this.orderArray = orderArray;
     }
 
+    public ArrayList<Order> getOrderArray() {
+        return orderArray;
+    }
+
     public JPanel getUserAccount() {
         return UserAccount;
     }
@@ -151,7 +156,10 @@ public class UserAccount {
                     +orderArray.get(i).getPrice()+" - " +orderArray.get(i).getTotalPrice()+" - "+orderArray.get(i).getIdTable());
 
         }
+
     }
+
+
 
     public UserAccount() {
 
@@ -456,8 +464,7 @@ public class UserAccount {
                             btnUndo.setBounds(560, makeOrder.orderPositionY, 100, 30);
 
 
-                            makeOrder.checkForPayment=1;
-                            makeOrder.setBtnPayment();
+
                         }else{
                             JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
                             makeOrder.countItem=30;
@@ -552,8 +559,64 @@ public class UserAccount {
     }
 
     public UserAccount AccountManager() {
-
+        System.out.println("Account Manager");
         return null;
     }
 
+    public void doneOrder() {
+        int size=orderArray.size();
+        System.out.println("SIZE OF ARRAY "+size);
+        System.out.println("ID TABLE "+chceckDoneOrder);
+        switch (chceckDoneOrder){
+            case 1:
+                    for (int i=0;i<size;i++){
+                        if (orderArray.get(i).getIdTable()==1){
+                            orderArray.remove(i);
+                        }
+                    }
+            case 2:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==2){
+                        orderArray.remove(i);
+                    }
+                }
+            case 3:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==3){
+                        orderArray.remove(i);
+                    }
+                }
+            case 4:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==4){
+                        orderArray.remove(i);
+                    }
+                }
+            case 5:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==5){
+                        orderArray.remove(i);
+                    }
+                }
+            case 6:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==6){
+                        orderArray.remove(i);
+                    }
+                }
+            case 7:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==7){
+                        orderArray.remove(i);
+                    }
+                }
+            case 8:
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==8){
+                        orderArray.remove(i);
+                    }
+                }
+        }
+        System.out.println("Order was deleted from orderArray");
+    }
 }
