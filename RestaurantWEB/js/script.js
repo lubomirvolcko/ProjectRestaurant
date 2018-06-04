@@ -1226,7 +1226,7 @@ console.log(date);
 });
 
 
-var a = 0;
+var q = 0;
 var b = 0;
 //var c = 0;
 
@@ -1239,14 +1239,14 @@ $.get({
         dataType: 'json',
         success: function(response){ 
          for(var i = 0; i < response.length;i++){
-          $("#firstInp").append("<div class=\"form-group\"><input type=\"text\"id=\"name"+a+"\"class=\"form-control\" readonly></div>");
-          $("#name"+a).val(response[i].name);
+          $("#firstInp").append("<div class=\"form-group\"><input type=\"text\"id=\"name"+q+"\"class=\"form-control\" readonly></div>");
+          $("#name"+q).val(response[i].name);
           $("#firstInp").append("<div class=\"form-group\"><textarea id=\"review"+b+"\" class=\"form-control\" rows=\"5\" readonly></textarea></div>");
           $("#review"+b).val(response[i].review);
         // $('#star').append('<option value=1>1</option><option value=2></option><option value=3></option><option value=4><option value=5></option></option>').selectmenu('refresh');
 
          // $("#stars"+c).val(response[i].reviewStar);
-          a++;
+          q++;
           b++;
          // c++;
           // $("#stars").val( response[i].reviewStar); 
