@@ -523,7 +523,7 @@ public class MakeOrder {
                 openPayment(e);
             }
         });
-        txtSearch.addKeyListener(new KeyAdapter() {
+        /*txtSearch.addKeyListener(new KeyAdapter() {
             @Override
             public void keyReleased(KeyEvent e) {
                 super.keyReleased(e);
@@ -533,7 +533,7 @@ public class MakeOrder {
                 getSearched(st);
 
             }
-        });
+        });*/
     }
 
     public void getSearched(String st) {
@@ -602,7 +602,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -942,7 +942,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1013,7 +1013,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1084,7 +1084,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1154,7 +1154,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1225,7 +1225,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1298,7 +1298,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1370,7 +1370,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1441,7 +1441,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1511,7 +1511,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1582,7 +1582,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1652,7 +1652,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1725,7 +1725,7 @@ public class MakeOrder {
                     countX = Integer.parseInt(count);
 
                     if (countX > 50){
-                        JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
+                        //JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                     }else{
                         int numberOfItem;
                         numberOfItem=Integer.parseInt(finalTxtCount.getText());
@@ -1764,35 +1764,44 @@ public class MakeOrder {
     Order order = new Order();
 
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
+        System.out.println("Send To Order - start");
         btnCancel.setEnabled(false);
         checkItemsInArray();
-
-
 
         double totalPrice;
         totalPrice=numberOfItem*smootiePrice;
         totalPrice=Math.round(totalPrice * 100)/100.0;
 
+        int countOfItem=0;
         int countChnages=0;
         int size = orderArrayList.size();
-        if (countItem<31 && numberOfItem!=0){
+        System.out.println("size of array: "+size);
+        if (countItem<31){
             if (size>0){
+                System.out.println("Size of array is more than 0");
                 for (int i=0; i<size;i++){
 
-                    if ((orderArrayList.get(i).getIdTable()==makeOrderIdTable) && (orderArrayList.get(i).getNameItem().equals(smootieName))){
-                        if ((numberOfItem+orderArrayList.get(i).getNumberOfItem()==50)  || (numberOfItem+orderArrayList.get(i).getNumberOfItem()>50) ){
+
+                    /*System.out.println("array name: "+userAccount.orderArray.get(i).getNameItem());
+                    System.out.println("Item name: "+smootieName);
+                    System.out.println("array name: "+userAccount.orderArray.get(i).getIdTable());
+                    System.out.println("Item table: "+makeOrderIdTable);
+                    if ((userAccount.orderArray.get(i).getNameItem().equals(smootieName)) && (userAccount.orderArray.get(i).getIdTable()==makeOrderIdTable)){
+                        userAccount.orderArray.get(i).setNumberOfItem(userAccount.orderArray.get(i).getNumberOfItem()+numberOfItem);
+                        userAccount.orderArray.get(i).setTotalPrice(userAccount.orderArray.get(i).getNumberOfItem()*smootiePrice);
+                        totalPrice=totalPrice+userAccount.orderArray.get(i).getTotalPrice();
+
+                    }else */
+                    System.out.println("for run -- "+i);if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
+
+
+                        if (orderArrayList.get(i).getNumberOfItem()>=50 && smootieName.equals(orderArrayList.get(i).getNameItem()) && numberOfItem>0){
                             JOptionPane.showMessageDialog(null, "Max quantity of item can be 50 !");
                             orderArrayList.get(i).setNumberOfItem(50);
-                        }
-
-                        orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getNumberOfItem()*smootiePrice);
-                    }else if (orderArrayList.get(i).getNameItem().equals(smootieName) && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
-
+                        }else{
                             orderArrayList.get(i).setNumberOfItem(orderArrayList.get(i).getNumberOfItem()+numberOfItem);
                             orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getTotalPrice()+totalPrice);
-
-                            orderArrayList.get(i).setTotalPrice(orderArrayList.get(i).getNumberOfItem()*smootiePrice);
-
+                        }
                     }else {
                         countChnages++;
                     }
@@ -1801,8 +1810,14 @@ public class MakeOrder {
                 if (countChnages==size){
 
                     Order order = new Order();
-
+                    System.out.println("number of item: "+numberOfItem);
+                    System.out.println("nuber of item in Order: "+order.getNumberOfItem());
                     order.setNumberOfItem(numberOfItem);
+                    System.out.println("order after");
+                    if (order.getNumberOfItem()>50){
+                        System.out.println("if done");
+                        order.setNumberOfItem(50);
+                    }
                     order.setPrice(smootiePrice);
                     order.setNameItem(smootieName);
                     order.setTotalPrice(totalPrice);
@@ -1811,8 +1826,8 @@ public class MakeOrder {
                     orderArrayList.add(order);
                 }
 
-
             }else {
+                System.out.println("Size of array is empty");
                 order.setNumberOfItem(numberOfItem);
                 order.setPrice(smootiePrice);
                 order.setNameItem(smootieName);

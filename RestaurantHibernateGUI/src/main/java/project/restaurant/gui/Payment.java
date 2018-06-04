@@ -92,7 +92,7 @@ public class Payment {
                 txtReceivedCash.setFont(font);
 
 
-                String sum=txtReceivedCash.getText();
+                /*String sum=txtReceivedCash.getText();
                 double xx=Double.parseDouble(sum);
                 double releasePrice=xx-makeOrder.paymentPrice;
 
@@ -104,7 +104,7 @@ public class Payment {
                     lblRelease.setText("Release: "+releasePrice);
 
                     frame2.add(btnDone);
-                }
+                }*/
 
 
                 lblUser.setBounds(180, 40, 200, 40);

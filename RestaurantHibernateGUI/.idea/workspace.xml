@@ -8,25 +8,13 @@
   <component name="ChangeListManager">
     <list default="true" id="633f36e6-18ce-4e82-873b-662c02ff45cf" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$21.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$22.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$23.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$24.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$24.class" afterDir="false" />
@@ -35,7 +23,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$27.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$27.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$28.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$28.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$29.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$29.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$3.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$30.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$30.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$31.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$31.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$32.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$32.class" afterDir="false" />
@@ -44,39 +31,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$35.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$35.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$36.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$36.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$37.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$37.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$38.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$38.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$9.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder$38.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/MakeOrder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$10.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$10.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$11.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$11.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$12.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$12.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$13.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$13.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$14.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$14.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$15.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$15.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$16.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$16.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$17.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$17.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$18.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$18.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$19.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$19.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$20.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$20.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$21.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$21.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$22.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$22.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$23.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$23.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$24.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$4.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$5.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$6.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$6.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$7.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$7.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$8.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$8.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$9.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount$9.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/project/restaurant/gui/UserAccount.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -92,75 +48,153 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MakeOrder.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="1814" column="13" selection-start-line="1814" selection-start-column="13" selection-end-line="1814" selection-end-column="13" />
+            <state relative-caret-position="358">
+              <caret line="1798" column="28" selection-start-line="1798" selection-start-column="28" selection-end-line="1798" selection-end-column="100" />
               <folding>
-                <element signature="e#89825#93121#0" expanded="true" />
-                <element signature="e#93120#93121#0" expanded="true" />
-                <element signature="e#93157#96151#0" expanded="true" />
-                <element signature="e#96150#96151#0" expanded="true" />
+                <element signature="e#10934#11292#0" expanded="true" />
+                <element signature="e#11291#11292#0" expanded="true" />
+                <element signature="e#11332#11466#0" expanded="true" />
+                <element signature="e#11465#11466#0" expanded="true" />
+                <element signature="e#11504#11636#0" expanded="true" />
+                <element signature="e#11635#11636#0" expanded="true" />
+                <element signature="e#11703#12821#0" expanded="true" />
+                <element signature="e#12820#12821#0" expanded="true" />
+                <element signature="e#12864#13019#0" expanded="true" />
+                <element signature="e#13018#13019#0" expanded="true" />
+                <element signature="e#13061#13253#0" expanded="true" />
+                <element signature="e#13252#13253#0" expanded="true" />
+                <element signature="e#13295#13481#0" expanded="true" />
+                <element signature="e#13480#13481#0" expanded="true" />
+                <element signature="e#13523#13709#0" expanded="true" />
+                <element signature="e#13708#13709#0" expanded="true" />
+                <element signature="e#13755#13913#0" expanded="true" />
+                <element signature="e#13912#13913#0" expanded="true" />
+                <element signature="e#13951#14128#0" expanded="true" />
+                <element signature="e#14127#14128#0" expanded="true" />
+                <element signature="e#14170#14362#0" expanded="true" />
+                <element signature="e#14361#14362#0" expanded="true" />
+                <element signature="e#14402#14584#0" expanded="true" />
+                <element signature="e#14583#14584#0" expanded="true" />
+                <element signature="e#14622#14799#0" expanded="true" />
+                <element signature="e#14798#14799#0" expanded="true" />
+                <element signature="e#14841#15032#0" expanded="true" />
+                <element signature="e#15031#15032#0" expanded="true" />
+                <element signature="e#15069#15249#0" expanded="true" />
+                <element signature="e#15248#15249#0" expanded="true" />
+                <element signature="e#15290#15478#0" expanded="true" />
+                <element signature="e#15477#15478#0" expanded="true" />
+                <element signature="e#15516#15698#0" expanded="true" />
+                <element signature="e#15697#15698#0" expanded="true" />
+                <element signature="e#15738#15923#0" expanded="true" />
+                <element signature="e#15922#15923#0" expanded="true" />
+                <element signature="e#15963#16380#0" expanded="true" />
+                <element signature="e#16379#16380#0" expanded="true" />
+                <element signature="e#16420#16577#0" expanded="true" />
+                <element signature="e#16576#16577#0" expanded="true" />
+                <element signature="e#19646#20447#0" expanded="true" />
+                <element signature="e#20446#20447#0" expanded="true" />
+                <element signature="e#31946#32708#0" expanded="true" />
+                <element signature="e#32707#32708#0" expanded="true" />
+                <element signature="e#35047#35809#0" expanded="true" />
+                <element signature="e#35808#35809#0" expanded="true" />
+                <element signature="e#38169#38930#0" expanded="true" />
+                <element signature="e#38929#38930#0" expanded="true" />
+                <element signature="e#41262#42024#0" expanded="true" />
+                <element signature="e#42023#42024#0" expanded="true" />
+                <element signature="e#44398#45161#0" expanded="true" />
+                <element signature="e#45160#45161#0" expanded="true" />
+                <element signature="e#47516#48278#0" expanded="true" />
+                <element signature="e#48277#48278#0" expanded="true" />
+                <element signature="e#50611#51373#0" expanded="true" />
+                <element signature="e#51372#51373#0" expanded="true" />
+                <element signature="e#53740#54494#0" expanded="true" />
+                <element signature="e#54493#54494#0" expanded="true" />
+                <element signature="e#56832#57594#0" expanded="true" />
+                <element signature="e#57593#57594#0" expanded="true" />
+                <element signature="e#59961#60722#0" expanded="true" />
+                <element signature="e#60721#60722#0" expanded="true" />
+                <element signature="e#63089#63850#0" expanded="true" />
+                <element signature="e#63849#63850#0" expanded="true" />
+                <element signature="e#66263#67027#0" expanded="true" />
+                <element signature="e#67026#67027#0" expanded="true" />
+                <element signature="e#75730#76163#0" expanded="true" />
+                <element signature="e#76162#76163#0" expanded="true" />
+                <element signature="e#76382#76635#0" expanded="true" />
+                <element signature="e#76634#76635#0" expanded="true" />
+                <element signature="e#77963#81259#0" expanded="true" />
+                <element signature="e#81258#81259#0" expanded="true" />
+                <element signature="e#81295#84289#0" expanded="true" />
+                <element signature="e#84288#84289#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="UserAccount.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="493" column="57" selection-start-line="493" selection-start-column="57" selection-end-line="493" selection-end-column="57" />
+            <state relative-caret-position="331">
+              <caret line="178" column="18" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
               <folding>
-                <element signature="e#3729#3736#0" expanded="true" />
-                <element signature="e#6119#6268#0" expanded="true" />
-                <element signature="e#6267#6268#0" expanded="true" />
-                <element signature="e#6345#6634#0" expanded="true" />
-                <element signature="e#6633#6634#0" expanded="true" />
-                <element signature="e#6716#6867#0" expanded="true" />
-                <element signature="e#6866#6867#0" expanded="true" />
-                <element signature="e#6943#7090#0" expanded="true" />
-                <element signature="e#7089#7090#0" expanded="true" />
-                <element signature="e#7161#7442#0" expanded="true" />
-                <element signature="e#7441#7442#0" expanded="true" />
-                <element signature="e#7513#7643#0" expanded="true" />
-                <element signature="e#7642#7643#0" expanded="true" />
-                <element signature="e#7690#7820#0" expanded="true" />
-                <element signature="e#7819#7820#0" expanded="true" />
-                <element signature="e#7859#7996#0" expanded="true" />
-                <element signature="e#7995#7996#0" expanded="true" />
-                <element signature="e#8035#8172#0" expanded="true" />
-                <element signature="e#8171#8172#0" expanded="true" />
-                <element signature="e#8211#8348#0" expanded="true" />
-                <element signature="e#8347#8348#0" expanded="true" />
-                <element signature="e#8387#8524#0" expanded="true" />
-                <element signature="e#8523#8524#0" expanded="true" />
-                <element signature="e#8563#8700#0" expanded="true" />
-                <element signature="e#8699#8700#0" expanded="true" />
-                <element signature="e#8739#8876#0" expanded="true" />
-                <element signature="e#8875#8876#0" expanded="true" />
-                <element signature="e#8915#9052#0" expanded="true" />
-                <element signature="e#9051#9052#0" expanded="true" />
-                <element signature="e#9091#9228#0" expanded="true" />
-                <element signature="e#9227#9228#0" expanded="true" />
-                <element signature="e#9279#9551#0" expanded="true" />
-                <element signature="e#9550#9551#0" expanded="true" />
-                <element signature="e#9595#9867#0" expanded="true" />
-                <element signature="e#9866#9867#0" expanded="true" />
-                <element signature="e#9909#10130#0" expanded="true" />
-                <element signature="e#10129#10130#0" expanded="true" />
-                <element signature="e#10171#10384#0" expanded="true" />
-                <element signature="e#10383#10384#0" expanded="true" />
-                <element signature="e#10432#10645#0" expanded="true" />
-                <element signature="e#10644#10645#0" expanded="true" />
-                <element signature="e#10694#10915#0" expanded="true" />
-                <element signature="e#10914#10915#0" expanded="true" />
-                <element signature="e#20464#20971#0" expanded="true" />
-                <element signature="e#20970#20971#0" expanded="true" />
-                <element signature="e#21174#21477#0" expanded="true" />
-                <element signature="e#21476#21477#0" expanded="true" />
+                <element signature="e#4355#4648#0" expanded="true" />
+                <element signature="e#4647#4648#0" expanded="true" />
+                <element signature="e#4729#4881#0" expanded="true" />
+                <element signature="e#4880#4881#0" expanded="true" />
+                <element signature="e#4957#5104#0" expanded="true" />
+                <element signature="e#5103#5104#0" expanded="true" />
+                <element signature="e#5175#5456#0" expanded="true" />
+                <element signature="e#5455#5456#0" expanded="true" />
+                <element signature="e#5527#5657#0" expanded="true" />
+                <element signature="e#5656#5657#0" expanded="true" />
+                <element signature="e#5704#5834#0" expanded="true" />
+                <element signature="e#5833#5834#0" expanded="true" />
+                <element signature="e#5873#6010#0" expanded="true" />
+                <element signature="e#6009#6010#0" expanded="true" />
+                <element signature="e#6049#6186#0" expanded="true" />
+                <element signature="e#6185#6186#0" expanded="true" />
+                <element signature="e#6225#6362#0" expanded="true" />
+                <element signature="e#6361#6362#0" expanded="true" />
+                <element signature="e#6401#6538#0" expanded="true" />
+                <element signature="e#6537#6538#0" expanded="true" />
+                <element signature="e#6577#6714#0" expanded="true" />
+                <element signature="e#6713#6714#0" expanded="true" />
+                <element signature="e#6753#6890#0" expanded="true" />
+                <element signature="e#6889#6890#0" expanded="true" />
+                <element signature="e#6929#7066#0" expanded="true" />
+                <element signature="e#7065#7066#0" expanded="true" />
+                <element signature="e#7105#7242#0" expanded="true" />
+                <element signature="e#7241#7242#0" expanded="true" />
+                <element signature="e#7293#7565#0" expanded="true" />
+                <element signature="e#7564#7565#0" expanded="true" />
+                <element signature="e#7609#7881#0" expanded="true" />
+                <element signature="e#7880#7881#0" expanded="true" />
+                <element signature="e#7923#8144#0" expanded="true" />
+                <element signature="e#8143#8144#0" expanded="true" />
+                <element signature="e#8185#8398#0" expanded="true" />
+                <element signature="e#8397#8398#0" expanded="true" />
+                <element signature="e#8446#8659#0" expanded="true" />
+                <element signature="e#8658#8659#0" expanded="true" />
+                <element signature="e#8708#8929#0" expanded="true" />
+                <element signature="e#8928#8929#0" expanded="true" />
+                <element signature="e#17122#17628#0" expanded="true" />
+                <element signature="e#17627#17628#0" expanded="true" />
+                <element signature="e#17831#18134#0" expanded="true" />
+                <element signature="e#18133#18134#0" expanded="true" />
+                <element signature="e#18206#18207#0" expanded="true" />
+                <element signature="e#18242#18243#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Order.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Order.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="68">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -173,14 +207,10 @@
       <file leaf-file-name="Payment.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="96" selection-end-column="62" />
+            <state relative-caret-position="646">
+              <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1476#5011#0" expanded="true" />
-                <element signature="e#4686#4846#0" expanded="true" />
-                <element signature="e#4845#4846#0" expanded="true" />
-                <element signature="e#5010#5011#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,39 +226,35 @@
           <provider selected="true" editor-type-id="ui-designer" />
         </entry>
       </file>
-      <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="337">
-              <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="84" selection-end-column="11" />
-              <folding>
-                <element signature="e#1794#2106#0" expanded="true" />
-                <element signature="e#2105#2106#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SetEmployee.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3570">
-              <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
+            <state relative-caret-position="6331">
+              <caret line="457" lean-forward="true" selection-start-line="457" selection-end-line="457" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#5442#7249#0" expanded="true" />
+                <element signature="e#5625#7223#0" expanded="true" />
+                <element signature="e#7222#7223#0" expanded="true" />
+                <element signature="e#7248#7249#0" expanded="true" />
+                <element signature="e#7295#8905#0" expanded="true" />
+                <element signature="e#8904#8905#0" expanded="true" />
+                <element signature="e#15094#16570#0" expanded="true" />
+                <element signature="e#16569#16570#0" expanded="true" />
+                <element signature="e#16606#17321#0" expanded="true" />
+                <element signature="e#17320#17321#0" expanded="true" />
+                <element signature="e#17361#20213#0" expanded="true" />
+                <element signature="e#20212#20213#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetDrinks.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
+      <file leaf-file-name="EntryPage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="5134">
-              <caret line="333" column="16" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="186">
+              <caret line="127" selection-start-line="127" selection-end-line="127" />
             </state>
           </provider>
         </entry>
@@ -256,12 +282,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>lblTotalPrice</find>
-      <find>throw</find>
-      <find>totalPrice</find>
-      <find>DELETE</find>
-      <find>frame2</find>
-      <find>btnConfirm</find>
       <find>order.add</find>
       <find>btnCancel</find>
       <find>btnChooseHistory</find>
@@ -283,9 +303,15 @@
       <find>btnChoose</find>
       <find>sendToOrder</find>
       <find>checkItemsInArray</find>
-      <find>openMeal</find>
       <find>txtCount</find>
       <find>58</find>
+      <find>openMeal</find>
+      <find>can be 50</find>
+      <find>printOrder</find>
+      <find>btnConfirm</find>
+      <find>makeorder</find>
+      <find>MAKE ORDER 0:</find>
+      <find>&quot;Make</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -318,15 +344,15 @@
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Food.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetFood.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/ItemSearch.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.form" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form" />
         <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java" />
-        <option value="$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java" />
       </list>
     </option>
   </component>
@@ -348,8 +374,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -366,12 +390,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="UI_DESIGNER_EDITOR_MODE.UIDesignerToolWindowManager.WIDTH" value="228" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../ccRestaurantSovy/ProjectRestaurant" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -635,7 +661,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528034319926</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="lblCount insted of txtCount">
+      <created>1528057519496</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1528057519496</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -644,14 +677,14 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32837406" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32731137" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32624868" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.35600424" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.37300745" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
@@ -723,7 +756,9 @@
     <MESSAGE value="send order to payment" />
     <MESSAGE value="search bar" />
     <MESSAGE value="btn cash - not finished" />
-    <option name="LAST_COMMIT_MESSAGE" value="btn cash - not finished" />
+    <MESSAGE value="lblCount insted of txtCount+" />
+    <MESSAGE value="lblCount insted of txtCount" />
+    <option name="LAST_COMMIT_MESSAGE" value="lblCount insted of txtCount" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -763,7 +798,6 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/HibernateUtil.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/META-INF/MANIFEST.MF" />
     <entry file="file://$PROJECT_DIR$/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Order.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/Authentication.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/getInformationFromDatabase.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/SetDrinks.java" />
@@ -784,19 +818,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3570">
-          <caret line="258" column="5" selection-start-line="258" selection-start-column="5" selection-end-line="258" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetDrinks.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5134">
+        <state relative-caret-position="5389">
           <caret line="333" column="16" selection-start-line="333" selection-start-column="16" selection-end-line="336" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -822,19 +846,137 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/hibernate/ItemSearch.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="186">
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Order.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
+      <provider selected="true" editor-type-id="ui-designer" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="1798" column="28" selection-start-line="1798" selection-start-column="28" selection-end-line="1798" selection-end-column="100" />
+          <folding>
+            <element signature="e#10934#11292#0" expanded="true" />
+            <element signature="e#11291#11292#0" expanded="true" />
+            <element signature="e#11332#11466#0" expanded="true" />
+            <element signature="e#11465#11466#0" expanded="true" />
+            <element signature="e#11504#11636#0" expanded="true" />
+            <element signature="e#11635#11636#0" expanded="true" />
+            <element signature="e#11703#12821#0" expanded="true" />
+            <element signature="e#12820#12821#0" expanded="true" />
+            <element signature="e#12864#13019#0" expanded="true" />
+            <element signature="e#13018#13019#0" expanded="true" />
+            <element signature="e#13061#13253#0" expanded="true" />
+            <element signature="e#13252#13253#0" expanded="true" />
+            <element signature="e#13295#13481#0" expanded="true" />
+            <element signature="e#13480#13481#0" expanded="true" />
+            <element signature="e#13523#13709#0" expanded="true" />
+            <element signature="e#13708#13709#0" expanded="true" />
+            <element signature="e#13755#13913#0" expanded="true" />
+            <element signature="e#13912#13913#0" expanded="true" />
+            <element signature="e#13951#14128#0" expanded="true" />
+            <element signature="e#14127#14128#0" expanded="true" />
+            <element signature="e#14170#14362#0" expanded="true" />
+            <element signature="e#14361#14362#0" expanded="true" />
+            <element signature="e#14402#14584#0" expanded="true" />
+            <element signature="e#14583#14584#0" expanded="true" />
+            <element signature="e#14622#14799#0" expanded="true" />
+            <element signature="e#14798#14799#0" expanded="true" />
+            <element signature="e#14841#15032#0" expanded="true" />
+            <element signature="e#15031#15032#0" expanded="true" />
+            <element signature="e#15069#15249#0" expanded="true" />
+            <element signature="e#15248#15249#0" expanded="true" />
+            <element signature="e#15290#15478#0" expanded="true" />
+            <element signature="e#15477#15478#0" expanded="true" />
+            <element signature="e#15516#15698#0" expanded="true" />
+            <element signature="e#15697#15698#0" expanded="true" />
+            <element signature="e#15738#15923#0" expanded="true" />
+            <element signature="e#15922#15923#0" expanded="true" />
+            <element signature="e#15963#16380#0" expanded="true" />
+            <element signature="e#16379#16380#0" expanded="true" />
+            <element signature="e#16420#16577#0" expanded="true" />
+            <element signature="e#16576#16577#0" expanded="true" />
+            <element signature="e#19646#20447#0" expanded="true" />
+            <element signature="e#20446#20447#0" expanded="true" />
+            <element signature="e#31946#32708#0" expanded="true" />
+            <element signature="e#32707#32708#0" expanded="true" />
+            <element signature="e#35047#35809#0" expanded="true" />
+            <element signature="e#35808#35809#0" expanded="true" />
+            <element signature="e#38169#38930#0" expanded="true" />
+            <element signature="e#38929#38930#0" expanded="true" />
+            <element signature="e#41262#42024#0" expanded="true" />
+            <element signature="e#42023#42024#0" expanded="true" />
+            <element signature="e#44398#45161#0" expanded="true" />
+            <element signature="e#45160#45161#0" expanded="true" />
+            <element signature="e#47516#48278#0" expanded="true" />
+            <element signature="e#48277#48278#0" expanded="true" />
+            <element signature="e#50611#51373#0" expanded="true" />
+            <element signature="e#51372#51373#0" expanded="true" />
+            <element signature="e#53740#54494#0" expanded="true" />
+            <element signature="e#54493#54494#0" expanded="true" />
+            <element signature="e#56832#57594#0" expanded="true" />
+            <element signature="e#57593#57594#0" expanded="true" />
+            <element signature="e#59961#60722#0" expanded="true" />
+            <element signature="e#60721#60722#0" expanded="true" />
+            <element signature="e#63089#63850#0" expanded="true" />
+            <element signature="e#63849#63850#0" expanded="true" />
+            <element signature="e#66263#67027#0" expanded="true" />
+            <element signature="e#67026#67027#0" expanded="true" />
+            <element signature="e#75730#76163#0" expanded="true" />
+            <element signature="e#76162#76163#0" expanded="true" />
+            <element signature="e#76382#76635#0" expanded="true" />
+            <element signature="e#76634#76635#0" expanded="true" />
+            <element signature="e#77963#81259#0" expanded="true" />
+            <element signature="e#81258#81259#0" expanded="true" />
+            <element signature="e#81295#84289#0" expanded="true" />
+            <element signature="e#84288#84289#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/SetEmployee.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6331">
+          <caret line="457" lean-forward="true" selection-start-line="457" selection-end-line="457" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5442#7249#0" expanded="true" />
+            <element signature="e#5625#7223#0" expanded="true" />
+            <element signature="e#7222#7223#0" expanded="true" />
+            <element signature="e#7248#7249#0" expanded="true" />
+            <element signature="e#7295#8905#0" expanded="true" />
+            <element signature="e#8904#8905#0" expanded="true" />
+            <element signature="e#15094#16570#0" expanded="true" />
+            <element signature="e#16569#16570#0" expanded="true" />
+            <element signature="e#16606#17321#0" expanded="true" />
+            <element signature="e#17320#17321#0" expanded="true" />
+            <element signature="e#17361#20213#0" expanded="true" />
+            <element signature="e#20212#20213#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/Payment.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="94" column="16" selection-start-line="94" selection-start-column="16" selection-end-line="96" selection-end-column="62" />
+        <state relative-caret-position="646">
+          <caret line="103" column="46" selection-start-line="103" selection-start-column="46" selection-end-line="103" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1476#5011#0" expanded="true" />
-            <element signature="e#4686#4846#0" expanded="true" />
-            <element signature="e#4845#4846#0" expanded="true" />
-            <element signature="e#5010#5011#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -842,85 +984,57 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.form">
       <provider selected="true" editor-type-id="ui-designer" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.form">
-      <provider selected="true" editor-type-id="ui-designer" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/EntryPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="75" column="8" selection-start-line="75" selection-start-column="8" selection-end-line="84" selection-end-column="11" />
-          <folding>
-            <element signature="e#1794#2106#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/UserAccount.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="493" column="57" selection-start-line="493" selection-start-column="57" selection-end-line="493" selection-end-column="57" />
+        <state relative-caret-position="331">
+          <caret line="178" column="18" selection-start-line="178" selection-start-column="18" selection-end-line="178" selection-end-column="18" />
           <folding>
-            <element signature="e#3729#3736#0" expanded="true" />
-            <element signature="e#6119#6268#0" expanded="true" />
-            <element signature="e#6267#6268#0" expanded="true" />
-            <element signature="e#6345#6634#0" expanded="true" />
-            <element signature="e#6633#6634#0" expanded="true" />
-            <element signature="e#6716#6867#0" expanded="true" />
-            <element signature="e#6866#6867#0" expanded="true" />
-            <element signature="e#6943#7090#0" expanded="true" />
-            <element signature="e#7089#7090#0" expanded="true" />
-            <element signature="e#7161#7442#0" expanded="true" />
-            <element signature="e#7441#7442#0" expanded="true" />
-            <element signature="e#7513#7643#0" expanded="true" />
-            <element signature="e#7642#7643#0" expanded="true" />
-            <element signature="e#7690#7820#0" expanded="true" />
-            <element signature="e#7819#7820#0" expanded="true" />
-            <element signature="e#7859#7996#0" expanded="true" />
-            <element signature="e#7995#7996#0" expanded="true" />
-            <element signature="e#8035#8172#0" expanded="true" />
-            <element signature="e#8171#8172#0" expanded="true" />
-            <element signature="e#8211#8348#0" expanded="true" />
-            <element signature="e#8347#8348#0" expanded="true" />
-            <element signature="e#8387#8524#0" expanded="true" />
-            <element signature="e#8523#8524#0" expanded="true" />
-            <element signature="e#8563#8700#0" expanded="true" />
-            <element signature="e#8699#8700#0" expanded="true" />
-            <element signature="e#8739#8876#0" expanded="true" />
-            <element signature="e#8875#8876#0" expanded="true" />
-            <element signature="e#8915#9052#0" expanded="true" />
-            <element signature="e#9051#9052#0" expanded="true" />
-            <element signature="e#9091#9228#0" expanded="true" />
-            <element signature="e#9227#9228#0" expanded="true" />
-            <element signature="e#9279#9551#0" expanded="true" />
-            <element signature="e#9550#9551#0" expanded="true" />
-            <element signature="e#9595#9867#0" expanded="true" />
-            <element signature="e#9866#9867#0" expanded="true" />
-            <element signature="e#9909#10130#0" expanded="true" />
-            <element signature="e#10129#10130#0" expanded="true" />
-            <element signature="e#10171#10384#0" expanded="true" />
-            <element signature="e#10383#10384#0" expanded="true" />
-            <element signature="e#10432#10645#0" expanded="true" />
-            <element signature="e#10644#10645#0" expanded="true" />
-            <element signature="e#10694#10915#0" expanded="true" />
-            <element signature="e#10914#10915#0" expanded="true" />
-            <element signature="e#20464#20971#0" expanded="true" />
-            <element signature="e#20970#20971#0" expanded="true" />
-            <element signature="e#21174#21477#0" expanded="true" />
-            <element signature="e#21476#21477#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/project/restaurant/gui/MakeOrder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="1814" column="13" selection-start-line="1814" selection-start-column="13" selection-end-line="1814" selection-end-column="13" />
-          <folding>
-            <element signature="e#89825#93121#0" expanded="true" />
-            <element signature="e#93120#93121#0" expanded="true" />
-            <element signature="e#93157#96151#0" expanded="true" />
-            <element signature="e#96150#96151#0" expanded="true" />
+            <element signature="e#4355#4648#0" expanded="true" />
+            <element signature="e#4647#4648#0" expanded="true" />
+            <element signature="e#4729#4881#0" expanded="true" />
+            <element signature="e#4880#4881#0" expanded="true" />
+            <element signature="e#4957#5104#0" expanded="true" />
+            <element signature="e#5103#5104#0" expanded="true" />
+            <element signature="e#5175#5456#0" expanded="true" />
+            <element signature="e#5455#5456#0" expanded="true" />
+            <element signature="e#5527#5657#0" expanded="true" />
+            <element signature="e#5656#5657#0" expanded="true" />
+            <element signature="e#5704#5834#0" expanded="true" />
+            <element signature="e#5833#5834#0" expanded="true" />
+            <element signature="e#5873#6010#0" expanded="true" />
+            <element signature="e#6009#6010#0" expanded="true" />
+            <element signature="e#6049#6186#0" expanded="true" />
+            <element signature="e#6185#6186#0" expanded="true" />
+            <element signature="e#6225#6362#0" expanded="true" />
+            <element signature="e#6361#6362#0" expanded="true" />
+            <element signature="e#6401#6538#0" expanded="true" />
+            <element signature="e#6537#6538#0" expanded="true" />
+            <element signature="e#6577#6714#0" expanded="true" />
+            <element signature="e#6713#6714#0" expanded="true" />
+            <element signature="e#6753#6890#0" expanded="true" />
+            <element signature="e#6889#6890#0" expanded="true" />
+            <element signature="e#6929#7066#0" expanded="true" />
+            <element signature="e#7065#7066#0" expanded="true" />
+            <element signature="e#7105#7242#0" expanded="true" />
+            <element signature="e#7241#7242#0" expanded="true" />
+            <element signature="e#7293#7565#0" expanded="true" />
+            <element signature="e#7564#7565#0" expanded="true" />
+            <element signature="e#7609#7881#0" expanded="true" />
+            <element signature="e#7880#7881#0" expanded="true" />
+            <element signature="e#7923#8144#0" expanded="true" />
+            <element signature="e#8143#8144#0" expanded="true" />
+            <element signature="e#8185#8398#0" expanded="true" />
+            <element signature="e#8397#8398#0" expanded="true" />
+            <element signature="e#8446#8659#0" expanded="true" />
+            <element signature="e#8658#8659#0" expanded="true" />
+            <element signature="e#8708#8929#0" expanded="true" />
+            <element signature="e#8928#8929#0" expanded="true" />
+            <element signature="e#17122#17628#0" expanded="true" />
+            <element signature="e#17627#17628#0" expanded="true" />
+            <element signature="e#17831#18134#0" expanded="true" />
+            <element signature="e#18133#18134#0" expanded="true" />
+            <element signature="e#18206#18207#0" expanded="true" />
+            <element signature="e#18242#18243#0" expanded="true" />
           </folding>
         </state>
       </provider>

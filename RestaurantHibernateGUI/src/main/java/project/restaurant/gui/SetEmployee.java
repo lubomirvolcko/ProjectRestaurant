@@ -164,14 +164,15 @@ createTable();
                         // i = the index of the selected row
                         int i = tblEmployees.getSelectedRow();
 
-                        updateTxtFirstName.setText(model.getValueAt(i, 1).toString());
-                        updateTxtLastName.setText(model.getValueAt(i, 2).toString());
-                        updateTxtIdcard.setText(model.getValueAt(i, 3).toString());
-                        updateTxtLogin.setText(model.getValueAt(i, 4).toString());
-                        updatePswPassword.setText(model.getValueAt(i, 5).toString());
-                        updateTxtEmail.setText(model.getValueAt(i, 6).toString());
-                        String position = model.getValueAt(i, 4).toString();
-                        updateJcomboPosition.setSelectedItem(position);
+                            updateTxtFirstName.setText(model.getValueAt(i, 1).toString());
+                            updateTxtLastName.setText(model.getValueAt(i, 2).toString());
+                            updateTxtIdcard.setText(model.getValueAt(i, 3).toString());
+                            updateTxtLogin.setText(model.getValueAt(i, 4).toString());
+                            updatePswPassword.setText(model.getValueAt(i, 5).toString());
+                            updateTxtEmail.setText(model.getValueAt(i, 6).toString());
+                            String position = model.getValueAt(i, 4).toString();
+                            updateJcomboPosition.setSelectedItem(position);
+
                     }
                 });
             }
@@ -388,6 +389,7 @@ createTable();
         String email= null;
         String position = null;
 
+        int checkManager=0;
 
         SessionFactory sf = HibernateUtil.getSessionFactory();
         Session se = sf.openSession();
@@ -398,6 +400,7 @@ createTable();
         se.close();
         for(Authentication g : usersInfo)
         {
+
 
             id=g.getId();
             firstname=g.getName();
@@ -413,7 +416,7 @@ createTable();
                 row[0] = id;
                 row[1] = firstname;
                 row[2] = lastname;
-                row[3] =idcard;
+                row[3] = idcard;
                 row[4] = login;
                 row[5] = password;
                 row[6] = email;
@@ -421,10 +424,12 @@ createTable();
                 // add row to the model
                 model.addRow(row);
 
-
+                if (row[7].equals("manager"))
+                    checkManager++;
         }
 
 
+        final int finalCheckManager = checkManager;
         btnDelete.addActionListener(new ActionListener(){
 
             @Override
@@ -437,6 +442,12 @@ createTable();
 
                 Transaction transaction = se.beginTransaction();
                 try {
+
+                    if (finalCheckManager == 1){
+                        JOptionPane.showMessageDialog(null, "User "+textlogin.getText()+" can't be deleted!");
+                    }else {
+
+
 
                     String hql = "delete from Authentication where id= :id";
                     Query query = se.createQuery(hql);
@@ -453,6 +464,8 @@ createTable();
                     Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                     win.dispose();
                     createTable();
+
+                    }
 
                 } catch (Throwable t) {
                     transaction.rollback();
@@ -502,6 +515,18 @@ createTable();
                 try {
 
 
+                    int empty=0;
+
+                        if (textFname.getText().equals("") || textLname.getText().equals("") || textIdcard.getText().equals("") || textlogin.getText().equals("")
+                                || textpassword.getText().equals("") || textemail.getText().equals("")){
+                            empty++;
+                        }
+
+
+                    if (empty!=0){
+                        JOptionPane.showMessageDialog(null, "Each field needs to be filled !");
+                    }else{
+
                         String hql = "update  Authentication set Name= :name,Surname= :surname,Idcard= :idcard,login= :login,password= :password, email= :email,position = :position where id= :id";
                         Query query = se.createQuery(hql);
                     query.setParameter("name", textFname.getText());
@@ -522,6 +547,7 @@ createTable();
                     transaction.commit();
 
                     JOptionPane.showMessageDialog(null, "User "+textlogin.getText()+" successfully updaded!");
+                    }
                 } catch (Throwable t) {
                     transaction.rollback();
                     throw t;

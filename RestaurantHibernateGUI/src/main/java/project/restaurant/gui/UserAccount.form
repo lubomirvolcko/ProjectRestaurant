@@ -78,7 +78,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="8bcb2" class="javax.swing.JButton" binding="btnTopMenuMakeOrder">
+              <component id="8bcb2" class="javax.swing.JButton" binding="btnTopMenuDelivery">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -87,8 +87,8 @@
                   <enabled value="true"/>
                   <font name="Century Gothic" size="22" style="1"/>
                   <foreground color="-1"/>
-                  <icon value="src/img/orderTopMenu.png"/>
-                  <text value="MakeOrder"/>
+                  <icon value="src/img/deliveryTopMenu.png"/>
+                  <text value="Delivery"/>
                 </properties>
               </component>
               <component id="1ccb7" class="javax.swing.JButton" binding="btnTopMenuTables">
@@ -196,7 +196,7 @@
             </properties>
             <border type="none"/>
             <children>
-              <component id="29aee" class="javax.swing.JButton" binding="btnMakeOrder">
+              <component id="29aee" class="javax.swing.JButton" binding="btnDelivery">
                 <constraints>
                   <grid row="0" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                 </constraints>
@@ -208,8 +208,8 @@
                   <foreground color="-8023247"/>
                   <hideActionText value="true"/>
                   <horizontalTextPosition value="0"/>
-                  <icon value="src/img/order.png"/>
-                  <text value="Make Order"/>
+                  <icon value="src/img/delivery.png"/>
+                  <text value="Delivery"/>
                   <toolTipText value=""/>
                   <verticalAlignment value="3"/>
                   <verticalTextPosition value="3"/>

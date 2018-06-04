@@ -4,8 +4,6 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
-import java.awt.event.KeyAdapter;
-import java.awt.event.KeyEvent;
 import java.awt.print.PrinterException;
 import java.util.ArrayList;
 
@@ -22,7 +20,7 @@ public class UserAccount {
     private JTextField txtSearch;
     private JButton btnSearch;
     private JPanel pnlTopMenu;
-    private JButton btnTopMenuMakeOrder;
+    private JButton btnTopMenuDelivery;
     private JButton btnTopMenuTables;
     private JButton btnTopMenuTransfer;
     private JButton btnTopMenuBill;
@@ -30,7 +28,7 @@ public class UserAccount {
     private JButton btnTopMenuSetFoods;
     private JButton btnTopMenuSetEmployee;
     private JButton btnTopMenuLogOut;
-    private JButton btnMakeOrder;
+    private JButton btnDelivery;
     private JButton btnTables;
     private JButton btnTransfer;
     private JButton btnBill;
@@ -167,18 +165,18 @@ public class UserAccount {
             }
         });
         //btn basic menu MakeOrder
-        btnMakeOrder.addActionListener(new ActionListener() {
+        btnDelivery.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                pnlBasicMenu.setVisible(false);
+                /*pnlBasicMenu.setVisible(false);
                 pnlTopMenu.setVisible(true);
                 pnlTables.setVisible(true);
-                System.out.println("MakeOrder");
+                System.out.println("MakeOrder");*/
             }
         });
         //btn top menu MakeOrder
-        btnTopMenuMakeOrder.addActionListener(new ActionListener() {
+        btnTopMenuDelivery.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                pnlBasicMenu.setVisible(false);
+                //pnlBasicMenu.setVisible(false);
             }
         });
         //btn top menu Tables
