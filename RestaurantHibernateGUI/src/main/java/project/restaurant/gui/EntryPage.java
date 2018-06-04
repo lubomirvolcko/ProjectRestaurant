@@ -135,33 +135,33 @@ public class EntryPage {
         for(Authentication d : auth)
         {
 
-            System.out.println("Login: "+d.getLogin());
-            System.out.println("Password: "+d.getPassword());
-
-            if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
+            if(logInArea.getText().equals(d.getLogin()) && txtPassword.getText().equals(d.getPassword()) && d.getPosition().equals("manager")) {
                 openForm(3, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("waiter")) {
                 openForm(1, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
             else if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("supervisor")) {
                 openForm(2, d.getLogin());
                 close.dispose();
                 clickedOnBtnLogin=0;
+                System.out.println("Login: "+d.getLogin());
+                System.out.println("Password: "+d.getPassword());
             }
-            else
-            {
-                if (clickedOnBtnLogin==1){
-                    JOptionPane.showMessageDialog(null, "Wrong Login or Password ! Try it Again please !");
-                    System.out.println("Bad Login or Password");
-                    clickedOnBtnLogin=0;
-                }
+        }
 
-            }
+        if (clickedOnBtnLogin==1){
+            JOptionPane.showMessageDialog(null, "Wrong Login or Password ! Try it Again please !");
+            System.out.println("Bad Login or Password");
+            clickedOnBtnLogin=0;
         }
 
 

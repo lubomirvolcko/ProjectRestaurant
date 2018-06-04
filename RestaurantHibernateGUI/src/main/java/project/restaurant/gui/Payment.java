@@ -1,11 +1,5 @@
 package project.restaurant.gui;
 
-import org.hibernate.Session;
-import org.hibernate.SessionFactory;
-import org.hibernate.Transaction;
-import org.hibernate.query.Query;
-import project.restaurant.hibernate.Authentication;
-import project.restaurant.hibernate.HibernateUtil;
 
 import javax.swing.*;
 import java.awt.*;

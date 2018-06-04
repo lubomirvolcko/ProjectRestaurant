@@ -59,7 +59,12 @@ public class MakeOrder {
     private JPanel pnlDessert;
     private JPanel pnlWine;
     private String btnChooseHistory="false";
-
+    /*
+    private AbstractButton btnDelete;
+    private AbstractButton btnUndo;
+    private AbstractButton delete;
+    private AbstractButton undo;
+    */
     public JLabel getLblTotalPrice() {
         return lblTotalPrice;
     }
@@ -71,6 +76,11 @@ public class MakeOrder {
     }
 
     private JPanel pnlItemOnTable;
+
+    public JButton getBtnPayment() {
+        return btnPayment;
+    }
+
     private JButton btnPayment;
     private JTextField txtSearch;
     private JPanel pnlSearched;
@@ -100,6 +110,7 @@ public class MakeOrder {
     String historyTable7;
     String historyTable8;
     Double paymentPrice=0.0;
+    int checkForPayment=0;
 
     UserAccount userAccount = new UserAccount();
 
@@ -656,31 +667,36 @@ public class MakeOrder {
 
 
             if (userAccount.orderArray.get(x).getNumberOfItem() != 0) {
-                orderPositionY=orderPositionY+30;
-                finalPrice=finalPrice+userAccount.orderArray.get(x).getTotalPrice();
-                paymentPrice=finalPrice;
+                if (userAccount.orderArray.get(x).getIdTable()==makeOrderIdTable){
+                    orderPositionY=orderPositionY+30;
+                    finalPrice=finalPrice+userAccount.orderArray.get(x).getTotalPrice();
+                    paymentPrice=finalPrice;
 
-                payment.getPnlPaymentItems().setLayout(null);
+                    payment.getPnlPaymentItems().setLayout(null);
 
-                payment.getPnlPaymentItems().add(lblPaymentCount = new JLabel("" + userAccount.orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
-                lblPaymentCount.setFont(font);
-                lblPaymentCount.setBounds(10, orderPositionY, 45, 30);
+                    payment.getPnlPaymentItems().add(lblPaymentCount = new JLabel("" + userAccount.orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
+                    lblPaymentCount.setFont(font);
+                    lblPaymentCount.setBounds(10, orderPositionY, 45, 30);
 
-                payment.getPnlPaymentItems().add(lblPaymentX = new JLabel("x", FlowLayout.LEFT));
-                lblPaymentX.setFont(font);
-                lblPaymentX.setBounds(55, orderPositionY, 20, 30);
+                    payment.getPnlPaymentItems().add(lblPaymentX = new JLabel("x", FlowLayout.LEFT));
+                    lblPaymentX.setFont(font);
+                    lblPaymentX.setBounds(55, orderPositionY, 20, 30);
 
-                payment.getPnlPaymentItems().add(lblPaymentName = new JLabel("" + userAccount.orderArray.get(x).getNameItem(), FlowLayout.LEFT));
-                lblPaymentName.setFont(font);
-                lblPaymentName.setBounds(85, orderPositionY, 200, 30);
+                    payment.getPnlPaymentItems().add(lblPaymentName = new JLabel("" + userAccount.orderArray.get(x).getNameItem(), FlowLayout.LEFT));
+                    lblPaymentName.setFont(font);
+                    lblPaymentName.setBounds(85, orderPositionY, 250, 30);
 
-                payment.getPnlPaymentItems().add(lblPaymentPrice = new JLabel("" + userAccount.orderArray.get(x).getTotalPrice(), FlowLayout.LEFT));
-                lblPaymentPrice.setFont(font);
-                lblPaymentPrice.setBounds(295, orderPositionY, 100, 30);
+                    payment.getPnlPaymentItems().add(lblPaymentPrice = new JLabel("" + userAccount.orderArray.get(x).getTotalPrice(), FlowLayout.LEFT));
+                    lblPaymentPrice.setFont(font);
+                    lblPaymentPrice.setBounds(345, orderPositionY, 100, 30);
 
-                payment.getPnlPaymentItems().add(lblPaymentEuro = new JLabel("€", FlowLayout.LEFT));
-                lblPaymentEuro.setFont(font);
-                lblPaymentEuro.setBounds(405, orderPositionY, 30, 30);
+                    payment.getPnlPaymentItems().add(lblPaymentEuro = new JLabel("€", FlowLayout.LEFT));
+                    lblPaymentEuro.setFont(font);
+                    lblPaymentEuro.setBounds(455, orderPositionY, 30, 30);
+                }else {
+                    System.out.println("WRONG TABLE ----");
+                }
+
             }
 
             payment.getLblFinalPrice().setText("Final prce : "+String.valueOf(finalPrice));
@@ -1766,6 +1782,8 @@ public class MakeOrder {
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
         System.out.println("Send To Order - start");
         btnCancel.setEnabled(false);
+        btnConfirm.setEnabled(true);
+        btnPayment.setEnabled(true);
         checkItemsInArray();
 
         double totalPrice;
@@ -1846,6 +1864,8 @@ public class MakeOrder {
         }
 
     }
+
+
 
     //send item to order on table
     public void sendToTable(final String name, final Double price){
@@ -1939,6 +1959,9 @@ public class MakeOrder {
 
         }
 
+        /*delete = btnDelete;
+        undo = btnUndo;*/
+
         orderPositionY=orderPositionY+32;
 
 
@@ -1951,7 +1974,8 @@ public class MakeOrder {
         final JLabel finalLblCount = lblCount;
         final JLabel finalLblCount1 = lblCount;
         final JLabel finalLblPrice = lblPrice;
-        btnDelete.addActionListener(new ActionListener() {
+        finalBtnDelete.addActionListener(new ActionListener() {
+        //this.delete.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int numberOfItem;
@@ -1967,15 +1991,27 @@ public class MakeOrder {
         final JLabel finalLblEuro1 = lblEuro;
         final JLabel finalLblCount2 = lblCount;
         btnUndo.addActionListener(new ActionListener() {
+        //this.undo.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 undoItem(finalLblCount, finalLblX1, finalLblName, finalLblPrice, finalLblEuro1, finalBtnDelete, finalBtnUndo1);
             }
         });
+
+       /*
+        JLabel count = finalLblCount;
+        JLabel x = finalLblX;
+        JLabel nameItem = finalLblName;
+        JLabel priceItem = finalLblPrice;
+        JLabel euro = finalLblEuro;
+        JButton delete = finalBtnDelete;
+        JButton undo = finalBtnUndo;
+        */
     }
 
-    public void throwItem(final JLabel lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
 
+    public void throwItem(final JLabel lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
+        btnConfirm.setEnabled(true);
 
 
         JFrame frame2 = new JFrame("Delete Verification");
@@ -1984,6 +2020,7 @@ public class MakeOrder {
         Font font = new Font("Century Gothic", 1, 22);
         frame2.setFont(font);
 
+        final JLabel lblNote = new JLabel();
         final JLabel lblPassword = new JLabel();
         final JPasswordField textPassword = new JPasswordField();
         JButton btnOk = new JButton("OK");
@@ -2189,7 +2226,7 @@ public class MakeOrder {
                 userAccount.orderArray.get(x).setTotalPrice(Double.parseDouble(lblPrice.getText()));
                 totalPrice=totalPrice+userAccount.orderArray.get(x).getTotalPrice();
 
-                if (btnChooseHistory.equals(false)){
+                if (btnChooseHistory.equals("false")){
                     btnCancel.setEnabled(true);
                 }
             }
@@ -2207,5 +2244,13 @@ public class MakeOrder {
 
         }
 
+    public void setBtnPayment() {
+        if (checkForPayment==0){
+            btnPayment.setEnabled(false);
+        }else if (checkForPayment==1){
+            btnPayment.setEnabled(true);
+        }
+
+    }
 }
 

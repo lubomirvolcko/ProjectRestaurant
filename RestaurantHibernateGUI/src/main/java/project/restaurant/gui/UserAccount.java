@@ -456,7 +456,8 @@ public class UserAccount {
                             btnUndo.setBounds(560, makeOrder.orderPositionY, 100, 30);
 
 
-
+                            makeOrder.checkForPayment=1;
+                            makeOrder.setBtnPayment();
                         }else{
                             JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
                             makeOrder.countItem=30;
@@ -551,7 +552,7 @@ public class UserAccount {
     }
 
     public UserAccount AccountManager() {
-        System.out.println("Account Manager");
+
         return null;
     }
 
