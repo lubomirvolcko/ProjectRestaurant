@@ -635,7 +635,7 @@ public class MakeOrder {
 
 
     private JFrame openPayment(ActionEvent e) {
-        Payment payment =  new Payment(userAccount.userName ,userAccount.getOrderArray());
+        Payment payment = new Payment(userAccount.userName ,userAccount.getOrderArray(),makeOrderIdTable);
 
         JFrame paymentFrame = new JFrame();
         paymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

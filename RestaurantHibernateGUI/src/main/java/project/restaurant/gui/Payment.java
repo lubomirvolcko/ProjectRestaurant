@@ -1,16 +1,21 @@
 package project.restaurant.gui;
 
+import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.criterion.Projections;
 import org.hibernate.query.Query;
+import project.restaurant.hibernate.AllItemsOfOrder;
 import project.restaurant.hibernate.Authentication;
 import project.restaurant.hibernate.HibernateUtil;
+import project.restaurant.hibernate.finalOrder;
 
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,16 +28,30 @@ public class Payment extends UserAccount{
     private JButton btnPaymentCancel;
     private JButton btnCreditCard;
     private JLabel lblFinalPrice;
+    int ordernumber;
+
 
     public ArrayList<Order> getPaymentArray() {
         return paymentArray;
     }
+
+
+
 
     public void setPaymentArray(ArrayList<Order> paymentArray) {
         this.paymentArray = paymentArray;
     }
 
     private ArrayList<Order> paymentArray = new ArrayList<Order>();
+    private int idtable;
+
+    public int getIdtable() {
+        return idtable;
+    }
+
+    public void setIdtable(int idtable) {
+        this.idtable = idtable;
+    }
 
     public JLabel getLblFinalPrice() {
         return lblFinalPrice;
@@ -65,12 +84,13 @@ public class Payment extends UserAccount{
 
 
 
-    public Payment(String username, ArrayList orderArray) {
+    public Payment(String username, ArrayList orderArray, int IdTable) {
 
         System.out.println("USERNAME: "+username);
         System.out.println("ARRAY LIST SIZE: "+orderArray.size());
 
         setPaymentArray(orderArray);
+        setIdtable(IdTable);
 
         System.out.println("fucking array: "+getPaymentArray().size());
 
@@ -106,7 +126,7 @@ public class Payment extends UserAccount{
         Color green = new Color(133,147,49);
         Color orange = new Color(254,151,44);
 
-        JFrame frame2 = new JFrame("Payment - Cash");
+        final JFrame frame2 = new JFrame("Payment - Cash");
         frame2.setBackground(new Color(240,232,220));
 
         Font font = new Font("Century Gothic", 1, 26);
@@ -116,6 +136,7 @@ public class Payment extends UserAccount{
         final JLabel lblFnllPrice = new JLabel("name");
         final JLabel lblReceivedCash = new JLabel("name");
         final JTextField txtReceivedCash = new JTextField();
+        final JTextArea bill = new JTextArea();
 
         final JLabel lblRelease = new JLabel();
         JButton btnConfirm = new JButton("CONFIRM");
@@ -162,6 +183,8 @@ public class Payment extends UserAccount{
         btnConfirm.setBounds(180, 280, 200, 40);
         lblRelease.setBounds(180, 340, 200, 40);
         btnDone.setBounds(180, 400, 200, 40);
+        bill.setBounds(180, 460, 200, 40);
+
 
 
         frame2.setLayout(null);
@@ -187,12 +210,15 @@ public class Payment extends UserAccount{
                 double finalprice = Double.parseDouble(part2);
                 double received = Double.parseDouble(txtReceivedCash.getText());
                 double release = received - finalprice;
+                release = Math.round(release*100)/100.0;
                 if(received<finalprice)
                 {
                     JOptionPane.showMessageDialog(null, "Missing receive money!");
                 }
                 else
                     lblRelease.setText(String.valueOf(release));
+
+
 
             }
         });
@@ -203,9 +229,69 @@ public class Payment extends UserAccount{
             @Override
             public void actionPerformed(ActionEvent e) {
 
-                userAccount.chceckDoneOrder=makeOrder.makeOrderIdTable;
-                userAccount.doneOrder();
-                System.out.println(userAccount.getOrderArray().size());
+                System.out.println("RLY"+getPaymentArray().size());
+
+                AllItemsOfOrder allitems = new AllItemsOfOrder();
+                SessionFactory sff = HibernateUtil.getSessionFactory();
+                Session ss = sff.openSession();
+                ss.beginTransaction();
+
+                Criteria criteria = ss
+                        .createCriteria(AllItemsOfOrder.class)
+                        .setProjection(Projections.max("ordernumber"));
+                Integer maxNumber = (Integer)criteria.uniqueResult();
+                maxNumber++;
+
+                for(int p = 0;p<getPaymentArray().size();p++) {
+
+                    SessionFactory sf = HibernateUtil.getSessionFactory();
+                    Session s = sf.openSession();
+                    s.beginTransaction();
+
+                    allitems.setName(getPaymentArray().get(p).getNameItem());
+                    allitems.setPrice(getPaymentArray().get(p).getPrice());
+                    allitems.setTabllle(getPaymentArray().get(p).getIdTable());
+                    allitems.setOrdernumber(maxNumber);
+                    s.getTransaction().commit();
+
+                    s.save(allitems);
+                    s.close();
+
+                }
+
+                finalOrder finalorder = new finalOrder();
+                SessionFactory sf = HibernateUtil.getSessionFactory();
+                Session s = sf.openSession();
+                s.beginTransaction();
+                String[] parts = getLblFinalPrice().getText().split(":");
+                String part1 = parts[0]; // 004
+                final String part2 = parts[1]; // 034556
+                System.out.println(part2);
+
+
+                finalorder.setOrderid(maxNumber);
+                finalorder.setTablle(allitems.getTabllle());
+                finalorder.setFinalprice(Double.parseDouble(part2));
+
+                s.save(finalorder);
+                s.close();
+
+
+
+
+
+
+
+
+
+
+
+
+                getPaymentArray().clear();
+                frame2.dispose();
+
+
+                System.out.println("TABLE"+getIdtable());
 
             }
         });
@@ -218,6 +304,8 @@ public class Payment extends UserAccount{
 
         frame2.setVisible(true);
     }
+
+
 
 
 }

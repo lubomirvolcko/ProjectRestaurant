@@ -22,6 +22,8 @@ public class HibernateUtil {
         configuration.addAnnotatedClass(Drink.class);
         configuration.addAnnotatedClass(Food.class);
         configuration.addAnnotatedClass(Authentication.class);
+        configuration.addAnnotatedClass(AllItemsOfOrder.class);
+        configuration.addAnnotatedClass(finalOrder.class);
         return  configuration.buildSessionFactory(new StandardServiceRegistryBuilder().build());
 
 
