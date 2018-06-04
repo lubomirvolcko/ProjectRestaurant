@@ -1038,7 +1038,7 @@ finalpriceprint = 0;
       var address = $("#orderAddress").val();
       var city = $('#getCity').find(":selected").text();
       var phonenumber =  $("#formNumber").val();
-      var time = $("#timereservation").val();
+      var time = $("#timeres").val();
       console.log(personname);
       console.log(address);
       console.log(city);
