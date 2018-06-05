@@ -20,13 +20,6 @@ public class Order {
         this.idTable = idTable;
     }
 
-    /*public Order(int numberOfItem, String nameItem, Double price, Double totalPrice) {
-        this.numberOfItem = numberOfItem;
-        this.nameItem = nameItem;
-        this.price = price;
-        this.totalPrice = totalPrice;
-    }*/
-
     public void setNumberOfItem(int numberOfItem) {
         this.numberOfItem = numberOfItem;
     }

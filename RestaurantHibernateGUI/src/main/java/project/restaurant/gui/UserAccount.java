@@ -142,7 +142,7 @@ public class UserAccount {
         return orderArray;
     }
 
-    EntryPage xx = new EntryPage();
+    //EntryPage xx = new EntryPage();
     public JPanel getUserAccount() {
         return UserAccount;
     }
@@ -151,7 +151,6 @@ public class UserAccount {
 
     public void printOrderArray(){
         int size=orderArray.size();
-        System.out.println("SIZE : "+size);
 
         for (int i=0;i<size;i++){
             System.out.println("ARRAY LIST "+i+": "+orderArray.get(i).getNumberOfItem()+" - "+orderArray.get(i).getNameItem()+" - "+
@@ -165,8 +164,8 @@ public class UserAccount {
 
     public UserAccount() {
 
-        userName=xx.getUsername();
-        System.out.println("USERNAME: "+userName+" -------");
+        //userName=xx.getUsername();
+        //System.out.println("USERNAME: "+userName+" -------");
 
         pnlTopMenu.setVisible(false);
         pnlTables.setVisible(false);
@@ -174,7 +173,6 @@ public class UserAccount {
         //btn search
         btnSearch.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
-                System.out.println("Search");
             }
         });
         //btn basic menu MakeOrder
@@ -393,13 +391,18 @@ public class UserAccount {
         frameMakeOrder.setContentPane(makeorder.getPnlMakeOrder());
         frameMakeOrder.setVisible(true);
 
+
+
         return frameMakeOrder;
     }
 
     public void setToTable(JFrame frameMakeOrder, final MakeOrder makeOrder) {
+        makeOrder.btnChooseHistory="true";
+
         int size=orderArray.size();
         if (size>0){
             for (int i=0;i<size;i++){
+
                 makeOrder.totalPrice=0;
 
                 JLabel lblCount = new JLabel("name");
@@ -469,7 +472,8 @@ public class UserAccount {
                             btnUndo.setBounds(560, makeOrder.orderPositionY, 100, 30);
 
 
-
+                            makeOrder.checkForPayment=1;
+                            makeOrder.setBtnPayment();
                         }else{
                             JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
                             makeOrder.countItem=30;
@@ -500,7 +504,6 @@ public class UserAccount {
                     public void actionPerformed(ActionEvent e) {
                         int numberOfItem;
                         numberOfItem = Integer.parseInt(finalLblCount.getText());
-                        System.out.println("Number of item is: "+numberOfItem);
 
                         makeOrder.throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnChoose, finalBtnUndo);
                     }
@@ -573,15 +576,13 @@ public class UserAccount {
 
     public void doneOrder() {
         int size=orderArray.size();
-        System.out.println("SIZE OF ARRAY "+size);
-        System.out.println("ID TABLE "+chceckDoneOrder);
         switch (chceckDoneOrder){
             case 1:
-                    for (int i=0;i<size;i++){
-                        if (orderArray.get(i).getIdTable()==1){
-                            orderArray.remove(i);
-                        }
+                for (int i=0;i<size;i++){
+                    if (orderArray.get(i).getIdTable()==1){
+                        orderArray.remove(i);
                     }
+                }
             case 2:
                 for (int i=0;i<size;i++){
                     if (orderArray.get(i).getIdTable()==2){

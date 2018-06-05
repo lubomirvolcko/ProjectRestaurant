@@ -14,6 +14,7 @@ import java.util.List;
 
 
 public class MakeOrder {
+    public String btnChooseHistory="false";
     private JPanel pnlMakeOrder;
     private JPanel pnlOrderedItems;
     private JPanel pnlMainCategory;
@@ -58,7 +59,6 @@ public class MakeOrder {
     private JPanel pnlSalad;
     private JPanel pnlDessert;
     private JPanel pnlWine;
-    private String btnChooseHistory="false";
     double finalPrice=0;
 
 
@@ -106,7 +106,11 @@ public class MakeOrder {
 
     UserAccount userAccount = new UserAccount();
 
+    public JButton getBtnPayment() {
+        return btnPayment;
+    }
 
+    int checkForPayment=0;
 
     public JPanel getPnlOrderedItems() {
         return pnlOrderedItems;
@@ -364,6 +368,7 @@ public class MakeOrder {
     }
 
     public MakeOrder() {
+
         setPanels();
 
         pnlMakeOrder.setSize(500, 500);
@@ -521,6 +526,7 @@ public class MakeOrder {
                 btnChooseHistory="false";
                 setOrderHistory();
 
+
                 JComponent comp = (JComponent) e.getSource();
                 Window win = SwingUtilities.getWindowAncestor(comp); //get top window
                 win.dispose();
@@ -532,17 +538,6 @@ public class MakeOrder {
                 openPayment(e);
             }
         });
-        /*txtSearch.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyReleased(KeyEvent e) {
-                super.keyReleased(e);
-                String st = txtSearch.getText().trim();
-                System.out.println("KEY LISTENER: "+st);
-                StateSearch();
-                getSearched(st);
-
-            }
-        });*/
     }
 
     public void getSearched(String st) {
@@ -558,7 +553,6 @@ public class MakeOrder {
         se.close();
         for(ItemSearch d : itemList)
         {
-            System.out.println("FOR: "+d);
             itemName=d.getItemName();
             itemPrice=d.getItemPrice();
             getSearchedItems(itemName, itemPrice);
@@ -567,7 +561,6 @@ public class MakeOrder {
 
     public void getSearchedItems(String itemName, Double itemPrice) {
         try{
-            System.out.println("GET SEARCHED ITEMS");
             JLabel lblSmootieNumber = new JLabel("name"); //create label
             JButton btnSmootie = new JButton(); //create button
             JTextField txtCount = new JTextField(); //create text field
@@ -635,71 +628,20 @@ public class MakeOrder {
 
 
     private JFrame openPayment(ActionEvent e) {
-        Payment payment = new Payment(userAccount.userName ,userAccount.getOrderArray(),makeOrderIdTable);
+        Payment payment =  new Payment(userAccount.userName ,userAccount.getOrderArray(), makeOrderIdTable);
 
         JFrame paymentFrame = new JFrame();
         paymentFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         paymentFrame.setExtendedState(JFrame.MAXIMIZED_BOTH);
         paymentFrame.setUndecorated(true);
-        paymentFrame.setContentPane(payment.getPnlPayment());
+        paymentFrame.setContentPane(payment.getPnlPayment(paymentFrame));
         paymentFrame.setVisible(true);
 
-        JLabel lblPaymentCount = new JLabel("name");
-        JLabel lblPaymentX = new JLabel("name");
-        JLabel lblPaymentName = new JLabel("name");
-        JLabel lblPaymentPrice = new JLabel("name");
-        JLabel lblPaymentEuro = new JLabel("name");
-        Font font = new Font("Century Gothic", Font.BOLD, 26);
 
+        JComponent comp = (JComponent) e.getSource();
+        Window win = SwingUtilities.getWindowAncestor(comp); //get top window
+        win.dispose();
 
-        orderPositionY=0;
-
-        int sizeOfArray=userAccount.orderArray.size();
-        for (int x=0;x<sizeOfArray;x++) {
-
-
-                System.out.println("MAKE ORDER "+x+": "+userAccount.orderArray.get(x).getNumberOfItem()+" - "+userAccount.orderArray.get(x).getNameItem()+" - "+
-                        +userAccount.orderArray.get(x).getPrice()+" - " +userAccount.orderArray.get(x).getTotalPrice()+" - "+userAccount.orderArray.get(x).getIdTable());
-
-
-            System.out.println("MAKEORDERID "+makeOrderIdTable+" --------------------------");
-            System.out.println("ID TABLE IN ARRAY: "+userAccount.orderArray.get(x).getIdTable());
-
-            if ((userAccount.orderArray.get(x).getNumberOfItem() != 0) /* && (userAccount.orderArray.get(x).getNumberOfItem()==makeOrderIdTable)*/) {
-                orderPositionY=orderPositionY+30;
-                finalPrice=finalPrice+userAccount.orderArray.get(x).getTotalPrice();
-                paymentPrice=finalPrice;
-
-                payment.getPnlPaymentItems().setLayout(null);
-
-                payment.getPnlPaymentItems().add(lblPaymentCount = new JLabel("" + userAccount.orderArray.get(x).getNumberOfItem(), FlowLayout.LEFT));
-                lblPaymentCount.setFont(font);
-                lblPaymentCount.setBounds(10, orderPositionY, 45, 30);
-
-                payment.getPnlPaymentItems().add(lblPaymentX = new JLabel("x", FlowLayout.LEFT));
-                lblPaymentX.setFont(font);
-                lblPaymentX.setBounds(55, orderPositionY, 20, 30);
-
-                payment.getPnlPaymentItems().add(lblPaymentName = new JLabel("" + userAccount.orderArray.get(x).getNameItem(), FlowLayout.LEFT));
-                lblPaymentName.setFont(font);
-                lblPaymentName.setBounds(85, orderPositionY, 200, 30);
-
-                payment.getPnlPaymentItems().add(lblPaymentPrice = new JLabel("" + userAccount.orderArray.get(x).getTotalPrice(), FlowLayout.LEFT));
-                lblPaymentPrice.setFont(font);
-                lblPaymentPrice.setBounds(295, orderPositionY, 100, 30);
-
-                payment.getPnlPaymentItems().add(lblPaymentEuro = new JLabel("€", FlowLayout.LEFT));
-                lblPaymentEuro.setFont(font);
-                lblPaymentEuro.setBounds(405, orderPositionY, 30, 30);
-            }
-
-            payment.getLblFinalPrice().setText("Final price : "+String.valueOf(finalPrice));
-
-
-            JComponent comp = (JComponent) e.getSource();
-            Window win = SwingUtilities.getWindowAncestor(comp); //get top window
-            win.dispose();
-        }
         return paymentFrame;
     }
 
@@ -1774,8 +1716,9 @@ public class MakeOrder {
     Order order = new Order();
 
     private void sendToOrder(int numberOfItem, Double smootiePrice, String smootieName, int itemCount) {
-        System.out.println("Send To Order - start");
         btnCancel.setEnabled(false);
+        btnConfirm.setEnabled(true);
+        btnPayment.setEnabled(true);
         checkItemsInArray();
 
         double totalPrice;
@@ -1785,10 +1728,8 @@ public class MakeOrder {
         int countOfItem=0;
         int countChnages=0;
         int size = orderArrayList.size();
-        System.out.println("size of array: "+size);
         if (countItem<31){
             if (size>0){
-                System.out.println("Size of array is more than 0");
                 for (int i=0; i<size;i++){
 
 
@@ -1802,7 +1743,7 @@ public class MakeOrder {
                         totalPrice=totalPrice+userAccount.orderArray.get(i).getTotalPrice();
 
                     }else */
-                    System.out.println("for run -- "+i);if (orderArrayList.get(i).getNameItem()==smootieName && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
+                    if (orderArrayList.get(i).getNameItem().equals(smootieName) && orderArrayList.get(i).getIdTable()==makeOrderIdTable){
 
 
                         if (orderArrayList.get(i).getNumberOfItem()>=50 && smootieName.equals(orderArrayList.get(i).getNameItem()) && numberOfItem>0){
@@ -1820,12 +1761,8 @@ public class MakeOrder {
                 if (countChnages==size){
 
                     Order order = new Order();
-                    System.out.println("number of item: "+numberOfItem);
-                    System.out.println("nuber of item in Order: "+order.getNumberOfItem());
                     order.setNumberOfItem(numberOfItem);
-                    System.out.println("order after");
                     if (order.getNumberOfItem()>50){
-                        System.out.println("if done");
                         order.setNumberOfItem(50);
                     }
                     order.setPrice(smootiePrice);
@@ -1837,7 +1774,6 @@ public class MakeOrder {
                 }
 
             }else {
-                System.out.println("Size of array is empty");
                 order.setNumberOfItem(numberOfItem);
                 order.setPrice(smootiePrice);
                 order.setNameItem(smootieName);
@@ -1862,8 +1798,8 @@ public class MakeOrder {
 
     //send item to order on table
     public void sendToTable(final String name, final Double price){
-            totalPrice=0;
-            btnChooseHistory="true";
+        totalPrice=0;
+        btnChooseHistory="true";
 
 
         JLabel lblCount = new JLabel("name");
@@ -1881,7 +1817,6 @@ public class MakeOrder {
         orderPositionY=0;
 
         int sizeArray=userAccount.orderArray.size();
-
         for (int i=0;i<sizeArray;i++){
 
 
@@ -1892,61 +1827,61 @@ public class MakeOrder {
 
             if (countOfItem!=0){
 
-            if (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())
-            {
-
-                totalPrice=totalPrice+userAccount.orderArray.get(i).getTotalPrice();
-                orderPositionY=orderPositionY+32;
-                if (countItem<31)
+                if (makeOrderIdTable==userAccount.orderArray.get(i).getIdTable())
                 {
-                    countPrice=price*countX;
-                    countPrice=Math.round(countPrice * 100)/100.0;
-                    totalPrice=Math.round(totalPrice * 100)/100.0;
 
-                    lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
+                    totalPrice=totalPrice+userAccount.orderArray.get(i).getTotalPrice();
+                    orderPositionY=orderPositionY+32;
+                    if (countItem<31)
+                    {
+                        countPrice=price*countX;
+                        countPrice=Math.round(countPrice * 100)/100.0;
+                        totalPrice=Math.round(totalPrice * 100)/100.0;
 
-                    pnlItemOnTable.add(lblCount = new JLabel(""+countOfItem, FlowLayout.LEFT));
-                    lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    lblCount.setBounds(10, orderPositionY, 45, 30);
+                        lblTotalPrice.setText("Price: "+Double.toString(totalPrice)+" €");
 
-                    pnlItemOnTable.add(lblX = new JLabel("x", FlowLayout.LEFT));
-                    lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    lblX.setBounds(55, orderPositionY, 20, 30);
+                        pnlItemOnTable.add(lblCount = new JLabel(""+countOfItem, FlowLayout.LEFT));
+                        lblCount.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                        lblCount.setBounds(10, orderPositionY, 45, 30);
 
-                    pnlItemOnTable.add(lblName = new JLabel(""+nameItem, FlowLayout.LEFT));
-                    lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    lblName.setBounds(85, orderPositionY, 200, 30);
+                        pnlItemOnTable.add(lblX = new JLabel("x", FlowLayout.LEFT));
+                        lblX.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                        lblX.setBounds(55, orderPositionY, 20, 30);
 
-                    pnlItemOnTable.add(lblPrice = new JLabel(""+priceItem, FlowLayout.LEFT));
-                    lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    lblPrice.setBounds(295, orderPositionY, 100, 30);
+                        pnlItemOnTable.add(lblName = new JLabel(""+nameItem, FlowLayout.LEFT));
+                        lblName.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                        lblName.setBounds(85, orderPositionY, 200, 30);
 
-                    pnlItemOnTable.add(lblEuro = new JLabel("€", FlowLayout.LEFT));
-                    lblEuro.setFont(new Font("Century Gothic", Font.ITALIC, 25));
-                    lblEuro.setBounds(405, orderPositionY, 30, 30);
+                        pnlItemOnTable.add(lblPrice = new JLabel(""+priceItem, FlowLayout.LEFT));
+                        lblPrice.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                        lblPrice.setBounds(295, orderPositionY, 100, 30);
 
-                    pnlItemOnTable.add(btnDelete = new JButton("DELETE"));
-                    btnDelete.setBackground(new Color(254,151,44));
-                    btnDelete.setFont(new Font("Century Gothic", Font.BOLD, 17));
-                    btnDelete.setForeground(Color.white);
-                    btnDelete.setBorderPainted(false);
-                    btnDelete.setBounds(450, orderPositionY, 100, 30);
+                        pnlItemOnTable.add(lblEuro = new JLabel("€", FlowLayout.LEFT));
+                        lblEuro.setFont(new Font("Century Gothic", Font.ITALIC, 25));
+                        lblEuro.setBounds(405, orderPositionY, 30, 30);
 
-                    pnlItemOnTable.add(btnUndo = new JButton("UNDO"));
-                    btnUndo.setBackground(new Color(133,147,49));
-                    btnUndo.setFont(new Font("Century Gothic", Font.BOLD, 17));
-                    btnUndo.setForeground(Color.white);
-                    btnUndo.setBorderPainted(false);
-                    btnUndo.setEnabled(false);
-                    btnUndo.setBounds(560, orderPositionY, 100, 30);
+                        pnlItemOnTable.add(btnDelete = new JButton("DELETE"));
+                        btnDelete.setBackground(new Color(254,151,44));
+                        btnDelete.setFont(new Font("Century Gothic", Font.BOLD, 17));
+                        btnDelete.setForeground(Color.white);
+                        btnDelete.setBorderPainted(false);
+                        btnDelete.setBounds(450, orderPositionY, 100, 30);
+
+                        pnlItemOnTable.add(btnUndo = new JButton("UNDO"));
+                        btnUndo.setBackground(new Color(133,147,49));
+                        btnUndo.setFont(new Font("Century Gothic", Font.BOLD, 17));
+                        btnUndo.setForeground(Color.white);
+                        btnUndo.setBorderPainted(false);
+                        btnUndo.setEnabled(false);
+                        btnUndo.setBounds(560, orderPositionY, 100, 30);
 
 
-                }else{
-                    JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
-                    countItem=30;
+                    }else{
+                        JOptionPane.showMessageDialog(null, "Max quantity of ordered item in one time can be 30 !");
+                        countItem=30;
+                    }
+
                 }
-
-            }
 
             }
 
@@ -1969,7 +1904,6 @@ public class MakeOrder {
             public void actionPerformed(ActionEvent e) {
                 int numberOfItem;
                 numberOfItem = Integer.parseInt(finalLblCount1.getText());
-                System.out.println("Number of item is: "+numberOfItem);
 
                 throwItem(finalLblCount, finalLblX, finalLblName, finalLblPrice, finalLblEuro, finalBtnDelete, finalBtnUndo);
             }
@@ -1989,7 +1923,7 @@ public class MakeOrder {
 
     public void throwItem(final JLabel lblCount, final JLabel lblX, final JLabel lblName, final JLabel lblPrice, final JLabel lblEuro, final JButton btnThrow, final JButton btnUndo) {
 
-
+        btnConfirm.setEnabled(true);
 
         JFrame frame2 = new JFrame("Delete Verification");
         frame2.setBackground(new Color(240,232,220));
@@ -2102,7 +2036,7 @@ public class MakeOrder {
                     }
 
                 }
-                }
+            }
 
         });
 
@@ -2218,7 +2152,15 @@ public class MakeOrder {
         btnThrow.setEnabled(true);
         btnUndo.setEnabled(false);
 
+    }
+
+    public void setBtnPayment() {
+        if (checkForPayment==0){
+            btnPayment.setEnabled(false);
+        }else if (checkForPayment==1){
+            btnPayment.setEnabled(true);
         }
+    }
 
 }
 

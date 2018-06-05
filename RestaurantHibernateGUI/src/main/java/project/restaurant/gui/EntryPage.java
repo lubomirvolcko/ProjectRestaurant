@@ -7,23 +7,16 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.query.Query;
 import project.restaurant.hibernate.Authentication;
-import project.restaurant.hibernate.Drink;
 import project.restaurant.hibernate.HibernateUtil;
-import project.restaurant.hibernate.getInformationFromDatabase;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.List;
 
-
+import static org.apache.log4j.helpers.Loader.getResource;
 
 
 public class EntryPage {
@@ -150,7 +143,6 @@ public class EntryPage {
             if(logInArea.getText().equals(d.getLogin())&&txtPassword.getText().equals(d.getPassword())&&d.getPosition().equals("manager")) {
                 openForm(3, d.getLogin());
                 setUsername(d.getLogin());
-                //System.out.println("UserName: "+getUsername());
                 close.dispose();
                 clickedOnBtnLogin=0;
                 System.out.println("Login: "+d.getLogin());
